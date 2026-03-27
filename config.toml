@@ -1,12 +1,9 @@
 baseURL = 'https://raphaell2e.github.io/'
 languageCode = 'zh-CN'
 title = 'Raphael Tech Blog'
-theme = "github.com/theNewDynamic/gohugo-theme-ananke"
 
-[module]
-  [[module.imports]]
-    path = "github.com/theNewDynamic/gohugo-theme-ananke"
-    disabled = false
+# 使用最简单的内置主题
+theme = "ananke"
 
 [params]
   author = "Raphael"

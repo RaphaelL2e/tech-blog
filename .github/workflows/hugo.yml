@@ -35,16 +35,14 @@ jobs:
         with:
           fetch-depth: 0
           
-      - name: Setup Go
-        uses: actions/setup-go@v5
-        with:
-          go-version: '1.22'
-          
-      - name: Setup Hugo Modules
-        run: hugo mod init github.com/RaphaelL2e/tech-blog || true
-        
-      - name: Get Theme
-        run: hugo mod get -u github.com/theNewDynamic/gohugo-theme-ananke
+      - name: Install Theme
+        run: |
+          mkdir -p themes
+          cd themes
+          # 使用国内镜像或备用源
+          git clone --depth 1 https://ghproxy.com/https://github.com/theNewDynamic/gohugo-theme-ananke.git ananke || \
+          git clone --depth 1 https://mirror.ghproxy.com/https://github.com/theNewDynamic/gohugo-theme-ananke.git ananke || \
+          git clone --depth 1 https://github.com/theNewDynamic/gohugo-theme-ananke.git ananke
           
       - name: Setup Pages
         id: pages
