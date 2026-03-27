@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -39,15 +39,9 @@ jobs:
         run: |
           mkdir -p themes
           cd themes
-          # 使用国内镜像或备用源
-          git clone --depth 1 https://ghproxy.com/https://github.com/theNewDynamic/gohugo-theme-ananke.git ananke || \
-          git clone --depth 1 https://mirror.ghproxy.com/https://github.com/theNewDynamic/gohugo-theme-ananke.git ananke || \
-          git clone --depth 1 https://github.com/theNewDynamic/gohugo-theme-ananke.git ananke
+          git clone --depth 1 https://github.com/theNewDynamic/gohugo-theme-ananke.git ananke || \
+          git clone --depth 1 https://ghproxy.com/https://github.com/theNewDynamic/gohugo-theme-ananke.git ananke
           
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v5
-        
       - name: Build with Hugo
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
@@ -57,20 +51,11 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+            --baseURL "https://raphaell2e.github.io/tech-blog/"
             
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: ./public
-
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
