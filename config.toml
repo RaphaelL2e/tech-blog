@@ -1,22 +1,27 @@
 baseURL = 'https://raphaell2e.github.io/'
 languageCode = 'zh-CN'
 title = 'Raphael Tech Blog'
-theme = 'ananke'
+theme = "github.com/theNewDynamic/gohugo-theme-ananke"
+
+[module]
+  [[module.imports]]
+    path = "github.com/theNewDynamic/gohugo-theme-ananke"
+    disabled = false
 
 [params]
-  author = 'Raphael'
-  description = '技术博客 - AI、架构、编程'
+  author = "Raphael"
+  description = "技术博客 - AI、架构、编程"
   
 [menu]
   [[menu.main]]
-    name = '首页'
-    url = '/'
+    name = "首页"
+    url = "/"
     weight = 10
   [[menu.main]]
-    name = '文章'
-    url = '/posts/'
+    name = "文章"
+    url = "/posts/"
     weight = 20
   [[menu.main]]
-    name = '关于'
-    url = '/about/'
+    name = "关于"
+    url = "/about/"
     weight = 30
