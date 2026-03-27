@@ -1,0 +1,22 @@
+baseURL = 'https://raphaell2e.github.io/'
+languageCode = 'zh-CN'
+title = 'Raphael Tech Blog'
+theme = 'ananke'
+
+[params]
+  author = 'Raphael'
+  description = '技术博客 - AI、架构、编程'
+  
+[menu]
+  [[menu.main]]
+    name = '首页'
+    url = '/'
+    weight = 10
+  [[menu.main]]
+    name = '文章'
+    url = '/posts/'
+    weight = 20
+  [[menu.main]]
+    name = '关于'
+    url = '/about/'
+    weight = 30
