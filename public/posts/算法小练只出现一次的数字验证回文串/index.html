@@ -1,0 +1,59 @@
+<!doctype html><html lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>算法小练——只出现一次的数字验证回文串 - Raphael Tech Blog</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;line-height:1.6;color:#333;max-width:800px;margin:0 auto;padding:20px}header{border-bottom:2px solid #3498db;padding-bottom:20px;margin-bottom:30px}header h1 a{color:#2c3e50;text-decoration:none}nav{margin-top:10px}nav a{margin-right:20px;color:#3498db;text-decoration:none}nav a:hover{text-decoration:underline}article{margin-bottom:40px}article h2{color:#2c3e50;margin-bottom:10px}article h2 a{color:inherit;text-decoration:none}article h2 a:hover{text-decoration:underline}.meta{color:#7f8c8d;font-size:.9em;margin-bottom:10px}.summary{color:#555}footer{margin-top:50px;padding-top:20px;border-top:1px solid #eee;color:#7f8c8d;text-align:center}h1,h2,h3,h4{margin:20px 0 10px}p{margin-bottom:15px}ul,ol{margin-left:20px;margin-bottom:15px}code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-family:monospace}pre{background:#f4f4f4;padding:15px;border-radius:5px;overflow-x:auto;margin-bottom:15px}blockquote{border-left:4px solid #3498db;padding-left:20px;margin:15px 0;color:#666}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #ddd;padding:10px;text-align:left}th{background:#f5f5f5}</style></head><body><header><h1><a href=https://raphaell2e.github.io/tech-blog/>Raphael Tech Blog</a></h1><nav><a href=https://raphaell2e.github.io/tech-blog/>首页</a>
+<a href=https://raphaell2e.github.io/tech-blog/posts/>文章</a>
+<a href=https://raphaell2e.github.io/tech-blog/about/>关于</a></nav></header><main><article><h1>算法小练——只出现一次的数字验证回文串</h1><div class=meta>2019-11-17</div><h1 id=只出现一次的数字只出现一次的数字httpsleetcode-cncomproblemssingle-number><a href=#%E5%8F%AA%E5%87%BA%E7%8E%B0%E4%B8%80%E6%AC%A1%E7%9A%84%E6%95%B0%E5%AD%97></a><a href=https://leetcode-cn.com/problems/single-number/>只出现一次的数字</a></h1><h3 id=描述描述><a href=#%E6%8F%8F%E8%BF%B0></a>描述</h3><p>给定一个非空整数数组，除了某个元素只出现一次以外，其余每个元素均出现两次。找出那个只出现了一次的元素。</p><h4 id=说明说明><a href=#%E8%AF%B4%E6%98%8E></a>说明</h4><p>你的算法应该具有线性时间复杂度。 你可以不使用额外空间来实现吗？</p><h3 id=示例示例><a href=#%E7%A4%BA%E4%BE%8B></a>示例</h3><h4 id=示例-1示例-1><a href=#%E7%A4%BA%E4%BE%8B-1></a>示例 1:</h4><p>输入: [2,2,1]
+输出: 1</p><h4 id=示例-2示例-2><a href=#%E7%A4%BA%E4%BE%8B-2></a>示例 2:</h4><p>输入: [4,1,2,1,2]
+输出: 4</p><h3 id=代码代码><a href=#%E4%BB%A3%E7%A0%81></a>代码</h3><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+class Solution {
+public int singleNumber(int[] nums) {
+int ans = 0;
+Set set = new HashSet&lt;>();
+for(int i=0;i&lt;nums.length;i++) {
+if(set.contains(nums[i])) {
+set.remove(nums[i]);
+}else {
+set.add(nums[i]);
+}
+}
+ans = set.iterator().next();
+return ans;
+}
+}</p><h3 id=笔记笔记><a href=#%E7%AC%94%E8%AE%B0></a>笔记</h3><p>此处用了hash表来判断是否存在两次，最后剩下的那个则是唯一的元素</p><pre><code>    -------------本文结束**感谢阅读-------------
+
+
+    
+
+
+  
+    
+
+欢迎您扫一扫上面的微信公众号，订阅我的博客！
+</code></pre><p>坚持原创技术分享，您的支持将鼓励我继续创作！</p><pre><code>打赏
+
+
+
+
+  
+    
+    微信支付
+
+  
+
+
+
+  
+    
+    支付宝</code></pre></article></main><footer><p>&copy; 2026 Raphael. All rights reserved.</p></footer></body></html>

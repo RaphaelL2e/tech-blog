@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Oracle on Raphael Tech Blog</title><link>https://raphaell2e.github.io/tech-blog/categories/oracle/</link><description>Recent content in Oracle on Raphael Tech Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 01 Jan 2020 15:54:18 +0800</lastBuildDate><atom:link href="https://raphaell2e.github.io/tech-blog/categories/oracle/index.xml" rel="self" type="application/rss+xml"/><item><title>Oralce创建与操作</title><link>https://raphaell2e.github.io/tech-blog/posts/oralce%E5%88%9B%E5%BB%BA%E4%B8%8E%E6%93%8D%E4%BD%9C/</link><pubDate>Wed, 01 Jan 2020 15:54:18 +0800</pubDate><guid>https://raphaell2e.github.io/tech-blog/posts/oralce%E5%88%9B%E5%BB%BA%E4%B8%8E%E6%93%8D%E4%BD%9C/</guid><description>创建新用户 1 2 3 4 5 6 7 8 9 10 11 12 CREATE USER username IDENTIFIED BY password [DEFAULT TABLESPACE tablespace] [TEMPORARY TABLESPACE tablespace];
+CREATE USER MARTIN IDENTIFIED BY martinpwd DEFAULT TABLESPACE USERS TEMPORARY TABLESPACE TEMP;
+如果账户被锁定，则需管理员给帐户解锁 sql&amp;gt; alter user martin account unlock;
+授予权限 1 2 3 4 grant 权限/角色 to 用户
+CONNECT角色允许用户连接至数据库，并创建数据库对象 GRANT CONNECT TO MARTIN;
+更改用户 1 ALTER USER MARTIN IDENTIFIED BY martinpass;
+删除用户 1 2 DROP USER MARTIN CASCADE; CASCADE 级联删除</description></item><item><title>Oralce介绍与安装</title><link>https://raphaell2e.github.io/tech-blog/posts/oralce%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AE%89%E8%A3%85/</link><pubDate>Wed, 01 Jan 2020 15:01:56 +0800</pubDate><guid>https://raphaell2e.github.io/tech-blog/posts/oralce%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%AE%89%E8%A3%85/</guid><description>基础概念 数据库系统 数据库（DB） 数据存放的仓库
+数据库管理系统（DBMS） 按一定的数据模型组织数据形成数据库，并对数据库进行管理
+数据库系统 数据、数据库、数据库管理系统的应用加上支撑他们的硬件、软件平台与人员构成的完整的数据库系统
+数据模型 层次模型 网状模型 关系模型 关系型数据库语言 DDL数据定义语言 CREATE 创建库或对象
+ALTER 修改
+DROP 删除
+DML数据操作语言 SELECT 检索
+INSERT 插入
+UPDATE 修改
+DELETE 删除
+DCL数据控制语言 GRANT 授权
+REVOKE 收回权限
+DENY 收回权限，并禁止从其他角色继承许可权限
+数据库设计 概念数据模型 概念数据模型（Conceptual Data Model），简称概念模型，是面向数据库用户的现实世界的模型，主要用来描述世界的概念化结构，它使数据库的设计人员在设计的初始阶段，摆脱计算机系统及DBMS的具体技术问题，集中精力分析数据以及数据之间的联系等，与具体的数据库管理系统（Database Management System，简称DBMS）无关。
+逻辑数据模型 逻辑数据模型 (LogicDataModel，LDM)是一种图形化的展现方式，一般采用面向对象的设计方法，有效组织来源多样的各种业务数据，使用统一的逻辑语言描述业务。
+物理数据模型 物理数据模型（Physical Data Model，PDM），提供了系统初始设计所需要的基础元素，以及相关元素之间的关系。即用于存储结构和访问机制的更高层描述，描述数据是如何在计算机中存储的，如何表达记录结构、记录顺序和访问路径等信息。
+ORACLE安装 待补充～～～
+Oralce数据库基础结构 内部结构 表空间（TABLESPACE） 表空间是数据库的逻辑划分，一个表空间只属于一个数据库。
+每个表空间由一个或多个数据文件组成，表空间中其他的逻辑结构的数据存储在这些数据文件中。
+EXAMPLE 示例表空间，存放示例数据库方案对象信息及培训资料
+SYSTEM 系统表空间，存放Oralce系统内部表和数据字典的数据，如表名、列名、用户名等
+SYSAUX辅助系统表空间，存放Oralce内部常用的样例用户对象等
+TEMP临时表空间，临时表与数据，用于排序和汇总
+UNDOTBSI 重做表空间，存放关于重做的相关信息和数据。、
+USERS 用户表空间，存放永久性用户对象的数据和私有信息
+表（TABLE） 存放用户数据的对象。
+约束条件（CONSTRAINT） 主键（PRIMARYKEY）</description></item></channel></rss>

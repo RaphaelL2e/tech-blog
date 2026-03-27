@@ -1,0 +1,98 @@
+<!doctype html><html lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>算法小练——删除排序数组中的重复项 - Raphael Tech Blog</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;line-height:1.6;color:#333;max-width:800px;margin:0 auto;padding:20px}header{border-bottom:2px solid #3498db;padding-bottom:20px;margin-bottom:30px}header h1 a{color:#2c3e50;text-decoration:none}nav{margin-top:10px}nav a{margin-right:20px;color:#3498db;text-decoration:none}nav a:hover{text-decoration:underline}article{margin-bottom:40px}article h2{color:#2c3e50;margin-bottom:10px}article h2 a{color:inherit;text-decoration:none}article h2 a:hover{text-decoration:underline}.meta{color:#7f8c8d;font-size:.9em;margin-bottom:10px}.summary{color:#555}footer{margin-top:50px;padding-top:20px;border-top:1px solid #eee;color:#7f8c8d;text-align:center}h1,h2,h3,h4{margin:20px 0 10px}p{margin-bottom:15px}ul,ol{margin-left:20px;margin-bottom:15px}code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-family:monospace}pre{background:#f4f4f4;padding:15px;border-radius:5px;overflow-x:auto;margin-bottom:15px}blockquote{border-left:4px solid #3498db;padding-left:20px;margin:15px 0;color:#666}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #ddd;padding:10px;text-align:left}th{background:#f5f5f5}</style></head><body><header><h1><a href=https://raphaell2e.github.io/tech-blog/>Raphael Tech Blog</a></h1><nav><a href=https://raphaell2e.github.io/tech-blog/>首页</a>
+<a href=https://raphaell2e.github.io/tech-blog/posts/>文章</a>
+<a href=https://raphaell2e.github.io/tech-blog/about/>关于</a></nav></header><main><article><h1>算法小练——删除排序数组中的重复项</h1><div class=meta>2019-11-07</div><h1 id=删除排序数组中的重复项-删除排序数组中的重复项httpsleetcode-cncomproblemsremove-duplicates-from-sorted-array><a href=#%E5%88%A0%E9%99%A4%E6%8E%92%E5%BA%8F%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E9%87%8D%E5%A4%8D%E9%A1%B9></a><a href=https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array/> 删除排序数组中的重复项</a></h1><h3 id=描述描述><a href=#%E6%8F%8F%E8%BF%B0></a>描述</h3><p>给定一个排序数组，你需要在原地删除重复出现的元素，使得每个元素只出现一次，返回移除后数组的新长度。</p><p>不要使用额外的数组空间，你必须在原地修改输入数组并在使用 O(1) 额外空间的条件下完成。</p><h3 id=示例示例><a href=#%E7%A4%BA%E4%BE%8B></a>示例</h3><h4 id=示例-1示例-1><a href=#%E7%A4%BA%E4%BE%8B-1></a>示例 1:</h4><p>给定数组 nums = [1,1,2], 函数应该返回新的长度 2, 并且原数组 nums 的前两个元素被修改为 1, 2。</p><p>你不需要考虑数组中超出新长度后面的元素。</p><h4 id=示例-2示例-2><a href=#%E7%A4%BA%E4%BE%8B-2></a>示例 2:</h4><p>给定 nums = [0,0,1,1,1,2,2,3,3,4],函数应该返回新的长度 5, 并且原数组 nums 的前五个元素被修改为 0, 1, 2, 3, 4。</p><p>你不需要考虑数组中超出新长度后面的元素。</p><h3 id=说明说明><a href=#%E8%AF%B4%E6%98%8E></a>说明:</h3><p>为什么返回数值是整数，但输出的答案是数组呢?</p><p>请注意，输入数组是以“引用”方式传递的，这意味着在函数里修改输入数组对于调用者是可见的。</p><p>你可以想象内部操作如下:</p><p>1
+2
+3
+4
+5
+6
+7
+8
+// nums 是以“引用”方式传递的。也就是说，不对实参做任何拷贝
+int len = removeDuplicates(nums);</p><p>// 在函数里修改输入数组对于调用者是可见的。
+// 根据你的函数返回的长度, 它会打印出数组中该长度范围内的所有元素。
+for (int i = 0; i &lt; len; i++) {
+print(nums[i]);
+}</p><h3 id=代码代码><a href=#%E4%BB%A3%E7%A0%81></a>代码</h3><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+class Solution {
+public int removeDuplicates(int[] nums) {
+int ans = 0;
+Set hashSet = new HashSet&lt;>();
+for (int i = 0; i &lt; nums.length; i++) {
+if(!hashSet.contains(nums[i])){
+hashSet.add(nums[i]);
+nums[ans++] = nums[i];
+}
+}</p><pre><code>    return ans;
+}
+</code></pre><p>}</p><h3 id=笔记笔记><a href=#%E7%AC%94%E8%AE%B0></a>笔记</h3><p>1
+2
+之前用过的hashset，用来判断是否存在，不存在就存入，并且把nums前置
+但是其实复杂化了。直接用双指针法来实现就行</p><h3 id=代码优化代码优化><a href=#%E4%BB%A3%E7%A0%81%E4%BC%98%E5%8C%96></a>代码优化</h3><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+//双指针
+/**
+数组完成排序后，我们可以放置两个指针 ii 和 jj，其中 ii 是慢指针，而 jj 是快指针。只要 nums[i] = nums[j]nums[i]=nums[j]，我们就增加 jj 以跳过重复项。
+*/
+public int removeDuplicates(int[] nums) {
+if (nums.length == 0) return 0;
+int i = 0;
+for (int j = 1; j &lt; nums.length; j++) {
+if (nums[j] != nums[i]) {
+i++;
+nums[i] = nums[j];
+}
+}
+return i + 1;
+}</p><pre><code>    -------------本文结束**感谢阅读-------------
+
+
+    
+
+
+  
+    
+
+欢迎您扫一扫上面的微信公众号，订阅我的博客！
+</code></pre><p>坚持原创技术分享，您的支持将鼓励我继续创作！</p><pre><code>打赏
+
+
+
+
+  
+    
+    微信支付
+
+  
+
+
+
+  
+    
+    支付宝</code></pre></article></main><footer><p>&copy; 2026 Raphael. All rights reserved.</p></footer></body></html>

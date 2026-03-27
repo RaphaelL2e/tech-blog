@@ -1,0 +1,219 @@
+<!doctype html><html lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>算法小练——最长公共前缀 - Raphael Tech Blog</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;line-height:1.6;color:#333;max-width:800px;margin:0 auto;padding:20px}header{border-bottom:2px solid #3498db;padding-bottom:20px;margin-bottom:30px}header h1 a{color:#2c3e50;text-decoration:none}nav{margin-top:10px}nav a{margin-right:20px;color:#3498db;text-decoration:none}nav a:hover{text-decoration:underline}article{margin-bottom:40px}article h2{color:#2c3e50;margin-bottom:10px}article h2 a{color:inherit;text-decoration:none}article h2 a:hover{text-decoration:underline}.meta{color:#7f8c8d;font-size:.9em;margin-bottom:10px}.summary{color:#555}footer{margin-top:50px;padding-top:20px;border-top:1px solid #eee;color:#7f8c8d;text-align:center}h1,h2,h3,h4{margin:20px 0 10px}p{margin-bottom:15px}ul,ol{margin-left:20px;margin-bottom:15px}code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-family:monospace}pre{background:#f4f4f4;padding:15px;border-radius:5px;overflow-x:auto;margin-bottom:15px}blockquote{border-left:4px solid #3498db;padding-left:20px;margin:15px 0;color:#666}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #ddd;padding:10px;text-align:left}th{background:#f5f5f5}</style></head><body><header><h1><a href=https://raphaell2e.github.io/tech-blog/>Raphael Tech Blog</a></h1><nav><a href=https://raphaell2e.github.io/tech-blog/>首页</a>
+<a href=https://raphaell2e.github.io/tech-blog/posts/>文章</a>
+<a href=https://raphaell2e.github.io/tech-blog/about/>关于</a></nav></header><main><article><h1>算法小练——最长公共前缀</h1><div class=meta>2019-11-05</div><h4 id=最长公共前缀-最长公共前缀httpsleetcode-cncomproblemslongest-common-prefix><a href=#%E6%9C%80%E9%95%BF%E5%85%AC%E5%85%B1%E5%89%8D%E7%BC%80></a><a href=https://leetcode-cn.com/problems/longest-common-prefix/> 最长公共前缀</a></h4><h3 id=描述描述><a href=#%E6%8F%8F%E8%BF%B0></a>描述</h3><p>编写一个函数来查找字符串数组中的最长公共==前缀==。</p><p>如果不存在公共前缀，返回空字符串 &ldquo;"。</p><h3 id=示例示例><a href=#%E7%A4%BA%E4%BE%8B></a>示例</h3><p>####　示例 1:</p><p>输入: [“flower”,”flow”,”flight”]
+输出: “fl”</p><h4 id=示例-2示例-2><a href=#%E7%A4%BA%E4%BE%8B-2></a>示例 2:</h4><p>输入: [“dog”,”racecar”,”car”]
+输出: “”
+解释: 输入不存在公共前缀。</p><h3 id=说明说明><a href=#%E8%AF%B4%E6%98%8E></a>说明</h3><p>所有输入只包含小写字母 a-z 。</p><h3 id=代码代码><a href=#%E4%BB%A3%E7%A0%81></a>代码</h3><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+class Solution {
+public String longestCommonPrefix(String[] strs) {
+//思路：把第一个字符串，分词为多个字符串，找到字符串组里其他里是否包含该字符串
+//因为目的是找最长的字符串，所以先找应该从大往小找，这样能够查找次数最少
+if(strs.length ==0){
+return &ldquo;&rdquo;;
+}</p><pre><code>    int str0 = strs[0].length(); //最短字符串的长度
+    String strShort = strs[0];
+    int index = 0;
+    for (int i = 1; i &lt; strs.length; i++) {
+        if(str0&gt;strs[i].length()){
+            str0 = strs[i].length();
+            strShort = strs[i];
+            index = i;
+        }
+    }
+    char[] chars = strShort.toCharArray();
+    for (int i = chars.length; i&gt;0; i--) {
+        String s = strShort.substring(0,i);
+        boolean flag = true;
+        for (int j = 0; j &lt; strs.length; j++) {
+            if(j == index){
+                continue;
+            }
+            String newString = strs[j].substring(0,i);
+            if(!newString.contentEquals(s)){
+               flag =false;
+            }
+        }
+        if(flag){
+            return s;
+        }
+    }
+
+    return &quot;&quot;;
+}
+</code></pre><p>}</p><h3 id=笔记笔记><a href=#%E7%AC%94%E8%AE%B0></a>笔记</h3><p>这道题，做的我很心酸，没有仔细读题，最开始当做，从一个字符串组中，找出最长公共子串做了。结果验证的时候出问题了，再仔细读题，才发现是最长前缀。但是就当给自己增加下难度吧，下面会把求最长公共子串的代码，留下。</p><h3 id=代码2代码2><a href=#%E4%BB%A3%E7%A0%812></a>代码2</h3><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+// 最长公共子串求解
+class Solution {
+public String longestCommonPrefix(String[] strs) {
+//思路：把第一个字符串，分词为多个字符串，找到字符串组里其他里是否包含该字符串
+//因为目的是找最长的字符串，所以先找应该从大往小找，这样能够查找次数最少
+if(strs.length ==0){
+return &ldquo;&rdquo;;
+}
+if(strs.length == 1){
+return strs[0];
+}
+int str0 = strs[0].length(); //最短字符串的长度
+String strShort = strs[0];
+int index = 0;
+for (int i = 1; i &lt; strs.length; i++) {
+if(str0>strs[i].length()){
+str0 = strs[i].length();
+strShort = strs[i];
+index = i;
+}
+}
+char[] chars = strShort.toCharArray();
+for (int i = chars.length; i>0; i&ndash;) {
+boolean flag = true; //如果有不包含的，则变为false
+String newString= strShort.substring(0,i);
+for (int j = 0; j &lt; strs.length; j++) {
+//如果是该字符串本身，则不比较
+if(j==index){
+continue;
+}
+if(i==strs[j].length()){
+if(strs[j].contentEquals(newString)){
+flag = true;
+continue;
+}
+flag =false;
+}
+//找一个字符串中是否存在某个字符串
+for (int k = 0; k &lt; strs[j].length()-i; k++) {</p><pre><code>                String stringPart= strs[j].substring(k,k+i);
+                if(stringPart.contentEquals(newString)){
+                    flag =  true;
+                    break;
+                }
+                flag =false;
+            }
+
+        }
+        if(flag){
+            return newString;
+        }
+    }
+
+    return &quot;&quot;;
+}
+</code></pre><p>}</p><pre><code>    -------------本文结束**感谢阅读-------------
+
+
+    
+
+
+  
+    
+
+欢迎您扫一扫上面的微信公众号，订阅我的博客！
+</code></pre><p>坚持原创技术分享，您的支持将鼓励我继续创作！</p><pre><code>打赏
+
+
+
+
+  
+    
+    微信支付
+
+  
+
+
+
+  
+    
+    支付宝</code></pre></article></main><footer><p>&copy; 2026 Raphael. All rights reserved.</p></footer></body></html>

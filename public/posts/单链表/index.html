@@ -1,0 +1,606 @@
+<!doctype html><html lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>单链表 - Raphael Tech Blog</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;line-height:1.6;color:#333;max-width:800px;margin:0 auto;padding:20px}header{border-bottom:2px solid #3498db;padding-bottom:20px;margin-bottom:30px}header h1 a{color:#2c3e50;text-decoration:none}nav{margin-top:10px}nav a{margin-right:20px;color:#3498db;text-decoration:none}nav a:hover{text-decoration:underline}article{margin-bottom:40px}article h2{color:#2c3e50;margin-bottom:10px}article h2 a{color:inherit;text-decoration:none}article h2 a:hover{text-decoration:underline}.meta{color:#7f8c8d;font-size:.9em;margin-bottom:10px}.summary{color:#555}footer{margin-top:50px;padding-top:20px;border-top:1px solid #eee;color:#7f8c8d;text-align:center}h1,h2,h3,h4{margin:20px 0 10px}p{margin-bottom:15px}ul,ol{margin-left:20px;margin-bottom:15px}code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-family:monospace}pre{background:#f4f4f4;padding:15px;border-radius:5px;overflow-x:auto;margin-bottom:15px}blockquote{border-left:4px solid #3498db;padding-left:20px;margin:15px 0;color:#666}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #ddd;padding:10px;text-align:left}th{background:#f5f5f5}</style></head><body><header><h1><a href=https://raphaell2e.github.io/tech-blog/>Raphael Tech Blog</a></h1><nav><a href=https://raphaell2e.github.io/tech-blog/>首页</a>
+<a href=https://raphaell2e.github.io/tech-blog/posts/>文章</a>
+<a href=https://raphaell2e.github.io/tech-blog/about/>关于</a></nav></header><main><article><h1>单链表</h1><div class=meta>2019-09-30</div><h1 id=小结小结><a href=#%E5%B0%8F%E7%BB%93></a>小结</h1><ul><li><p>链表是以节点的方式来存储，链式存储</p></li><li><p>每个节点包含data域，next域：指向下一个节点</p></li><li><p>如图：发现链表的各个节点不一定是连续存储</p></li></ul><ul><li></li></ul><ul><li>链表分带头节点的链表和没有头节点的链表，根据实际的需求来</li></ul><h2 id=头节点头节点><a href=#%E5%A4%B4%E8%8A%82%E7%82%B9></a>头节点</h2><ul><li><p>不存放数据</p></li><li><p>作用就是表示单链表头 next</p></li></ul><h2 id=链表创建链表创建><a href=#%E9%93%BE%E8%A1%A8%E5%88%9B%E5%BB%BA></a>链表创建</h2><ul><li><p>先创建一个head头节点，作用就是表示单链表的头</p></li><li><p>后面每添加一个节点，就直接加入到链表的最后遍历</p></li></ul><h2 id=代码实例代码实例><a href=#%E4%BB%A3%E7%A0%81%E5%AE%9E%E4%BE%8B></a>代码实例</h2><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+package com.leeyf.linkedlist;</p><p>import java.util.jar.JarEntry;</p><p>/**</p><ul><li><p>单链表
+*/
+public class SingleLinkedListDemo {</p><p>public static void main(String[] args) {
+//先创建几个节点
+HeroNode heroNode1 = new HeroNode(1, &ldquo;a&rdquo;, &ldquo;A&rdquo;);
+HeroNode heroNode2 = new HeroNode(2, &ldquo;b&rdquo;, &ldquo;B&rdquo;);
+HeroNode heroNode3 = new HeroNode(3, &ldquo;c&rdquo;, &ldquo;C&rdquo;);
+HeroNode heroNode4 = new HeroNode(4, &ldquo;d&rdquo;, &ldquo;D&rdquo;);
+//初始化链表
+SingleLinkedList singleLinkedList = new SingleLinkedList();
+//加入
+//singleLinkedList.add(heroNode1);
+//singleLinkedList.add(heroNode3);
+//singleLinkedList.add(heroNode4);
+//singleLinkedList.add(heroNode2);</p><pre><code> //按照编号加入
+ singleLinkedList.addByOrder(heroNode1);
+ singleLinkedList.addByOrder(heroNode3);
+ singleLinkedList.addByOrder(heroNode4);
+ singleLinkedList.addByOrder(heroNode2);
+ singleLinkedList.list();
+ HeroNode newHeroNode = new HeroNode(1,&quot;B&quot;,&quot;b&quot;);
+ singleLinkedList.update(newHeroNode);
+ singleLinkedList.list();
+ singleLinkedList.delete(1);
+ singleLinkedList.delete(1);
+ singleLinkedList.delete(2);
+ singleLinkedList.delete(3);
+ singleLinkedList.delete(4);
+ singleLinkedList.list();
+</code></pre><p>}</p></li></ul><p>}</p><p>//创建单链表，定义singleLinkedList
+class SingleLinkedList {
+//先初始化一个头节点
+private HeroNode head = new HeroNode(0, &ldquo;&rdquo;, &ldquo;&rdquo;);</p><pre><code>/**
+ *添加节点到链表(无序添加)
+ */
+public void add(HeroNode heroNode) {
+    //辅助节点
+    HeroNode temp = head;
+    //遍历链表，找到最后
+    while (true) {
+        //找到链表最后
+        if (temp.next == null) {
+            break;
+            //如果没有找到最后，将temp后移
+        } else {
+            temp = temp.next;
+        }
+    }
+
+    //当退出while时，指向链表的最后
+    temp.next = heroNode;
+}
+
+/**
+ *添加节点到链表(有序添加)
+ **/
+public void addByOrder(HeroNode heroNode) {
+    //因为头节点不能动，因此通过辅助指针来帮助找到添加的位置
+    HeroNode temp = head;
+    boolean flag = false;
+    while (true) {
+        //说明temp已经在链表的最后
+        if (temp.next == null) {
+            break;
+        }
+        //位置找到，就在temp的后面插入
+        if (temp.next.getNo() &gt; heroNode.getNo()) {
+            break;
+            //说明要添加的编号已经存在
+        } else if (temp.next.getNo() == heroNode.getNo()) {
+            flag = true;//说明编号存在
+            break;
+        }
+        temp = temp.next;
+    }
+    if (flag) {
+        System.out.printf(&quot;准备插入的英雄的编号%d已经存在，不能加入\n&quot;, heroNode.getNo());
+    } else {
+        //插入链表中
+        heroNode.next = temp.next;
+        temp.next = heroNode;
+    }
+}
+
+/**
+ *修改节点(根据编号修改)
+ */
+public void update(HeroNode newHeroNode){
+    //判断链表是否为空
+    if(head.next == null){
+        System.out.println(&quot;链表为空&quot;);
+        return;
+    }
+    HeroNode temp = head.next;
+    boolean flag = false; //是否找到该节点
+    while (true){
+        if (temp == null){
+            break; //链表尾
+        }
+        if (temp.getNo() == newHeroNode.getNo()){
+            flag = true;
+            break;
+        }
+        temp = temp.next;
+    }
+
+    if(flag){
+        temp.setName(newHeroNode.getName());
+        temp.setNickname(newHeroNode.getNickname());
+    }else {
+        System.out.printf(&quot;未找到编号为%d的节点,不能修改\n&quot;,newHeroNode.getNo());
+    }
+
+}
+/**
+ * 删除节点(根据编号删除)
+ */
+void delete(int heroNode){
+    //判断链表是否为空
+    if(head.next == null){
+        System.out.println(&quot;链表为空&quot;);
+        return;
+    }
+    HeroNode temp = head;
+    boolean flag = false;
+    while (true){
+        if(temp.next==null){
+            break;
+        }
+        if(temp.next.getNo() == heroNode){
+            flag = true;
+            break;
+        }
+        temp = temp.next;
+    }
+    if(flag){
+        temp.next = temp.next.next;
+    }else {
+        System.out.printf(&quot;未找到编号为%d的节点,不能删除\n&quot;,heroNode);
+    }
+}
+
+/**
+ * 显示链表
+ */
+void list() {
+    //判断链表是否为空
+    if (head.next == null) {
+        System.out.println(&quot;链表为空&quot;);
+        return;
+    }
+    //因为头节点不能动，因此需要辅助变量来遍历
+    HeroNode temp = head.next;
+    while (true) {
+        //判断是否到链表最后
+        if (temp == null) {
+            break;
+        }
+        //输出节点的信息
+        System.out.println(temp);
+        temp = temp.next;
+    }
+    System.out.println(&quot;----------------------&quot;);
+}
+</code></pre><p>}</p><p>//定义一个HeroNode,每个HeroNode对象 就是一个节点
+class HeroNode {
+private int no;
+private String name;
+private String nickname;
+HeroNode next; //指向下一个节点</p><pre><code>//构造器
+HeroNode(int no, String name, String nickname) {
+    this.no = no;
+    this.name = name;
+    this.nickname = nickname;
+}
+
+//为显示方便重新写toString方法
+
+@Override
+public String toString() {
+    return &quot;HeroNode{&quot; +
+            &quot;no=&quot; + no +
+            &quot;, name='&quot; + name + '\'' +
+            &quot;, nickname='&quot; + nickname + '\'' +
+            '}';
+}
+
+public HeroNode() {
+}
+
+int getNo() {
+    return no;
+}
+
+void setName(String name) {
+    this.name = name;
+}
+
+void setNickname(String nickname) {
+    this.nickname = nickname;
+}
+
+String getName() {
+    return name;
+}
+
+ String getNickname() {
+    return nickname;
+}
+</code></pre><p>}</p><h2 id=单链表面试题单链表面试题><a href=#%E5%8D%95%E9%93%BE%E8%A1%A8%E9%9D%A2%E8%AF%95%E9%A2%98></a>单链表面试题</h2><h3 id=1-查找单链表中的倒数第k个节点新浪面试题1查找单链表中的倒数第k个节点新浪面试题><a href=#1-%E6%9F%A5%E6%89%BE%E5%8D%95%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9%E3%80%90%E6%96%B0%E6%B5%AA%E9%9D%A2%E8%AF%95%E9%A2%98%E3%80%91></a>1.查找单链表中的倒数第k个节点【新浪面试题】</h3><p>思路：</p><ul><li><p>倒数第k个就是正数第 （有效节点数-k +1）个</p></li><li><p>有效节点数，可以遍历整个链表求得</p></li></ul><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+/**
+* 既求整个链表第 (节点数-k +1)个节点
+* @param head 头节点
+* @param index k值
+* @return 返回第k个节点,未找到返回空
+*
+*/
+public static HeroNode getHeroNode(HeroNode head,int index){
+if (head.next == null){
+return null;
+}
+//获取有效节点个数
+int length= getLength(head);
+//index数据校验
+if(index&lt;=0 || index>length){
+return null;
+}
+//定义一个辅助变量
+HeroNode temp = head;
+for (int i = 0; i &lt; length - index + 1; i++) {
+temp = temp.next;
+}
+return temp;</p><pre><code>}
+</code></pre><p>/**
+* @param head 链表的头节点
+* @return 返回有效节点的个数
+*/
+public static int getLength(HeroNode head) {
+if (head.next == null) {
+return 0;
+}
+//定义一个辅助变量
+HeroNode cur = head.next;
+int length = 0;
+while (cur!=null){
+length++;
+cur = cur.next;
+}
+return length;
+}</p><h3 id=2-单链表的反转腾讯面试题2单链表的反转腾讯面试题><a href=#2-%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%8F%8D%E8%BD%AC%E3%80%90%E8%85%BE%E8%AE%AF%E9%9D%A2%E8%AF%95%E9%A2%98%E3%80%91></a>2.单链表的反转【腾讯面试题】</h3><p>思路：</p><ul><li><p>先定义一个新的节点</p></li><li><p>从头到位遍历原来的链表，每遍历一个节点，就取出，并放到新链表的最前端</p></li><li><p>将原来链表的头节点指向的next = 新节点的next</p></li></ul><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+/**
+* 将单链表进项反转
+* @param head 头节点
+*/
+public static void reversetList(HeroNode head) {
+//如果链表为空,无需反转
+if (head.next == null || head.next.next == null) {
+return;
+}
+//定义辅助指针
+HeroNode cur = head.next;
+HeroNode next = null; //指向当前节点的下一个节点
+HeroNode newHead = new HeroNode(0, &ldquo;&rdquo;, &ldquo;&rdquo;);
+//遍历原来的列表，每遍历一个节点将其放在心链表的前端
+while (cur != null) {
+next = cur.next; //暂时保存当前节点的下一个节点
+cur.next = newHead.next; //将cur的下一个节点指向新链表的最前端
+newHead.next = cur; //将cur连接到新的链表上
+cur = next; //cur后移</p><pre><code>    }
+    //将新的链表的头指针更换成之前的头指针
+    head.next = newHead.next;
+}
+
+  
+
+
+
+
+
+
+  
+	 
+
+    -------------本文结束*感谢阅读-------------
+
+
+    
+
+
+  
+    
+
+欢迎您扫一扫上面的微信公众号，订阅我的博客！
+</code></pre><p>坚持原创技术分享，您的支持将鼓励我继续创作！</p><pre><code>打赏
+
+
+
+
+  
+    
+    微信支付
+
+  
+
+
+
+  
+    
+    支付宝</code></pre></article></main><footer><p>&copy; 2026 Raphael. All rights reserved.</p></footer></body></html>

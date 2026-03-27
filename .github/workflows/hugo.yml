@@ -8,54 +8,25 @@ on:
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
-defaults:
-  run:
-    shell: bash
 
 jobs:
-  build:
+  build-deploy:
     runs-on: ubuntu-latest
-    env:
-      HUGO_VERSION: 0.145.0
     steps:
-      - name: Install Hugo CLI
-        run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
-          sudo dpkg -i ${{ runner.temp }}/hugo.deb
-          
       - name: Checkout
         uses: actions/checkout@v4
+        
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
         with:
-          fetch-depth: 0
+          hugo-version: '0.115.4'
+          extended: true
           
-      - name: Install Theme
-        run: |
-          mkdir -p themes
-          cd themes
-          git clone --depth 1 https://github.com/theNewDynamic/gohugo-theme-ananke.git ananke || \
-          git clone --depth 1 https://ghproxy.com/https://github.com/theNewDynamic/gohugo-theme-ananke.git ananke
-          
-      - name: Build with Hugo
-        env:
-          HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
-          HUGO_ENVIRONMENT: production
-          TZ: Asia/Shanghai
-        run: |
-          hugo \
-            --gc \
-            --minify \
-            --baseURL "https://raphaell2e.github.io/tech-blog/"
-            
-      - name: Deploy to gh-pages branch
+      - name: Build
+        run: hugo --gc --minify --baseURL "https://raphaell2e.github.io/tech-blog/"
+        
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pages

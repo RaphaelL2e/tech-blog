@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>概述 on Raphael Tech Blog</title><link>https://raphaell2e.github.io/tech-blog/tags/%E6%A6%82%E8%BF%B0/</link><description>Recent content in 概述 on Raphael Tech Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 02 Dec 2019 17:33:46 +0800</lastBuildDate><atom:link href="https://raphaell2e.github.io/tech-blog/tags/%E6%A6%82%E8%BF%B0/index.xml" rel="self" type="application/rss+xml"/><item><title>系统分析与设计概述</title><link>https://raphaell2e.github.io/tech-blog/posts/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0/</link><pubDate>Mon, 02 Dec 2019 17:33:46 +0800</pubDate><guid>https://raphaell2e.github.io/tech-blog/posts/%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E4%B8%8E%E8%AE%BE%E8%AE%A1%E6%A6%82%E8%BF%B0/</guid><description>系统概述及特性 概述 系统是一组实现某些结果相互联系、相互作用的部件的集合体
+信息系统即信息管理系统，是一组以收集、处理、存储信息为基础啊，并输出完成业务任务所需信息为提交的相互联系、相互作用的集合体。
+特性
+可分解性 功能分解
+系统是由可分解的、相互联系的部件在系统中一起作用
+边界性 每一个系统与其所在环境都是有边界的，任何输入输出都必须通过这个系统的边界
+系统的自动部分和手动部分之间的分界，也称自动化边界
+系统分类与环境 信息系统的分类：事务处理系统、管理信息系统、智能决策支持系统、办公自动化系统
+环境 信息系统的发展经历了数据处理、管理信息、决策支持三个阶段
+高速的计算机网络环境
+对象技术和协作技术 面向对象开发的优点：对象是可以复用的、对象是可扩展的
+系统模型 模型一般是系统的一种图形表示，描述了系统的实际情况或者期望情形。
+模型是对所研究的系统、过程、事务或概念的一种表达形式
+在信息系统中，模型一般用于对系统的输入、输出、过程、数据、对象、对象之间的相互作用、位置、网络与设备，以及其他相关事物的表达。
+常见的构件模型
+流程图
+数据流图
+实体关系图（ER图）
+结构图
+用例图（UML图）
+类图
+顺序图
+PERT图和甘特图一般用于管理系统开发的过程中
+系统模型的类型 1.上下文模型(过程模型) 关注于“过程”，有助于消除非技术人员与用户与技术人员的交流隔阂
+流程图
+数据流图
+结构图
+2.数据模型 必不可少的部分，增加“知识”是信息系统框架必不可少的部分
+实例 数据库的设计
+3.对象模型 基于面向对象技术的发展，是想对先进的系统开发方法
+类图
+实体关系图
+用例图
+系统关联人员 系统所有者
+系统用户
+系统分析设计人员
+系统外部服务人员
+项目经理
+系统分析过程 1.范围定义 确定“系统是否存在开发的价值”
+任务 确定系统项目开发动机
+协商系统项目初步范围
+评估系统项目的价值
+制订系统项目计划
+2.问题分析 确定“系统真的具有开发价值吗”
+任务 研究问题领域
+分析问题和机会
+分析业务过程
+制订系统改进目标
+修改项目计划与汇报
+3.需求分析 为新系统定义业务需求</description></item></channel></rss>

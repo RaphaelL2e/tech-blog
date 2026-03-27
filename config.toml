@@ -1,14 +1,12 @@
 baseURL = 'https://raphaell2e.github.io/'
 languageCode = 'zh-CN'
 title = 'Raphael Tech Blog'
-
-# 使用最简单的内置主题
-theme = "ananke"
+theme = "simple"
 
 [params]
   author = "Raphael"
   description = "技术博客 - AI、架构、编程"
-  
+
 [menu]
   [[menu.main]]
     name = "首页"

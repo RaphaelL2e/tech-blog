@@ -1,0 +1,257 @@
+<!doctype html><html lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>第五章 Linux实操篇 - Raphael Tech Blog</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;line-height:1.6;color:#333;max-width:800px;margin:0 auto;padding:20px}header{border-bottom:2px solid #3498db;padding-bottom:20px;margin-bottom:30px}header h1 a{color:#2c3e50;text-decoration:none}nav{margin-top:10px}nav a{margin-right:20px;color:#3498db;text-decoration:none}nav a:hover{text-decoration:underline}article{margin-bottom:40px}article h2{color:#2c3e50;margin-bottom:10px}article h2 a{color:inherit;text-decoration:none}article h2 a:hover{text-decoration:underline}.meta{color:#7f8c8d;font-size:.9em;margin-bottom:10px}.summary{color:#555}footer{margin-top:50px;padding-top:20px;border-top:1px solid #eee;color:#7f8c8d;text-align:center}h1,h2,h3,h4{margin:20px 0 10px}p{margin-bottom:15px}ul,ol{margin-left:20px;margin-bottom:15px}code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-family:monospace}pre{background:#f4f4f4;padding:15px;border-radius:5px;overflow-x:auto;margin-bottom:15px}blockquote{border-left:4px solid #3498db;padding-left:20px;margin:15px 0;color:#666}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #ddd;padding:10px;text-align:left}th{background:#f5f5f5}</style></head><body><header><h1><a href=https://raphaell2e.github.io/tech-blog/>Raphael Tech Blog</a></h1><nav><a href=https://raphaell2e.github.io/tech-blog/>首页</a>
+<a href=https://raphaell2e.github.io/tech-blog/posts/>文章</a>
+<a href=https://raphaell2e.github.io/tech-blog/about/>关于</a></nav></header><main><article><h1>第五章 Linux实操篇</h1><div class=meta>2019-08-15</div><h1 id=第五章-linux实操篇-远程登录linux系统第五章-linux实操篇-远程登录linux系统><a href=#%E7%AC%AC%E4%BA%94%E7%AB%A0-Linux%E5%AE%9E%E6%93%8D%E7%AF%87-%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95Linux%E7%B3%BB%E7%BB%9F></a>第五章 Linux实操篇 远程登录Linux系统</h1><h2 id=5-1-为什么要远程登录服务器51-为什么要远程登录服务器><a href=#5-1-%E4%B8%BA%E4%BB%80%E4%B9%88%E8%A6%81%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E6%9C%8D%E5%8A%A1%E5%99%A8></a>5.1 为什么要远程登录服务器</h2><h2 id=5-2-xhell5-windows-远程登录软件52-xhell5windows远程登录软件><a href=#5-2-xhell5-windows-%E8%BF%9C%E7%A8%8B%E7%99%BB%E5%BD%95%E8%BD%AF%E4%BB%B6></a>5.2 xhell5(windows)远程登录软件</h2><ul><li>需要Linux开启sshd服务 22端口</li></ul><h2 id=5-3-xftp-远程文件操纵53-xftp-远程文件操纵><a href=#5-3-xftp-%E8%BF%9C%E7%A8%8B%E6%96%87%E4%BB%B6%E6%93%8D%E7%BA%B5></a>5.3 xftp 远程文件操纵</h2><h1 id=第六章-linux实操篇-vi和vim编辑器第六章-linux实操篇--vi和vim编辑器><a href=#%E7%AC%AC%E5%85%AD%E7%AB%A0-Linux%E5%AE%9E%E6%93%8D%E7%AF%87-vi%E5%92%8Cvim%E7%BC%96%E8%BE%91%E5%99%A8></a>第六章 Linux实操篇 vi和vim编辑器</h1><h2 id=6-1-vi-和vim介绍61-vi-和vim介绍><a href=#6-1-vi-%E5%92%8Cvim%E4%BB%8B%E7%BB%8D></a>6.1 vi 和vim介绍</h2><p>vi是系统自带的文本编辑器</p><p>vim是vi的增强版</p><h2 id=6-2-三种模式62-三种模式><a href=#6-2-%E4%B8%89%E7%A7%8D%E6%A8%A1%E5%BC%8F></a>6.2 三种模式</h2><h3 id=6-2-1-正常模式621-正常模式><a href=#6-2-1-%E6%AD%A3%E5%B8%B8%E6%A8%A1%E5%BC%8F></a>6.2.1 正常模式</h3><p>正常模式下，我们可以使用快捷键</p><h3 id=6-2-2-插入模式622-插入模式><a href=#6-2-2-%E6%8F%92%E5%85%A5%E6%A8%A1%E5%BC%8F></a>6.2.2 插入模式</h3><p>在该模式下，程序员可以输入内容</p><h3 id=6-2-3-命令行模式623-命令行模式><a href=#6-2-3-%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%A8%A1%E5%BC%8F></a>6.2.3 命令行模式</h3><p>完成读取、存盘、替换、显示行号等动作</p><h2 id=6-3-快速入门63-快速入门><a href=#6-3-%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8></a>6.3 快速入门</h2><p>yy 复制</p><p>dd 删除</p><p>u撤销</p><p>set nu 设置行号 set nonu 取消行号</p><p>shift+g 定位 eg: 5 shift+g 定位到第5行</p><h1 id=第七章-linux实操篇-开机重启用户登录注销第七章-linux实操篇-开机重启用户登录注销><a href=#%E7%AC%AC%E4%B8%83%E7%AB%A0-Linux%E5%AE%9E%E6%93%8D%E7%AF%87-%E5%BC%80%E6%9C%BA%E3%80%81%E9%87%8D%E5%90%AF%E3%80%81%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E6%B3%A8%E9%94%80></a>第七章 Linux实操篇 开机、重启、用户登录注销</h1><h2 id=7-1-关机和重启指令71-关机和重启指令><a href=#7-1-%E5%85%B3%E6%9C%BA%E5%92%8C%E9%87%8D%E5%90%AF%E6%8C%87%E4%BB%A4></a>7.1 关机和重启指令</h2><h3 id=shutdownshutdown><a href=#shutdown></a>shutdown</h3><ul><li><p>shutdown - h now</p></li><li><p>shutdown -h 1 表示1分钟后关机</p></li><li><p>shutdown -r now 立即重启</p></li></ul><h3 id=halthalt><a href=#halt></a>halt</h3><ul><li>直接使用，效果等价于关机</li></ul><h3 id=rebootreboot><a href=#reboot></a>reboot</h3><ul><li>重启系统</li></ul><h3 id=syncsync><a href=#sync></a>sync</h3><ul><li>把内存的数据同步到磁盘</li></ul><p>关机或重启时，先执行sync指令，把内存写入磁盘</p><h2 id=7-2-用户登录和注销72-用户登录和注销><a href=#7-2-%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E5%92%8C%E6%B3%A8%E9%94%80></a>7.2 用户登录和注销</h2><ul><li>一般不直接用root登录</li></ul><h3 id=logoutlogout><a href=#logout></a>logout</h3><p>用户注销</p><h3 id=使用细节使用细节><a href=#%E4%BD%BF%E7%94%A8%E7%BB%86%E8%8A%82></a>使用细节</h3><p>logout注销指令在图形界面无效，在<strong>运行级别</strong>3下有效</p><h1 id=第八章-linux实操篇-用户管理第八章-linux实操篇-用户管理><a href=#%E7%AC%AC%E5%85%AB%E7%AB%A0-Linux%E5%AE%9E%E6%93%8D%E7%AF%87-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86></a>第八章 Linux实操篇 用户管理</h1><h2 id=8-1-基本介绍81-基本介绍><a href=#8-1-%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D></a>8.1 基本介绍</h2><ul><li><p>用户
+root</p></li><li><p>leeyf其他用户</p></li><li><p>用户组
+root</p></li><li><p>group其他组</p></li><li><p>用户家目录：
+/home 目录下有各个创建的用户对应的家目录，当用户登录时，会自动进入到自己的家目录</p></li></ul><p><strong>说明</strong>：</p><ul><li><p>Linux系统是一个多用户多任务的操作系统，任何一个使用系统资源的用户，都必须首先向系统管理员申请一个账号，然后以该账号进入系统</p></li><li><p>Linux的用户需要至少属于一个组</p></li></ul><h2 id=8-2-添加用户82-添加用户><a href=#8-2-%E6%B7%BB%E5%8A%A0%E7%94%A8%E6%88%B7></a>8.2 添加用户</h2><h3 id=8-2-1基本语法821基本语法><a href=#8-2-1%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95></a>8.2.1基本语法</h3><p><strong>useradd</strong></p><h3 id=8-2-2-案例822-案例><a href=#8-2-2-%E6%A1%88%E4%BE%8B></a>8.2.2 案例</h3><p>1
+useradd leeyf //添加用户leeyf 默认创建group leeyf</p><h3 id=8-2-3-细节说明823-细节说明><a href=#8-2-3-%E7%BB%86%E8%8A%82%E8%AF%B4%E6%98%8E></a>8.2.3 细节说明</h3><p>创建成功后，会自动创建和用户同名的家目录</p><p>可通过useradd -d 指定目录，创建新用户，并指定家 目录</p><h2 id=8-3-修改密码83-修改密码><a href=#8-3-%E4%BF%AE%E6%94%B9%E5%AF%86%E7%A0%81></a>8.3 修改密码</h2><p>1
+passwd 用户名 //修改密码</p><h2 id=8-4-删除用户84-删除用户><a href=#8-4-%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7></a>8.4 删除用户</h2><h3 id=8-4-1-基本语法841-基本语法><a href=#8-4-1-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95></a>8.4.1 基本语法</h3><p>1
+2
+userdel 用户名 //删除用户保留用户主目录
+userdel -r 用户名 //删除用户及用户主目录</p><h3 id=8-4-2细节说明842细节说明><a href=#8-4-2%E7%BB%86%E8%8A%82%E8%AF%B4%E6%98%8E></a>8.4.2细节说明</h3><p>是否保留家目录？</p><p>删除用户时，一般不会删除家目录</p><h2 id=8-5-查询用户信息85-查询用户信息><a href=#8-5-%E6%9F%A5%E8%AF%A2%E7%94%A8%E6%88%B7%E4%BF%A1%E6%81%AF></a>8.5 查询用户信息</h2><h3 id=8-5-1-基本语法851-基本语法><a href=#8-5-1-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95></a>8.5.1 基本语法</h3><p>1
+id 用户名</p><ul><li></li></ul><h3 id=8-5-2-细节说明852-细节说明><a href=#8-5-2-%E7%BB%86%E8%8A%82%E8%AF%B4%E6%98%8E></a>8.5.2 细节说明</h3><p>当用户不存在，返回无此用户</p><h2 id=8-6-切换用户86-切换用户><a href=#8-6-%E5%88%87%E6%8D%A2%E7%94%A8%E6%88%B7></a>8.6 切换用户</h2><h3 id=8-6-1-基本语法861-基本语法><a href=#8-6-1-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95></a>8.6.1 基本语法</h3><p>1
+su - 切换用户名</p><p>1
+exit //返回到原来用户 或者ctrl+D 退出当前用户</p><h2 id=8-7-查询当前用户87-查询当前用户><a href=#8-7-%E6%9F%A5%E8%AF%A2%E5%BD%93%E5%89%8D%E7%94%A8%E6%88%B7></a>8.7 查询当前用户</h2><p>1
+whoami / who am i</p><h2 id=8-8-用户组88-用户组><a href=#8-8-%E7%94%A8%E6%88%B7%E7%BB%84></a>8.8 用户组</h2><h3 id=8-8-1-介绍881-介绍><a href=#8-8-1-%E4%BB%8B%E7%BB%8D></a>8.8.1 介绍</h3><ul><li>类似于角色，系统可以对有共性的多个用户进行统一的管理</li></ul><h3 id=8-8-2-增加组882-增加组><a href=#8-8-2-%E5%A2%9E%E5%8A%A0%E7%BB%84></a>8.8.2 增加组</h3><p>1
+groupadd 组名 //创建组</p><h3 id=8-8-3-删除组883-删除组><a href=#8-8-3-%E5%88%A0%E9%99%A4%E7%BB%84></a>8.8.3 删除组</h3><p>1
+groupdel 组名 //删除组</p><h3 id=8-8-4-增加用户直接指定组884-增加用户直接指定组><a href=#8-8-4-%E5%A2%9E%E5%8A%A0%E7%94%A8%E6%88%B7%E7%9B%B4%E6%8E%A5%E6%8C%87%E5%AE%9A%E7%BB%84></a>8.8.4 增加用户直接指定组</h3><p>1
+useradd -g 用户组 用户名</p><h3 id=8-8-5-修改用户的组885-修改用户的组><a href=#8-8-5-%E4%BF%AE%E6%94%B9%E7%94%A8%E6%88%B7%E7%9A%84%E7%BB%84></a>8.8.5 修改用户的组</h3><p>1
+usermod -g 用户组 用户名 /将用户改组</p><h2 id=8-9-用户配置文件89-用户配置文件><a href=#8-9-%E7%94%A8%E6%88%B7%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6></a>8.9 用户配置文件</h2><p>1
+2
+3
+4
+5
+/etc/passwd //用户配置文件</p><p>/etc/group //组胚子文件</p><p>/etc/shadow //口令配置文件(密码和登录信息)加密</p><h3 id=8-9-1-etc-passwd891-etcpasswd><a href=#8-9-1-etc-passwd></a>8.9.1 /etc/passwd</h3><p>1
+2
+leeyf:x:1000:1000::/home/leeyf:/bin/bash
+用户名：加密密码：用户id:用户组id::家目录：shell路径</p><h3 id=8-9-2-etc-group892--etcgroup><a href=#8-9-2-etc-group></a>8.9.2 /etc/group</h3><p>1
+2
+leeyf:x:1000
+组名：口令组标识符：组id：组内用户列表(隐藏)</p><h1 id=第九章-linux实操篇-实用指令第九章-linux实操篇-实用指令><a href=#%E7%AC%AC%E4%B9%9D%E7%AB%A0-Linux%E5%AE%9E%E6%93%8D%E7%AF%87-%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4></a>第九章 Linux实操篇 实用指令</h1><h2 id=9-1-运行级别91-运行级别><a href=#9-1-%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB></a>9.1 运行级别</h2><h3 id=9-1-1-介绍911-介绍><a href=#9-1-1-%E4%BB%8B%E7%BB%8D></a>9.1.1 介绍</h3><p>级别
+含义</p><p>0
+关机</p><p>1
+单用户（找回密码）</p><p>2
+多用户无网络服务</p><p>3
+多用户有网络服务</p><p>4
+保留</p><p>5
+图形界面</p><p>6
+重启</p><h3 id=9-1-2-配置文件912-配置文件><a href=#9-1-2-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6></a>9.1.2 配置文件</h3><p>1
+2
+/etc/inittab
+id:5:initdefault 这行中的数字为运行级别</p><h2 id=9-2-切换指定运行级别92-切换指定运行级别><a href=#9-2-%E5%88%87%E6%8D%A2%E6%8C%87%E5%AE%9A%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB></a>9.2 切换指定运行级别</h2><p>1
+init [012356]</p><h3 id=面试题如何找回丢失的root密码面试题如何找回丢失的root密码><a href=#%E9%9D%A2%E8%AF%95%E9%A2%98%EF%BC%9A%E5%A6%82%E4%BD%95%E6%89%BE%E5%9B%9E%E4%B8%A2%E5%A4%B1%E7%9A%84root%E5%AF%86%E7%A0%81></a>面试题：如何找回丢失的root密码</h3><p>解题思路：进入单用户</p><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+//centos7
+引导界面
+e 进入编辑界面
+ro 改 rw
+删除 rhjb quite
+utf8 后 + init/bin/sh
+ctrl+x 执行进入单用户
+passwd root
+如果乱码 LANG=en
+修改后
+touch /.autorelabel
+然后重启</p><h2 id=9-3-帮助指令93-帮助指令><a href=#9-3-%E5%B8%AE%E5%8A%A9%E6%8C%87%E4%BB%A4></a>9.3 帮助指令</h2><h3 id=9-3-1-介绍931-介绍><a href=#9-3-1-%E4%BB%8B%E7%BB%8D></a>9.3.1 介绍</h3><p>当我们对某个指令不熟悉时，我们可以使用Linux提供的帮助指令来了解指令的使用方法。</p><h3 id=9-3-2-man932-man><a href=#9-3-2-man></a>9.3.2 man</h3><ul><li><strong>man</strong> [<strong>命令或者配置文件</strong>]</li></ul><h3 id=9-3-3-help933-help><a href=#9-3-3-help></a>9.3.3 help</h3><ul><li><strong>help</strong> [<strong>命令或者配置文件</strong>]</li></ul><h3 id=9-3-4-百度更直接934-百度更直接><a href=#9-3-4-%E7%99%BE%E5%BA%A6%E6%9B%B4%E7%9B%B4%E6%8E%A5></a>9.3.4 百度更直接</h3><h2 id=9-4-文件目录类94-文件目录类><a href=#9-4-%E6%96%87%E4%BB%B6%E7%9B%AE%E5%BD%95%E7%B1%BB></a>9.4 文件目录类</h2><h3 id=9-4-1-pwd指令941-pwd指令><a href=#9-4-1-pwd%E6%8C%87%E4%BB%A4></a>9.4.1 pwd指令</h3><ul><li>基础语法
+pwd (显示当前目录绝对路径)</li></ul><h3 id=9-4-2-ls指令942-ls指令><a href=#9-4-2-ls%E6%8C%87%E4%BB%A4></a>9.4.2 ls指令</h3><ul><li><p>基础语法
+ls [选项] [目录或文件]
+-a ,显示当前目录所有文件和目录，包括隐藏</p></li><li><p>-l ,以列表的方式显示信息</p></li><li><p>更多选项 man ls查看</p></li></ul><h3 id=9-4-3-cd指令943-cd指令><a href=#9-4-3-cd%E6%8C%87%E4%BB%A4></a>9.4.3 cd指令</h3><ul><li><p>基础语法
+cd [参数] [路径]</p></li><li><p>常用参数：
+绝对路径和相对路径
+绝对 ：/ 开始</p></li><li><p>相对：从当前位置开始</p></li><li><p>cd ~ 回到家目录</p></li><li><p>cd .. 回到当前目录的上一级目录</p></li></ul><h3 id=9-4-4-mkdir指令-amp-rmdir指令944-mkdir指令rmdir指令><a href=#9-4-4-mkdir%E6%8C%87%E4%BB%A4-amp-rmdir%E6%8C%87%E4%BB%A4></a>9.4.4 mkdir指令&amp;rmdir指令</h3><ul><li><p>基础语法
+mkdir [选项] 要创建的目录</p></li><li><p>rmdir [选项] 要删除的空目录</p></li><li><p>常用选项
+-p 创建多级目录</p></li><li><p>删除非空目录
+rm -rf 目录</p></li></ul><h3 id=9-4-5-touch-指令945-touch-指令><a href=#9-4-5-touch-%E6%8C%87%E4%BB%A4></a>9.4.5 touch 指令</h3><ul><li><p>基础语法
+touch 文件名称 创建空文件</p></li><li><p>touch [文件1，文件2] 可一次性创建多个文件</p></li></ul><h3 id=9-4-6-cp-指令946-cp-指令><a href=#9-4-6-cp-%E6%8C%87%E4%BB%A4></a>9.4.6 cp 指令</h3><ul><li><p>拷贝指令</p></li><li><p>基础语法
+cp [选项] source dest</p></li><li><p>常用选项
+-r 递归复制整个文件夹</p></li><li><p>强制覆盖
+/cp 直接覆盖</p></li></ul><h3 id=9-4-7-rm指令947-rm指令><a href=#9-4-7-rm%E6%8C%87%E4%BB%A4></a>9.4.7 rm指令</h3><ul><li><p>rm 移除文件或目录</p></li><li><p>基本语法
+rm [选项] 文件或目录</p></li><li><p>常用选项
+-r 递归删除整个文件夹</p></li><li><p>-f 强制删除不提示</p></li></ul><h3 id=9-4-8-mv指令948-mv指令><a href=#9-4-8-mv%E6%8C%87%E4%BB%A4></a>9.4.8 mv指令</h3><ul><li><p>mv 移动文件与目录或重命名</p></li><li><p>基本语法
+mv oldNameFile newNameFile 重命名</p></li><li><p>mv /temp/movefile /targetFolder 移动文件</p></li></ul><h3 id=9-4-9-cat指令949-cat指令><a href=#9-4-9-cat%E6%8C%87%E4%BB%A4></a>9.4.9 cat指令</h3><ul><li><p>查看文件内容</p></li><li><p>基础语法
+cat [选项] 内容</p></li><li><p>常用选项
+-n 显示行号</p></li><li><p>常用法
+cat [选项] 内容 | more 以cat打开文件，并使用分页显示</p></li></ul><h3 id=9-4-10-more指令9410-more指令><a href=#9-4-10-more%E6%8C%87%E4%BB%A4></a>9.4.10 more指令</h3><ul><li><p>基于vi编辑器的文本过滤器，以全屏幕的方式按页显示内容</p></li><li><p>基础语法</p></li></ul><p>more 要查看的文件</p><ul><li>内置快捷键</li></ul><p>快捷键
+功能</p><p>空白键space
+向下翻一页</p><p>Enter
+向下翻一行</p><p>q
+立即离开more,不再显示文件内容</p><p>ctrl+F
+向下滚动一屏</p><p>ctrl+B
+返回上一屏</p><p>=
+输出当前行号</p><p>f
+输出文件名和当前行的行号</p><h3 id=9-4-11-less指令9411-less指令><a href=#9-4-11-less%E6%8C%87%E4%BB%A4></a>9.4.11 less指令</h3><ul><li>分屏查看文件内容，功能与more相似，但比more强大。</li></ul><p>less在显示文件内容时，并部署一次将整个文件加载之后再显示，而是根据显示需要加载内容，对于<strong>显示大型文件具有较高的效率</strong>。</p><p>操作
+功能说明</p><p>空白键
+向下移动一页</p><p>[pagedown]
+向下翻动一页</p><p>[pageup]
+向上翻动一页</p><p>/字串
+向下搜寻[字串]，n向下查询，N向上查询</p><p>？字串
+向上搜寻[字串]，n向上查询，N向下查询</p><p>q
+离开less程序</p><h3 id=9-4-12-gt-指令和-gt-gt-指令9412-指令和-指令><a href=#9-4-12-gt-%E6%8C%87%E4%BB%A4%E5%92%8C-gt-gt-%E6%8C%87%E4%BB%A4></a>9.4.12 >指令和 &#187;指令</h3><ul><li><blockquote><p>输出重定向 和　&#187; 追加</p></blockquote></li></ul><blockquote><p>覆盖原来内容</p></blockquote><ul><li><blockquote><blockquote><p>追加内容在原文件</p></blockquote></blockquote></li><li><p>基本语法
+ls -l > 文件 列表的内容写入文件中</p></li><li><p>ls -al &#187; 文件 列表的内容追加到文件的末尾</p></li><li><p>cat 文件1 > 文件2 将文件1的内容覆盖到文件2</p></li><li><p>echo &ldquo;内容&rdquo; &#187; 文件</p></li></ul><h3 id=9-4-13-echo指令9413-echo指令><a href=#9-4-13-echo%E6%8C%87%E4%BB%A4></a>9.4.13 echo指令</h3><ul><li><p>输出内容到控制台</p></li><li><p>echo [选项] [输出内容]</p></li><li><p>echo $PATH 输出环境变量</p></li></ul><h3 id=9-4-14-head指令9414-head指令><a href=#9-4-14-head%E6%8C%87%E4%BB%A4></a>9.4.14 head指令</h3><ul><li><p>用于显示文件的开头部分内容，默认情况head指令显示文件的前10行内容</p></li><li><p>基本语法
+head 文件 查看文件头10行内容</p></li><li><p>head -n 5 查看文件头5行内容</p></li></ul><h3 id=9-4-15-tail指令9415-tail指令><a href=#9-4-15-tail%E6%8C%87%E4%BB%A4></a>9.4.15 tail指令</h3><ul><li><p>用于输出文件尾部的内容，默认情况下tail 显示文件的后10行内容</p></li><li><p>基本语法
+tail 文件 查看文件后10行内容</p></li><li><p>tail -n 5 文件 查看文件后5行内容</p></li><li><p>tail -f 文件 实时追踪该文档的所有更新</p></li></ul><h3 id=9-4-16-ln指令9416-ln指令><a href=#9-4-16-ln%E6%8C%87%E4%BB%A4></a>9.4.16 ln指令</h3><ul><li><p>软链接～符号链接 ,主要存放了链接其他文件的路径</p></li><li><p>基本语法</p></li></ul><p>ln -s [原文件或目录] [软链接名] 给原文件创建一个软链接</p><ul><li>删除软链接</li></ul><p>1
+rm -rf LinkToROot</p><ul><li><strong>当用pwd查看目录时，仍然是软链接所在目录</strong></li></ul><h3 id=9-4-17-history指令9417-history指令><a href=#9-4-17-history%E6%8C%87%E4%BB%A4></a>9.4.17 history指令</h3><ul><li><p>查看已经执行过历史命令，也可以执行历史指令</p></li><li><p>基本语法</p></li></ul><p>1
+history</p><ul><li><p>history显示所有执行过的所有历史指令</p></li><li><p>history 10 显示最近执行过的10个指令</p></li><li><p>!10 执行历史指令中编号为10的指令</p></li></ul><h2 id=9-5-时间日期类95-时间日期类><a href=#9-5-%E6%97%B6%E9%97%B4%E6%97%A5%E6%9C%9F%E7%B1%BB></a>9.5 时间日期类</h2><h3 id=9-5-1-date指令951-date指令><a href=#9-5-1-date%E6%8C%87%E4%BB%A4></a>9.5.1 date指令</h3><h4 id=9-5-1-1-显示当前日期9511-显示当前日期><a href=#9-5-1-1-%E6%98%BE%E7%A4%BA%E5%BD%93%E5%89%8D%E6%97%A5%E6%9C%9F></a>9.5.1.1 显示当前日期</h4><ul><li><p>基本用法
+date 显示当前时间</p></li><li><p>date +"%Y" 显示当前年</p></li><li><p>date +"%m"显示当前月</p></li><li><p>date +"%d"显示当前日</p></li><li><p>date +"%Y-%m-%d-%H%M%S" 显示年月日时分秒</p></li></ul><h4 id=9-5-1-2-设置系统时间9512-设置系统时间><a href=#9-5-1-2-%E8%AE%BE%E7%BD%AE%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%97%B4></a>9.5.1.2 设置系统时间</h4><ul><li>基本语法
+date -s 字符串时间</li></ul><h3 id=9-5-2-cal-指令952-cal-指令><a href=#9-5-2-cal-%E6%8C%87%E4%BB%A4></a>9.5.2 cal 指令</h3><ul><li><p>查看日历指令</p></li><li><p>基本语法
+cal [选项] 不加选项，显示本月日历</p></li><li><p>cal 2020 显示 2020年日历</p></li></ul><h2 id=9-6-搜索查询类96-搜索查询类><a href=#9-6-%E6%90%9C%E7%B4%A2%E6%9F%A5%E8%AF%A2%E7%B1%BB></a>9.6 搜索查询类</h2><h3 id=9-6-1-find指令961-find指令><a href=#9-6-1-find%E6%8C%87%E4%BB%A4></a>9.6.1 find指令</h3><ul><li><p>从指定目录向下递归遍历各个子目录，将满足条件的 <strong>文件或目录</strong>显示在终端</p></li><li><p>基本语法</p></li></ul><p>find [搜索范围] [选项]</p><ul><li>选项说明</li></ul><p>-name &lt;查询方式> 按照指定的文件名查找模式或文件</p><ul><li><p>-user&lt;用户名> 查找属于指定用户名的所有文件</p></li><li><p>-size&lt;文件大小> 按照指定的文件大小查找文件</p></li></ul><p>find / -size +20M 查找大于20M的文件</p><p>find / -size -20M 查找小于20M的文件</p><h3 id=9-6-2-locate指令962-locate指令><a href=#9-6-2-locate%E6%8C%87%E4%BB%A4></a>9.6.2 locate指令</h3><ul><li><p>快速定位文件路径。locate指令利用事先建立的系统中所有的文件名称及路径的locate数据库实现快速定位给定的文件。</p></li><li><p>为了保证查询结果的准确度，管理员必须顶起更新locate时刻</p></li><li><p>由于locate基于数据库进行查询，所以第一次运行前，使用updatedb指令创建locate数据库</p></li><li><p>基本语法
+locate 查询文件</p></li></ul><h3 id=9-6-3-grep指令和管道符号963-grep指令和管道符号><a href=#9-6-3-grep%E6%8C%87%E4%BB%A4%E5%92%8C%E7%AE%A1%E9%81%93%E7%AC%A6%E5%8F%B7></a>9.6.3 grep指令和管道符号|</h3><ul><li><p>过滤查找。 管道符号”|”，表示将前面的命令结果交给后面的命令处理</p></li><li><p>基本语法
+grep [选项] 查找内容的源文件</p></li><li><p>常用选项
+-n 显示匹配行及行号</p></li><li><p>-i 忽略字母大小写</p></li></ul><h2 id=9-7-压缩跟解压缩类97-压缩跟解压缩类><a href=#9-7-%E5%8E%8B%E7%BC%A9%E8%B7%9F%E8%A7%A3%E5%8E%8B%E7%BC%A9%E7%B1%BB></a>9.7 压缩跟解压缩类</h2><h3 id=9-7-1-gzip-gunzip指令971-gzipgunzip指令><a href=#9-7-1-gzip-gunzip%E6%8C%87%E4%BB%A4></a>9.7.1 gzip/gunzip指令</h3><ul><li><p>基本语法
+gzip 文件 压缩为 *.gz文件</p></li><li><p>gunzip 文件 解压缩 将*.gz 文件解压</p></li><li><p>细节说明
+使用gzip压缩后不会保留原文件</p></li></ul><h3 id=9-7-2-zip-unzip指令972-zipunzip指令><a href=#9-7-2-zip-unzip%E6%8C%87%E4%BB%A4></a>9.7.2 zip/unzip指令</h3><ul><li><p>zip用于压缩，unzip用于解压</p></li><li><p>基本语法
+zip [选项] xxx.zip 要压缩的内容 压缩文件和目录</p></li><li><p>unzip [选项] xxx.zip 解压缩文件</p></li><li><p>常用选项
+zip -r 递归压缩，压缩目录</p></li><li><p>unzip -d 目录 指定解压缩后文件的存放目录</p></li></ul><h3 id=9-7-3-tar指令973-tar指令><a href=#9-7-3-tar%E6%8C%87%E4%BB%A4></a>9.7.3 tar指令</h3><ul><li><p>打包指令</p></li><li><p>基本语法
+tar [选项] xxx.tar.gz打包内容</p></li><li><p>选项说明
+-c产生tar打包文件</p></li><li><p>-v显示详细信息</p></li><li><p>-f指定压缩后的文件名</p></li><li><p>-z打包同时压缩</p></li><li><p>-x解包tar文件</p></li><li><p>tar -zcvf a.tar.gz 要压缩的文件 压缩打包</p></li><li><p>tar -zxvf a.tar.gz 解压打包</p></li></ul><h1 id=第十章-linux实操篇-组管理和权限管理第十章-linux实操篇-组管理和权限管理><a href=#%E7%AC%AC%E5%8D%81%E7%AB%A0-Linux%E5%AE%9E%E6%93%8D%E7%AF%87-%E7%BB%84%E7%AE%A1%E7%90%86%E5%92%8C%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86></a>第十章 Linux实操篇 组管理和权限管理</h1><h2 id=10-1-linux组基本介绍101-linux组基本介绍><a href=#10-1-Linux%E7%BB%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D></a>10.1 Linux组基本介绍</h2><ul><li>每个用户必须属于一个组，不能独立于组外，在linux中每个文件有所有者、所在组、其他组的概念</li></ul><h2 id=10-2-文件-目录的所有者102-文件目录的所有者><a href=#10-2-%E6%96%87%E4%BB%B6-%E7%9B%AE%E5%BD%95%E7%9A%84%E6%89%80%E6%9C%89%E8%80%85></a>10.2 文件/目录的所有者</h2><h3 id=10-2-1-查看所有者1021-查看所有者><a href=#10-2-1-%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E8%80%85></a>10.2.1 查看所有者</h3><ul><li>基本语法
+ls -ahl查看文件的所有者</li></ul><h3 id=10-2-2-修改文件所有者1022-修改文件所有者><a href=#10-2-2-%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%89%80%E6%9C%89%E8%80%85></a>10.2.2 修改文件所有者</h3><ul><li>基本语法
+chown 用户名 文件名 修改文件所有者</li></ul><h2 id=10-3-组的创建103-组的创建><a href=#10-3-%E7%BB%84%E7%9A%84%E5%88%9B%E5%BB%BA></a>10.3 组的创建</h2><h3 id=10-3-1-创建组1031-创建组><a href=#10-3-1-%E5%88%9B%E5%BB%BA%E7%BB%84></a>10.3.1 创建组</h3><ul><li>基本语法
+groupadd 组名</li></ul><h3 id=10-3-2-创建指定组的用户1032-创建指定组的用户><a href=#10-3-2-%E5%88%9B%E5%BB%BA%E6%8C%87%E5%AE%9A%E7%BB%84%E7%9A%84%E7%94%A8%E6%88%B7></a>10.3.2 创建指定组的用户</h3><ul><li>基本语法
+useradd -g 组名 用户名</li></ul><h2 id=10-4-文件或者目录所在组104-文件或者目录所在组><a href=#10-4-%E6%96%87%E4%BB%B6%E6%88%96%E8%80%85%E7%9B%AE%E5%BD%95%E6%89%80%E5%9C%A8%E7%BB%84></a>10.4 文件或者目录所在组</h2><ul><li>当用户创建文件后，用户所在组就是文件所在组</li></ul><h3 id=10-4-1-查看所有组1041-查看所有组><a href=#10-4-1-%E6%9F%A5%E7%9C%8B%E6%89%80%E6%9C%89%E7%BB%84></a>10.4.1 查看所有组</h3><ul><li>基本语法
+ls-ahl</li></ul><h3 id=10-4-2-修改所在组1042-修改所在组><a href=#10-4-2-%E4%BF%AE%E6%94%B9%E6%89%80%E5%9C%A8%E7%BB%84></a>10.4.2 修改所在组</h3><ul><li>基本语法
+chgrp== 用户组 文件名</li></ul><h2 id=10-5-改变用户所在组105-改变用户所在组><a href=#10-5-%E6%94%B9%E5%8F%98%E7%94%A8%E6%88%B7%E6%89%80%E5%9C%A8%E7%BB%84></a>10.5 改变用户所在组</h2><h3 id=10-5-1-改变用户所在组1051-改变用户所在组><a href=#10-5-1-%E6%94%B9%E5%8F%98%E7%94%A8%E6%88%B7%E6%89%80%E5%9C%A8%E7%BB%84></a>10.5.1 改变用户所在组</h3><ul><li>基本语法
+usermod -g 组名 用户名</li></ul><h3 id=10-5-2-改变用户登录的初始目录1052-改变用户登录的初始目录><a href=#10-5-2-%E6%94%B9%E5%8F%98%E7%94%A8%E6%88%B7%E7%99%BB%E5%BD%95%E7%9A%84%E5%88%9D%E5%A7%8B%E7%9B%AE%E5%BD%95></a>10.5.2 改变用户登录的初始目录</h3><ul><li>基本语法
+usermod -d 目录名 用户名</li></ul><h2 id=10-6-权限管理106-权限管理><a href=#10-6-%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86></a>10.6 权限管理</h2><h3 id=10-6-1-基本介绍1061-基本介绍><a href=#10-6-1-%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D></a>10.6.1 基本介绍</h3><h4 id=10-6-1-1-文件类型10611-文件类型><a href=#10-6-1-1-%E6%96%87%E4%BB%B6%E7%B1%BB%E5%9E%8B></a>10.6.1.1 文件类型</h4><ul><li>==-==———</li></ul><p>类型
+定义</p><ul><li></li></ul><p>普通文件</p><p>d
+目录</p><p>l
+链接文件</p><p>c
+字符设备【键盘、鼠标】</p><p>b
+块文件【硬盘】</p><h4 id=10-6-1-2-所有者权限10612-所有者权限><a href=#10-6-1-2-%E6%89%80%E6%9C%89%E8%80%85%E6%9D%83%E9%99%90></a>10.6.1.2 所有者权限</h4><ul><li>-==—==—— 1 root root 148 Aug 20 11:58 a.txt</li></ul><p>类型
+定义</p><p>r
+读</p><p>w
+写</p><p>x
+执行</p><h4 id=10-6-1-3-所在组权限10613-所在组权限><a href=#10-6-1-3-%E6%89%80%E5%9C%A8%E7%BB%84%E6%9D%83%E9%99%90></a>10.6.1.3 所在组权限</h4><ul><li>—-==—==— 1 root root 148 Aug 20 11:58 a.txt</li></ul><p>类型
+定义</p><p>r
+读</p><p>w
+写</p><p>x
+执行</p><h4 id=10-6-1-4-其他组用户权限10614-其他组用户权限><a href=#10-6-1-4-%E5%85%B6%E4%BB%96%E7%BB%84%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90></a>10.6.1.4 其他组用户权限</h4><ul><li>——-==—== 1 root root 148 Aug 20 11:58 a.txt</li></ul><p>类型
+定义</p><p>r
+读</p><p>w
+写</p><p>x
+执行</p><h4 id=10-6-1-5-num10615-num><a href=#10-6-1-5-num></a>10.6.1.5 num</h4><ul><li><p>———- ==1== root root 148 Aug 20 11:58 a.txt
+1 如果是文件代表 硬链接的数目</p></li><li><p>1 如果是目录代表 该目录子目录的个数</p></li></ul><h4 id=10-6-1-6-size10616-size><a href=#10-6-1-6-size></a>10.6.1.6 size</h4><ul><li><p>———-1 root root ==148== Aug 20 11:58 a.txt
+148 代表文件大小</p></li><li><p>如果是目录大小为4096</p></li></ul><h4 id=10-6-1-7-time10617-time><a href=#10-6-1-7-time></a>10.6.1.7 time</h4><ul><li>———- 1 root root 148 ==Aug 20 11:58== a.txt
+Aug 20 11:58 最后修改时间</li></ul><h4 id=10-6-1-8-name10618-name><a href=#10-6-1-8-name></a>10.6.1.8 name</h4><ul><li>———-1 root root 148 Aug 20 11:58 ==a.txt==
+a.txt 文件名</li></ul><h3 id=10-6-2-详解rwx权限1062-详解rwx权限><a href=#10-6-2-%E8%AF%A6%E8%A7%A3rwx%E6%9D%83%E9%99%90></a>10.6.2 详解rwx权限</h3><h4 id=10-6-2-1-rwx作用到文件10621-rwx作用到文件><a href=#10-6-2-1-rwx%E4%BD%9C%E7%94%A8%E5%88%B0%E6%96%87%E4%BB%B6></a>10.6.2.1 rwx作用到文件</h4><p>符号
+代表</p><p>r
+读取查看</p><p>w
+可以修改，不代表可以删除(==删除条件==对该文件所在目录有写权限，才能删除)</p><p>x
+代表可以被执行</p><h4 id=10-6-2-2-rwx作用在目录10622-rwx作用在目录><a href=#10-6-2-2-rwx%E4%BD%9C%E7%94%A8%E5%9C%A8%E7%9B%AE%E5%BD%95></a>10.6.2.2 rwx作用在目录</h4><p>符号
+代表</p><p>r
+可读取</p><p>w
+可以修改，目录内创建+删除+重命名目录</p><p>x
+可以进入目录</p><h3 id=10-6-3-权限管理-chmod1063-权限管理-chmod><a href=#10-6-3-%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86-chmod></a>10.6.3 权限管理-chmod</h3><h4 id=10-6-3-1-通过chmod指令可以修改文件或目录的权限10631-通过chmod指令可以修改文件或目录的权限><a href=#10-6-3-1-%E9%80%9A%E8%BF%87chmod%E6%8C%87%E4%BB%A4%EF%BC%8C%E5%8F%AF%E4%BB%A5%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95%E7%9A%84%E6%9D%83%E9%99%90></a>10.6.3.1 通过chmod指令，可以修改文件或目录的权限</h4><ul><li>第一种 + - = 变更权限</li></ul><p>符号
+含义</p><p>u
+所有者</p><p>g
+所有组</p><p>o
+其他人</p><p>a
+所有人(u,g,o)</p><ul><li><p>基本用法
+chmod u=rwx,g=rx,o=x 文件目录名</p></li><li><p>chmod o+w 文件目录名</p></li><li><p>chmod a-x 文件目录名</p></li><li><p>案例
+给abc文件的所有者 读写执行 的权限，给所在组 读执行权限 ，给其他组读执行权限
+chmod u=rwx,g=xr,o=xr abc</p></li><li><p>给abc文件的所有者除去执行的权限，增加组写的权限
+chmod u-x,g+w abc</p></li><li><p>给abc文件的所有用户添加读的权限
+chmod a+r abc</p></li></ul><h4 id=10-6-3-2-通过数字变更权限10632-通过数字变更权限><a href=#10-6-3-2-%E9%80%9A%E8%BF%87%E6%95%B0%E5%AD%97%E5%8F%98%E6%9B%B4%E6%9D%83%E9%99%90></a>10.6.3.2 通过数字变更权限</h4><p>==规则== ：r=4 w=2 x=1 rwx=4+2+1=7</p><p>chmod u=rwx,g=rx,o=x 文件目录</p><p>相当于 chmod 751 文件目录</p><h3 id=10-6-4-修改文件所有者-amp-所有组1064-修改文件所有者所有组><a href=#10-6-4-%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6%E6%89%80%E6%9C%89%E8%80%85-amp-%E6%89%80%E6%9C%89%E7%BB%84></a>10.6.4 修改文件所有者&所有组</h3><h4 id=10-6-4-1-改变文件所有者-chmod10641-改变文件所有者-chmod><a href=#10-6-4-1-%E6%94%B9%E5%8F%98%E6%96%87%E4%BB%B6%E6%89%80%E6%9C%89%E8%80%85-chmod></a>10.6.4.1 改变文件所有者-chmod</h4><ul><li><p>chown newowner file 改变文件所有者</p></li><li><p>chown newowner:newgroup file 改变用户的所有者和所有组</p></li><li><p>-R 如果是目录，择使其下所有子文件或目录递归生效</p></li></ul><h4 id=10-6-4-2-改变文件所有组-chgrp10642-改变文件所有组-chgrp><a href=#10-6-4-2-%E6%94%B9%E5%8F%98%E6%96%87%E4%BB%B6%E6%89%80%E6%9C%89%E7%BB%84-chgrp></a>10.6.4.2 改变文件所有组-chgrp</h4><ul><li><p>chgrp newgroup file 改变文件的所有组</p></li><li><p>-R 如果是目录，择使其下所有子文件或目录递归生效</p></li></ul><h2 id=10-7实践警匪游戏107实践警匪游戏><a href=#10-7%E5%AE%9E%E8%B7%B5%E2%80%93%E8%AD%A6%E5%8C%AA%E6%B8%B8%E6%88%8F></a>10.7实践–警匪游戏</h2><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+police ，bandit</p><p>jack,jerry: 警察
+xh,xq:土匪
+1.创建组
+2.创建用户
+3.jack 创建一个文件，自己可以读写，本组人可以读写，其他组没有任何权限
+4.jack修改该文件，让其他组可以读，本组人可以读写
+5.xh投靠警察，查看是否可以读写</p><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+groupadd police //创建组
+groupadd bandit //创建组</p><p>useradd -g police jack //创建用户并指定组
+useradd -g police jerry
+useradd -g bandit xh
+useradd -g bandit xq
+passwd 用户 //给所有用户添加密码</p><p>touch a.txt //创建文件</p><p>1
+chmod o-r a.txt</p><p>1
+chmod o+r,g+rw a.txt</p><p>1
+2
+3
+usermod -g police xh //改变xh所在组</p><p>chmod g=rx jack //给所在组 r x权限</p><h1 id=第十一章-linux实操篇-定时任务调度第十一章-linux实操篇-定时任务调度><a href=#%E7%AC%AC%E5%8D%81%E4%B8%80%E7%AB%A0-Linux%E5%AE%9E%E6%93%8D%E7%AF%87-%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6></a>第十一章 Linux实操篇 定时任务调度</h1><h2 id=11-1-crond-任务调度111-crond-任务调度><a href=#11-1-crond-%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6></a>11.1 crond 任务调度</h2><ul><li><p>任务调度，指系统在某个时间执行的特定的命令或程序</p></li><li><p>分类
+1.系统工作，重要工作必须周而复始的执行</p></li><li><p>个别用户工作</p></li><li><p>基本语法
+crontab [选项]</p></li><li><p>常用选项
+-e编辑定时任务</p></li><li><p>-l查看定时任务</p></li><li><p>-r删除当前用户所有定时任务</p></li><li><p>service crond restart 重启任务调度</p></li><li><p>参数细节说明
+*/ * * * * * 指令</p></li></ul><p>项目
+含义
+范围</p><p>第一个’*’
+一小时中的第几分钟
+0-59</p><p>第二个*
+一天中的第几个小时
+0-23</p><p>第三个*
+一个月当中的第几天
+1-31</p><p>第四个*
+一年当中的第几个月
+1-12</p><p>第五个*
+一周中的星期几
+0-7（07是周天）</p><ul><li>特殊说明</li></ul><p>特殊符号
+含义</p><ul><li></li></ul><p>代表任何时间。比如第一个※代表一个消失中每分钟都执行一次的意思</p><p>，
+代表不连续的时间。比如’0 8,12,16 * * * 命令’，代表在每天的8点0坟，12点0分，16点0分都执行一次命令</p><ul><li></li></ul><p>代表连续的时间范围。比如’0 5 * * 1-6 命令’，代表在周一到周六的5点0分执行命令</p><p><em>/n
+代表每隔多久执行一次。比如’</em>/10 * * * * 命令’,代表每隔10分钟执行一次命令</p><ul><li>应用实例
+案例1：每隔1分钟，将当前时间信息，追加到/tmp/mydate文件中
+*/1 * * * * date&#187; /tmp/mydate</li></ul><h1 id=第十二章-linux实操篇-linux磁盘分区和挂载第十二章-linux实操篇-linux磁盘分区和挂载><a href=#%E7%AC%AC%E5%8D%81%E4%BA%8C%E7%AB%A0-Linux%E5%AE%9E%E6%93%8D%E7%AF%87-Linux%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA%E5%92%8C%E6%8C%82%E8%BD%BD></a>第十二章 Linux实操篇 Linux磁盘分区和挂载</h1><h2 id=12-1-分区基础知识121-分区基础知识><a href=#12-1-%E5%88%86%E5%8C%BA%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86></a>12.1 分区基础知识</h2><h3 id=12-1-1-mbr分区1211-mbr分区><a href=#12-1-1-mbr%E5%88%86%E5%8C%BA></a>12.1.1 mbr分区</h3><ul><li><p>最多支持四个主分区</p></li><li><p>系统只能安装在主分区</p></li><li><p>扩展分区要占一个主分区</p></li><li><p>MBR最大只支持2TB，但是拥有最好的兼容性</p></li></ul><h3 id=12-1-2-gtp分区1212-gtp分区><a href=#12-1-2-gtp%E5%88%86%E5%8C%BA></a>12.1.2 gtp分区</h3><ul><li><p>支持无限多个主分区(操作系统可能限制，Windows下最多128个分区)</p></li><li><p>最大支持18EB的大容量(1EB=1024PB，1PB=1024TB)</p></li><li><p>Windows7 64以后支持gtp</p></li></ul><h2 id=12-2分区介绍122分区介绍><a href=#12-2%E5%88%86%E5%8C%BA%E4%BB%8B%E7%BB%8D></a>12.2分区介绍</h2><h3 id=12-2-1-windows分区1221-windows分区><a href=#12-2-1-windows%E5%88%86%E5%8C%BA></a>12.2.1 windows分区</h3><h3 id=12-2-2-linux分区1222-linux分区><a href=#12-2-2-Linux%E5%88%86%E5%8C%BA></a>12.2.2 Linux分区</h3><ul><li><p>原理介绍
+Linux无论有几个分区，分给哪个目录使用，归根结底只有一个根目录。一个独立且唯一的文件结构，每个分区都用来组成整个文件系统的一部分。</p></li><li><p>采用一种”载入”的处理方式，整个文件系统中包含了一整套文件和目录，且将一个分区和一个目录联系起来，这是要载入的一个分区将使用它的存储空间在一个目录下获得</p></li><li><p>示意图</p></li></ul><h2 id=12-3-硬盘说明123-硬盘说明><a href=#12-3-%E7%A1%AC%E7%9B%98%E8%AF%B4%E6%98%8E></a>12.3 硬盘说明</h2><ul><li><p>硬盘分为IDE和SCSI硬盘，目前基本是SCSI硬盘</p></li><li><p>对于==IDE硬盘==,驱动器标识符为’hdx’，hd标明分区所在设备类型x为盘号(a为基本盘，b为基本从属盘，c为辅助主盘，d为辅助从盘)，’~’代表分区，前四个分区用数字1到4表示，他们为主分区或者扩展分区，从5开始为逻辑分区。==hda3==为第一个IDE盘上第三个主分区或者扩展分区，hdb2表示第二个IDE盘上的第二个主分区或扩展分区。</p></li><li><p>对于==SCSI硬盘==则标识为’sdx’,其他标识跟IDE硬盘表示方法一样</p></li><li><p>lsblk -f(老师不离开) 查看系统的分区和挂载情况</p></li></ul><h2 id=12-4-挂载经典案例124-挂载经典案例><a href=#12-4-%E6%8C%82%E8%BD%BD%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B></a>12.4 挂载经典案例</h2><ul><li><p>需求 给Linux增加一块硬盘，挂载到/home/newdisk</p></li><li><p>虚拟机添加硬盘</p></li><li><p>分区 fdisk /dev/sdb</p></li><li><p>格式化 mkfs -t ext4 /dev/sdb x</p></li><li><p>挂载 先创建一个目录 /home/newdisk, 挂载 ,mount /dev/sdbx /home/newdisk</p></li><li><p>设置自动挂载 vim /etc/fstab
+/dev/sdbx /home/newdisk ext4 defaults 0 0</p></li><li><p>断掉挂载 umount /dev/sdb1</p></li></ul><h2 id=12-5-查询系统整体磁盘使用情况125-查询系统整体磁盘使用情况><a href=#12-5-%E6%9F%A5%E8%AF%A2%E7%B3%BB%E7%BB%9F%E6%95%B4%E4%BD%93%E7%A3%81%E7%9B%98%E4%BD%BF%E7%94%A8%E6%83%85%E5%86%B5></a>12.5 查询系统整体磁盘使用情况</h2><h3 id=12-5-1-df指令1251-df指令><a href=#12-5-1-df%E6%8C%87%E4%BB%A4></a>12.5.1 df指令</h3><ul><li>基本语法
+df -lh</li></ul><h3 id=12-5-2-du指令1252-du指令><a href=#12-5-2-du%E6%8C%87%E4%BB%A4></a>12.5.2 du指令</h3><ul><li><p>基本语法
+du -h /目录</p></li><li><p>选项
+-s指定目录占用大小汇总</p></li><li><p>-h带计量单位</p></li><li><p>-a含文件</p></li><li><p>&ndash;max-depth=1 子目录深度</p></li><li><p>-c 列出明细同时，增加汇总值</p></li><li><p>应用实例
+查询/opt目录的磁盘占用情况，深度为1</p></li></ul><h2 id=12-6-磁盘情况-工作实用指令126-磁盘情况-工作实用指令><a href=#12-6-%E7%A3%81%E7%9B%98%E6%83%85%E5%86%B5-%E5%B7%A5%E4%BD%9C%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4></a>12.6 磁盘情况-工作实用指令</h2><ul><li><p>统计/home文件夹下文件的个数
+ls -l /home/leeyf | grep &lsquo;^-&rsquo; | wc -l</p></li><li><p>ls 列出来</p></li><li><p>grep 过滤 - 打头的文件</p></li><li><p>wc统计</p></li><li><p>统计/home下面目录的个数
+ls -l /home/leeyf | grep &lsquo;^d&rsquo; | wc -l</p></li><li><p>统计/home文件夹下文件的个数，包括子文件夹里的
+ls -lR /home/leeyf | grep &lsquo;^-&rsquo; | wc -l</p></li><li><p>-R 递归</p></li><li><p>统计文件夹下目录的个数
+ls -lR /home/leeyf | grep &lsquo;^d&rsquo; | wc -l</p></li><li><p>用树状图显示目录结构
+tree 目录</p></li></ul><h1 id=第十三章-linux实操篇-网络配置第十三章-linux实操篇-网络配置><a href=#%E7%AC%AC%E5%8D%81%E4%B8%89%E7%AB%A0-Linux%E5%AE%9E%E6%93%8D%E7%AF%87-%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE></a>第十三章 Linux实操篇 网络配置</h1><h2 id=13-1-linux网络配置原理图含虚拟机131-linux网络配置原理图含虚拟机><a href=#13-1-Linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86%E5%9B%BE%EF%BC%88%E5%90%AB%E8%99%9A%E6%8B%9F%E6%9C%BA%EF%BC%89></a>13.1 Linux网络配置原理图（含虚拟机）</h2><ul><li>目前的网络配置采用NAT模式</li></ul><p>NAT模式(网络环境)</p><h2 id=13-2-查看网络ip跟网关132-查看网络ip跟网关><a href=#13-2-%E6%9F%A5%E7%9C%8B%E7%BD%91%E7%BB%9Cip%E8%B7%9F%E7%BD%91%E5%85%B3></a>13.2 查看网络ip跟网关</h2><ul><li>ifconfig</li></ul><h2 id=13-3-测试网络联通133-测试网络联通><a href=#13-3-%E6%B5%8B%E8%AF%95%E7%BD%91%E7%BB%9C%E8%81%94%E9%80%9A></a>13.3 测试网络联通</h2><ul><li>ping</li></ul><h2 id=13-4-linux-网络环境配置134-linux-网络环境配置><a href=#13-4-Linux-%E7%BD%91%E7%BB%9C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE></a>13.4 Linux 网络环境配置</h2><ul><li><p>自动获取（获取的ip可能不一样）不适用于做服务器</p></li><li><p>修改配置文件指定ip
+直接修改配置文件来指定ip,并且可以连接到外网</p></li><li><p>编辑 vim /etc/sysconfig/network-scripts/ifcfg-eth0</p></li><li></li></ul><h1 id=第十四章-linux实操篇-进程管理第十四章-linux实操篇-进程管理><a href=#%E7%AC%AC%E5%8D%81%E5%9B%9B%E7%AB%A0-Linux%E5%AE%9E%E6%93%8D%E7%AF%87-%E8%BF%9B%E7%A8%8B%E7%AE%A1%E7%90%86></a>第十四章 Linux实操篇 进程管理</h1><h2 id=14-1-基本介绍141-基本介绍><a href=#14-1-%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D></a>14.1 基本介绍</h2><ul><li><p>Linux中每个执行的程序都称为一个进程，都分配一个ID号</p></li><li><p>每一个进程都对应一个父进程，而父进程可以复制多个进程</p></li><li><p>每个进程都可能以两种方式存在，==前台与后台==</p></li><li><p>一般 系统的服务都是以后台运行的，常驻在后台，直到关机结束</p></li></ul><h2 id=14-2-ps指令142-ps指令><a href=#14-2-ps%E6%8C%87%E4%BB%A4></a>14.2 ps指令</h2><ul><li><p>显示系统执行的进程</p></li><li><p>基本语法
+ps -a:显示当前终端的所有进程信息</p></li><li><p>ps -u:以用户个事显示进程信息</p></li><li><p>ps -x:显示后台进程运行的参数</p></li><li><p>ps -aux |grep xxx过滤查询</p></li><li></li><li><p>ps -ef 查看父进程
+e 显示所有进程</p></li><li><p>f 全格式</p></li></ul><h2 id=14-3-终止进程kill-和killall143-终止进程kill-和killall><a href=#14-3-%E7%BB%88%E6%AD%A2%E8%BF%9B%E7%A8%8Bkill-%E5%92%8Ckillall></a>14.3 终止进程kill 和killall</h2><ul><li><p>kill [选项] PID 强制终止进程通过进程号</p></li><li><p>killall 进程名称 通过进程名称杀死进程，也支持通配符，这在系统过载而变得很慢时很有用</p></li><li><p>常用选项
+-9强迫进程立即停止</p></li><li><p>案例
+踢掉某个非法登录的用户
+查询 ps -aux |grep sshd</p></li><li><p>kill -9 非法用户进程</p></li><li><p>终止远程登录服务
+kill sshd的服务</p></li></ul><h2 id=14-4-查看进程树-pstree144-查看进程树-pstree><a href=#14-4-%E6%9F%A5%E7%9C%8B%E8%BF%9B%E7%A8%8B%E6%A0%91-pstree></a>14.4 查看进程树 pstree</h2><ul><li><p>语法
+pstree [选项] 更加直观的查看进程信息</p></li><li><p>选项
+-p显示进程的PID</p></li><li><p>-u 显示进程的所属用户</p></li></ul><h2 id=14-5-服务管理145-服务管理><a href=#14-5-%E6%9C%8D%E5%8A%A1%E7%AE%A1%E7%90%86></a>14.5 服务管理</h2><ul><li><p>介绍
+本质是进程，但是运行在后台，通常会监听某个端口，等待其他程序的请求，因此我们又称为守护进程，是Linux中重要的知识点</p></li><li><p>原理图</p></li><li><p>指令
+service 服务名 【start|stop| restart| reload | status】</p></li><li><p>CentOS7.0以后 使用 systemctl 代替 service</p></li></ul><h3 id=14-5-1-telnet-指令1451-telnet-指令><a href=#14-5-1-telnet-%E6%8C%87%E4%BB%A4></a>14.5.1 telnet 指令</h3><ul><li><p>检查Linux的某个端口是否在监听，并且可以访问</p></li><li><p>语法
+telnet ip 端口号</p></li></ul><h3 id=14-5-2-chkconfig指令1452-chkconfig指令><a href=#14-5-2-chkconfig%E6%8C%87%E4%BB%A4></a>14.5.2 chkconfig指令</h3><ul><li><p>通过chkconfig命令可以给各个运行级别设置自启动/关闭</p></li><li><p>基本语法
+查看服务 chkconfig &ndash;list|grep xxx</p></li><li><p>chkconfig 服务名 &ndash;list</p></li><li><p>chkconfig &ndash;level 5 服务名 on/off</p></li></ul><h2 id=14-6-动态监控进程146-动态监控进程><a href=#14-6-%E5%8A%A8%E6%80%81%E7%9B%91%E6%8E%A7%E8%BF%9B%E7%A8%8B></a>14.6 动态监控进程</h2><h3 id=14-6-1-top指令1461-top指令><a href=#14-6-1-top%E6%8C%87%E4%BB%A4></a>14.6.1 top指令</h3><p>跟ps相似，top在执行一段时间可以更新正在运行的进程</p><ul><li><p>基础语法
+top [选项]</p></li><li><p>选项
+-d 秒数 指定top命令每隔几秒更新，默认是秒在top命令的交互模式当中可以执行的命令</p></li><li><p>-i 使top不显示僵死或者闲置的进程</p></li><li><p>-p 通过指定监控进程ID来仅仅监控某个进程的状态</p></li><li><p>交互操作说明
+p 以CPU使用率排序，默认此项</p></li><li><p>M 以内存的使用率排序</p></li><li><p>N 以PID排序</p></li><li><p>q 退出top</p></li></ul><h2 id=14-5-监控网络状态145-监控网络状态><a href=#14-5-%E7%9B%91%E6%8E%A7%E7%BD%91%E7%BB%9C%E7%8A%B6%E6%80%81></a>14.5 监控网络状态</h2><h3 id=14-5-1-netstat指令1451-netstat指令><a href=#14-5-1-netstat%E6%8C%87%E4%BB%A4></a>14.5.1 netstat指令</h3><ul><li><p>基本语法
+netstat [选项]</p></li><li><p>选项
+-an 按一定顺序排列输出</p></li><li><p>-p 显示哪个进程在调用</p><pre><code>  -------------本文结束*感谢阅读-------------
+</code></pre><p>欢迎您扫一扫上面的微信公众号，订阅我的博客！</p><p>坚持原创技术分享，您的支持将鼓励我继续创作！</p><p>打赏</p><pre><code>  微信支付
+
+
+
+
+
+
+
+  支付宝</code></pre></li></ul></article></main><footer><p>&copy; 2026 Raphael. All rights reserved.</p></footer></body></html>

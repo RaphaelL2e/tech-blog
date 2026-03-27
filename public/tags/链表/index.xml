@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>链表 on Raphael Tech Blog</title><link>https://raphaell2e.github.io/tech-blog/tags/%E9%93%BE%E8%A1%A8/</link><description>Recent content in 链表 on Raphael Tech Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sat, 16 Nov 2019 10:42:41 +0800</lastBuildDate><atom:link href="https://raphaell2e.github.io/tech-blog/tags/%E9%93%BE%E8%A1%A8/index.xml" rel="self" type="application/rss+xml"/><item><title>数据结构——链表List、ArrayList、LinkedList</title><link>https://raphaell2e.github.io/tech-blog/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8listarraylistlinkedlist/</link><pubDate>Sat, 16 Nov 2019 10:42:41 +0800</pubDate><guid>https://raphaell2e.github.io/tech-blog/posts/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E9%93%BE%E8%A1%A8listarraylistlinkedlist/</guid><description>抽象数据类型ADT 是带有一组操作的一些对象的集合 一种特别的抽象类型——表ADT 什么是一个表呢？
+最简单的一个整数表 -&amp;gt; 由一群整数构成的一个数组，可以看做是一张表
+1 2 3 4 5 6 7 8 9 //表的简单数组实现 int[] arr = new int[10]; &amp;hellip; //对一个表的扩容 int[] newArr = new int[arr.length*2]; for(int i=0;i&amp;lt;arr.length;i++){ newArr[i] = arr[i]; } arr =newArr;
+数组的实现是线性执行的，对其中的查找操作也是常数时间，但是插入和删除却潜藏着昂贵的开销。两种情况最坏的情况都是O(N)
+简单链表 于是为了避免插入和删除的开销就有了，链表的出现。链表是由一个个节点组成的，并且不限制需要存储在一段连续的内存中。
+节点 每一个节点均含有一个表元素、一个包含了后继节点的链Link。
+1 2 3 4 5 //链表节点 LinkNode class{ Object var; LinkNode next; }
+对于链表中节点的删除与插入，只需要常数时间。
+首先找到要删除的节点位置或者要插入的节点位置
+删除 该节点的前一个节点，指向该节点的后继节点就可以了
+插入 找到插入节点的前一个节点，将前一个节点的后继节点用该节点指向，将前一个节点指向该节点
+双链表 对于单链表的不足之处在于，对尾节点的删除，需要先找到最后节点的项，把他改为next链改为null，然后再更新持有最后节点的链。但是在经典链表中，每个节点均存储的是下一个节点，并不提供最后一个节点的前驱节点的任何信息。
+==单链表的删除需要靠辅助节点，而双向链表则可以直接删除==
+对于此，就想到了双向链表，让每一个节点持有一个指向它在表中的前驱节点的链。
+JAVA中 Collections API中的表 集合的概念在java中用Collection接口来抽象，它存储一组类型相同的对象
+1 2 3 4 5 6 7 8 9 //源码参考 public interface Collection extends Iterable { int size(); boolean isEmpty(); boolean contains(Object o); Iterator iterator(); //该方法继承于Iterable接口内的Iterator方法 boolean add(E e); boolean remove(Object o); }</description></item></channel></rss>

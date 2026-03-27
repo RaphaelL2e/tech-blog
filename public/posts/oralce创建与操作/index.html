@@ -1,0 +1,98 @@
+<!doctype html><html lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Oralce创建与操作 - Raphael Tech Blog</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;line-height:1.6;color:#333;max-width:800px;margin:0 auto;padding:20px}header{border-bottom:2px solid #3498db;padding-bottom:20px;margin-bottom:30px}header h1 a{color:#2c3e50;text-decoration:none}nav{margin-top:10px}nav a{margin-right:20px;color:#3498db;text-decoration:none}nav a:hover{text-decoration:underline}article{margin-bottom:40px}article h2{color:#2c3e50;margin-bottom:10px}article h2 a{color:inherit;text-decoration:none}article h2 a:hover{text-decoration:underline}.meta{color:#7f8c8d;font-size:.9em;margin-bottom:10px}.summary{color:#555}footer{margin-top:50px;padding-top:20px;border-top:1px solid #eee;color:#7f8c8d;text-align:center}h1,h2,h3,h4{margin:20px 0 10px}p{margin-bottom:15px}ul,ol{margin-left:20px;margin-bottom:15px}code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-family:monospace}pre{background:#f4f4f4;padding:15px;border-radius:5px;overflow-x:auto;margin-bottom:15px}blockquote{border-left:4px solid #3498db;padding-left:20px;margin:15px 0;color:#666}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #ddd;padding:10px;text-align:left}th{background:#f5f5f5}</style></head><body><header><h1><a href=https://raphaell2e.github.io/tech-blog/>Raphael Tech Blog</a></h1><nav><a href=https://raphaell2e.github.io/tech-blog/>首页</a>
+<a href=https://raphaell2e.github.io/tech-blog/posts/>文章</a>
+<a href=https://raphaell2e.github.io/tech-blog/about/>关于</a></nav></header><main><article><h1>Oralce创建与操作</h1><div class=meta>2020-01-01</div><h1 id=创建新用户创建新用户><a href=#%E5%88%9B%E5%BB%BA%E6%96%B0%E7%94%A8%E6%88%B7></a>创建新用户</h1><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+CREATE USER username
+IDENTIFIED BY password
+[DEFAULT TABLESPACE tablespace]
+[TEMPORARY TABLESPACE tablespace];</p><p>CREATE USER MARTIN
+IDENTIFIED BY martinpwd
+DEFAULT TABLESPACE USERS
+TEMPORARY TABLESPACE TEMP;</p><p>如果账户被锁定，则需管理员给帐户解锁
+sql> alter user martin account unlock;</p><h2 id=授予权限授予权限><a href=#%E6%8E%88%E4%BA%88%E6%9D%83%E9%99%90></a>授予权限</h2><p>1
+2
+3
+4
+grant 权限/角色 to 用户</p><p>CONNECT角色允许用户连接至数据库，并创建数据库对象
+GRANT CONNECT TO MARTIN;</p><h2 id=更改用户更改用户><a href=#%E6%9B%B4%E6%94%B9%E7%94%A8%E6%88%B7></a>更改用户</h2><p>1
+ALTER USER MARTIN IDENTIFIED BY martinpass;</p><h2 id=删除用户删除用户><a href=#%E5%88%A0%E9%99%A4%E7%94%A8%E6%88%B7></a>删除用户</h2><p>1
+2
+DROP USER MARTIN CASCADE;
+CASCADE 级联删除</p><h1 id=sql-plus的连接命令sqlplus的连接命令><a href=#SQL-Plus%E7%9A%84%E8%BF%9E%E6%8E%A5%E5%91%BD%E4%BB%A4></a>SQL*Plus的连接命令</h1><h2 id=conn-ectconnect><a href=#conn-ect></a>conn[ect]</h2><p>用法: conn 用户名/密码@网络服务名 [as sysdba/sysoper]
+当用特权用户身份连接时，必须带上 as sysdba 或是 as sysoper</p><h2 id=disc-onnectdisconnect><a href=#disc-onnect></a>disc[onnect]</h2><p>说明:该命令用来断开与当前数据库的连接，但不退出sql*plus环境</p><h2 id=exit或者quit命令exit或者quit命令><a href=#exit%E6%88%96%E8%80%85quit%E5%91%BD%E4%BB%A4></a>exit或者quit命令</h2><p>说明：该命令会断开与数据库的连接，同时会退出sql*plus</p><h2 id=基础命令基础命令><a href=#%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4></a>基础命令</h2><ul><li></li></ul><h2 id=其他命令其他命令><a href=#%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4></a>其他命令</h2><p>（1 ）help命令：可以得到联机的命令帮助信息</p><p>（2） desc[ribe]命令：一是列出表的结构，二是列出相关函数、过程以及包的信息</p><p>（3）显示当前连接用户：SQL>SHOW USER</p><p>（4）显示所有：SQL> SHOW ALL</p><p>（5）设置一行可以容纳的字符数 SQL> SET LINESIZE 200;</p><p>（6）设置一页可以容纳的行数
+SQL> SET PAGESIZE 40;</p><h1 id=创建表创建表><a href=#%E5%88%9B%E5%BB%BA%E8%A1%A8></a>创建表</h1><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+CREATE TABLE语句，基本的语法格式为：
+CREATE TABLE [&lt;用户方案名>.] &lt;表名>
+(
+&lt;列名1> &lt;数据类型> [DEFAULT &lt;默认值>] [&lt;列约束>]
+&lt;列名2> &lt;数据类型> [DEFAULT &lt;默认值>] [&lt;列约束>]
+[,…n]
+&lt;表约束>[,…n]
+)
+[AS &lt;子查询>]</p><h2 id=修改表修改表><a href=#%E4%BF%AE%E6%94%B9%E8%A1%A8></a>修改表</h2><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+ALTER TABLE [&lt;用户方案名>.] &lt;表名>
+[ ADD(&lt;新列名> &lt;数据类型> [DEFAULT &lt;默认值>][列约束],…n) ] /<em>增加新列</em>/
+[ MODIFY([ &lt;列名> [&lt;数据类型>] [DEFAULT &lt;默认值>][列约束],…n) ] /<em>修改已有列属性</em>/
+[&lt;DROP子句> ] /<em>删除列或约束条件</em>/</p><pre><code>DROP {
+COLUMN &lt;列名&gt;
+∣PRIMARY [KEY]
+∣UNIQUE (&lt;列名&gt;,…n) 
+∣CONSTRAINT &lt;约束名&gt;
+∣[ CASCADE ]
+</code></pre><p>}</p><h2 id=删除表删除表><a href=#%E5%88%A0%E9%99%A4%E8%A1%A8></a>删除表</h2><p>1
+DROP TABLE [&lt;用户方案名>.] &lt;表名></p><pre><code>    -------------本文结束*感谢阅读-------------
+
+
+    
+
+
+  
+    
+
+欢迎您扫一扫上面的微信公众号，订阅我的博客！
+</code></pre><p>坚持原创技术分享，您的支持将鼓励我继续创作！</p><pre><code>打赏
+
+
+
+
+  
+    
+    微信支付
+
+  
+
+
+
+  
+    
+    支付宝</code></pre></article></main><footer><p>&copy; 2026 Raphael. All rights reserved.</p></footer></body></html>

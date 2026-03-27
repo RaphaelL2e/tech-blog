@@ -1,0 +1,145 @@
+<!doctype html><html lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>算法小练——有效的括号 - Raphael Tech Blog</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;line-height:1.6;color:#333;max-width:800px;margin:0 auto;padding:20px}header{border-bottom:2px solid #3498db;padding-bottom:20px;margin-bottom:30px}header h1 a{color:#2c3e50;text-decoration:none}nav{margin-top:10px}nav a{margin-right:20px;color:#3498db;text-decoration:none}nav a:hover{text-decoration:underline}article{margin-bottom:40px}article h2{color:#2c3e50;margin-bottom:10px}article h2 a{color:inherit;text-decoration:none}article h2 a:hover{text-decoration:underline}.meta{color:#7f8c8d;font-size:.9em;margin-bottom:10px}.summary{color:#555}footer{margin-top:50px;padding-top:20px;border-top:1px solid #eee;color:#7f8c8d;text-align:center}h1,h2,h3,h4{margin:20px 0 10px}p{margin-bottom:15px}ul,ol{margin-left:20px;margin-bottom:15px}code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-family:monospace}pre{background:#f4f4f4;padding:15px;border-radius:5px;overflow-x:auto;margin-bottom:15px}blockquote{border-left:4px solid #3498db;padding-left:20px;margin:15px 0;color:#666}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #ddd;padding:10px;text-align:left}th{background:#f5f5f5}</style></head><body><header><h1><a href=https://raphaell2e.github.io/tech-blog/>Raphael Tech Blog</a></h1><nav><a href=https://raphaell2e.github.io/tech-blog/>首页</a>
+<a href=https://raphaell2e.github.io/tech-blog/posts/>文章</a>
+<a href=https://raphaell2e.github.io/tech-blog/about/>关于</a></nav></header><main><article><h1>算法小练——有效的括号</h1><div class=meta>2019-11-06</div><h4 id=有效的括号-有效的括号httpsleetcode-cncomproblemsvalid-parentheses><a href=#%E6%9C%89%E6%95%88%E7%9A%84%E6%8B%AC%E5%8F%B7></a><a href=https://leetcode-cn.com/problems/valid-parentheses/> 有效的括号</a></h4><h3 id=描述描述><a href=#%E6%8F%8F%E8%BF%B0></a>描述</h3><p>给定一个只包括 ‘(‘，’)’，’{‘，’}’，’[‘，’]’ 的字符串，判断字符串是否有效。</p><p>有效字符串需满足：</p><p>左括号必须用相同类型的右括号闭合。
+左括号必须以正确的顺序闭合。
+注意空字符串可被认为是有效字符串。</p><h3 id=示例示例><a href=#%E7%A4%BA%E4%BE%8B></a>示例</h3><h4 id=示例-1示例-1><a href=#%E7%A4%BA%E4%BE%8B-1></a>示例 1:</h4><p>输入: “()”
+输出: true</p><h4 id=示例-2示例-2><a href=#%E7%A4%BA%E4%BE%8B-2></a>示例 2:</h4><p>输入: “()[]{}”
+输出: true</p><h4 id=示例-3示例-3><a href=#%E7%A4%BA%E4%BE%8B-3></a>示例 3:</h4><p>输入: “(]”
+输出: false</p><h4 id=示例-4示例-4><a href=#%E7%A4%BA%E4%BE%8B-4></a>示例 4:</h4><p>输入: “([)]”
+输出: false</p><h4 id=示例-5示例-5><a href=#%E7%A4%BA%E4%BE%8B-5></a>示例 5:</h4><p>输入: “{[]}”
+输出: true</p><h3 id=代码代码><a href=#%E4%BB%A3%E7%A0%81></a>代码</h3><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+class Solution {
+public boolean isValid(String s) {
+Stack stack = new Stack&lt;>(s.length());
+for (int i = 0; i &lt; s.length(); i++) {
+char ch = s.charAt(i);
+switch (s.charAt(i)){
+case &lsquo;(&rsquo;:
+case &lsquo;[&rsquo;:
+case &lsquo;{&rsquo;:
+stack.push(s.charAt(i));
+break;
+case &lsquo;)&rsquo;:
+case &lsquo;]&rsquo;:
+case &lsquo;}&rsquo;:
+if(!stack.isEmpty()) {
+char chx = (char) stack.pop();
+if((chx==&rsquo;(&rsquo;&&amp;ch!=&rsquo;)&rsquo;)
+||(chx==&rsquo;[&rsquo;&&amp;ch!=&rsquo;]&rsquo;)
+||(chx==&rsquo;{&rsquo;&&amp;ch!=&rsquo;}&rsquo;)){
+return false;
+}
+}else {
+return false;
+}
+default:break;
+}
+}
+return stack.isEmpty();
+}
+}</p><h3 id=代码-栈的使用代码-栈的使用><a href=#%E4%BB%A3%E7%A0%81-%E6%A0%88%E7%9A%84%E4%BD%BF%E7%94%A8></a>代码 栈的使用</h3><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+class Stack {
+private int size; //栈的大小
+private int top; //栈顶下标
+private Object[] stackArray;
+//构造函数
+public Stack(int size) {
+this.size = size;
+this.top = -1;
+this.stackArray = new Object[size];
+}
+//入栈，同时，栈顶元素下标加一
+public void push(T elem){
+stackArray[++top] = elem;
+}
+//出栈，删除栈顶元素，下标减一
+public Object pop(){
+return stackArray[top&ndash;];
+}
+//判断为空
+public boolean isEmpty(){
+return (top==-1);
+}</p><p>public boolean isFull(){
+return (top == size-1);
+}
+}</p><h3 id=笔记笔记><a href=#%E7%AC%94%E8%AE%B0></a>笔记</h3><p>难度几乎没有，主要是对栈的理解。</p><pre><code>    -------------本文结束**感谢阅读-------------
+
+
+    
+
+
+  
+    
+
+欢迎您扫一扫上面的微信公众号，订阅我的博客！
+</code></pre><p>坚持原创技术分享，您的支持将鼓励我继续创作！</p><pre><code>打赏
+
+
+
+
+  
+    
+    微信支付
+
+  
+
+
+
+  
+    
+    支付宝</code></pre></article></main><footer><p>&copy; 2026 Raphael. All rights reserved.</p></footer></body></html>

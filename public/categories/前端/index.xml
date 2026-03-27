@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>前端 on Raphael Tech Blog</title><link>https://raphaell2e.github.io/tech-blog/categories/%E5%89%8D%E7%AB%AF/</link><description>Recent content in 前端 on Raphael Tech Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 12 Jan 2020 21:37:35 +0800</lastBuildDate><atom:link href="https://raphaell2e.github.io/tech-blog/categories/%E5%89%8D%E7%AB%AF/index.xml" rel="self" type="application/rss+xml"/><item><title>html基础</title><link>https://raphaell2e.github.io/tech-blog/posts/html%E5%9F%BA%E7%A1%80/</link><pubDate>Sun, 12 Jan 2020 21:37:35 +0800</pubDate><guid>https://raphaell2e.github.io/tech-blog/posts/html%E5%9F%BA%E7%A1%80/</guid><description>﻿## 基础标签
+文本格式化标签 加粗 斜体 删除 &amp;lt;/ins 下划线
+图像标签 alt 图片不能显示时的替代文本
+title 鼠标悬停时显示
+height 图像高度
+width 图像宽度
+border 图像边框宽度
+链接标签 属性 target _blank 新窗口打开
+拓展 特殊字符 空字符 &amp;amp;nbsp; 注册商标 &amp;amp;reg; &amp;lt; &amp;amp;lt; &amp;gt; &amp;amp;gt; &amp;amp; &amp;amp;amp; 表格 展示表格式数据 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16
+表格属性 border 边框 width 宽度 height 高度 align 设置表格在网页中水平对齐方式
+left
+center
+right
+cellspacing 单元格与单元格之间距离
+cellpadding 单元格内容与边框的距离</description></item></channel></rss>

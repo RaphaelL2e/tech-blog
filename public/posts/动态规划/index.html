@@ -1,0 +1,34 @@
+<!doctype html><html lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>动态规划 - Raphael Tech Blog</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;line-height:1.6;color:#333;max-width:800px;margin:0 auto;padding:20px}header{border-bottom:2px solid #3498db;padding-bottom:20px;margin-bottom:30px}header h1 a{color:#2c3e50;text-decoration:none}nav{margin-top:10px}nav a{margin-right:20px;color:#3498db;text-decoration:none}nav a:hover{text-decoration:underline}article{margin-bottom:40px}article h2{color:#2c3e50;margin-bottom:10px}article h2 a{color:inherit;text-decoration:none}article h2 a:hover{text-decoration:underline}.meta{color:#7f8c8d;font-size:.9em;margin-bottom:10px}.summary{color:#555}footer{margin-top:50px;padding-top:20px;border-top:1px solid #eee;color:#7f8c8d;text-align:center}h1,h2,h3,h4{margin:20px 0 10px}p{margin-bottom:15px}ul,ol{margin-left:20px;margin-bottom:15px}code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-family:monospace}pre{background:#f4f4f4;padding:15px;border-radius:5px;overflow-x:auto;margin-bottom:15px}blockquote{border-left:4px solid #3498db;padding-left:20px;margin:15px 0;color:#666}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #ddd;padding:10px;text-align:left}th{background:#f5f5f5}</style></head><body><header><h1><a href=https://raphaell2e.github.io/tech-blog/>Raphael Tech Blog</a></h1><nav><a href=https://raphaell2e.github.io/tech-blog/>首页</a>
+<a href=https://raphaell2e.github.io/tech-blog/posts/>文章</a>
+<a href=https://raphaell2e.github.io/tech-blog/about/>关于</a></nav></header><main><article><h1>动态规划</h1><div class=meta>2019-11-12</div><h1 id=动态规划动态规划><a href=#%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92></a>动态规划</h1><h2 id=基本定义基本定义><a href=#%E5%9F%BA%E6%9C%AC%E5%AE%9A%E4%B9%89></a>基本定义</h2><ul><li><p>通过把原问题分解为想对简单的子问题的方式求解复杂问题的方法。</p></li><li><p>适用于：</p></li></ul><p>重叠子问题
+在查找有很多<strong>重叠子问题</strong>的情况的最优解时有效。它将问题重新组合成子问题。为了避免多次解决这些子问题，它们的结果都逐渐被计算并被保存，从简单的问题直到整个问题都被解决。</p><ul><li>最优子结构
+<strong>最优子结构</strong>的意思是局部最优解能决定全局最优解（对有些问题这个要求并不能完全满足，故有时需要引入一定的近似）。</li></ul><h2 id=基本思想基本思想><a href=#%E5%9F%BA%E6%9C%AC%E6%80%9D%E6%83%B3></a>基本思想</h2><p>若要解决一个给定的问题，则要解其不同部分的问题，再根据子问题的解求出原问题的解</p><h2 id=实例实例><a href=#%E5%AE%9E%E4%BE%8B></a>实例</h2><h3 id=背包问题背包问题><a href=#%E8%83%8C%E5%8C%85%E9%97%AE%E9%A2%98></a>背包问题</h3><p>问题可以描述为：给定一组物品，每种物品都有自己的重量和价格，在限定的总重量内，我们如何选择，才能使得物品的总价格最高。问题的名称来源于如何选择最合适的物品放置于给定背包中。</p><p>我们有 <em>n</em> 种物品，物品 <em>j</em> 的重量为<em>wj</em>，价格为<em>pj</em>。
+我们假定所有物品的重量和价格都是非负的。背包所能承受的最大重量为<em>W</em>。
+如果限定每种物品只能选择0个或1个，则问题称为<strong>0-1背包问题</strong>。</p><p>可以用公式表示为：</p><p>最大值 *</p><p>受限于</p><p>如果限定物品<em>j</em>最多只能选择<em>bj</em>个，则问题称为<strong>有界背包问题</strong>。
+可以用公式表示为：</p><p>最大值</p><p>受限于</p><p>如果不限定每种物品的数量，则问题称为<strong>无界背包问题</strong>。
+各类复杂的背包问题总可以变换为简单的0-1背包问题进行求解。</p><pre><code>    -------------本文结束*感谢阅读-------------
+
+
+    
+
+
+  
+    
+
+欢迎您扫一扫上面的微信公众号，订阅我的博客！
+</code></pre><p>坚持原创技术分享，您的支持将鼓励我继续创作！</p><pre><code>打赏
+
+
+
+
+  
+    
+    微信支付
+
+  
+
+
+
+  
+    
+    支付宝</code></pre></article></main><footer><p>&copy; 2026 Raphael. All rights reserved.</p></footer></body></html>

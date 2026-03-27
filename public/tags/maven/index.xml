@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>maven on Raphael Tech Blog</title><link>https://raphaell2e.github.io/tech-blog/tags/maven/</link><description>Recent content in maven on Raphael Tech Blog</description><generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 27 Jun 2019 14:45:38 +0800</lastBuildDate><atom:link href="https://raphaell2e.github.io/tech-blog/tags/maven/index.xml" rel="self" type="application/rss+xml"/><item><title>maven学习</title><link>https://raphaell2e.github.io/tech-blog/posts/maven%E5%AD%A6%E4%B9%A0/</link><pubDate>Thu, 27 Jun 2019 14:45:38 +0800</pubDate><guid>https://raphaell2e.github.io/tech-blog/posts/maven%E5%AD%A6%E4%B9%A0/</guid><description>一、为什么使用maven? 1.一般的一个项目就是一个工程 当一个项目非常庞大，可以借助maven拆分成一个个工程。
+2.项目中使用到的jar包，需要复制粘贴到lib目录下 借助maven可以将jar保存在仓库，直接引用就行。不用累赘的一个个导包。
+3.jar的下载与使用 借助maven可以更加便捷快捷，规范化的使用jar包
+4.jar包的版本不一致有风险 借助maven所有jar存放在仓库，所有项目使用仓库中的一份jar包
+5. jar包中如果依赖其他jar需要手动导入 借助maven会自动的导入相关依赖包
+二、什么是maven? Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project’s build, reporting and documentation from a central piece of information. 是一个软件项目管理和理解工具。基于项目对象模型（POM）的概念，Maven可以从一个中心信息管理项目的构建，报告和文档。
+构建： 定义：把动态的web工程通过编译得到的编译结果部署到服务器上的过程 a.编译：java源文件–&amp;gt;编译–&amp;gt;Class字节码文件
+b.部署：最终在servlet容器中部署的是编译后的文件
+构建的各个环节： clean [清理] ：将之前编译的文件删除
+compile [编译] ： 将java源文件编译成字节码文件
+test [测试] ：自动测试，自动调用junit程序
+report [报告] ：测试程序的执行结果
+package [打包] ： 将动态web打包成war,将java工程打包成jar</description></item></channel></rss>

@@ -1,0 +1,157 @@
+<!doctype html><html lang=zh-CN><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>html基础 - Raphael Tech Blog</title><style>*{margin:0;padding:0;box-sizing:border-box}body{font-family:-apple-system,BlinkMacSystemFont,segoe ui,Roboto,sans-serif;line-height:1.6;color:#333;max-width:800px;margin:0 auto;padding:20px}header{border-bottom:2px solid #3498db;padding-bottom:20px;margin-bottom:30px}header h1 a{color:#2c3e50;text-decoration:none}nav{margin-top:10px}nav a{margin-right:20px;color:#3498db;text-decoration:none}nav a:hover{text-decoration:underline}article{margin-bottom:40px}article h2{color:#2c3e50;margin-bottom:10px}article h2 a{color:inherit;text-decoration:none}article h2 a:hover{text-decoration:underline}.meta{color:#7f8c8d;font-size:.9em;margin-bottom:10px}.summary{color:#555}footer{margin-top:50px;padding-top:20px;border-top:1px solid #eee;color:#7f8c8d;text-align:center}h1,h2,h3,h4{margin:20px 0 10px}p{margin-bottom:15px}ul,ol{margin-left:20px;margin-bottom:15px}code{background:#f4f4f4;padding:2px 6px;border-radius:3px;font-family:monospace}pre{background:#f4f4f4;padding:15px;border-radius:5px;overflow-x:auto;margin-bottom:15px}blockquote{border-left:4px solid #3498db;padding-left:20px;margin:15px 0;color:#666}table{width:100%;border-collapse:collapse;margin:15px 0}th,td{border:1px solid #ddd;padding:10px;text-align:left}th{background:#f5f5f5}</style></head><body><header><h1><a href=https://raphaell2e.github.io/tech-blog/>Raphael Tech Blog</a></h1><nav><a href=https://raphaell2e.github.io/tech-blog/>首页</a>
+<a href=https://raphaell2e.github.io/tech-blog/posts/>文章</a>
+<a href=https://raphaell2e.github.io/tech-blog/about/>关于</a></nav></header><main><article><h1>html基础</h1><div class=meta>2020-01-12</div><p>﻿## 基础标签</p><h2 id=文本格式化标签文本格式化标签><a href=#%E6%96%87%E6%9C%AC%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A0%87%E7%AD%BE></a>文本格式化标签</h2><p>加粗 斜体 删除 &lt;/ins 下划线</p><h2 id=图像标签图像标签><a href=#%E5%9B%BE%E5%83%8F%E6%A0%87%E7%AD%BE></a>图像标签</h2><ul><li><p>alt 图片不能显示时的替代文本</p></li><li><p>title 鼠标悬停时显示</p></li><li><p>height 图像高度</p></li><li><p>width 图像宽度</p></li><li><p>border 图像边框宽度</p></li></ul><h2 id=链接标签链接标签><a href=#%E9%93%BE%E6%8E%A5%E6%A0%87%E7%AD%BE></a>链接标签</h2><p>属性
+target _blank 新窗口打开</p><h2 id=拓展拓展><a href=#%E6%8B%93%E5%B1%95></a>拓展</h2><h3 id=特殊字符特殊字符><a href=#%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6></a>特殊字符</h3><pre tabindex=0><code>空字符        &amp;nbsp;
+注册商标    &amp;reg;
+&lt;                       &amp;lt;
+&gt;                       &amp;gt;    
+&amp;                   &amp;amp;
+</code></pre><h2 id=表格表格><a href=#%E8%A1%A8%E6%A0%BC></a>表格</h2><h3 id=展示表格式数据展示表格式数据><a href=#%E5%B1%95%E7%A4%BA%E8%A1%A8%E6%A0%BC%E5%BC%8F%E6%95%B0%E6%8D%AE></a>展示表格式数据</h3><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16</p><h3 id=表格属性表格属性><a href=#%E8%A1%A8%E6%A0%BC%E5%B1%9E%E6%80%A7></a>表格属性</h3><p>border 边框
+width 宽度
+height 高度
+align 设置表格在网页中水平对齐方式</p><ul><li><p>left</p></li><li><p>center</p></li><li><p>right</p></li><li><p>cellspacing 单元格与单元格之间距离</p></li><li><p>cellpadding 单元格内容与边框的距离</p></li></ul><h3 id=合并单元格合并单元格><a href=#%E5%90%88%E5%B9%B6%E5%8D%95%E5%85%83%E6%A0%BC></a>合并单元格</h3><h4 id=跨行合并跨行合并><a href=#%E8%B7%A8%E8%A1%8C%E5%90%88%E5%B9%B6></a>跨行合并</h4><p>rowspan=&ldquo;合并单元格的个数 "</p><h4 id=跨列合并跨列合并><a href=#%E8%B7%A8%E5%88%97%E5%90%88%E5%B9%B6></a>跨列合并</h4><p>colspan=&ldquo;合并单元格个数&rdquo;</p><h4 id=合并三部曲合并三部曲><a href=#%E5%90%88%E5%B9%B6%E4%B8%89%E9%83%A8%E6%9B%B2></a>合并三部曲</h4><ul><li><p>先确认跨行还是跨列</p></li><li><p>根据 先上 后下 先左 后右的原则找到目标单元格 ，然后写上合并方式 和合并数量</p></li><li><p>删除多余的单元格</p></li></ul><h3 id=表格结构划分表格结构划分><a href=#%E8%A1%A8%E6%A0%BC%E7%BB%93%E6%9E%84%E5%88%92%E5%88%86></a>表格结构划分</h3><h2 id=列表标签列表标签><a href=#%E5%88%97%E8%A1%A8%E6%A0%87%E7%AD%BE></a>列表标签</h2><h3 id=无序列表无序列表><a href=#%E6%97%A0%E5%BA%8F%E5%88%97%E8%A1%A8></a>无序列表</h3><p>1
+2
+3
+4
+5</p><p><strong>效果：</strong></p><pre><code>- 列表项1 
+
+- 列表项2
+</code></pre><h3 id=有序列表有序列表><a href=#%E6%9C%89%E5%BA%8F%E5%88%97%E8%A1%A8></a>有序列表</h3><p>1
+2
+3
+4</p><p><strong>效果：</strong></p><pre><code>- 列表项
+
+- 列表项
+</code></pre><h3 id=自定义列表自定义列表><a href=#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%88%97%E8%A1%A8></a>自定义列表</h3><p>1
+2
+3
+4
+5
+6
+7</p><p><strong>效果：</strong></p><pre><code>名词
+名词的解释1
+名词的解释2
+名词2
+名词2的解释2
+</code></pre><h2 id=表单表单><a href=#%E8%A1%A8%E5%8D%95></a>表单</h2><h3 id=表单标签表单标签><a href=#%E8%A1%A8%E5%8D%95%E6%A0%87%E7%AD%BE></a>表单标签</h3><h4 id=lt-input-gt-控件input控件><a href=#lt-input-gt-%E6%8E%A7%E4%BB%B6></a>控件</h4><ul><li><p>语法</p></li><li><p>属性值
+type</p></li></ul><pre tabindex=0><code>- `text` 单行文本输入框
+- `password ` 密码输入框
+- `radio` 单选按钮    
+- `checkbox` 复选框
+- `button` 普通按钮
+- `submit` 提交按钮
+- `reset` 重置按钮
+- `image` 图像形式的提交按钮
+- `file` 文件域
+</code></pre><ul><li><p>name 控件的名称</p></li><li><p>value input控件中的默认文本值</p></li><li><p>size input控件在页面中的显示宽度</p></li><li><p>checked 表示默认选中状态</p></li></ul><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+用户名：
+密码：
+性别：
+男
+女
+未知
+爱好：
+睡觉
+游泳
+游戏
+看书
+上传头像:</p><h4 id=lt-label-gt-lt-label-gt-标签labellabel标签><a href=#lt-label-gt-lt-label-gt-%E6%A0%87%E7%AD%BE></a>标签</h4><p><strong>作用:</strong> 用于绑定一个表单元素，当点击label标签时，被绑定的表单元素会获得输入焦点
+<strong>绑定元素:</strong></p><ul><li>直接包含</li></ul><p>1
+用户名：</p><ul><li>通过for 和 id</li></ul><p>1
+用户名：</p><h4 id=lt-textarea-gt-lt-textarea-gt-文本域textareatextarea文本域><a href=#lt-textarea-gt-lt-textarea-gt-%E6%96%87%E6%9C%AC%E5%9F%9F></a>文本域</h4><p>可显示多行文本
+<strong>效果：</strong></p><p>可显示多行文本1
+可显示多行文本2
+可显示多行文本3</p><h4 id=select下拉列表select下拉列表><a href=#select%E4%B8%8B%E6%8B%89%E5%88%97%E8%A1%A8></a>select下拉列表</h4><p>1
+2
+3
+4
+5
+6
+&ndash;请选择&ndash;
+&lt;option　 selected=&ldquo;selected&rdquo;>选项１
+选项２</p><h2 id=lt-form-gt-表单域form表单域><a href=#lt-form-gt-%E8%A1%A8%E5%8D%95%E5%9F%9F></a>表单域</h2><p><strong>语法：</strong></p><p>1
+2
+3
+4</p><p><strong>属性：</strong></p><ul><li><p>action url地址</p></li><li><p>method 表单提交方式</p></li><li><p>name 指定表单名称</p></li></ul><p><strong>示例：</strong></p><p>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23</p><pre><code>    -------------本文结束**感谢阅读-------------
+
+
+    
+
+
+  
+    
+
+欢迎您扫一扫上面的微信公众号，订阅我的博客！
+</code></pre><p>坚持原创技术分享，您的支持将鼓励我继续创作！</p><pre><code>打赏
+
+
+
+
+  
+    
+    微信支付
+
+  
+
+
+
+  
+    
+    支付宝</code></pre></article></main><footer><p>&copy; 2026 Raphael. All rights reserved.</p></footer></body></html>

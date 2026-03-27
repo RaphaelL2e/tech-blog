@@ -1,0 +1,10 @@
+{{ define "main" }}
+<h2>最新文章</h2>
+{{ range .Site.RegularPages }}
+<article>
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <div class="meta">{{ .Date.Format "2006-01-02" }}</div>
+    <div class="summary">{{ .Summary }}</div>
+</article>
+{{ end }}
+{{ end }}
