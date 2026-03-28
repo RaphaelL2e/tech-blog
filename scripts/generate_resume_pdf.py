@@ -6,6 +6,7 @@ from reportlab.lib.units import mm
 from reportlab.lib.colors import HexColor, white
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable
 from reportlab.lib.styles import ParagraphStyle
+from reportlab.lib.pdfencrypt import StandardEncryption
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import os
@@ -50,7 +51,8 @@ W = PAGE_W - 2 * M
 out = os.path.join(os.path.dirname(__file__), '..', 'static', 'about', 'resume.pdf')
 out = os.path.abspath(out)
 
-doc = SimpleDocTemplate(out, pagesize=A4, leftMargin=M, rightMargin=M, topMargin=M, bottomMargin=M)
+encrypt = StandardEncryption('4963')
+doc = SimpleDocTemplate(out, pagesize=A4, leftMargin=M, rightMargin=M, topMargin=M, bottomMargin=M, encrypt=encrypt)
 story = []
 
 # ── Header ────────────────────────────────────────────────────
