@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
-"""Generate 李亚飞 Resume PDF using ReportLab (v4 compatible)"""
+"""Generate 李亚飞 Resume PDF - Clean Professional Style"""
 
 from reportlab.lib.pagesizes import A4
 from reportlab.lib.units import mm
-from reportlab.lib.colors import HexColor, white, black
+from reportlab.lib.colors import HexColor, white
 from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, TableStyle, HRFlowable
 from reportlab.lib.styles import ParagraphStyle
-from reportlab.lib.enums import TA_LEFT, TA_CENTER
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 import os
@@ -15,38 +14,37 @@ import os
 pdfmetrics.registerFont(TTFont('Hei', '/System/Library/Fonts/STHeiti Medium.ttc'))
 pdfmetrics.registerFont(TTFont('Song', '/System/Library/Fonts/Supplemental/Songti.ttc'))
 
-# Color palette
-PURPLE = HexColor('#7c3aed')
-PURPLE_LIGHT = HexColor('#a78bfa')
-DARK_CARD = HexColor('#12121a')
-GRAY_TEXT = HexColor('#9ca3af')
-LIGHT_TEXT = HexColor('#e2e8f0')
-CARD_BG = HexColor('#0f0f15')
-CARD_BG2 = HexColor('#13131c')
+# Clean professional color palette (white background)
+ACCENT   = HexColor('#2563eb')
+PURPLE   = HexColor('#7c3aed')
+DARK     = HexColor('#1a1a2e')
+GRAY     = HexColor('#6b7280')
+LGRAY    = HexColor('#f3f4f6')
+BORDER   = HexColor('#d1d5db')
+WHITE    = white
 
 PAGE_W, PAGE_H = A4
-M = 18 * mm
+M = 16 * mm
 
 def S(name, **kw):
-    base = dict(fontName='Hei', leading=12)
-    base.update(kw)
-    return ParagraphStyle(name, **base)
+    defaults = dict(fontName='Hei', leading=12)
+    defaults.update(kw)
+    return ParagraphStyle(name, **defaults)
 
-title_s   = S('title',   fontName='Hei', fontSize=22, textColor=LIGHT_TEXT, spaceAfter=2, leading=26)
-sub_s     = S('sub',     fontName='Hei', fontSize=10, textColor=PURPLE_LIGHT, spaceAfter=4)
-meta_s    = S('meta',    fontName='Hei', fontSize=8,  textColor=GRAY_TEXT, spaceAfter=2)
-sec_s     = S('sec',     fontName='Hei', fontSize=11, textColor=PURPLE, spaceBefore=8, spaceAfter=4, leading=14)
-company_s = S('company',  fontName='Hei', fontSize=10, textColor=LIGHT_TEXT, spaceAfter=1, leading=13)
-role_s    = S('role',    fontName='Hei', fontSize=9,  textColor=PURPLE_LIGHT, spaceAfter=1, leading=12)
-period_s  = S('period',  fontName='Hei', fontSize=8,  textColor=HexColor('#6b7280'), spaceAfter=3, leading=11)
-bullet_s  = S('bullet',   fontName='Hei', fontSize=8,  textColor=GRAY_TEXT, spaceAfter=2, leading=11, leftIndent=8, firstLineIndent=-8)
-tag_s     = S('tag',     fontName='Hei', fontSize=8,  textColor=PURPLE_LIGHT, leading=11)
-sklabel_s = S('sklabel', fontName='Hei', fontSize=8,  textColor=PURPLE, spaceAfter=2, leading=11)
-school_s  = S('school',  fontName='Hei', fontSize=10, textColor=LIGHT_TEXT, spaceAfter=1)
-major_s   = S('major',   fontName='Hei', fontSize=9,  textColor=GRAY_TEXT, spaceAfter=1)
-honor_s   = S('honor',   fontName='Hei', fontSize=9,  textColor=HexColor('#f9a8d4'), spaceAfter=2, leading=12)
-avatar_s  = S('avatar',  fontName='Hei', fontSize=36, textColor=white, alignment=TA_CENTER, leading=42)
-dot_s     = S('dot',     fontName='Hei', fontSize=12, textColor=PURPLE, leading=14, alignment=TA_CENTER)
+# Styles
+title_s    = S('title',  fontName='Hei', fontSize=20, textColor=DARK, spaceAfter=2, leading=24)
+sub_s      = S('sub',    fontName='Hei', fontSize=10, textColor=PURPLE, spaceAfter=2)
+meta_s     = S('meta',   fontName='Hei', fontSize=8.5, textColor=GRAY, spaceAfter=1)
+sec_s      = S('sec',    fontName='Hei', fontSize=11, textColor=PURPLE, spaceBefore=8, spaceAfter=3, leading=14)
+company_s  = S('company', fontName='Hei', fontSize=10, textColor=DARK, spaceAfter=1, leading=13)
+role_s     = S('role',   fontName='Hei', fontSize=9,  textColor=PURPLE, spaceAfter=1, leading=12)
+period_s   = S('period', fontName='Hei', fontSize=8,  textColor=GRAY, spaceAfter=3, leading=11)
+bullet_s   = S('bullet', fontName='Hei', fontSize=8.5, textColor=GRAY, spaceAfter=2, leading=12, leftIndent=14, firstLineIndent=-12)
+sklabel_s  = S('sklabel',fontName='Hei', fontSize=8,  textColor=GRAY, leading=11)
+tag_s      = S('tag',    fontName='Hei', fontSize=8,  textColor=DARK, leading=11)
+school_s   = S('school',fontName='Hei', fontSize=10, textColor=DARK, spaceAfter=1)
+major_s    = S('major',  fontName='Hei', fontSize=9,  textColor=GRAY, spaceAfter=1)
+honor_s    = S('honor',  fontName='Hei', fontSize=9,  textColor=DARK, spaceAfter=2, leading=12)
 
 W = PAGE_W - 2 * M  # content width
 
@@ -55,34 +53,39 @@ output = os.path.abspath(output)
 
 doc = SimpleDocTemplate(output, pagesize=A4, leftMargin=M, rightMargin=M,
                         topMargin=M, bottomMargin=M)
-
 story = []
 
-# ── Header ───────────────────────────────────────────────────
+# ── Header ────────────────────────────────────────────────────
+# Avatar circle as a table cell
+avail = (W - 18*mm)  # space for text next to avatar
+av_width = 18*mm
+
 header_data = [[
-    Paragraph('李', avatar_s),
+    # Left: avatar
+    Paragraph('李', S('av', fontName='Hei', fontSize=26, textColor=WHITE,
+                      alignment=1, leading=30)),
+    # Right: name + info
     [Paragraph('李亚飞', title_s),
      Paragraph('四年经验 · 后端开发工程师', sub_s),
-     Paragraph('北京  |  17603444963  |  liyafei.work@foxmail.com  |  github.com/RaphaelL2e', meta_s)]
+     Paragraph('北京  |  17603444963  |  liyafei.work@foxmail.com  |  github.com/RaphaelL2e', meta_s)],
 ]]
-ht = Table(header_data, colWidths=[22*mm, W - 22*mm])
+ht = Table(header_data, colWidths=[av_width, W - av_width])
 ht.setStyle(TableStyle([
-    ('BACKGROUND', (0,0), (-1,-1), DARK_CARD),
-    ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
-    ('ALIGN', (0,0), (0,0), 'CENTER'),
-    ('TOPPADDING', (0,0), (-1,-1), 10),
-    ('BOTTOMPADDING', (0,0), (-1,-1), 10),
-    ('LEFTPADDING', (0,0), (0,0), 8),
-    ('LEFTPADDING', (1,0), (1,0), 12),
-    ('RIGHTPADDING', (0,0), (-1,-1), 10),
-    ('ROUNDEDCORNERS', [6]),
+    ('BACKGROUND', (0, 0), (-1, -1), LGRAY),
+    ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+    ('TOPPADDING', (0, 0), (-1, -1), 10),
+    ('BOTTOMPADDING', (0, 0), (-1, -1), 10),
+    ('LEFTPADDING', (0, 0), (0, 0), 12),
+    ('LEFTPADDING', (1, 0), (1, 0), 10),
+    ('RIGHTPADDING', (0, 0), (-1, -1), 10),
+    ('LINEBELOW', (0, 0), (-1, -1), 2, PURPLE),
 ]))
 story.append(ht)
-story.append(Spacer(1, 6*mm))
+story.append(Spacer(1, 5*mm))
 
-# ── Skills ───────────────────────────────────────────────────
+# ── Skills ──────────────────────────────────────────────────────
 story.append(Paragraph('专业技能', sec_s))
-story.append(HRFlowable(width='100%', thickness=0.5, color=PURPLE, spaceAfter=4))
+story.append(HRFlowable(width='100%', thickness=0.8, color=PURPLE, spaceAfter=3))
 
 skill_groups = [
     ('编程语言', ['Java', 'Go', 'Python']),
@@ -92,22 +95,22 @@ skill_groups = [
     ('存储/云',  ['S3/Ceph', 'HDFS', 'Linux', 'Git']),
 ]
 rows = [[Paragraph(lbl, sklabel_s), Paragraph('  '.join(tags), tag_s)] for lbl, tags in skill_groups]
-st = Table(rows, colWidths=[38*mm, W - 38*mm])
+st = Table(rows, colWidths=[36*mm, W - 36*mm])
 st.setStyle(TableStyle([
-    ('ROWBACKGROUNDS', (0,0), (-1,-1), [CARD_BG, CARD_BG2]),
-    ('TOPPADDING', (0,0), (-1,-1), 4),
-    ('BOTTOMPADDING', (0,0), (-1,-1), 4),
-    ('LEFTPADDING', (0,0), (-1,-1), 8),
-    ('RIGHTPADDING', (0,0), (-1,-1), 8),
-    ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
-    ('GRID', (0,0), (-1,-1), 0.3, HexColor('#1a1a25')),
+    ('ROWBACKGROUNDS', (0, 0), (-1, -1), [LGRAY, WHITE]),
+    ('TOPPADDING', (0, 0), (-1, -1), 4),
+    ('BOTTOMPADDING', (0, 0), (-1, -1), 4),
+    ('LEFTPADDING', (0, 0), (-1, -1), 8),
+    ('RIGHTPADDING', (0, 0), (-1, -1), 8),
+    ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+    ('LINEBELOW', (0, 0), (-1, -1), 0.3, BORDER),
 ]))
 story.append(st)
 story.append(Spacer(1, 4*mm))
 
-# ── Work Experience ───────────────────────────────────────────
+# ── Work Experience ────────────────────────────────────────────
 story.append(Paragraph('工作经历', sec_s))
-story.append(HRFlowable(width='100%', thickness=0.5, color=PURPLE, spaceAfter=4))
+story.append(HRFlowable(width='100%', thickness=0.8, color=PURPLE, spaceAfter=3))
 
 jobs = [
     dict(company='北京 · 京东远升科技', role='软件开发工程师',
@@ -136,18 +139,21 @@ jobs = [
          ]),
 ]
 
-for job in jobs:
-    jt = Table([[Paragraph('▸', dot_s),
-                 [Paragraph(job['company'], company_s),
-                  Paragraph(job['role'], role_s),
-                  Paragraph(job['period'], period_s)]]],
-               colWidths=[8*mm, W - 8*mm])
+for i, job in enumerate(jobs):
+    bg = LGRAY if i % 2 == 0 else WHITE
+    jt = Table([[
+        Paragraph('▸', S('dot', fontName='Hei', fontSize=10, textColor=PURPLE, alignment=1, leading=14)),
+        [Paragraph(job['company'], company_s),
+         Paragraph(job['role'], role_s),
+         Paragraph(job['period'], period_s)],
+    ]], colWidths=[8*mm, W - 8*mm])
     jt.setStyle(TableStyle([
-        ('VALIGN', (0,0), (-1,-1), 'TOP'),
-        ('TOPPADDING', (0,0), (-1,-1), 3),
-        ('BOTTOMPADDING', (0,0), (-1,-1), 2),
-        ('LEFTPADDING', (0,0), (0,0), 0),
-        ('LEFTPADDING', (1,0), (1,0), 4),
+        ('BACKGROUND', (0, 0), (-1, -1), bg),
+        ('VALIGN', (0, 0), (-1, -1), 'TOP'),
+        ('TOPPADDING', (0, 0), (-1, -1), 4),
+        ('BOTTOMPADDING', (0, 0), (-1, -1), 2),
+        ('LEFTPADDING', (0, 0), (0, 0), 6),
+        ('LEFTPADDING', (1, 0), (1, 0), 4),
     ]))
     story.append(jt)
     for b in job['bullets']:
@@ -156,31 +162,31 @@ for job in jobs:
 
 # ── Education ─────────────────────────────────────────────────
 story.append(Paragraph('教育背景', sec_s))
-story.append(HRFlowable(width='100%', thickness=0.5, color=PURPLE, spaceAfter=4))
+story.append(HRFlowable(width='100%', thickness=0.8, color=PURPLE, spaceAfter=3))
 
-et = Table([[Paragraph('太原理工大学', school_s),
-             Paragraph('2017.09 — 2021.07',
-                       S('date', fontName='Hei', fontSize=9, textColor=HexColor('#6b7280'),
-                         alignment=TA_CENTER, leading=13))]],
-           colWidths=[W - 40*mm, 40*mm])
+et = Table([[
+    Paragraph('太原理工大学', school_s),
+    Paragraph('2017.09 — 2021.07',
+              S('date', fontName='Hei', fontSize=9, textColor=GRAY, alignment=2, leading=13)),
+]], colWidths=[W - 40*mm, 40*mm])
 et.setStyle(TableStyle([
-    ('VALIGN', (0,0), (-1,-1), 'MIDDLE'),
-    ('BACKGROUND', (0,0), (-1,-1), CARD_BG),
-    ('TOPPADDING', (0,0), (-1,-1), 6),
-    ('BOTTOMPADDING', (0,0), (-1,-1), 6),
-    ('LEFTPADDING', (0,0), (0,0), 8),
-    ('RIGHTPADDING', (1,0), (1,0), 8),
-    ('LINEBELOW', (0,0), (-1,-1), 0.3, HexColor('#1a1a25')),
+    ('BACKGROUND', (0, 0), (-1, -1), LGRAY),
+    ('VALIGN', (0, 0), (-1, -1), 'MIDDLE'),
+    ('TOPPADDING', (0, 0), (-1, -1), 6),
+    ('BOTTOMPADDING', (0, 0), (-1, -1), 6),
+    ('LEFTPADDING', (0, 0), (0, 0), 8),
+    ('RIGHTPADDING', (1, 0), (1, 0), 8),
+    ('LINEBELOW', (0, 0), (-1, -1), 0.5, BORDER),
 ]))
 story.append(et)
 story.append(Paragraph('软件工程 · 本科', major_s))
 story.append(Spacer(1, 4*mm))
 
-# ── Honor ────────────────────────────────────────────────────
+# ── Honor ──────────────────────────────────────────────────────
 story.append(Paragraph('荣誉奖项', sec_s))
-story.append(HRFlowable(width='100%', thickness=0.5, color=PURPLE, spaceAfter=4))
-story.append(Paragraph('★ 2019年全国数学建模省赛二等奖', honor_s))
+story.append(HRFlowable(width='100%', thickness=0.8, color=PURPLE, spaceAfter=3))
+story.append(Paragraph('★  2019 年全国数学建模省赛二等奖', honor_s))
 
-# ── Build ────────────────────────────────────────────────────
+# ── Build ─────────────────────────────────────────────────────
 doc.build(story)
 print(f'PDF生成成功: {output}')
