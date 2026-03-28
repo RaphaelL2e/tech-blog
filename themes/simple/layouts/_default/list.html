@@ -1,4 +1,16 @@
 {{ define "main" }}
-<h1>{{ .Title }}</h1>
-{{ .Content }}
+<h1 class="page-title">{{ .Title }}</h1>
+<div class="post-content">
+    {{ .Content }}
+</div>
+{{ range .Pages }}
+<article>
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <div class="meta">{{ .Date.Format "2006-01-02" }}</div>
+    <div class="summary">
+        {{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Summary | truncate 120 }}{{ end }}
+        <a href="{{ .RelPermalink }}">阅读更多 →</a>
+    </div>
+</article>
+{{ end }}
 {{ end }}

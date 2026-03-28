@@ -1,0 +1,21 @@
+{{ define "main" }}
+<div class="taxonomy-detail">
+    <h1 class="page-title">分类：{{ .Title }}</h1>
+    <div class="taxonomy-stats">
+        <span class="stat-badge">共 {{ len .Pages }} 篇文章</span>
+    </div>
+    <div class="taxonomy-articles">
+        {{ range .Pages }}
+        <article class="taxonomy-article">
+            <a href="{{ .RelPermalink }}" class="article-link">
+                <h2>{{ .Title }}</h2>
+                <div class="article-meta">{{ .Date.Format "2006-01-02" }}</div>
+                <div class="article-summary">
+                    {{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Summary | truncate 150 }}{{ end }}
+                </div>
+            </a>
+        </article>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

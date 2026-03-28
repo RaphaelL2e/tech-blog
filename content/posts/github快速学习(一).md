@@ -2,6 +2,7 @@
 title: "GitHub快速学习(一)"
 date: 2019-06-26T19:06:32+08:00
 draft: false
+description: "GitHub 入门教程第一篇，讲解 Git 与 GitHub 的区别，以及社会化编程的概念。"
 categories: ['GitHub']
 tags: ['github']
 ---
@@ -44,49 +45,3 @@ git config --global user.email "Your_email@example.com"
 git config --global color.ui auto
 
 这些config 会在 ~/.gitconfig 中形成输出文件
-
-      
-    
-    
-    
-    
-
-    
-  	
-    	 
-    
-        -------------本文结束**感谢阅读-------------
-    
-
-        
-    
-    
-      
-        
-    
-    欢迎您扫一扫上面的微信公众号，订阅我的博客！
-
-      
-    
-
-    
-      
-        
-  坚持原创技术分享，您的支持将鼓励我继续创作！
-  
-    打赏
-  
-  
-
-    
-      
-        
-        微信支付
-
-      
-    
-
-    
-      
-        
-        支付宝

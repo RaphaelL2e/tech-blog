@@ -1,0 +1,77 @@
+{{ define "main" }}
+<div class="categories-container">
+    <h1 class="page-title">文章分类</h1>
+    <div class="category-tree">
+        {{ range .Site.Taxonomies.categories }}
+        <div class="tree-branch">
+            <div class="branch-header">
+                <span class="branch-icon">📁</span>
+                <a href="{{ .Page.RelPermalink }}" class="branch-name">{{ .Page.Title }}</a>
+                <span class="branch-count">{{ .Count }} 篇</span>
+            </div>
+            <div class="branch-leaves">
+                {{ range first 3 .Pages }}
+                <a href="{{ .RelPermalink }}" class="leaf-item">{{ .Title }}</a>
+                {{ end }}
+                {{ if gt (len .Pages) 3 }}
+                <span class="leaf-more" data-cat="{{ .Page.Title }}" data-count="{{ .Count }}" data-articles='[
+                    {{ range $i, $e := .Pages }}
+                    {{ if $i }},{{ end }}{"title":"{{ $e.Title }}","url":"{{ $e.RelPermalink }}","date":"{{ $e.Date.Format "2006-01-02" }}"}
+                    {{ end }}
+                ]'>+ {{ sub (len .Pages) 3 }} 更多</span>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="catModal" class="tag-modal">
+    <div class="tag-modal-content">
+        <div class="tag-modal-header">
+            <h2 id="catModalTitle"></h2>
+            <span class="tag-modal-close">&times;</span>
+        </div>
+        <div class="tag-modal-body" id="catModalBody">
+        </div>
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('.leaf-more').forEach(item => {
+    item.addEventListener('click', function() {
+        const catName = this.dataset.cat;
+        const count = this.dataset.count;
+        const articles = JSON.parse(this.dataset.articles);
+        
+        document.getElementById('catModalTitle').innerHTML = 
+            '📁 ' + catName + ' <span class="modal-count">' + count + ' 篇</span>';
+        
+        let html = '';
+        articles.forEach(article => {
+            html += '<a href="' + article.url + '" class="modal-article">' +
+                    '<span class="modal-article-title">' + article.title + '</span>' +
+                    '<span class="modal-article-date">' + article.date + '</span>' +
+                    '</a>';
+        });
+        document.getElementById('catModalBody').innerHTML = html;
+        
+        document.getElementById('catModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+document.querySelector('#catModal .tag-modal-close').addEventListener('click', function() {
+    document.getElementById('catModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
+
+document.getElementById('catModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        document.getElementById('catModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+});
+</script>
+{{ end }}

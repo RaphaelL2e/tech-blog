@@ -1,7 +1,11 @@
 {{ define "main" }}
-<article>
-    <h1>{{ .Title }}</h1>
-    <div class="meta">{{ .Date.Format "2006-01-02" }}</div>
-    {{ .Content }}
+<article class="post">
+    <div class="post-header">
+        <div class="meta">{{ .Date.Format "2006-01-02" }} {{ if .Params.categories }}<span>/</span> {{ range .Params.categories }}{{ . }} {{ end }}{{ end }}</div>
+        <h1>{{ .Title }}</h1>
+    </div>
+    <div class="post-content">
+        {{ .Content }}
+    </div>
 </article>
 {{ end }}

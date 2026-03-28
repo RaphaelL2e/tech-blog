@@ -1,4 +1,4 @@
-name: Deploy Hugo Site to GitHub Pages
+name: Deploy to RaphaelL2e.github.io
 
 on:
   push:
@@ -6,14 +6,11 @@ on:
       - main
   workflow_dispatch:
 
-permissions:
-  contents: write
-
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout tech-blog
         uses: actions/checkout@v4
         
       - name: Setup Hugo
@@ -23,10 +20,12 @@ jobs:
           extended: true
           
       - name: Build
-        run: hugo --gc --minify --baseURL "https://raphaell2e.github.io/tech-blog/"
+        run: hugo --gc --minify --baseURL "https://raphaell2e.github.io/"
         
-      - name: Deploy
+      - name: Deploy to RaphaelL2e.github.io
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          deploy_key: ${{ secrets.DEPLOY_KEY }}
+          external_repository: RaphaelL2e/RaphaelL2e.github.io
+          publish_branch: main
           publish_dir: ./public

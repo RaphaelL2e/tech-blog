@@ -1,15 +1,14 @@
 {{ define "main" }}
-<h1 class="page-title">最新文章</h1>
-{{ range .Site.RegularPages }}
+<h1 class="page-title">标签：{{ .Title }}</h1>
+<div class="category-stats">
+    <span class="stat-item">共 {{ len .Pages }} 篇文章</span>
+</div>
+{{ range .Pages }}
 <article>
     <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
     <div class="meta">{{ .Date.Format "2006-01-02" }} {{ if .Params.categories }}<span>/</span> {{ range .Params.categories }}{{ . }} {{ end }}{{ end }}</div>
     <div class="summary">
-        {{ if .Params.description }}
-            {{ .Params.description }}
-        {{ else }}
-            {{ .Summary | truncate 120 }}
-        {{ end }}
+        {{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Summary | truncate 120 }}{{ end }}
         <a href="{{ .RelPermalink }}">阅读更多 →</a>
     </div>
 </article>

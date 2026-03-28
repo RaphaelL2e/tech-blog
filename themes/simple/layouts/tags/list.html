@@ -1,0 +1,73 @@
+{{ define "main" }}
+<div class="tags-container">
+    <h1 class="page-title">标签云</h1>
+    <div class="tags-grid">
+        {{ range .Site.Taxonomies.tags }}
+        <div class="tag-card" data-tag="{{ .Page.Title }}" data-count="{{ .Count }}" data-articles='[
+            {{ range $i, $e := .Pages }}
+            {{ if $i }},{{ end }}{"title":"{{ $e.Title }}","url":"{{ $e.RelPermalink }}","date":"{{ $e.Date.Format "2006-01-02" }}"}
+            {{ end }}
+        ]'>
+            <span class="tag-name">{{ .Page.Title }}</span>
+            <span class="tag-num">{{ .Count }}</span>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="tagModal" class="tag-modal">
+    <div class="tag-modal-content">
+        <div class="tag-modal-header">
+            <h2 id="modalTitle"></h2>
+            <span class="tag-modal-close">&times;</span>
+        </div>
+        <div class="tag-modal-body" id="modalBody">
+        </div>
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('.tag-card').forEach(card => {
+    card.addEventListener('click', function() {
+        const tagName = this.dataset.tag;
+        const count = this.dataset.count;
+        const articles = JSON.parse(this.dataset.articles);
+        
+        document.getElementById('modalTitle').innerHTML = 
+            tagName + ' <span class="modal-count">' + count + ' 篇</span>';
+        
+        let html = '';
+        articles.forEach(article => {
+            html += '<a href="' + article.url + '" class="modal-article">' +
+                    '<span class="modal-article-title">' + article.title + '</span>' +
+                    '<span class="modal-article-date">' + article.date + '</span>' +
+                    '</a>';
+        });
+        document.getElementById('modalBody').innerHTML = html;
+        
+        document.getElementById('tagModal').style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+document.querySelector('.tag-modal-close').addEventListener('click', function() {
+    document.getElementById('tagModal').style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
+
+document.getElementById('tagModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        document.getElementById('tagModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+});
+
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        document.getElementById('tagModal').style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+});
+</script>
+{{ end }}
