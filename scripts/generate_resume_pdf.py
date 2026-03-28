@@ -135,7 +135,7 @@ story.append(HRFlowable(width='100%', thickness=0.8, color=BLUE, spaceAfter=3))
 
 jobs = [
     ('北京·京东远升科技', '软件开发工程师', '2025.04 — 至今', LGRAY,
-     '【技术栈：Go | ClickHouse | Kafka | MySQL】',
+     '【技术栈：Java | Spring Boot | ClickHouse | Kafka | MySQL | gRPC】',
      [
          ('领航财务分析看板（点击率↑300%）',
           '基于 ClickHouse 设计多维聚合数据模型，物化视图+异步预计算将查询 RT 从 8s 降至 800ms；'
@@ -153,7 +153,7 @@ jobs = [
      ]),
 
     ('深圳·卓驭科技（大疆车载）', '中级大数据开发工程师', '2024.01 — 2025.04', WHITE,
-     '【技术栈：Java | Go | NebulaGraph | Kafka | K8s | Spark】',
+     '【技术栈：Java | Spring Boot | NebulaGraph | Kafka | K8s | Spark】',
      [
          ('车载数据闭环平台 · 整体架构（资产规模：亿级）',
           '主导亿级数据资产平台架构设计与落地，NebulaGraph 图数据库建模资产血缘关系；'
@@ -173,7 +173,7 @@ jobs = [
      ]),
 
     ('北京·商汤科技', '后端开发工程师', '2021.01 — 2024.01', LGRAY,
-     '【技术栈：Python | K8s | Elasticsearch | HDFS | Ceph | gRPC】',
+     '【技术栈：Go | Python | K8s | Elasticsearch | HDFS | Ceph | gRPC】',
      [
          ('AI 云开发机平台（用户：2000+ 开发者）',
           '设计云原生开发环境后端，K8s+Docker 容器化算力调度，支持 1 卡到多卡弹性伸缩；'
