@@ -16,7 +16,8 @@ pdfmetrics.registerFont(TTFont('Song', '/System/Library/Fonts/Supplemental/Songt
 
 # Clean professional color palette (white background)
 ACCENT   = HexColor('#2563eb')
-PURPLE   = HexColor('#7c3aed')
+# PURPLE replaced by ACCENT
+PURPLE   = ACCENT
 DARK     = HexColor('#1a1a2e')
 GRAY     = HexColor('#6b7280')
 LGRAY    = HexColor('#f3f4f6')
