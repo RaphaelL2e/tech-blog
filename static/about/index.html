@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于 - Raphael Tech Blog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {--bg:#0a0a0f;--bg2:#12121a;--bg3:#1a1a25;--text:#e4e4e7;--text2:#a1a1aa;--text3:#71717a;--accent:#3b82f6;--purple:#7c3aed;--pink:#ec4899;--border:#27272a;}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); line-height:1.6; }
+header { background:var(--bg2); border-bottom:1px solid var(--border); position:sticky; top:0; z-index:100; backdrop-filter:blur(10px); }
+.header-inner { max-width:900px; margin:0 auto; padding:1rem 1.5rem; display:flex; justify-content:space-between; align-items:center; }
+header h1 a { color:var(--text); text-decoration:none; font-size:1.25rem; font-weight:700; display:flex; align-items:center; gap:.5rem; }
+header h1 a::before { content:'◆'; color:var(--accent); }
+nav { display:flex; gap:1.5rem; }
+nav a { color:var(--text2); text-decoration:none; font-size:.875rem; font-weight:500; transition:color .2s; }
+nav a:hover { color:var(--text); }
+.about-wrap { max-width:860px; margin:0 auto; padding:2.5rem 1.5rem 4rem; }
+.hero { display:flex; align-items:center; gap:2.5rem; margin-bottom:3rem; padding-bottom:2.5rem; border-bottom:1px solid rgba(255,255,255,.08); }
+.avatar { width:120px; height:120px; border-radius:50%; background:linear-gradient(135deg,#667eea,#764ba2,#f093fb); display:flex; align-items:center; justify-content:center; font-size:3rem; font-weight:800; color:#fff; flex-shrink:0; box-shadow:0 8px 32px rgba(102,126,234,.35); letter-spacing:-2px; }
+.hero-info h1 { font-size:2rem; margin:0 0 .4rem; color:#fff; }
+.tagline { color:#a78bfa; font-size:1.05rem; margin:0 0 .8rem; }
+.meta { display:flex; flex-wrap:wrap; gap:1.2rem; font-size:.85rem; color:#9ca3af; }
+.meta-item { display:flex; align-items:center; gap:.4rem; }
+.meta svg { width:14px; height:14px; opacity:.7; flex-shrink:0; }
+.meta a { color:#9ca3af; text-decoration:none; }
+.meta a:hover { color:#e2e8f0; }
+.sec-title { font-size:1.15rem; font-weight:700; color:#e2e8f0; margin:2.5rem 0 1.2rem; padding-left:.8rem; border-left:3px solid var(--purple); letter-spacing:.5px; }
+.skills { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:.8rem; margin-bottom:1.5rem; }
+.sk-card { background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.07); border-radius:10px; padding:1rem; }
+.sk-title { font-size:.78rem; color:#a78bfa; margin-bottom:.5rem; text-transform:uppercase; letter-spacing:1px; }
+.sk-tags { display:flex; flex-wrap:wrap; gap:.4rem; }
+.stag { background:rgba(124,58,237,.15); border-radius:6px; padding:.25rem .6rem; font-size:.78rem; color:#c4b5fd; }
+.tl { position:relative; padding-left:1.8rem; }
+.tl::before { content:''; position:absolute; left:0; top:.4rem; bottom:.4rem; width:2px; background:linear-gradient(to bottom,#7c3aed,#ec4899); border-radius:1px; }
+.tl-item { margin-bottom:2rem; position:relative; }
+.tl-item::before { content:''; position:absolute; left:-1.65rem; top:.5rem; width:10px; height:10px; border-radius:50%; background:#7c3aed; box-shadow:0 0 0 3px rgba(124,58,237,.3); }
+.tl-company { font-weight:700; font-size:1.05rem; color:#e2e8f0; margin-bottom:.2rem; }
+.tl-role { font-size:.9rem; color:#a78bfa; margin-bottom:.3rem; }
+.tl-period { font-size:.78rem; color:#6b7280; margin-bottom:.6rem; }
+.tl-bullets { list-style:none; padding:0; margin:0; }
+.tl-bullets li { font-size:.85rem; color:#9ca3af; padding:.2rem 0 .2rem .8rem; position:relative; line-height:1.6; }
+.tl-bullets li::before { content:'▸'; position:absolute; left:0; color:#7c3aed; font-size:.75rem; top:.3rem; }
+.school-row { display:flex; justify-content:space-between; align-items:center; margin:0 0 1rem; }
+.school-name { font-weight:700; color:#e2e8f0; font-size:1.05rem; }
+.school-major { color:#9ca3af; font-size:.85rem; }
+.school-period { font-size:.8rem; color:#6b7280; }
+.honor-badge { display:inline-flex; align-items:center; gap:.4rem; background:rgba(236,72,153,.12); border:1px solid rgba(236,72,153,.25); border-radius:8px; padding:.4rem .9rem; font-size:.85rem; color:#f9a8d4; margin:.3rem .3rem .3rem 0; }
+.c-links { display:flex; gap:1.2rem; flex-wrap:wrap; }
+.c-link { display:inline-flex; align-items:center; gap:.5rem; background:rgba(124,58,237,.12); border:1px solid rgba(124,58,237,.3); border-radius:10px; padding:.6rem 1.2rem; font-size:.85rem; color:#c4b5fd; text-decoration:none; transition:all .2s; }
+.c-link:hover { background:rgba(124,58,237,.25); border-color:#7c3aed; color:#e2e8f0; }
+footer { max-width:900px; margin:0 auto; padding:2rem 1.5rem; border-top:1px solid var(--border); text-align:center; color:var(--text3); font-size:.875rem; }
+footer a { color:var(--text3); text-decoration:none; }
+footer a:hover { color:var(--text2); }
+@media (max-width:600px) { .hero { flex-direction:column; text-align:center; } .skills { grid-template-columns:1fr; } .meta { justify-content:center; } nav { gap:1rem; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <h1><a href="https://raphaell2e.github.io/">Raphael Tech Blog</a></h1>
+    <nav>
+      <a href="https://raphaell2e.github.io/">首页</a>
+      <a href="https://raphaell2e.github.io/posts/">文章</a>
+      <a href="https://raphaell2e.github.io/categories/">分类</a>
+      <a href="https://raphaell2e.github.io/tags/">标签</a>
+      <a href="https://raphaell2e.github.io/about/">关于</a>
+    </nav>
+  </div>
+</header>
+<div class="about-wrap">
+  <div class="hero">
+    <div class="avatar">李</div>
+    <div class="hero-info">
+      <h1>李亚飞</h1>
+      <p class="tagline">四年经验 · 后端开发工程师</p>
+      <div class="meta">
+        <span class="meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>北京</span>
+        <span class="meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg>17603444963</span>
+        <span class="meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg><a href="mailto:liyafei.work@foxmail.com">liyafei.work@foxmail.com</a></span>
+        <span class="meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg><a href="https://github.com/RaphaelL2e" target="_blank">github.com/RaphaelL2e</a></span>
+      </div>
+    </div>
+  </div>
+  <h2 class="sec-title">专业技能</h2>
+  <div class="skills">
+    <div class="sk-card"><div class="sk-title">Languages</div><div class="sk-tags"><span class="stag">Java</span><span class="stag">Go</span><span class="stag">Python</span></div></div>
+    <div class="sk-card"><div class="sk-title">数据库</div><div class="sk-tags"><span class="stag">MySQL</span><span class="stag">Redis</span><span class="stag">Elasticsearch</span><span class="stag">ClickHouse</span><span class="stag">MongoDB</span><span class="stag">NebulaGraphDB</span></div></div>
+    <div class="sk-card"><div class="sk-title">中间件 &amp; 框架</div><div class="sk-tags"><span class="stag">Kafka</span><span class="stag">gRPC</span><span class="stag">Spring Boot</span></div></div>
+    <div class="sk-card"><div class="sk-title">DevOps</div><div class="sk-tags"><span class="stag">Docker</span><span class="stag">Kubernetes</span><span class="stag">Helm</span><span class="stag">Jenkins</span><span class="stag">CI/CD</span></div></div>
+    <div class="sk-card"><div class="sk-title">存储 &amp; 云</div><div class="sk-tags"><span class="stag">S3 / Ceph</span><span class="stag">HDFS</span><span class="stag">Linux</span><span class="stag">Git</span></div></div>
+  </div>
+  <h2 class="sec-title">工作经历</h2>
+  <div class="tl">
+    <div class="tl-item"><div class="tl-company">北京·京东远升科技</div><div class="tl-role">软件开发工程师</div><div class="tl-period">2025.04 — 至今 · 北京</div><ul class="tl-bullets"><li>领航财务分析系统：基于 ClickHouse 构建销售供应链分析看板，为业务人员提供直观数据分析支撑</li><li>自定义趋势图优化：将 49 个指标 + 13 条 SQL 精简合并为 2 条 SQL，实现配置化多维分析</li><li>灭霸看板优化：新增业务维度，调整 10 个指标及对应 SQL 逻辑，提升看板分析维度与准确性</li></ul></div>
+    <div class="tl-item"><div class="tl-company">深圳·卓驭科技（大疆车载）</div><div class="tl-role">中级大数据开发工程师</div><div class="tl-period">2024.01 — 2025.04 · 深圳</div><ul class="tl-bullets"><li>车载数据闭环平台：主导资产生命周期治理、血缘建设、亿级数据资产升级（千万→亿级）</li><li>NebulaGraph 图数据库：搭建车载资产血缘关系建模与可视化检索</li><li>分布式调度引擎 + Kafka 消息队列：实现跨业务系统的任务编排与解耦</li><li>GPS 解析 &amp; 视频预览解析工具：流水线自动化，提升数据处理效率</li></ul></div>
+    <div class="tl-item"><div class="tl-company">北京·商汤科技</div><div class="tl-role">后端开发工程师</div><div class="tl-period">2021.01 — 2024.01 · 北京</div><ul class="tl-bullets"><li>AI 云开发机：云原生开发环境，支持挂载存储、调用算力池，为 AI 开发者提供端到端开发服务</li><li>广汽感知闭环平台：异步任务队列系统、mpirun + K8s 多卡量化任务调度、自动标注系统</li><li>数据集版本管理平台：ES 全文检索、以图搜图、数据仓库 ETL 工具开发</li><li>数据采标管理平台：数据检索 MVP、分布式数据同步、SDK-Server 模块</li><li>HDFS 上云 Ceph（实习）：主导 1PB 数据迁移，Aws 分片方案支持单文件最大 5TB</li></ul></div>
+  </div>
+  <h2 class="sec-title">教育背景</h2>
+  <div class="school-row"><div><div class="school-name">太原理工大学</div><div class="school-major">软件工程 · 本科</div></div><div class="school-period">2017.09 — 2021.07</div></div>
+  <h2 class="sec-title">荣誉奖项</h2>
+  <div><span class="honor-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>2019 年全国数学建模省赛二等奖</span></div>
+  <h2 class="sec-title">联系方式</h2>
+  <div class="c-links">
+    <a class="c-link" href="mailto:liyafei.work@foxmail.com"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>liyafei.work@foxmail.com</a>
+    <a class="c-link" href="https://github.com/RaphaelL2e" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>github.com/RaphaelL2e</a>
+    <a class="c-link" href="https://raphaell2e.github.io" target="_blank"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>raphaell2e.github.io</a>
+  </div>
+</div>
+<footer><p>© 2026 Raphael · <a href="https://github.com/RaphaelL2e">GitHub</a></p></footer>
+</body>
+</html>

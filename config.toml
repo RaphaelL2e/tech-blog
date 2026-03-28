@@ -20,3 +20,4 @@ theme = "simple"
     name = "关于"
     url = "/about/"
     weight = 30
+disableHTMLEscaping = true
