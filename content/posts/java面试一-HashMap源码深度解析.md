@@ -1,3 +1,11 @@
+---
+title: "Java 面试一：HashMap 源码深度解析"
+date: 2026-04-27T22:15:00+08:00
+draft: false
+categories: ["java"]
+tags: ["Java", "面试", "HashMap", "源码解析"]
+---
+
 # Java 面试一 HashMap 源码深度解析
 
 HashMap 是 Java 面试中出现频率最高的集合类，没有之一。无论是校招还是社招，几乎所有 Java 面试都会问到 HashMap 的原理。很多候选人能说出「数组 + 链表 + 红黑树」「扰动函数」「扩容机制」等关键词，但真正能讲清楚源码细节和设计思想的却寥寥无几。
