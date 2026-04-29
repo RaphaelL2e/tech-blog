@@ -1,7 +1,8 @@
 ---
 title: "107倍成本差距：你的AI Agent正在烧钱吗？"
-date: 2026-04-29T08:00:00+08:00
+date: 2026-04-28T23:50:00+08:00
 draft: false
+slug: "107x-cost-saving-deepseek-vs-gpt4o"
 description: "AgentWatch 发现：DeepSeek 成本仅为 GPT-4o 的 1/107。本文展示如何用 AgentWatch 监控 AI 成本，避免不必要的开销。"
 tags: ["AI", "AgentWatch", "成本优化", "DeepSeek", "GPT-4o"]
 categories: ["技术分析"]
