@@ -27,5 +27,5 @@ jobs:
         with:
           deploy_key: ${{ secrets.DEPLOY_KEY }}
           external_repository: RaphaelL2e/RaphaelL2e.github.io
-          publish_branch: master
+          publish_branch: main
           publish_dir: ./public
