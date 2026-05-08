@@ -1,5 +1,5 @@
 ---
-title: "Java 面试七：JVM 类加载机制深度解析"
+title: "JVM 类加载机制深度解析"
 date: 2026-05-08T15:08:00+08:00
 draft: false
 categories: ["java"]

@@ -1,5 +1,5 @@
 ---
-title: "Java 面试六：Java 对象内存布局深度解析"
+title: "Java 对象内存布局深度解析"
 date: 2026-05-07T23:08:00+08:00
 draft: false
 categories: ["java"]
