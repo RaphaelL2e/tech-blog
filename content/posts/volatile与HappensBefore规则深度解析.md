@@ -1,3 +1,11 @@
+---
+title: "volatile 与 Happens-Before 规则深度解析"
+date: 2026-05-09T15:50:00+08:00
+draft: false
+categories: ["java"]
+tags: ["volatile", "happens-before", "并发", "JMM", "CAS"]
+---
+
 # volatile 与 Happens-Before 规则深度解析
 
 > 面试高频问题：volatile 如何保证可见性？synchronized 和 volatile 的区别？happens-before 是什么？
