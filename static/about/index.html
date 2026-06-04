@@ -84,7 +84,7 @@ footer a:hover { color:var(--text2); }
     <div class="avatar">李</div>
     <div class="hero-info">
       <h1>李亚飞</h1>
-      <p class="tagline">四年经验 · 后端开发工程师</p>
+      <p class="tagline">Java 后端工程师 · 平台后端 · 数据平台</p>
       <div class="meta">
         <span class="meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>北京</span>
         <span class="meta-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg><span class="phone-hidden" onclick="this.textContent='17603444963'; this.style.filter='none'; this.style.cursor='text'; this.onclick=null" title="点击显示完整号码">176········</span></span>
@@ -93,19 +93,24 @@ footer a:hover { color:var(--text2); }
       </div>
     </div>
   </div>
+  <h2 class="sec-title">个人简介</h2>
+  <div class="sk-card" style="margin-bottom:1.5rem">
+    <p style="color:#cbd5e1;margin-bottom:.8rem">5 年后端研发经验，长期从事平台型系统、数据闭环平台、运营中台和 AI 工程化建设。主语言是 Java，同时具备 Golang 项目经验。</p>
+    <p style="color:#cbd5e1">我更关注复杂业务系统背后的工程抽象：如何把调度、流程、策略、权限、缓存、分布式锁、数据同步和异常兜底沉淀成稳定、可扩展、可复用的平台能力。</p>
+  </div>
   <h2 class="sec-title">专业技能</h2>
   <div class="skills">
     <div class="sk-card"><div class="sk-title">Languages</div><div class="sk-tags"><span class="stag">Java</span><span class="stag">Go</span><span class="stag">Python</span></div></div>
-    <div class="sk-card"><div class="sk-title">数据库</div><div class="sk-tags"><span class="stag">MySQL</span><span class="stag">Redis</span><span class="stag">Elasticsearch</span><span class="stag">ClickHouse</span><span class="stag">MongoDB</span><span class="stag">NebulaGraphDB</span></div></div>
-    <div class="sk-card"><div class="sk-title">中间件 &amp; 框架</div><div class="sk-tags"><span class="stag">Kafka</span><span class="stag">gRPC</span><span class="stag">Spring Boot</span></div></div>
-    <div class="sk-card"><div class="sk-title">DevOps</div><div class="sk-tags"><span class="stag">Docker</span><span class="stag">Kubernetes</span><span class="stag">Helm</span><span class="stag">Jenkins</span><span class="stag">CI/CD</span></div></div>
-    <div class="sk-card"><div class="sk-title">存储 &amp; 云</div><div class="sk-tags"><span class="stag">S3 / Ceph</span><span class="stag">HDFS</span><span class="stag">Linux</span><span class="stag">Git</span></div></div>
+    <div class="sk-card"><div class="sk-title">后端框架</div><div class="sk-tags"><span class="stag">Spring Boot</span><span class="stag">DDD</span><span class="stag">MyBatis</span><span class="stag">RPC</span><span class="stag">AOP</span></div></div>
+    <div class="sk-card"><div class="sk-title">数据与检索</div><div class="sk-tags"><span class="stag">MySQL</span><span class="stag">PolarDB</span><span class="stag">Elasticsearch</span><span class="stag">ClickHouse</span><span class="stag">Milvus</span><span class="stag">NebulaGraph</span></div></div>
+    <div class="sk-card"><div class="sk-title">中间件 &amp; 平台</div><div class="sk-tags"><span class="stag">Kafka</span><span class="stag">JMQ</span><span class="stag">Redis / JimDB</span><span class="stag">DAG</span><span class="stag">EasyFlow</span></div></div>
+    <div class="sk-card"><div class="sk-title">DevOps &amp; 云</div><div class="sk-tags"><span class="stag">Docker</span><span class="stag">Kubernetes</span><span class="stag">Helm</span><span class="stag">Jenkins</span><span class="stag">CI/CD</span><span class="stag">OSS / Ceph</span></div></div>
   </div>
   <h2 class="sec-title">工作经历</h2>
   <div class="tl">
-    <div class="tl-item"><div class="tl-company">北京·京东远升科技</div><div class="tl-role">软件开发工程师</div><div class="tl-period">2025.04 — 至今 · 北京</div><ul class="tl-bullets"><li>领航财务分析系统：基于 ClickHouse 构建销售供应链分析看板，为业务人员提供直观数据分析支撑</li><li>自定义趋势图优化：将 49 个指标 + 13 条 SQL 精简合并为 2 条 SQL，实现配置化多维分析</li><li>灭霸看板优化：新增业务维度，调整 10 个指标及对应 SQL 逻辑，提升看板分析维度与准确性</li></ul></div>
-    <div class="tl-item"><div class="tl-company">深圳·卓驭科技（大疆车载）</div><div class="tl-role">中级大数据开发工程师</div><div class="tl-period">2024.01 — 2025.04 · 深圳</div><ul class="tl-bullets"><li>车载数据闭环平台：主导资产生命周期治理、血缘建设、亿级数据资产升级（千万→亿级）</li><li>NebulaGraph 图数据库：搭建车载资产血缘关系建模与可视化检索</li><li>分布式调度引擎 + Kafka 消息队列：实现跨业务系统的任务编排与解耦</li><li>GPS 解析 &amp; 视频预览解析工具：流水线自动化，提升数据处理效率</li></ul></div>
-    <div class="tl-item"><div class="tl-company">北京·商汤科技</div><div class="tl-role">后端开发工程师</div><div class="tl-period">2021.01 — 2024.01 · 北京</div><ul class="tl-bullets"><li>AI 云开发机：云原生开发环境，支持挂载存储、调用算力池，为 AI 开发者提供端到端开发服务</li><li>广汽感知闭环平台：异步任务队列系统、mpirun + K8s 多卡量化任务调度、自动标注系统</li><li>数据集版本管理平台：ES 全文检索、以图搜图、数据仓库 ETL 工具开发</li><li>数据采标管理平台：数据检索 MVP、分布式数据同步、SDK-Server 模块</li><li>HDFS 上云 Ceph（实习）：主导 1PB 数据迁移，Aws 分片方案支持单文件最大 5TB</li></ul></div>
+    <div class="tl-item"><div class="tl-company">北京·京东远升科技</div><div class="tl-role">软件开发工程师</div><div class="tl-period">2025.04 — 至今 · 北京</div><ul class="tl-bullets"><li>即时零售运营平台：建设任务管理模块，将 AI 图像复核、健康证到期识别、任务派发和 OCR 回填接入统一任务流</li><li>基于 EasyFlow 和 AutoBots 构建可中断、可恢复的异步流程，配合并发锁与多层幂等机制保障任务创建和回写一致性</li><li>智能排班与考勤系统：基于 JMQ 和 JimDB 处理排班变更消息的重复消费、乱序消费和最终一致性问题</li><li>WMS 实时作业监控大屏 2.0：通过 DDD 分层、策略工厂、分层缓存和并行编排提升指标接入效率、响应性能和故障隔离能力</li></ul></div>
+    <div class="tl-item"><div class="tl-company">深圳·卓驭科技（大疆车载）</div><div class="tl-role">中级大数据开发工程师</div><div class="tl-period">2024.01 — 2025.04 · 深圳</div><ul class="tl-bullets"><li>车载数据闭环平台：围绕资产生命周期治理、资产血缘、跨平台数据计划和底层数据库迁移建设平台后端能力</li><li>基于 NebulaGraph 建设数据资产血缘系统，支持资产、标注资产、模型、数据计划和训练任务等实体的上下游追溯</li><li>基于 DAG 模型建设跨平台任务编排能力，通过 Kafka 和节点适配器解耦数据采集、标注、检索、评测和训练链路</li><li>参与 MySQL 单库到 PolarDB 分布式数据库迁移、灰度切换和数据一致性校验，并建设数据评分与归档策略</li></ul></div>
+    <div class="tl-item"><div class="tl-company">北京·商汤科技</div><div class="tl-role">后端开发工程师</div><div class="tl-period">2021.01 — 2024.01 · 北京</div><ul class="tl-bullets"><li>广汽感知闭环平台：建设异步任务队列和任务状态机，支持感知结果评测、自定义量化、轨迹预测自动标注等长耗时任务</li><li>参与多卡量化任务接入，基于 K8s API 与 mpirun 完成任务参数下发、执行状态跟踪、日志采集和结果回传</li><li>数据集版本管理平台：支撑千万级文档与约 10 亿级图片数据管理，建设 Elasticsearch 检索、索引版本控制和平滑升级能力</li><li>数据采标管理平台：集成 Elasticsearch 元信息检索、ClickHouse 标签检索和 Milvus 向量检索，并建设 DWS 到多检索存储的数据同步链路</li></ul></div>
   </div>
   <h2 class="sec-title">教育背景</h2>
   <div class="school-row"><div><div class="school-name">太原理工大学</div><div class="school-major">软件工程 · 本科</div></div><div class="school-period">2017.09 — 2021.07</div></div>

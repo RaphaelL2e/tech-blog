@@ -4,8 +4,8 @@ title = 'Raphael Tech Blog'
 theme = "simple"
 
 [params]
-  author = "Raphael"
-  description = "技术博客 - AI、架构、编程"
+  author = "李亚飞"
+  description = "Java 后端工程师，关注平台后端、数据平台与 AI 工程化。"
 
 [menu]
   [[menu.main]]
