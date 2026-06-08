@@ -1,0 +1,77 @@
+{{ define "main" }}
+<link rel="stylesheet" href="{{ "wealth/wealth.css" | relURL }}">
+
+<section class="wealth-shell" id="wealth-app" data-payload-url="{{ "wealth/wealth-data.enc.json" | relURL }}">
+    <header class="wealth-hero">
+        <div>
+            <h1>Raphael Wealth OS</h1>
+            <p>个人财富驾驶舱。线上只保存加密数据，所有解密都在当前浏览器本地完成。</p>
+        </div>
+        <div class="wealth-lock" aria-label="Encrypted locally">
+            <span class="wealth-lock-mark">AES</span>
+            <span>本地解密</span>
+        </div>
+    </header>
+
+    <section class="wealth-unlock-panel" data-view="locked">
+        <form class="wealth-unlock-form" id="wealth-unlock-form">
+            <label for="wealth-password">访问密码</label>
+            <div class="wealth-password-row">
+                <input id="wealth-password" name="password" type="password" autocomplete="current-password" minlength="12" required>
+                <button type="submit">解锁</button>
+            </div>
+            <p class="wealth-status" id="wealth-status">密码不会发送到服务器，也不会写入本地存储。</p>
+        </form>
+    </section>
+
+    <section class="wealth-dashboard" id="wealth-dashboard" hidden>
+        <div class="wealth-dashboard-header">
+            <div>
+                <p class="wealth-kicker">统计时间</p>
+                <h2 id="wealth-snapshot-date">-</h2>
+            </div>
+            <button class="wealth-secondary-button" id="wealth-lock-button" type="button">锁定</button>
+        </div>
+
+        <div class="wealth-metrics" id="wealth-metrics"></div>
+
+        <div class="wealth-grid">
+            <section class="wealth-panel">
+                <h3>资产结构</h3>
+                <div id="wealth-category-bars" class="wealth-bars"></div>
+            </section>
+            <section class="wealth-panel">
+                <h3>仓位占比</h3>
+                <div id="wealth-allocation-bars" class="wealth-bars"></div>
+            </section>
+        </div>
+
+        <div class="wealth-grid">
+            <section class="wealth-panel">
+                <h3>本周操作建议</h3>
+                <div id="wealth-advice" class="wealth-advice"></div>
+            </section>
+            <section class="wealth-panel">
+                <h3>风险与流动性</h3>
+                <div id="wealth-scores" class="wealth-scores"></div>
+            </section>
+        </div>
+
+        <section class="wealth-panel">
+            <h3>定投计划</h3>
+            <div id="wealth-dca-summary" class="wealth-dca-summary"></div>
+            <div class="wealth-table-wrap">
+                <table class="wealth-table" id="wealth-dca-table"></table>
+            </div>
+        </section>
+
+        <section class="wealth-panel">
+            <h3>下一步行动</h3>
+            <ol id="wealth-next-actions" class="wealth-list"></ol>
+        </section>
+    </section>
+</section>
+
+<script src="{{ "wealth/wealth.js" | relURL }}" defer></script>
+{{ end }}
+

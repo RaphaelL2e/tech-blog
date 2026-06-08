@@ -9,3 +9,7 @@ Thumbs.db
 *.swp
 *.swo
 *~
+
+# Local secrets
+.env
+.env.*
