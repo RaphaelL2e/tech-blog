@@ -140,6 +140,11 @@
     gap: 1rem;
 }
 
+.wealth-unlock-panel[hidden],
+.wealth-dashboard[hidden] {
+    display: none;
+}
+
 .wealth-dashboard-header {
     display: flex;
     align-items: center;
@@ -341,4 +346,3 @@
         width: 100%;
     }
 }
-
