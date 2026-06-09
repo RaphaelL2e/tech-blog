@@ -746,4 +746,4 @@ public class RedisDistributedLock {
 
 ---
 
-*作者：亚飞的技术笔记 | 公众号：亚飞的技术笔记*
+*作者：飞哥的 AI 折腾日记*
