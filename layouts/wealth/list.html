@@ -35,6 +35,14 @@
 
         <div class="wealth-metrics" id="wealth-metrics"></div>
 
+        <section class="wealth-panel wealth-trend-panel">
+            <div class="wealth-panel-title">
+                <h3>每周财富变化</h3>
+                <p>柱状图按账号分组、按资产类型堆叠，折线展示总资产与金融资产。</p>
+            </div>
+            <div id="wealth-weekly-trend" class="wealth-trend" aria-label="每周财富变化图表"></div>
+        </section>
+
         <div class="wealth-grid">
             <section class="wealth-panel">
                 <h3>资产结构</h3>
@@ -74,4 +82,3 @@
 
 <script src="{{ "wealth/wealth.js" | relURL }}" defer></script>
 {{ end }}
-

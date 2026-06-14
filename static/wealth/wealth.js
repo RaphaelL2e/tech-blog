@@ -76,6 +76,11 @@
     };
 
     const formatPercent = (value) => `${((value || 0) * 100).toFixed(2)}%`;
+    const formatSignedMoney = (value) => {
+        const amount = value || 0;
+        const sign = amount > 0 ? "+" : "";
+        return `${sign}${formatMoney(amount)}`;
+    };
 
     const clearNode = (node) => {
         while (node.firstChild) node.removeChild(node.firstChild);
@@ -86,6 +91,331 @@
         node.textContent = value;
         if (className) node.className = className;
         return node;
+    };
+
+    const svgNode = (tag, attributes = {}) => {
+        const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
+        Object.entries(attributes).forEach(([key, value]) => {
+            if (value !== undefined && value !== null) node.setAttribute(key, value);
+        });
+        return node;
+    };
+
+    const pathLine = (points) => points.map(([x, y], index) => `${index === 0 ? "M" : "L"}${x},${y}`).join(" ");
+
+    const renderWeeklyTrend = (trend) => {
+        const container = document.getElementById("wealth-weekly-trend");
+        clearNode(container);
+        if (!trend || !trend.weeks || trend.weeks.length === 0) {
+            container.append(text("p", "暂无周度趋势数据。"));
+            return;
+        }
+
+        const width = 1080;
+        const height = 430;
+        const margin = { top: 22, right: 34, bottom: 56, left: 76 };
+        const plotWidth = width - margin.left - margin.right;
+        const plotHeight = height - margin.top - margin.bottom;
+        const weeks = trend.weeks;
+        const accounts = trend.accounts || [];
+        const colors = trend.assetTypeColors || {};
+        const metricColors = trend.metricColors || {};
+        const minVisibleWeeks = Math.min(6, weeks.length);
+        const chartState = {
+            start: 0,
+            end: weeks.length - 1,
+            dragging: false,
+            dragStartX: 0,
+            dragStartWindow: [0, weeks.length - 1],
+        };
+        const svg = svgNode("svg", {
+            viewBox: `0 0 ${width} ${height}`,
+            role: "img",
+            "aria-label": "每周财富变化",
+        });
+        const defs = svgNode("defs");
+        const clip = svgNode("clipPath", { id: "wealth-trend-clip" });
+        clip.append(svgNode("rect", { x: margin.left, y: margin.top, width: plotWidth, height: plotHeight }));
+        defs.append(clip);
+        svg.append(defs);
+
+        const gridLayer = svgNode("g");
+        const bars = svgNode("g", { "clip-path": "url(#wealth-trend-clip)" });
+        const linesLayer = svgNode("g", { "clip-path": "url(#wealth-trend-clip)" });
+        const axisLayer = svgNode("g");
+        svg.append(gridLayer);
+
+        const hoverBand = svgNode("rect", {
+            x: margin.left,
+            y: margin.top,
+            width: 1,
+            height: plotHeight,
+            class: "wealth-trend-hover-band",
+            hidden: "true",
+        });
+        svg.append(hoverBand);
+        svg.append(bars);
+        svg.append(linesLayer);
+        svg.append(axisLayer);
+
+        const interaction = svgNode("g");
+        svg.append(interaction);
+
+        const legend = document.createElement("div");
+        legend.className = "wealth-trend-legend";
+        Object.entries(colors).forEach(([name, color]) => {
+            const item = document.createElement("span");
+            item.append(svgNode("svg", { viewBox: "0 0 10 10", "aria-hidden": "true" }));
+            item.firstChild.append(svgNode("circle", { cx: 5, cy: 5, r: 4, fill: color }));
+            item.append(document.createTextNode(name));
+            legend.append(item);
+        });
+        Object.entries(metricColors).forEach(([name, color]) => {
+            const item = document.createElement("span");
+            item.append(svgNode("svg", { viewBox: "0 0 14 10", "aria-hidden": "true" }));
+            item.firstChild.append(svgNode("line", { x1: 1, x2: 13, y1: 5, y2: 5, stroke: color, "stroke-width": 2.5 }));
+            item.append(document.createTextNode(name));
+            legend.append(item);
+        });
+
+        const tooltip = document.createElement("div");
+        tooltip.className = "wealth-trend-tooltip";
+        tooltip.hidden = true;
+
+        const tooltipColor = (label, color) => {
+            if (label === "总资产") return "#111827";
+            if (label === "金融资产") return "#6D28D9";
+            return color || "#334155";
+        };
+
+        const renderTooltip = (week, index, event) => {
+            tooltip.hidden = false;
+            hoverBand.hidden = false;
+            clearNode(tooltip);
+            tooltip.append(text("strong", week.weekEnd));
+            [
+                ["总资产", week.totalAssets, metricColors["总资产"]],
+                ["金融资产", week.financialAssets, metricColors["金融资产"]],
+                ["周变化", week.weeklyChange, week.weeklyChange >= 0 ? "#16a34a" : "#dc2626", true],
+                ...accounts.map((account) => [account, week.accountTotals?.[account] || 0, "#334155"]),
+                ...(trend.assetTypes || []).map((assetType) => [assetType, week.assetTypeTotals?.[assetType] || 0, colors[assetType]]),
+                ["银行净流水", week.bankNetFlow, week.bankNetFlow >= 0 ? "#16a34a" : "#dc2626", true],
+                ["工资收入", week.salaryIncome, "#2563eb"],
+            ].forEach(([label, value, color, signed]) => {
+                const row = document.createElement("div");
+                row.style.color = tooltipColor(label, color);
+                row.append(text("span", label));
+                row.append(text("b", signed ? formatSignedMoney(value) : formatMoney(value)));
+                tooltip.append(row);
+            });
+            const rect = container.getBoundingClientRect();
+            const tooltipWidth = tooltip.offsetWidth || 420;
+            const tooltipHeight = Math.min(tooltip.scrollHeight || 560, window.innerHeight - 48);
+            const left = Math.min(Math.max(event.clientX - rect.left + 14, 8), Math.max(8, rect.width - tooltipWidth - 8));
+            const top = Math.min(Math.max(event.clientY - rect.top + 14, 8), Math.max(8, rect.height - tooltipHeight - 8));
+            tooltip.style.left = `${left}px`;
+            tooltip.style.top = `${top}px`;
+        };
+
+        const clearSvgNode = (node) => {
+            while (node.firstChild) node.removeChild(node.firstChild);
+        };
+
+        const visibleWeeks = () => weeks.slice(chartState.start, chartState.end + 1);
+
+        const clampWindow = (start, end) => {
+            const length = end - start + 1;
+            if (start < 0) {
+                start = 0;
+                end = Math.min(weeks.length - 1, length - 1);
+            }
+            if (end >= weeks.length) {
+                end = weeks.length - 1;
+                start = Math.max(0, end - length + 1);
+            }
+            chartState.start = Math.max(0, start);
+            chartState.end = Math.min(weeks.length - 1, end);
+        };
+
+        const drawChart = () => {
+            const data = visibleWeeks();
+            const maxValue = Math.max(
+                ...data.map((week) => week.totalAssets || 0),
+                ...data.flatMap((week) => Object.values(week.accountTotals || {}))
+            );
+            const yMax = maxValue <= 0 ? 1 : maxValue * 1.08;
+            const y = (value) => margin.top + plotHeight - ((value || 0) / yMax) * plotHeight;
+            const weekStep = plotWidth / data.length;
+            const groupWidth = Math.min(weekStep * 0.72, 82);
+            const barGap = Math.max(2, groupWidth * 0.08);
+            const barWidth = Math.max(5, (groupWidth - barGap * (accounts.length - 1)) / Math.max(accounts.length, 1));
+            const weekX = (index) => margin.left + weekStep * index + weekStep / 2;
+            const barX = (index, accountIndex) => weekX(index) - groupWidth / 2 + accountIndex * (barWidth + barGap);
+            const lineX = (index) => weekX(index);
+
+            clearSvgNode(gridLayer);
+            clearSvgNode(bars);
+            clearSvgNode(linesLayer);
+            clearSvgNode(axisLayer);
+            clearSvgNode(interaction);
+            hoverBand.hidden = true;
+            tooltip.hidden = true;
+
+            [0, 0.25, 0.5, 0.75, 1].forEach((ratio) => {
+                const value = yMax * ratio;
+                const yPos = y(value);
+                gridLayer.append(svgNode("line", {
+                    x1: margin.left,
+                    x2: margin.left + plotWidth,
+                    y1: yPos,
+                    y2: yPos,
+                    class: "wealth-trend-grid",
+                }));
+                const label = svgNode("text", {
+                    x: margin.left - 10,
+                    y: yPos + 4,
+                    "text-anchor": "end",
+                    class: "wealth-trend-axis-label",
+                });
+                label.textContent = `${Math.round(value / 10000)}万`;
+                gridLayer.append(label);
+            });
+
+            data.forEach((week, weekIndex) => {
+                accounts.forEach((account, accountIndex) => {
+                    let cursor = 0;
+                    const stacks = (week.stacks || []).filter((item) => item.account === account);
+                    stacks.forEach((item) => {
+                        const amount = item.amount || 0;
+                        const y1 = y(cursor);
+                        cursor += amount;
+                        const y2 = y(cursor);
+                        bars.append(svgNode("rect", {
+                            x: barX(weekIndex, accountIndex),
+                            y: y2,
+                            width: barWidth,
+                            height: Math.max(y1 - y2, 1),
+                            fill: colors[item.assetType] || "#64748b",
+                            rx: 1.5,
+                        }));
+                    });
+                });
+            });
+
+            [
+                ["总资产", data.map((week, index) => [lineX(index), y(week.totalAssets)]), metricColors["总资产"] || "#F8FAFC"],
+                ["金融资产", data.map((week, index) => [lineX(index), y(week.financialAssets)]), metricColors["金融资产"] || "#A78BFA"],
+            ].forEach(([label, points, color]) => {
+                linesLayer.append(svgNode("path", {
+                    d: pathLine(points),
+                    fill: "none",
+                    stroke: color,
+                    "stroke-width": label === "总资产" ? 3.2 : 2.7,
+                    "stroke-linejoin": "round",
+                    "stroke-linecap": "round",
+                    class: "wealth-trend-line",
+                }));
+                points.forEach(([xPos, yPos]) => {
+                    linesLayer.append(svgNode("circle", {
+                        cx: xPos,
+                        cy: yPos,
+                        r: label === "总资产" ? 3.4 : 3,
+                        fill: color,
+                        stroke: "rgba(15, 23, 42, 0.92)",
+                        "stroke-width": 1.5,
+                    }));
+                });
+            });
+
+            data.forEach((week, index) => {
+                if (index % Math.ceil(data.length / 8) !== 0 && index !== data.length - 1) return;
+                const label = svgNode("text", {
+                    x: lineX(index),
+                    y: height - 24,
+                    "text-anchor": "middle",
+                    class: "wealth-trend-axis-label",
+                });
+                label.textContent = week.weekEnd.slice(5);
+                axisLayer.append(label);
+            });
+
+            data.forEach((week, index) => {
+                const actualIndex = chartState.start + index;
+                const hit = svgNode("rect", {
+                    x: margin.left + weekStep * index,
+                    y: margin.top,
+                    width: weekStep,
+                    height: plotHeight,
+                    fill: "transparent",
+                    "data-index": String(actualIndex),
+                    "data-visible-index": String(index),
+                    class: "wealth-trend-hit",
+                });
+                hit.addEventListener("mousemove", (event) => {
+                    hoverBand.hidden = false;
+                    hoverBand.setAttribute("x", margin.left + weekStep * index);
+                    hoverBand.setAttribute("width", weekStep);
+                    renderTooltip(weeks[actualIndex], actualIndex, event);
+                });
+                hit.addEventListener("mouseleave", () => {
+                    tooltip.hidden = true;
+                    hoverBand.hidden = true;
+                });
+                interaction.append(hit);
+            });
+        };
+
+        svg.addEventListener("wheel", (event) => {
+            if (weeks.length <= minVisibleWeeks) return;
+            event.preventDefault();
+            const currentLength = chartState.end - chartState.start + 1;
+            const direction = event.deltaY > 0 ? 1 : -1;
+            const nextLength = Math.min(
+                weeks.length,
+                Math.max(minVisibleWeeks, currentLength + direction * Math.max(1, Math.round(currentLength * 0.18)))
+            );
+            const rect = svg.getBoundingClientRect();
+            const pointerRatio = Math.min(Math.max((event.clientX - rect.left) / rect.width, 0), 1);
+            const anchor = chartState.start + Math.round((currentLength - 1) * pointerRatio);
+            const nextStart = Math.round(anchor - (nextLength - 1) * pointerRatio);
+            clampWindow(nextStart, nextStart + nextLength - 1);
+            drawChart();
+        }, { passive: false });
+
+        svg.addEventListener("pointerdown", (event) => {
+            chartState.dragging = true;
+            chartState.dragStartX = event.clientX;
+            chartState.dragStartWindow = [chartState.start, chartState.end];
+            svg.setPointerCapture(event.pointerId);
+            svg.classList.add("is-dragging");
+        });
+
+        svg.addEventListener("pointermove", (event) => {
+            if (!chartState.dragging) return;
+            const currentLength = chartState.dragStartWindow[1] - chartState.dragStartWindow[0] + 1;
+            if (currentLength >= weeks.length) return;
+            const dx = event.clientX - chartState.dragStartX;
+            const step = plotWidth / currentLength;
+            const offset = Math.round(-dx / step);
+            clampWindow(chartState.dragStartWindow[0] + offset, chartState.dragStartWindow[1] + offset);
+            drawChart();
+        });
+
+        svg.addEventListener("pointerup", (event) => {
+            chartState.dragging = false;
+            svg.releasePointerCapture(event.pointerId);
+            svg.classList.remove("is-dragging");
+        });
+
+        svg.addEventListener("pointerleave", () => {
+            if (!chartState.dragging) {
+                tooltip.hidden = true;
+                hoverBand.hidden = true;
+            }
+        });
+
+        container.append(svg, legend, tooltip);
+        drawChart();
     };
 
     const renderMetrics = (summary) => {
@@ -220,6 +550,7 @@
         renderMetrics(data.summary);
         renderBars("wealth-category-bars", data.categoryRows, "ratio");
         renderBars("wealth-allocation-bars", data.allocationRows, "ratio");
+        renderWeeklyTrend(data.weeklyTrend);
         renderAdvice(data.weeklyAdvice);
         renderScores(data.summary);
         renderDca(data.dca);
