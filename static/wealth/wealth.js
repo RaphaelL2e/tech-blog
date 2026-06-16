@@ -74,6 +74,14 @@
             maximumFractionDigits: 0,
         }).format(value || 0);
     };
+    const formatMoney2 = (value) => {
+        return new Intl.NumberFormat("zh-CN", {
+            style: "currency",
+            currency: "CNY",
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2,
+        }).format(value || 0);
+    };
 
     const formatPercent = (value) => `${((value || 0) * 100).toFixed(2)}%`;
     const formatSignedMoney = (value) => {
@@ -459,6 +467,97 @@
         });
     };
 
+    const renderTable = (id, columns, rows) => {
+        const table = document.getElementById(id);
+        clearNode(table);
+        if (!rows || rows.length === 0) {
+            const tbody = document.createElement("tbody");
+            const tr = document.createElement("tr");
+            const td = text("td", "暂无数据。");
+            td.colSpan = columns.length;
+            tr.append(td);
+            tbody.append(tr);
+            table.append(tbody);
+            return;
+        }
+        const thead = document.createElement("thead");
+        const headRow = document.createElement("tr");
+        columns.forEach(([, label]) => headRow.append(text("th", label)));
+        thead.append(headRow);
+        const tbody = document.createElement("tbody");
+        rows.forEach((row) => {
+            const tr = document.createElement("tr");
+            columns.forEach(([key]) => tr.append(text("td", row[key] || "-")));
+            tbody.append(tr);
+        });
+        table.append(thead, tbody);
+    };
+
+    const renderAnalysis = (analysis) => {
+        const cashContainer = document.getElementById("wealth-cash-safety");
+        const riskContainer = document.getElementById("wealth-risk-exposure");
+        const riskConclusion = document.getElementById("wealth-risk-conclusion");
+        const systemConclusion = document.getElementById("wealth-system-conclusion");
+        clearNode(cashContainer);
+        clearNode(riskContainer);
+        clearNode(systemConclusion);
+        riskConclusion.textContent = "";
+
+        if (!analysis) {
+            cashContainer.append(text("p", "暂无分析数据。"));
+            return;
+        }
+
+        const cash = analysis.cashSafety || {};
+        [
+            ["当前现金", formatMoney2(cash.currentCash)],
+            ["现金占比", formatPercent(cash.cashRatio)],
+            ["状态", cash.status || "-"],
+            ["距下一档", formatMoney2(cash.gapToNextTarget)],
+        ].forEach(([label, value]) => {
+            const row = document.createElement("div");
+            row.className = "wealth-score-card";
+            row.append(text("strong", `${label}: ${value}`));
+            cashContainer.append(row);
+        });
+        if (cash.suggestion) cashContainer.append(text("p", cash.suggestion));
+
+        (analysis.riskExposure?.rows || []).forEach((row) => {
+            const item = document.createElement("div");
+            const head = document.createElement("div");
+            head.className = "wealth-bar-head";
+            head.append(text("span", row.name));
+            head.append(text("strong", `${formatMoney2(row.amount)} · ${formatPercent(row.ratio)}`));
+            const track = document.createElement("div");
+            const fill = document.createElement("div");
+            track.className = "wealth-bar-track";
+            fill.className = "wealth-bar-fill";
+            fill.style.width = `${Math.min(Math.max((row.ratio || 0) * 100, 0), 100)}%`;
+            track.append(fill);
+            item.append(head, track, text("p", row.components || ""));
+            riskContainer.append(item);
+        });
+        riskConclusion.textContent = analysis.riskExposure?.conclusion || "";
+
+        (analysis.systemConclusions || []).slice(0, 3).forEach((item) => {
+            const row = document.createElement("div");
+            row.className = "wealth-advice-item";
+            row.append(text("p", item));
+            systemConclusion.append(row);
+        });
+        renderTable(
+            "wealth-real-return-table",
+            [
+                ["资产类型", "资产类型"],
+                ["市值变化", "市值变化"],
+                ["本周净买入/卖出", "净买入/卖出"],
+                ["本周估算市场损益", "估算市场损益"],
+                ["备注", "备注"],
+            ],
+            analysis.realReturnRows || []
+        );
+    };
+
     const renderAdvice = (items) => {
         const container = document.getElementById("wealth-advice");
         clearNode(container);
@@ -550,6 +649,7 @@
         renderMetrics(data.summary);
         renderBars("wealth-category-bars", data.categoryRows, "ratio");
         renderBars("wealth-allocation-bars", data.allocationRows, "ratio");
+        renderAnalysis(data.analysis);
         renderWeeklyTrend(data.weeklyTrend);
         renderAdvice(data.weeklyAdvice);
         renderScores(data.summary);

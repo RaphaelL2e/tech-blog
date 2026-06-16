@@ -48,9 +48,9 @@ def import_wealth_modules(wealth_os_dir: Path):
         raise FileNotFoundError(f"dashboard directory not found: {dashboard_dir}")
     sys.path.insert(0, str(dashboard_dir))
     from analytics import build_dashboard_summary  # type: ignore
-    from app import build_weekly_operation_advice, load_dca_plan  # type: ignore
+    from app import build_wealth_analysis_payload, build_weekly_operation_advice, load_dca_plan  # type: ignore
 
-    return build_dashboard_summary, build_weekly_operation_advice, load_dca_plan
+    return build_dashboard_summary, build_weekly_operation_advice, load_dca_plan, build_wealth_analysis_payload
 
 
 def money_rows(items: dict[str, float], financial_assets: float, total_assets: float) -> list[dict]:
@@ -204,7 +204,7 @@ def load_weekly_trend_payload(wealth_os_dir: Path) -> dict:
 
 
 def build_plain_payload(wealth_os_dir: Path) -> dict:
-    build_dashboard_summary, build_weekly_operation_advice, load_dca_plan = import_wealth_modules(wealth_os_dir)
+    build_dashboard_summary, build_weekly_operation_advice, load_dca_plan, build_wealth_analysis_payload = import_wealth_modules(wealth_os_dir)
     assets_path = wealth_os_dir / "data" / "assets.csv"
     dca_plan_path = wealth_os_dir / "data" / "dca_plan.csv"
     summary = build_dashboard_summary(assets_path)
@@ -279,6 +279,7 @@ def build_plain_payload(wealth_os_dir: Path) -> dict:
             for row in weekly_advice
         ],
         "weeklyTrend": load_weekly_trend_payload(wealth_os_dir),
+        "analysis": build_wealth_analysis_payload(),
         "dca": dca_payload,
     }
 
