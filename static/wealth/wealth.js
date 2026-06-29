@@ -434,6 +434,7 @@
             ["金融资产", summary.financialAssets],
             ["现金", summary.cash],
             ["投资资产", summary.investmentAssets],
+            ["负债", summary.liabilities],
             ["净资产", summary.netAssets],
         ].forEach(([label, value]) => {
             const item = document.createElement("div");
