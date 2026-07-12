@@ -15,7 +15,7 @@ from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 from cryptography.hazmat.primitives.kdf.pbkdf2 import PBKDF2HMAC
 
 
-DEFAULT_WEALTH_OS_DIR = Path("/Users/liyafei/Documents/五年计划/wealth-os")
+DEFAULT_WEALTH_OS_DIR = Path("/Users/liyafei/Documents/RaphaelWorkspace/04 - Codex项目/五年计划/wealth-os")
 DEFAULT_OUTPUT = Path("static/wealth/wealth-data.enc.json")
 AAD = b"raphael-tech-blog:wealth-os:v1"
 ITERATIONS = 310_000
