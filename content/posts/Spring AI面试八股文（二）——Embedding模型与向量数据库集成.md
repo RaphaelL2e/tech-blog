@@ -1,14 +1,32 @@
 ---
-title: "Spring AI面试八股文（二）——Embedding模型与向量数据库集成"
-date: 2026-07-16T10:00:00+08:00
+title: Spring AI面试八股文（二）——Embedding模型与向量数据库集成
+date: 2026-07-16 10:00:00+08:00
+updated: '2026-07-16T10:00:00+08:00'
+description: 深入解析Spring AI中Embedding模型的使用、VectorStore抽象与实现、主流向量数据库对比与选型、企业级RAG数据层搭建。结合源码剖析和实战案例，全面掌握AI应用数据基础设施。
+topic: ai-engineering
+series: spring-ai-interview
+series_order: 2
+level: intermediate
+status: maintained
+tags:
+- Spring AI
+- Java
+- AI
+- Embedding
+- VectorStore
+categories:
+- AI 工程化
 draft: false
-categories: ["Spring AI"]
-tags: ["Spring AI", "Java", "AI", "Embedding", "VectorStore", "向量数据库", "面试"]
-keywords: ["Spring AI", "Embedding", "VectorStore", "向量数据库", "Milvus", "Pgvector", "Chroma", "面试八股文"]
-description: "深入解析Spring AI中Embedding模型的使用、VectorStore抽象与实现、主流向量数据库对比与选型、企业级RAG数据层搭建。结合源码剖析和实战案例，全面掌握AI应用数据基础设施。"
+keywords:
+- Spring AI
+- Embedding
+- VectorStore
+- 向量数据库
+- Milvus
+- Pgvector
+- Chroma
+- 面试八股文
 ---
-
-# Spring AI面试八股文（二）——Embedding模型与向量数据库集成
 
 > 面试高频问题：什么是Embedding？Spring AI中如何配置Embedding模型？VectorStore有哪些实现？Milvus和Pgvector怎么选？如何设计向量索引？向量搜索的召回率和精度如何优化？本文带你掌握AI应用的数据基础设施。
 
@@ -1062,6 +1080,6 @@ public class VectorBackupService {
 ---
 
 > **推荐阅读**
-> - [AI大模型面试八股文（四）——大模型应用开发与Agent框架](/posts/AI大模型面试八股文（四）——大模型应用开发与Agent框架/)：RAG、Function Calling基础原理
-> - [AI大模型面试八股文（六）——大模型系统设计与工程实践](/posts/AI大模型面试八股文（六）——大模型系统设计与工程实践/)：RAG完整架构设计
-> - [Spring Boot自动配置原理与自定义Starter开发](/posts/Spring面试八股文（九）——Spring-Boot自动配置原理与自定义Starter开发/)：Spring AI自动配置机制基于此实现
+> - [AI大模型面试八股文（四）——大模型应用开发与Agent框架]({{< ref "posts/AI大模型面试八股文（四）——大模型应用开发与Agent框架.md" >}})：RAG、Function Calling基础原理
+> - [AI大模型面试八股文（六）——大模型系统设计与工程实践]({{< ref "posts/AI大模型面试八股文（六）——大模型系统设计与工程实践.md" >}})：RAG完整架构设计
+> - [Spring Boot自动配置原理与自定义Starter开发]({{< ref "posts/Spring面试八股文（九）——Spring Boot自动配置原理与自定义Starter开发.md" >}})：Spring AI自动配置机制基于此实现

@@ -1,12 +1,21 @@
 ---
-title: "Redis面试八股文（四）——缓存问题解决方案、事务机制与Lua脚本实战"
-date: 2026-07-14T09:00:00+08:00
+title: Redis面试八股文（四）——缓存问题解决方案、事务机制与Lua脚本实战
+date: 2026-07-14 09:00:00+08:00
+updated: '2026-07-14T09:00:00+08:00'
+description: 聚焦 Redis 缓存穿透、击穿与雪崩治理，对比事务、Lua 脚本和 Pipeline，并讲解 GEO 等生产场景的实战方案。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- Redis
+- 缓存穿透
+- 缓存击穿
+- 缓存雪崩
+- Lua脚本
+categories:
+- 数据库与中间件
 draft: false
-categories: ["Redis"]
-tags: ["Redis", "缓存穿透", "缓存击穿", "缓存雪崩", "Lua脚本", "Redis事务", "Pipeline", "面试"]
 ---
-
-# Redis面试八股文（四）——缓存问题解决方案、事务机制与Lua脚本实战
 
 > 面试高频问题：如何解决缓存穿透、击穿、雪崩三大问题？Redis事务和Lua脚本有什么区别？Pipeline和原生批量操作哪个更好用？Redis的GEO功能怎么实现附近的人？本文带你深入理解Redis缓存高级特性与实战技巧。
 

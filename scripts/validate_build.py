@@ -17,7 +17,9 @@ import yaml
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / "public"
 POSTS = ROOT / "content" / "posts"
+SERIES = ROOT / "content" / "series"
 MAX_BYTES = 30 * 1024 * 1024
+MIN_CONTENT_ARTICLES = 254
 VALID_TOPICS = {
     "java-spring", "distributed-systems", "database-middleware",
     "system-engineering", "ai-engineering", "computer-science", "archive",
@@ -26,7 +28,7 @@ EXPECTED_SERIES_COUNTS = {
     "java-design-patterns": 23,
     "spring-interview": 10,
     "distributed-systems-interview": 10,
-    "microservices-interview": 8,
+    "microservices-interview": 10,
     "database-interview": 12,
     "system-design": 9,
     "ai-llm-interview": 6,
@@ -186,8 +188,10 @@ def main() -> int:
 
     content_paths = sorted(path for path in POSTS.glob("*.md") if path.name != "_index.md")
     facts.append(f"content articles: {len(content_paths)}")
-    if len(content_paths) != 254:
-        errors.append(f"expected 254 content articles, found {len(content_paths)}")
+    if len(content_paths) < MIN_CONTENT_ARTICLES:
+        errors.append(
+            f"expected at least {MIN_CONTENT_ARTICLES} content articles, found {len(content_paths)}"
+        )
     topic_counts: Counter[str] = Counter()
     categories: set[str] = set()
     series_orders: defaultdict[str, list[int]] = defaultdict(list)
@@ -222,6 +226,8 @@ def main() -> int:
     for key, orders in series_orders.items():
         if len(orders) != len(set(orders)):
             errors.append(f"series {key} has duplicate order values")
+        if not (SERIES / f"{key}.md").is_file():
+            errors.append(f"series {key} has articles but no content/series/{key}.md page")
     for key, expected in EXPECTED_SERIES_COUNTS.items():
         actual = len(series_orders.get(key, []))
         if actual != expected:

@@ -1,13 +1,24 @@
 ---
-title: "微服务面试八股文（九）——Kubernetes深入与云原生架构实践"
-date: 2026-07-13T10:00:00+08:00
+title: 微服务面试八股文（九）——Kubernetes深入与云原生架构实践
+date: 2026-07-13 10:00:00+08:00
+updated: '2026-07-13T10:00:00+08:00'
+description: 承接微服务容器化实践，深入 Pod 调度、StatefulSet、RBAC、NetworkPolicy、Helm 与 12-Factor，建立生产级 Kubernetes 架构能力。
+topic: distributed-systems
+series: microservices-interview
+series_order: 9
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- 微服务
+- Kubernetes
+- K8s
+categories:
+- 分布式与微服务
 draft: false
-categories: ["微服务", "Spring Cloud"]
-tags: ["面试", "八股文", "微服务", "Kubernetes", "K8s", "云原生", "Docker", "Helm", "StatefulSet", "ConfigMap", "Secret", "RBAC", "NetworkPolicy", "12-Factor", "Cloud Native", "YAML", "kubectl", "Ingress", "Service Mesh", "Sidecar", "Istio"]
-author: "飞哥"
+author: 飞哥
 ---
-
-# 微服务面试八股文（九）——Kubernetes深入与云原生架构实践
 
 > 🎯 **本文目标**：承接微服务容器化与部署实战，深入解析 Kubernetes 核心概念与进阶用法——Pod 生命周期与调度、StatefulSet 有状态部署、RBAC 权限模型、NetworkPolicy 网络策略、Helm 包管理，以及云原生 12-Factor 设计原则，构建生产级 Kubernetes 运维能力。
 

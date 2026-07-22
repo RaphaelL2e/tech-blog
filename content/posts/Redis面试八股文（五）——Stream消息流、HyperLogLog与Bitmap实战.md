@@ -1,12 +1,21 @@
 ---
-title: "Redis面试八股文（五）——Stream消息流、HyperLogLog与Bitmap实战"
-date: 2026-07-14T10:00:00+08:00
+title: Redis面试八股文（五）——Stream消息流、HyperLogLog与Bitmap实战
+date: 2026-07-14 10:00:00+08:00
+updated: '2026-07-14T10:00:00+08:00'
+description: 对比 Redis Stream 与 Kafka，深入 HyperLogLog 亿级 UV 统计、Bitmap 状态记录，并讲解 BigKeys、慢查询与性能监控。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- Redis
+- Stream
+- HyperLogLog
+- Bitmap
+- Redis监控
+categories:
+- 数据库与中间件
 draft: false
-categories: ["Redis"]
-tags: ["Redis", "Stream", "HyperLogLog", "Bitmap", "Redis监控", "BigKeys", "性能优化", "面试"]
 ---
-
-# Redis面试八股文（五）——Stream消息流、HyperLogLog与Bitmap实战
 
 > 面试高频问题：Redis Stream和Kafka有什么区别？HyperLogLog如何实现亿级UV统计？Bitmap适合什么场景？Redis如何排查BigKeys和慢查询？本文带你掌握Redis高级数据结构与性能监控的终极指南。
 

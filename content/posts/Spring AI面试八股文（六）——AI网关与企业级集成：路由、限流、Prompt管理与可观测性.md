@@ -1,14 +1,32 @@
 ---
-title: "Spring AI面试八股文（六）——AI网关与企业级集成：路由、限流、Prompt管理与可观测性"
-date: 2026-07-18T10:00:00+08:00
+title: Spring AI面试八股文（六）——AI网关与企业级集成：路由、限流、Prompt管理与可观测性
+date: 2026-07-18 10:00:00+08:00
+updated: '2026-07-18T10:00:00+08:00'
+description: 深入解析Spring AI企业级集成核心：AI网关架构设计、Prompt模板注册与版本管理、Token计量与成本控制、AI工作负载限流策略、可观测性建设（Metrics/Logging/Tracing）。结合生产级实战案例与面试高频问题，掌握企业AI平台建设的工程能力。
+topic: ai-engineering
+series: spring-ai-interview
+series_order: 6
+level: intermediate
+status: maintained
+tags:
+- Spring AI
+- AI网关
+- Prompt管理
+- 限流
+- 可观测性
+categories:
+- AI 工程化
 draft: false
-categories: ["Spring AI"]
-tags: ["Spring AI", "AI网关", "Prompt管理", "限流", "可观测性", "企业集成", "Java", "面试"]
-keywords: ["Spring AI", "AI Gateway", "Prompt Registry", "AI限流", "Token计费", "Micrometer", "OpenTelemetry", "面试八股文"]
-description: "深入解析Spring AI企业级集成核心：AI网关架构设计、Prompt模板注册与版本管理、Token计量与成本控制、AI工作负载限流策略、可观测性建设（Metrics/Logging/Tracing）。结合生产级实战案例与面试高频问题，掌握企业AI平台建设的工程能力。"
+keywords:
+- Spring AI
+- AI Gateway
+- Prompt Registry
+- AI限流
+- Token计费
+- Micrometer
+- OpenTelemetry
+- 面试八股文
 ---
-
-# Spring AI面试八股文（六）——AI网关与企业级集成：路由、限流、Prompt管理与可观测性
 
 > 面试高频问题：Spring AI在企业中的网关架构怎么设计？Prompt模板如何统一管理和版本化？AI调用的Token成本怎么计量和控制？限流策略怎么做才合理？AI服务的可观测性怎么建设？本文从工程化视角全面解答。
 

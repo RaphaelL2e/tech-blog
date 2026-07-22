@@ -1,14 +1,30 @@
 ---
-title: "Spring AI面试八股文（一）——ChatClient API与Prompt模板工程"
-date: 2026-07-16T09:00:00+08:00
+title: Spring AI面试八股文（一）——ChatClient API与Prompt模板工程
+date: 2026-07-16 09:00:00+08:00
+updated: '2026-07-16T09:00:00+08:00'
+description: 深入解析Spring AI框架核心API：ChatClient的同步/响应式调用、Prompt模板工程、多模型配置与切换、Function Calling基础。结合企业级实战案例和面试高频问题，全面掌握Spring AI开发能力。
+topic: ai-engineering
+series: spring-ai-interview
+series_order: 1
+level: intermediate
+status: maintained
+tags:
+- Spring AI
+- Java
+- AI
+- ChatClient
+- Prompt
+categories:
+- AI 工程化
 draft: false
-categories: ["Spring AI"]
-tags: ["Spring AI", "Java", "AI", "ChatClient", "Prompt", "面试"]
-keywords: ["Spring AI", "ChatClient", "PromptTemplate", "Model", "AI工程师", "面试八股文"]
-description: "深入解析Spring AI框架核心API：ChatClient的同步/响应式调用、Prompt模板工程、多模型配置与切换、Function Calling基础。结合企业级实战案例和面试高频问题，全面掌握Spring AI开发能力。"
+keywords:
+- Spring AI
+- ChatClient
+- PromptTemplate
+- Model
+- AI工程师
+- 面试八股文
 ---
-
-# Spring AI面试八股文（一）——ChatClient API与Prompt模板工程
 
 > 面试高频问题：Spring AI的ChatClient怎么用？Prompt模板有哪些高级玩法？如何配置多个AI模型？Function Calling在Spring AI中怎么实现？本文带你掌握Spring AI框架的核心API和工程实践。
 
@@ -831,6 +847,6 @@ public class StructuredOutputService {
 ---
 
 > **推荐阅读**
-> - [AI大模型面试八股文（四）——大模型应用开发与Agent框架](/posts/AI大模型面试八股文（四）——大模型应用开发与Agent框架/)：了解RAG、Function Calling基础原理
-> - [Spring Boot自动配置原理与自定义Starter开发](/posts/Spring面试八股文（九）——Spring-Boot自动配置原理与自定义Starter开发/)：Spring Boot条件装配机制（Spring AI自动配置基于此实现）
-> - [AI大模型系统设计与工程实践](/posts/AI大模型面试八股文（六）——大模型系统设计与工程实践/)：RAG系统完整架构
+> - [AI大模型面试八股文（四）——大模型应用开发与Agent框架]({{< ref "posts/AI大模型面试八股文（四）——大模型应用开发与Agent框架.md" >}})：了解RAG、Function Calling基础原理
+> - [Spring Boot自动配置原理与自定义Starter开发]({{< ref "posts/Spring面试八股文（九）——Spring Boot自动配置原理与自定义Starter开发.md" >}})：Spring Boot条件装配机制（Spring AI自动配置基于此实现）
+> - [AI大模型系统设计与工程实践]({{< ref "posts/AI大模型面试八股文（六）——大模型系统设计与工程实践.md" >}})：RAG系统完整架构

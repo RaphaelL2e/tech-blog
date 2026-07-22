@@ -1,12 +1,22 @@
 ---
-title: "RocketMQ深度解析：架构原理与生产实战"
-date: 2026-07-15T10:00:00+08:00
+title: RocketMQ深度解析：架构原理与生产实战
+date: 2026-07-15 10:00:00+08:00
+updated: '2026-07-15T10:00:00+08:00'
+description: RocketMQ 是阿里巴巴开源的分布式消息中间件，目前是 Apache 顶级项目，在国内互联网公司中应用极为广泛。相比 Kafka，RocketMQ 在延迟消息、事务消息、顺序消息等场景下有更丰富的原生支持；相比 RabbitMQ，RocketMQ
+  的吞吐量和高可用能力更强，更适合大规模分布式系统。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- RocketMQ
+- 消息队列
+- 分布式
+- 异步消息
+- 事务消息
+categories:
+- 数据库与中间件
 draft: false
-categories: ["分布式系统"]
-tags: ["RocketMQ", "消息队列", "分布式", "异步消息", "事务消息"]
 ---
-
-# RocketMQ深度解析：架构原理与生产实战
 
 ## 一、引言
 

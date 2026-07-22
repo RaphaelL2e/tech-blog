@@ -59,6 +59,8 @@ def classify(title: str, meta: dict) -> str:
     categories = " ".join(str(item) for item in (meta.get("categories") or []))
     tags = " ".join(str(item) for item in (meta.get("tags") or []))
     value = f"{title} {categories} {tags}".lower()
+    if "spring ai面试八股文" in value:
+        return "ai-engineering"
     rules = [
         ("ai-engineering", ("ai大模型", "agent", "openclaw", "deepseek", "gpt", "llm", "大模型", "人工智能")),
         ("database-middleware", ("mysql", "redis", "kafka", "elasticsearch", "zookeeper", "mongodb", "newsql", "数据库", "消息队列", "索引", "sql", "oracle", "oralce")),
@@ -75,6 +77,7 @@ def classify(title: str, meta: dict) -> str:
 
 SERIES_PATTERNS = [
     ("java-design-patterns", re.compile(r"java设计模式[（(]?([\d一二三四五六七八九十]+)[）)]?", re.I)),
+    ("spring-ai-interview", re.compile(r"SpringAI面试八股文（([\d一二三四五六七八九十]+)）", re.I)),
     ("spring-interview", re.compile(r"Spring面试八股文（([\d一二三四五六七八九十]+)）", re.I)),
     ("distributed-systems-interview", re.compile(r"分布式系统面试八股文（([\d一二三四五六七八九十]+)）")),
     ("microservices-interview", re.compile(r"微服务面试八股文（([\d一二三四五六七八九十]+)）")),

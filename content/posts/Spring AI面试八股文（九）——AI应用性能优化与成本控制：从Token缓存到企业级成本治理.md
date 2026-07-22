@@ -1,9 +1,22 @@
 ---
-title: "Spring AI面试八股文（九）——AI应用性能优化与成本控制：从Token缓存到企业级成本治理"
-date: 2026-07-18T10:00:00+08:00
+title: Spring AI面试八股文（九）——AI应用性能优化与成本控制：从Token缓存到企业级成本治理
+date: 2026-07-18 10:00:00+08:00
+updated: '2026-07-18T10:00:00+08:00'
+description: 从 Token 缓存、Prompt 压缩、限流降级到多租户成本分摊，系统讲解 Spring AI 应用的性能优化与企业级成本治理。
+topic: ai-engineering
+series: spring-ai-interview
+series_order: 9
+level: intermediate
+status: maintained
+tags:
+- Spring AI
+- 性能优化
+- 成本控制
+- Token缓存
+- 限流降级
+categories:
+- AI 工程化
 draft: false
-categories: ["Spring AI"]
-tags: ["Spring AI", "性能优化", "成本控制", "Token缓存", "限流降级", "成本治理", "面试"]
 ---
 
 > 面试高频问题：AI应用如何降低Token消耗成本？Spring AI有哪些内置缓存机制？如何实现多租户场景下的AI成本分摊？LLM调用失败时如何做熔断降级？在大模型API按Token计费的商业模式下，性能优化与成本控制是AI工程化的核心命题。本文聚焦Spring AI侧的优化策略，从Token缓存、Prompt压缩、限流降级、成本监控到多租户成本归属，构建完整的AI应用成本治理体系。
@@ -594,12 +607,12 @@ AI应用的成本优化不是单一技术问题，而是**技术+业务+运营**
 在大模型API广泛应用于生产环境的背景下，AI应用的安全问题日益突出：用户输入可能被恶意构造为Prompt注入攻击；对话数据可能涉及隐私合规；模型输出可能包含有害内容。本系列最后一篇，我们将深入AI应用安全与合规的核心议题：**Prompt注入的防御策略、输入输出过滤机制、对话数据的合规存储、以及企业级AI安全治理框架**。
 
 > **系列导航**
-> - [（一）ChatClient API与Prompt模板工程](/spring-ai-interview-1-chatclient)
-> - [（二）Embedding模型与向量数据库集成](/spring-ai-interview-2-embedding)
-> - [（三）Function Calling与Tool Calling深入](/spring-ai-interview-3-function-calling)
-> - [（四）RAG企业级实践](/spring-ai-interview-4-rag)
-> - [（五）AI Agent开发实战](/spring-ai-interview-5-agent)
-> - [（六）AI网关与企业级集成](/spring-ai-interview-6-gateway)
-> - [（七）多模型适配与切换](/spring-ai-interview-7-multi-model)
-> - [（八）Prompt工程与管理](/spring-ai-interview-8-prompt)
-> - [（九）AI应用性能优化与成本控制](/spring-ai-interview-9-perf)
+> - [（一）ChatClient API与Prompt模板工程]({{< ref "posts/Spring AI面试八股文（一）——ChatClient API与Prompt模板工程.md" >}})
+> - [（二）Embedding模型与向量数据库集成]({{< ref "posts/Spring AI面试八股文（二）——Embedding模型与向量数据库集成.md" >}})
+> - [（三）Function Calling与Tool Calling深入]({{< ref "posts/Spring AI面试八股文（三）——Function Calling与Tool Calling深入.md" >}})
+> - [（四）RAG企业级实践]({{< ref "posts/Spring AI面试八股文（四）——RAG企业级实践.md" >}})
+> - [（五）AI Agent开发实战]({{< ref "posts/Spring AI面试八股文（五）——AI Agent开发实战.md" >}})
+> - [（六）AI网关与企业级集成]({{< ref "posts/Spring AI面试八股文（六）——AI网关与企业级集成：路由、限流、Prompt管理与可观测性.md" >}})
+> - [（七）多模型适配与切换]({{< ref "posts/Spring AI面试八股文（七）——多模型适配与切换：统一抽象与企业级实践.md" >}})
+> - [（八）Prompt工程与管理]({{< ref "posts/Spring AI面试八股文（八）——Prompt工程与管理：从模板到生产级版本控制.md" >}})
+> - [（九）AI应用性能优化与成本控制]({{< ref "posts/Spring AI面试八股文（九）——AI应用性能优化与成本控制：从Token缓存到企业级成本治理.md" >}})

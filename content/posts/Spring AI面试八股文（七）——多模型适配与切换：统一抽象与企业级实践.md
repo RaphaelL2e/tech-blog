@@ -1,14 +1,33 @@
 ---
-title: "Spring AI面试八股文（七）——多模型适配与切换：统一抽象与企业级实践"
-date: 2026-07-20T10:00:00+08:00
+title: Spring AI面试八股文（七）——多模型适配与切换：统一抽象与企业级实践
+date: 2026-07-20 10:00:00+08:00
+updated: '2026-07-20T10:00:00+08:00'
+description: 深入解析Spring AI多模型适配与切换的企业级实践：ChatModel/EmbeddingModel统一抽象、模型注册与发现机制、智能路由与A/B Testing、Fallback降级策略、成本感知模型选择、Embedding模型多路复用。掌握企业级多模型管理的工程能力。
+topic: ai-engineering
+series: spring-ai-interview
+series_order: 7
+level: intermediate
+status: maintained
+tags:
+- Spring AI
+- 多模型
+- 模型适配
+- 模型切换
+- ChatModel
+categories:
+- AI 工程化
 draft: false
-categories: ["Spring AI"]
-tags: ["Spring AI", "多模型", "模型适配", "模型切换", "ChatModel", "EmbeddingModel", "Spring", "Java", "面试"]
-keywords: ["Spring AI", "Multi-model", "ChatModel", "EmbeddingModel", "Model Selection", "A/B Testing", "Fallback", "负载均衡", "面试八股文"]
-description: "深入解析Spring AI多模型适配与切换的企业级实践：ChatModel/EmbeddingModel统一抽象、模型注册与发现机制、智能路由与A/B Testing、Fallback降级策略、成本感知模型选择、Embedding模型多路复用。掌握企业级多模型管理的工程能力。"
+keywords:
+- Spring AI
+- Multi-model
+- ChatModel
+- EmbeddingModel
+- Model Selection
+- A/B Testing
+- Fallback
+- 负载均衡
+- 面试八股文
 ---
-
-# Spring AI面试八股文（七）——多模型适配与切换：统一抽象与企业级实践
 
 > 面试高频问题：Spring AI如何屏蔽不同模型的API差异？多模型切换时如何保证业务代码不变？如何在运行时根据成本或性能动态选择模型？Embedding模型和Chat模型的多模型管理有什么区别？本文从工程化视角全面解答。
 

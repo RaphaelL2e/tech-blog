@@ -1,14 +1,32 @@
 ---
-title: "Spring AI面试八股文（四）——RAG企业级实践"
-date: 2026-07-17T10:00:00+08:00
+title: Spring AI面试八股文（四）——RAG企业级实践
+date: 2026-07-17 10:00:00+08:00
+updated: '2026-07-17T10:00:00+08:00'
+description: 深入解析Spring AI的企业级RAG实现：从QuestionAnswerAdvisor快速上手，到spring-ai-rag新模块的查询改写/扩展、文档后处理、上下文增强全流程；涵盖元数据过滤、混合检索、重排、引用溯源（grounding
+  with citations）与生产级调优。结合源码与实战代码掌握可落地的RAG架构。
+topic: ai-engineering
+series: spring-ai-interview
+series_order: 4
+level: intermediate
+status: maintained
+tags:
+- Spring AI
+- Java
+- AI
+- RAG
+- Advisor
+categories:
+- AI 工程化
 draft: false
-categories: ["Spring AI"]
-tags: ["Spring AI", "Java", "AI", "RAG", "Advisor", "向量检索", "企业级", "面试"]
-keywords: ["Spring AI", "RAG", "QuestionAnswerAdvisor", "RetrievalAugmentationAdvisor", "VectorStore", "引用溯源", "面试八股文"]
-description: "深入解析Spring AI的企业级RAG实现：从QuestionAnswerAdvisor快速上手，到spring-ai-rag新模块的查询改写/扩展、文档后处理、上下文增强全流程；涵盖元数据过滤、混合检索、重排、引用溯源（grounding with citations）与生产级调优。结合源码与实战代码掌握可落地的RAG架构。"
+keywords:
+- Spring AI
+- RAG
+- QuestionAnswerAdvisor
+- RetrievalAugmentationAdvisor
+- VectorStore
+- 引用溯源
+- 面试八股文
 ---
-
-# Spring AI面试八股文（四）——RAG企业级实践
 
 > 面试高频问题：RAG在Spring AI里怎么落地？`QuestionAnswerAdvisor`和`RetrievalAugmentationAdvisor`有什么区别？怎么做查询改写和引用溯源？元数据过滤怎么玩？本文带你把"能问答"升级为"答得准、可追溯"。
 

@@ -1,14 +1,34 @@
 ---
-title: "Spring AI面试八股文（五）——AI Agent开发实战"
-date: 2026-07-18T10:00:00+08:00
+title: Spring AI面试八股文（五）——AI Agent开发实战
+date: 2026-07-18 10:00:00+08:00
+updated: '2026-07-18T10:00:00+08:00'
+description: 深入解析Spring AI Agent开发：从ReAct循环、ChatMemory多轮记忆、ToolAgent工具编排到多Agent协作与人工接管（HITL）模式。结合企业级实战代码和面试高频问题，掌握用Spring
+  AI构建生产级自主Agent的核心能力。
+topic: ai-engineering
+series: spring-ai-interview
+series_order: 5
+level: intermediate
+status: maintained
+tags:
+- Spring AI
+- Java
+- AI
+- Agent
+- ReAct
+categories:
+- AI 工程化
 draft: false
-categories: ["Spring AI"]
-tags: ["Spring AI", "Java", "AI", "Agent", "ReAct", "ChatMemory", "HITL", "多Agent", "人工智能", "面试"]
-keywords: ["Spring AI", "AI Agent", "ReAct", "ChatMemory", "ToolAgent", "Specification", "Executor", "HITL", "面试八股文"]
-description: "深入解析Spring AI Agent开发：从ReAct循环、ChatMemory多轮记忆、ToolAgent工具编排到多Agent协作与人工接管（HITL）模式。结合企业级实战代码和面试高频问题，掌握用Spring AI构建生产级自主Agent的核心能力。"
+keywords:
+- Spring AI
+- AI Agent
+- ReAct
+- ChatMemory
+- ToolAgent
+- Specification
+- Executor
+- HITL
+- 面试八股文
 ---
-
-# Spring AI面试八股文（五）——AI Agent开发实战
 
 > 面试高频问题：Spring AI中Agent的核心架构是什么？ReAct循环怎么实现？ChatMemory多轮对话怎么管理？ToolAgent怎么编排多个工具？人工接管（HITL）怎么实现？多Agent如何协作？本文带你从"能回答"升级为"能行动"。
 
@@ -563,8 +583,8 @@ Redis ChatMemory 用 Lua 脚本保证读-写原子性；多 Agent 写入同一 s
 ---
 
 > 📚 **本系列导航**
-> - [（一）——ChatClient API与Prompt模板工程](/posts/Spring-AI面试八股文（一）——ChatClient-API与Prompt模板工程/)
-> - [（二）——Embedding模型与向量数据库集成](/posts/Spring-AI面试八股文（二）——Embedding模型与向量数据库集成/)
-> - [（三）——Function Calling与Tool Calling深入](/posts/Spring-AI面试八股文（三）——Function-Calling与Tool-Calling深入/)
-> - [（四）——RAG企业级实践](/posts/Spring-AI面试八股文（四）——RAG企业级实践/)
-> - [（六）——AI应用性能优化与成本控制](/posts/Spring-AI面试八股文（六）——AI应用性能优化与成本控制/)（待发布）
+> - [（一）——ChatClient API与Prompt模板工程]({{< ref "posts/Spring AI面试八股文（一）——ChatClient API与Prompt模板工程.md" >}})
+> - [（二）——Embedding模型与向量数据库集成]({{< ref "posts/Spring AI面试八股文（二）——Embedding模型与向量数据库集成.md" >}})
+> - [（三）——Function Calling与Tool Calling深入]({{< ref "posts/Spring AI面试八股文（三）——Function Calling与Tool Calling深入.md" >}})
+> - [（四）——RAG企业级实践]({{< ref "posts/Spring AI面试八股文（四）——RAG企业级实践.md" >}})
+> - [（六）——AI网关与企业级集成]({{< ref "posts/Spring AI面试八股文（六）——AI网关与企业级集成：路由、限流、Prompt管理与可观测性.md" >}})

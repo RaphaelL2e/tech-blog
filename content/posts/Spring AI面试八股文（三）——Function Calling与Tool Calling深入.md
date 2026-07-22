@@ -1,14 +1,32 @@
 ---
-title: "Spring AI面试八股文（三）——Function Calling与Tool Calling深入"
-date: 2026-07-17T09:00:00+08:00
+title: Spring AI面试八股文（三）——Function Calling与Tool Calling深入
+date: 2026-07-17 09:00:00+08:00
+updated: '2026-07-17T09:00:00+08:00'
+description: 深入解析Spring AI 1.0的Tool Calling抽象：从@Functional到@Tool的演进、ToolCallback核心接口、MethodToolCallback反射实现、@Tool注解与参数Schema、ToolContext上下文传递、结构化输出、企业级Agent编排与安全治理。结合源码剖析与实战代码，掌握Spring
+  AI工具调用的工
+topic: ai-engineering
+series: spring-ai-interview
+series_order: 3
+level: intermediate
+status: maintained
+tags:
+- Spring AI
+- Java
+- AI
+- Tool Calling
+- Function Calling
+categories:
+- AI 工程化
 draft: false
-categories: ["Spring AI"]
-tags: ["Spring AI", "Java", "AI", "Tool Calling", "Function Calling", "Agent", "面试"]
-keywords: ["Spring AI", "Tool Calling", "Function Calling", "ToolCallback", "@Tool", "Agent", "面试八股文"]
-description: "深入解析Spring AI 1.0的Tool Calling抽象：从@Functional到@Tool的演进、ToolCallback核心接口、MethodToolCallback反射实现、@Tool注解与参数Schema、ToolContext上下文传递、结构化输出、企业级Agent编排与安全治理。结合源码剖析与实战代码，掌握Spring AI工具调用的工程化落地。"
+keywords:
+- Spring AI
+- Tool Calling
+- Function Calling
+- ToolCallback
+- '@Tool'
+- Agent
+- 面试八股文
 ---
-
-# Spring AI面试八股文（三）——Function Calling与Tool Calling深入
 
 > 面试高频问题：Spring AI的Tool Calling和普通Function Calling有什么区别？`@Tool`注解怎么用？`ToolCallback`是干什么的？工具调用时如何传递用户上下文？如何在企业里安全地治理工具？本文带你从"会调用"进阶到"工程化掌控"。
 

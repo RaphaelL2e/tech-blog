@@ -1,14 +1,33 @@
 ---
-title: "Spring AI面试八股文（八）——Prompt工程与管理：从模板到生产级版本控制"
-date: 2026-07-21T10:00:00+08:00
+title: Spring AI面试八股文（八）——Prompt工程与管理：从模板到生产级版本控制
+date: 2026-07-21 10:00:00+08:00
+updated: '2026-07-21T10:00:00+08:00'
+description: 深入解析Spring AI Prompt工程与管理：PromptTemplate高级用法、SystemPromptTemplate与MessagePromptTemplate、参数绑定与类型安全、Prompt版本控制与灰度发布、生产环境Prompt管理与可观测性、Prompt缓存与成本优化。掌握企业级Prompt工程能力。
+topic: ai-engineering
+series: spring-ai-interview
+series_order: 8
+level: intermediate
+status: maintained
+tags:
+- Spring AI
+- Prompt
+- PromptTemplate
+- SystemPrompt
+- Prompt版本控制
+categories:
+- AI 工程化
 draft: false
-categories: ["Spring AI"]
-tags: ["Spring AI", "Prompt", "PromptTemplate", "SystemPrompt", "Prompt版本控制", "A/B测试", "Java", "AI工程化", "面试"]
-keywords: ["Spring AI", "PromptTemplate", "SystemPromptTemplate", "MessagePromptTemplate", "Prompt管理", "Prompt版本控制", "Prompt工程", "A/B测试", "面试八股文"]
-description: "深入解析Spring AI Prompt工程与管理：PromptTemplate高级用法、SystemPromptTemplate与MessagePromptTemplate、参数绑定与类型安全、Prompt版本控制与灰度发布、生产环境Prompt管理与可观测性、Prompt缓存与成本优化。掌握企业级Prompt工程能力。"
+keywords:
+- Spring AI
+- PromptTemplate
+- SystemPromptTemplate
+- MessagePromptTemplate
+- Prompt管理
+- Prompt版本控制
+- Prompt工程
+- A/B测试
+- 面试八股文
 ---
-
-# Spring AI面试八股文（八）——Prompt工程与管理：从模板到生产级版本控制
 
 > 面试高频问题：Spring AI的PromptTemplate有哪些高级用法？如何优雅管理System Prompt？如何实现Prompt的版本控制和灰度发布？Prompt参数如何做到类型安全？生产环境如何监控Prompt效果和成本？本文全面解析Prompt工程的企业级实践。
 

@@ -1,12 +1,21 @@
 ---
-title: "ClickHouse深度解析：OLAP列式数据库实战指南"
-date: 2026-07-15T11:00:00+08:00
+title: ClickHouse深度解析：OLAP列式数据库实战指南
+date: 2026-07-15 11:00:00+08:00
+updated: '2026-07-15T11:00:00+08:00'
+description: 系统讲解 ClickHouse 列式存储、MergeTree 引擎、分区排序、查询优化与集群部署，并给出实时 OLAP 场景的生产实践。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- ClickHouse
+- OLAP
+- 列式存储
+- MergeTree
+- 数据分析
+categories:
+- 数据库与中间件
 draft: false
-categories: ["数据库"]
-tags: ["ClickHouse", "OLAP", "列式存储", "MergeTree", "数据分析"]
 ---
-
-# ClickHouse深度解析：OLAP列式数据库实战指南
 
 ## 一、引言
 
