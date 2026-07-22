@@ -1,12 +1,24 @@
 ---
-title: "Spring面试八股文（二）——Spring AOP与事务管理"
-date: 2026-06-24T09:00:00+08:00
+title: Spring面试八股文（二）——Spring AOP与事务管理
+date: 2026-06-24 09:00:00+08:00
+updated: '2026-06-24T09:00:00+08:00'
+description: 🎯 本文目标：承接上一篇的IoC容器基础，深入剖析Spring AOP的核心机制——JDK动态代理与CGLIB的底层原理及选择策略、切点表达式的完整语法与匹配规则、AOP执行链的责任链模式实现、以及Spring声明式事务的七种传播行为与六大失效场景，构建Spring
+  AOP与事务管理的完整知识体系。
+topic: java-spring
+series: spring-interview
+series_order: 2
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Spring
+- AOP
+- 动态代理
+categories:
+- Java 与 Spring
 draft: false
-categories: ["Spring"]
-tags: ["面试", "八股文", "Spring", "AOP", "动态代理", "CGLIB", "JDK代理", "事务传播", "事务失效", "切面", "切点表达式"]
 ---
-
-# Spring面试八股文（二）——Spring AOP与事务管理
 
 > 🎯 **本文目标**：承接上一篇的IoC容器基础，深入剖析Spring AOP的核心机制——JDK动态代理与CGLIB的底层原理及选择策略、切点表达式的完整语法与匹配规则、AOP执行链的责任链模式实现、以及Spring声明式事务的七种传播行为与六大失效场景，构建Spring AOP与事务管理的完整知识体系。
 

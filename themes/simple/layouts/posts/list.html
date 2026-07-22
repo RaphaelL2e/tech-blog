@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+<section class="library-hero shell">
+  <p class="eyebrow">ARTICLE LIBRARY</p>
+  <h1>文章库</h1>
+  <p class="lead">从 {{ len $posts }} 篇工程笔记中，按关键词、主题或系列找到你正在解决的问题。</p>
+  {{ partial "search-controls.html" . }}
+</section>
+<section class="shell library-results" data-default-library>
+  <div class="result-summary"><strong>{{ .Paginator.TotalNumberOfElements }}</strong> 篇文章 <span>·</span> 按最近更新排序</div>
+  <div class="post-grid" id="default-results">
+    {{ range .Paginator.Pages }}{{ partial "post-card.html" . }}{{ end }}
+  </div>
+  {{ partial "pagination.html" . }}
+  <div class="post-grid search-results" id="search-results" hidden></div>
+  <div class="empty-state" id="search-empty" hidden><strong>没有找到匹配文章</strong><p>试试更短的关键词，或清除主题和系列筛选。</p></div>
+</section>
+{{ end }}

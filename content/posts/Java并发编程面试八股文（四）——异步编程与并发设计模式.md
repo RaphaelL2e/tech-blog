@@ -1,12 +1,22 @@
 ---
-title: "Java并发编程面试八股文（四）——异步编程与并发设计模式"
-date: 2026-06-16T10:00:00+08:00
+title: Java并发编程面试八股文（四）——异步编程与并发设计模式
+date: 2026-06-16 10:00:00+08:00
+updated: '2026-06-16T10:00:00+08:00'
+description: '面试高频问题：CompletableFuture和Future有什么区别？thenApply和thenCompose的使用场景？ForkJoinPool的工作窃取算法是什么？如何设计线程安全的单例模式？本文带你深入Java异步编程与并发设计模式。
+  Q: 传统Future有什么局限性？Completa。'
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Java
+- 并发
+- CompletableFuture
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["面试", "八股文", "Java", "并发", "CompletableFuture", "ForkJoinPool", "设计模式", "异步编程"]
 ---
-
-# Java并发编程面试八股文（四）——异步编程与并发设计模式
 
 > 面试高频问题：CompletableFuture和Future有什么区别？thenApply和thenCompose的使用场景？ForkJoinPool的工作窃取算法是什么？如何设计线程安全的单例模式？本文带你深入Java异步编程与并发设计模式。
 

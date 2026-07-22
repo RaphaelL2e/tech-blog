@@ -1,12 +1,22 @@
 ---
-title: "Java并发编程面试八股文（一）——线程基础与锁机制"
-date: 2026-06-15T09:00:00+08:00
+title: Java并发编程面试八股文（一）——线程基础与锁机制
+date: 2026-06-15 09:00:00+08:00
+updated: '2026-06-15T09:00:00+08:00'
+description: '面试高频问题：Java线程有几种创建方式？synchronized底层原理是什么？ReentrantLock和synchronized有什么区别？volatile能保证原子性吗？本文带你系统掌握Java并发编程基础与锁机制的核心知识。
+  Q: Java中创建线程有几种方式？ A: 常见的创建方式有以下。'
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Java
+- 并发
+- 线程
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["面试", "八股文", "Java", "并发", "线程", "synchronized", "AQS", "volatile", "锁"]
 ---
-
-# Java并发编程面试八股文（一）——线程基础与锁机制
 
 > 面试高频问题：Java线程有几种创建方式？synchronized底层原理是什么？ReentrantLock和synchronized有什么区别？volatile能保证原子性吗？本文带你系统掌握Java并发编程基础与锁机制的核心知识。
 

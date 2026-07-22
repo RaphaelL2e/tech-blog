@@ -1,23 +1,74 @@
 baseURL = 'https://raphaell2e.github.io/'
 languageCode = 'zh-CN'
-title = 'Raphael Tech Blog'
-theme = "simple"
+title = 'Raphael Lab｜飞哥 AI 实验室'
+theme = 'simple'
+paginate = 12
+enableRobotsTXT = true
+enableGitInfo = false
+disableKinds = ['taxonomy', 'term']
+summaryLength = 52
 
 [params]
-  author = "飞哥的 AI 折腾日记"
-  description = "Java 后端工程师，关注平台后端、数据平台与 AI 工程化。"
+  brand = 'Raphael Lab'
+  chineseBrand = '飞哥 AI 实验室'
+  author = '李亚飞'
+  description = '记录后端工程、分布式系统与 AI 工程化的真实实践。'
+  github = 'https://github.com/RaphaelL2e'
+  email = 'liyafei.work@foxmail.com'
+  defaultImage = '/images/og-default.png'
 
 [menu]
   [[menu.main]]
-    name = "首页"
-    url = "/"
+    name = '首页'
+    url = '/'
     weight = 10
   [[menu.main]]
-    name = "文章"
-    url = "/posts/"
+    name = '专题'
+    url = '/series/'
     weight = 20
   [[menu.main]]
-    name = "关于"
-    url = "/about/"
+    name = '文章库'
+    url = '/posts/'
     weight = 30
-disableHTMLEscaping = true
+  [[menu.main]]
+    name = '项目'
+    url = '/projects/'
+    weight = 40
+  [[menu.main]]
+    name = '关于'
+    url = '/about/'
+    weight = 50
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+  section = ['HTML', 'RSS']
+
+[outputFormats.JSON]
+  mediaType = 'application/json'
+  baseName = 'search-index'
+  isPlainText = true
+  notAlternative = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+    ordered = false
+
+[sitemap]
+  changefreq = 'weekly'
+  priority = 0.5
+  filename = 'sitemap.xml'
+
+[privacy]
+  [privacy.youtube]
+    privacyEnhanced = true
+
+[security]
+  enableInlineShortcodes = false

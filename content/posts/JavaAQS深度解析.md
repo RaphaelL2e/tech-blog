@@ -1,12 +1,21 @@
 ---
-title: "Java AQS 深度解析：并发编程的基石"
-date: 2026-06-07T09:00:00+08:00
+title: Java AQS 深度解析：并发编程的基石
+date: 2026-06-07 09:00:00+08:00
+updated: '2026-06-07T09:00:00+08:00'
+description: 面试高频问题：AQS 的原理是什么？CLH 队列是怎么实现的？独占模式和共享模式有什么区别？为什么 AQS 是并发包的基石？ AbstractQueuedSynchronizer（AQS）是 Java 并发包（java.util.concurrent）中最核心的框架类，ReentrantLock、C。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Java
+- AQS
+- 并发
+- ReentrantLock
+- CountDownLatch
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["java", "AQS", "并发", "ReentrantLock", "CountDownLatch", "源码解析"]
 ---
-
-# Java AQS 深度解析：并发编程的基石
 
 > 面试高频问题：AQS 的原理是什么？CLH 队列是怎么实现的？独占模式和共享模式有什么区别？为什么 AQS 是并发包的基石？
 

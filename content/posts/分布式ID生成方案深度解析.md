@@ -1,12 +1,22 @@
 ---
-title: "分布式 ID 生成方案深度解析"
-date: 2026-05-14T11:40:00+08:00
+title: 分布式 ID 生成方案深度解析
+date: 2026-05-14 11:40:00+08:00
+updated: '2026-05-14T11:40:00+08:00'
+description: 在分布式系统中，唯一 ID 的生成是一个基础且关键的问题。数据库自增 ID 在分库分表后无法保证全局唯一，UUID 性能差且无序，如何高效生成全局唯一、趋势递增的 ID 是面试高频考点。 UUID（Universally
+  Unique Identifier）是 128 位的唯一标识符。 无序：不适合。
+topic: distributed-systems
+level: intermediate
+status: maintained
+tags:
+- 分布式ID
+- Snowflake
+- UUID
+- Leaf
+- 号段模式
+categories:
+- 分布式与微服务
 draft: false
-categories: ["分布式系统"]
-tags: ["分布式ID", "Snowflake", "UUID", "Leaf", "号段模式"]
 ---
-
-# 分布式 ID 生成方案深度解析
 
 ## 一、引言
 
@@ -699,4 +709,4 @@ UidGenerator:   ~2000万/秒（RingBuffer 缓存）
 
 ---
 
-*作者：飞哥的 AI 折腾日记*
+*作者：李亚飞 · Raphael Lab*

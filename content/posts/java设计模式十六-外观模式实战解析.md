@@ -1,9 +1,23 @@
 ---
-title: "Java设计模式（十六）：外观模式实战解析"
-date: 2026-04-22T10:20:00+08:00
+title: Java设计模式（十六）：外观模式实战解析
+date: 2026-04-22 10:20:00+08:00
+updated: '2026-04-22T10:20:00+08:00'
+description: 外观模式（Facade Pattern）是一种结构型设计模式，它的核心思想是：为子系统中的一组接口提供一个一致的界面（Facade），使得子系统更加容易使用。 核心思想：封装复杂性，提供简化的高层接口。 假设我们正在开发一个智能家居系统，有灯光、空调、音响、窗帘等多个子系统：
+  客户端需要了解每个子系。
+topic: java-spring
+series: java-design-patterns
+series_order: 16
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 外观模式
+- facade
+- 封装
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "外观模式", "facade", "封装", "子系统"]
 ---
 
 ## 前言

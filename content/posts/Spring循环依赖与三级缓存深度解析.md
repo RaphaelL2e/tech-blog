@@ -1,13 +1,21 @@
 ---
-title: "Spring 循环依赖与三级缓存深度解析"
-date: 2026-05-12T10:45:00+08:00
+title: Spring 循环依赖与三级缓存深度解析
+date: 2026-05-12 10:45:00+08:00
+updated: '2026-05-12T10:45:00+08:00'
+description: 面试高频问题：Spring 如何解决循环依赖？三级缓存是什么？构造器循环依赖能解决吗？ 循环依赖是 Spring 容器中常见的问题：Bean A 依赖 Bean B，Bean B 又依赖 Bean A。Spring 通过三级缓存巧妙地解决了字段注入和
+  setter 注入的循环依赖，但构造器注入的循环。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Spring
+- circular-dependency
+- three-level-cache
+- aop
+categories:
+- Java 与 Spring
 draft: false
-categories: ["spring"]
-tags: ["spring", "circular-dependency", "three-level-cache", "aop"]
 ---
-
-
-# Spring 循环依赖与三级缓存深度解析
 
 > 面试高频问题：Spring 如何解决循环依赖？三级缓存是什么？构造器循环依赖能解决吗？
 

@@ -1,12 +1,24 @@
 ---
-title: "数据库面试八股文（十一）——分布式数据库与NewSQL实战"
-date: 2026-06-18T10:00:00+08:00
+title: 数据库面试八股文（十一）——分布式数据库与NewSQL实战
+date: 2026-06-18 10:00:00+08:00
+updated: '2026-06-18T10:00:00+08:00'
+description: '🎯 本文目标：承接本系列前10篇的单机数据库知识，全面转向分布式数据库领域。从CAP理论出发，深入TiDB/CockroachDB等NewSQL架构原理，剖析分布式事务、Raft一致性协议，最终以高频面试题收尾。 Q1:
+  为什么大多数互联网公司选择AP而非CP？ 用户体验优先：宁可看到5秒前的旧数据。'
+topic: database-middleware
+series: database-interview
+series_order: 11
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- 分布式
+- NewSQL
+- TiDB
+categories:
+- 数据库与中间件
 draft: false
-categories: ["数据库"]
-tags: ["面试", "八股文", "分布式", "NewSQL", "TiDB", "CockroachDB", "CAP", "分布式事务", "Raft", "HTAP"]
 ---
-
-# 数据库面试八股文（十一）——分布式数据库与NewSQL实战
 
 > 🎯 **本文目标**：承接本系列前10篇的单机数据库知识，全面转向分布式数据库领域。从CAP理论出发，深入TiDB/CockroachDB等NewSQL架构原理，剖析分布式事务、Raft一致性协议，最终以高频面试题收尾。
 

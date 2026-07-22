@@ -1,13 +1,21 @@
 ---
-title: "JVM 类文件结构与字节码深度解析"
-date: 2026-05-12T10:15:00+08:00
+title: JVM 类文件结构与字节码深度解析
+date: 2026-05-12 10:15:00+08:00
+updated: '2026-05-12T10:15:00+08:00'
+description: 面试高频问题：Class 文件的结构？字节码指令有哪些？类加载的过程？ Java 的"一次编写，到处运行"依赖于 Class 文件这一中间格式。理解 Class 文件结构和字节码指令，是深入理解 JVM 的基础，也是性能调优、代码生成、字节码增强等技术的前提。
+  常量池是 Class 文件中最大的数据。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- JVM
+- bytecode
+- classfile
+- jvm-instructions
+categories:
+- Java 与 Spring
 draft: false
-categories: ["jvm"]
-tags: ["jvm", "bytecode", "classfile", "jvm-instructions"]
 ---
-
-
-# JVM 类文件结构与字节码深度解析
 
 > 面试高频问题：Class 文件的结构？字节码指令有哪些？类加载的过程？
 

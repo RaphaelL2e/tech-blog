@@ -1,12 +1,18 @@
 ---
-title: "第五章 Linux实操篇"
-date: 2019-08-15T15:27:58+08:00
+title: 第五章 Linux实操篇
+date: 2019-08-15 15:27:58+08:00
+updated: '2019-08-15T15:27:58+08:00'
+description: '需要Linux开启sshd服务 22端口 完成读取、存盘、替换、显示行号等动作 set nu 设置行号 set nonu 取消行号 shift+g 定位 eg: 5 shift+g 定位到第5行 shutdown -
+  h now shutdown -h 1 表示1分钟后关机 shutdown -r。'
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- Linux
+categories:
+- 计算机基础
 draft: false
-categories: ['Linux']
-tags: ['linux']
 ---
-
-# [](#第五章-Linux实操篇-远程登录Linux系统)第五章 Linux实操篇 远程登录Linux系统
 
 ## [](#5-1-为什么要远程登录服务器)5.1 为什么要远程登录服务器
 
@@ -16,7 +22,7 @@ tags: ['linux']
 
 ## [](#5-3-xftp-远程文件操纵)5.3 xftp 远程文件操纵
 
-# [](#第六章-Linux实操篇-vi和vim编辑器)第六章 Linux实操篇  vi和vim编辑器
+## [](#第六章-Linux实操篇-vi和vim编辑器)第六章 Linux实操篇  vi和vim编辑器
 
 ## [](#6-1-vi-和vim介绍)6.1 vi 和vim介绍
 
@@ -50,7 +56,7 @@ set nu 设置行号 set nonu 取消行号
 
 shift+g 定位  eg: 5 shift+g 定位到第5行
 
-# [](#第七章-Linux实操篇-开机、重启、用户登录注销)第七章 Linux实操篇 开机、重启、用户登录注销
+## [](#第七章-Linux实操篇-开机、重启、用户登录注销)第七章 Linux实操篇 开机、重启、用户登录注销
 
 ## [](#7-1-关机和重启指令)7.1 关机和重启指令
 
@@ -88,7 +94,7 @@ shift+g 定位  eg: 5 shift+g 定位到第5行
 
 logout注销指令在图形界面无效，在**运行级别**3下有效
 
-# [](#第八章-Linux实操篇-用户管理)第八章 Linux实操篇 用户管理
+## [](#第八章-Linux实操篇-用户管理)第八章 Linux实操篇 用户管理
 
 ## [](#8-1-基本介绍)8.1 基本介绍
 
@@ -229,7 +235,7 @@ leeyf:x:1000:1000::/home/leeyf:/bin/bash
 leeyf:x:1000
 组名：口令组标识符：组id：组内用户列表(隐藏)
 
-# [](#第九章-Linux实操篇-实用指令)第九章 Linux实操篇 实用指令
+## [](#第九章-Linux实操篇-实用指令)第九章 Linux实操篇 实用指令
 
 ## [](#9-1-运行级别)9.1 运行级别
 
@@ -674,7 +680,7 @@ tar [选项] xxx.tar.gz打包内容
 
 - tar -zxvf a.tar.gz 解压打包
 
-# [](#第十章-Linux实操篇-组管理和权限管理)第十章 Linux实操篇 组管理和权限管理
+## [](#第十章-Linux实操篇-组管理和权限管理)第十章 Linux实操篇 组管理和权限管理
 
 ## [](#10-1-Linux组基本介绍)10.1 Linux组基本介绍
 
@@ -975,7 +981,7 @@ usermod -g police xh //改变xh所在组
 
 chmod g=rx jack //给所在组 r x权限
 
-# [](#第十一章-Linux实操篇-定时任务调度)第十一章 Linux实操篇 定时任务调度
+## [](#第十一章-Linux实操篇-定时任务调度)第十一章 Linux实操篇 定时任务调度
 
 ## [](#11-1-crond-任务调度)11.1 crond 任务调度
 
@@ -1046,7 +1052,7 @@ crontab [选项]
 案例1：每隔1分钟，将当前时间信息，追加到/tmp/mydate文件中
 */1 * * * * date>> /tmp/mydate
 
-# [](#第十二章-Linux实操篇-Linux磁盘分区和挂载)第十二章 Linux实操篇 Linux磁盘分区和挂载
+## [](#第十二章-Linux实操篇-Linux磁盘分区和挂载)第十二章 Linux实操篇 Linux磁盘分区和挂载
 
 ## [](#12-1-分区基础知识)12.1 分区基础知识
 
@@ -1159,7 +1165,7 @@ ls -lR /home/leeyf | grep '^d' | wc -l
 - 用树状图显示目录结构
 tree 目录
 
-# [](#第十三章-Linux实操篇-网络配置)第十三章 Linux实操篇 网络配置
+## [](#第十三章-Linux实操篇-网络配置)第十三章 Linux实操篇 网络配置
 
 ## [](#13-1-Linux网络配置原理图（含虚拟机）)13.1 Linux网络配置原理图（含虚拟机）
 
@@ -1186,7 +1192,7 @@ NAT模式(网络环境)
 
 - 
 
-# [](#第十四章-Linux实操篇-进程管理)第十四章 Linux实操篇 进程管理
+## [](#第十四章-Linux实操篇-进程管理)第十四章 Linux实操篇 进程管理
 
 ## [](#14-1-基本介绍)14.1 基本介绍
 

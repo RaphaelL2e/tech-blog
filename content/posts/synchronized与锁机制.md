@@ -1,12 +1,22 @@
 ---
-title: "synchronized 与锁机制：从对象头到锁升级"
-date: 2026-04-29T18:00:00+08:00
+title: synchronized 与锁机制：从对象头到锁升级
+date: 2026-04-29 18:00:00+08:00
+updated: '2026-04-29T18:00:00+08:00'
+description: synchronized 是 Java 中最基础的同步机制，也是面试的高频考点。很多候选人知道「synchronized 是重量级锁」「JDK 6 之后有锁升级」，但真正能说清楚对象头结构、锁升级流程、与 ReentrantLock
+  区别的却不多。 本文将从 JVM 底层出发，深入剖析 synchr。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Java
+- 面试
+- synchronized
+- 锁
+- 并发
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["Java", "面试", "synchronized", "锁", "并发", "JVM"]
 ---
-
-# synchronized 与锁机制：从对象头到锁升级
 
 `synchronized` 是 Java 中最基础的同步机制，也是面试的高频考点。很多候选人知道「synchronized 是重量级锁」「JDK 6 之后有锁升级」，但真正能说清楚对象头结构、锁升级流程、与 ReentrantLock 区别的却不多。
 

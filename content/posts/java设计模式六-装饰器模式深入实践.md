@@ -1,9 +1,21 @@
 ---
-title: "Java设计模式（六）：装饰器模式深入实践"
-date: 2026-04-16T10:00:00+08:00
+title: Java设计模式（六）：装饰器模式深入实践
+date: 2026-04-16 10:00:00+08:00
+updated: '2026-04-16T10:00:00+08:00'
+description: 前五篇文章我们介绍了单例模式、工厂模式、建造者模式、原型模式和适配器模式，今天继续 Java 设计模式系列。装饰器模式（Decorator Pattern） 是结构型模式中的重要成员，用于动态地给对象添加额外职责。 核心思想：动态地给一个对象添加一些额外的职责，就增加功能来说，装饰器模式比继承更加灵。
+topic: java-spring
+series: java-design-patterns
+series_order: 6
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 装饰器模式
+- decorator
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "装饰器模式", "decorator"]
 ---
 
 ## 前言

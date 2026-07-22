@@ -1,12 +1,23 @@
 ---
-title: "AI大模型面试八股文（一）——大模型基础与Transformer架构"
-date: 2026-06-08T10:00:00+08:00
+title: AI大模型面试八股文（一）——大模型基础与Transformer架构
+date: 2026-06-08 10:00:00+08:00
+updated: '2026-06-08T10:00:00+08:00'
+description: 面试高频问题：什么是大模型？Transformer的核心原理是什么？自注意力机制如何工作？位置编码为什么重要？本文作为AI大模型系列的开篇，带你从零理解大模型的技术底座。 年底ChatGPT的发布，标志着AI大模型时代的到来。从GPT系列到LLaMA、Qwen、DeepSeek，大模型已经成为技术面。
+topic: ai-engineering
+series: ai-llm-interview
+series_order: 1
+level: intermediate
+status: maintained
+tags:
+- AI
+- 大模型
+- Transformer
+- 注意力机制
+- LLM
+categories:
+- AI 工程化
 draft: false
-categories: ["AI"]
-tags: ["AI", "大模型", "Transformer", "注意力机制", "LLM", "面试"]
 ---
-
-# AI大模型面试八股文（一）——大模型基础与Transformer架构
 
 > 面试高频问题：什么是大模型？Transformer的核心原理是什么？自注意力机制如何工作？位置编码为什么重要？本文作为AI大模型系列的开篇，带你从零理解大模型的技术底座。
 
@@ -566,4 +577,4 @@ Token = 文本的最小处理单位
 
 ---
 
-*作者：飞哥的 AI 折腾日记*
+*作者：李亚飞 · Raphael Lab*

@@ -1,0 +1,12 @@
+<footer class="site-footer">
+  <div>
+    <a class="footer-brand" href="{{ "/" | relURL }}">{{ .Site.Params.brand }}</a>
+    <p>{{ .Site.Params.description }}</p>
+  </div>
+  <div class="footer-links">
+    <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+    <a href="mailto:{{ .Site.Params.email }}">邮箱</a>
+    <a href="{{ "index.xml" | relURL }}">RSS</a>
+  </div>
+  <p class="copyright">© {{ now.Year }} {{ .Site.Params.author }}</p>
+</footer>

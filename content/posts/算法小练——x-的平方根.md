@@ -1,12 +1,18 @@
 ---
-title: "算法小练——x 的平方根"
-date: 2019-11-11T20:50:44+08:00
+title: 算法小练——x 的平方根
+date: 2019-11-11 20:50:44+08:00
+updated: '2019-11-11T20:50:44+08:00'
+description: 实现 int sqrt(int x) 函数。 计算并返回 x 的平方根，其中 x 是非负整数。 由于返回类型是整数，结果只保留整数的部分，小数部分将被舍去。 的平方根是 2.82842…, 由于返回类型是整数，小数部分将被舍去。
+  https://leetcode-cn.com/problems/sq。
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- easy
+categories:
+- 计算机基础
 draft: false
-categories: ['Algorithms']
-tags: ['easy']
 ---
-
-# [](#x-的平方根)[ x 的平方根](https://leetcode-cn.com/problems/sqrtx/)
 
 ### [](#描述)描述
 

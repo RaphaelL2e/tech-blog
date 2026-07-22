@@ -1,13 +1,25 @@
 ---
-title: "微服务面试八股文（八）——API版本管理、配置中心与服务网格进阶实战"
-date: 2026-07-09T11:00:00+08:00
+title: 微服务面试八股文（八）——API版本管理、配置中心与服务网格进阶实战
+date: 2026-07-09 11:00:00+08:00
+updated: '2026-07-09T11:00:00+08:00'
+description: '🎯 本文目标：承接微服务部署与容器化实战，聚焦 API 版本管理策略与配置中心的微服务集成、以及服务网格进阶特性。掌握这些内容，你将具备微服务生命周期管理、灰度发布、配置治理的完整工程能力，能够在面试中展现从"能用"到"用好"的微服务工程化深度。
+  Q: 如何做到 API 不 down 机的情况下完成。'
+topic: distributed-systems
+series: microservices-interview
+series_order: 8
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- 微服务
+- API版本管理
+- 配置中心
+categories:
+- 分布式与微服务
 draft: false
-categories: ["微服务", "Spring Cloud"]
-tags: ["面试", "八股文", "微服务", "API版本管理", "配置中心", "Apollo", "Spring Cloud Config", "服务网格", "Istio", "Gateway", "灰度发布", "A/B测试", "Feature Flag", "金丝雀"]
-author: "飞哥"
+author: 飞哥
 ---
-
-# 微服务面试八股文（八）——API版本管理、配置中心与服务网格进阶实战
 
 > 🎯 **本文目标**：承接微服务部署与容器化实战，聚焦 API 版本管理策略与配置中心的微服务集成、以及服务网格进阶特性。掌握这些内容，你将具备微服务生命周期管理、灰度发布、配置治理的完整工程能力，能够在面试中展现从"能用"到"用好"的微服务工程化深度。
 

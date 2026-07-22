@@ -1,12 +1,24 @@
 ---
-title: "操作系统面试八股文（七）——Linux网络编程与Shell实战"
-date: 2026-06-17T10:00:00+08:00
+title: 操作系统面试八股文（七）——Linux网络编程与Shell实战
+date: 2026-06-17 10:00:00+08:00
+updated: '2026-06-17T10:00:00+08:00'
+description: '面试高频问题：Socket编程的基本流程是什么？TCP三次握手在代码中怎么体现？epoll的边缘触发和水平触发有什么区别？awk/sed/grep三剑客怎么用？Shell脚本怎么写才能稳健可靠？本文带你系统掌握Linux网络编程与Shell实战的核心知识。
+  Q: TCP Socket编程的基本流程是。'
+topic: computer-science
+series: operating-system
+series_order: 7
+level: intermediate
+status: maintained
+tags:
+- 操作系统
+- Linux
+- 网络编程
+- Socket
+- TCP
+categories:
+- 计算机基础
 draft: false
-categories: ["操作系统"]
-tags: ["操作系统", "Linux", "网络编程", "Socket", "TCP", "UDP", "Shell", "awk", "sed", "面试"]
 ---
-
-# 操作系统面试八股文（七）——Linux网络编程与Shell实战
 
 > 面试高频问题：Socket编程的基本流程是什么？TCP三次握手在代码中怎么体现？epoll的边缘触发和水平触发有什么区别？awk/sed/grep三剑客怎么用？Shell脚本怎么写才能稳健可靠？本文带你系统掌握Linux网络编程与Shell实战的核心知识。
 

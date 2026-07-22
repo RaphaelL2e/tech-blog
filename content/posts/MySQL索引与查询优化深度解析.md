@@ -1,13 +1,21 @@
 ---
-title: "MySQL 索引与查询优化深度解析"
-date: 2026-05-12T17:20:00+08:00
+title: MySQL 索引与查询优化深度解析
+date: 2026-05-12 17:20:00+08:00
+updated: '2026-05-12T17:20:00+08:00'
+description: 面试高频问题：MySQL 索引底层为什么用 B+ 树？索引失效的场景？如何优化慢查询？ MySQL 索引是面试中最常考的知识点之一，也是生产环境优化的重点。理解索引的原理、结构和失效场景，是每个后端工程师的必备技能。
+  索引（Index）是数据库表中一种特殊的数据结构，用于加速数据检索。就像书籍的目录。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- MySQL
+- index
+- b-plus-tree
+- query-optimization
+categories:
+- 数据库与中间件
 draft: false
-categories: ["mysql"]
-tags: ["mysql", "index", "b-plus-tree", "query-optimization"]
 ---
-
-
-# MySQL 索引与查询优化深度解析
 
 > 面试高频问题：MySQL 索引底层为什么用 B+ 树？索引失效的场景？如何优化慢查询？
 

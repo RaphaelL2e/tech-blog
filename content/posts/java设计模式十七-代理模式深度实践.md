@@ -1,9 +1,23 @@
 ---
-title: "Java设计模式（十七）：代理模式深度实践"
-date: 2026-04-22T10:30:00+08:00
+title: Java设计模式（十七）：代理模式深度实践
+date: 2026-04-22 10:30:00+08:00
+updated: '2026-04-22T10:30:00+08:00'
+description: 代理模式（Proxy Pattern）是一种结构型设计模式，它的核心思想是：为其他对象提供一种代理以控制对这个对象的访问。 核心思想：在客户端和目标对象之间增加一层间接层，以控制访问、增强功能或延迟加载。 假设我们有一个远程服务接口，直接调用存在以下问题：
+  如果直接修改目标对象，会污染业务逻辑。代理。
+topic: java-spring
+series: java-design-patterns
+series_order: 17
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 代理模式
+- proxy
+- 动态代理
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "代理模式", "proxy", "动态代理", "AOP"]
 ---
 
 ## 前言

@@ -1,9 +1,22 @@
 ---
-title: "Java设计模式（十）：责任链模式深度实践"
-date: 2026-04-20T11:20:00+08:00
+title: Java设计模式（十）：责任链模式深度实践
+date: 2026-04-20 11:20:00+08:00
+updated: '2026-04-20T11:20:00+08:00'
+description: 前九篇文章我们覆盖了 4 种创建型模式和 5 种结构/行为型模式。今天继续 Java 设计模式系列，责任链模式（Chain of Responsibility Pattern） 是处理请求传递的利器，完美体现了"解耦"和"灵活组合"。
+  核心思想：将请求的发送者和接收者解耦，让多个对象都有机会处理请求。
+topic: java-spring
+series: java-design-patterns
+series_order: 10
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 责任链
+- chain of responsibility
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "责任链", "chain of responsibility"]
 ---
 
 ## 前言

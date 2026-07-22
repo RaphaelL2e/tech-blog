@@ -1,12 +1,24 @@
 ---
-title: "数据库面试八股文（六）——MySQL日志系统与主从复制"
-date: 2026-06-03T10:00:00+08:00
+title: 数据库面试八股文（六）——MySQL日志系统与主从复制
+date: 2026-06-03 10:00:00+08:00
+updated: '2026-06-03T10:00:00+08:00'
+description: 面试高频考点：MySQL三大日志的作用与协作机制、WAL技术、主从复制原理与延迟优化。本文从日志写入流程到底层复制机制，全面梳理面试必问知识点。 核心问题：如果只有一种日志，能同时满足崩溃恢复和数据复制吗？ Redo
+  Log 是物理日志，记录"某数据页做了什么修改"，循环写入，空间固定会覆盖 Bin。
+topic: database-middleware
+series: database-interview
+series_order: 6
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- MySQL
+- Redo Log
+- Undo Log
+categories:
+- 数据库与中间件
 draft: false
-categories: ["数据库"]
-tags: ["面试", "八股文", "MySQL", "Redo Log", "Undo Log", "Binlog", "主从复制", "GTID"]
 ---
-
-# 数据库面试八股文（六）——MySQL日志系统与主从复制
 
 > 面试高频考点：MySQL三大日志的作用与协作机制、WAL技术、主从复制原理与延迟优化。本文从日志写入流程到底层复制机制，全面梳理面试必问知识点。
 

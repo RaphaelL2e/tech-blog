@@ -1,9 +1,23 @@
 ---
-title: "Java设计模式（二十三）：GoF 23 设计模式全总结"
-date: 2026-04-22T11:30:00+08:00
+title: Java设计模式（二十三）：GoF 23 设计模式全总结
+date: 2026-04-22 11:30:00+08:00
+updated: '2026-04-22T11:30:00+08:00'
+description: 经过 22 篇的深度实践，我们终于走完了 GoF 23 种设计模式的全部旅程。这篇文章作为系列的收官之作，将从全局视角梳理所有模式，帮助你建立完整的设计模式知识体系。 GoF 23 种设计模式按目的分为三大类： 设计模式背后的灵魂是六大设计原则：
+  控制器层：策略模式（不同请求处理策略） 服务层：代理。
+topic: java-spring
+series: java-design-patterns
+series_order: 23
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- GoF
+- 总结
+- 设计原则
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "GoF", "总结", "设计原则"]
 ---
 
 ## 前言

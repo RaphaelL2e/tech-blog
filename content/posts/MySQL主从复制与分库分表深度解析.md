@@ -1,13 +1,22 @@
 ---
-title: "MySQL 主从复制与分库分表深度解析"
-date: 2026-05-12T17:40:00+08:00
+title: MySQL 主从复制与分库分表深度解析
+date: 2026-05-12 17:40:00+08:00
+updated: '2026-05-12T17:40:00+08:00'
+description: 面试高频问题：MySQL 主从复制原理？什么是半同步复制？分库分表如何实现？ShardingSphere 是什么？ 随着业务增长，单机 MySQL 无法承载海量数据和高并发访问。主从复制和分库分表是 MySQL 扩展的两种核心方案。主从复制解决读写分离和数据备份问题，分库分表解决数据量大的问题。
+  核。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- MySQL
+- replication
+- sharding
+- shardingsphere
+- read-write-separation
+categories:
+- 数据库与中间件
 draft: false
-categories: ["mysql"]
-tags: ["mysql", "replication", "sharding", "shardingsphere", "read-write-separation"]
 ---
-
-
-# MySQL 主从复制与分库分表深度解析
 
 > 面试高频问题：MySQL 主从复制原理？什么是半同步复制？分库分表如何实现？ShardingSphere 是什么？
 

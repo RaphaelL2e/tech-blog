@@ -1,12 +1,21 @@
 ---
-title: "TCP与UDP深度解析"
-date: 2026-05-17T23:30:00+08:00
+title: TCP与UDP深度解析
+date: 2026-05-17 23:30:00+08:00
+updated: '2026-05-17T23:30:00+08:00'
+description: 计算机网络是后端开发工程师面试的重点考察领域，而传输层协议TCP和UDP更是必考知识点。无论是互联网大厂还是创业公司，几乎每个技术面试官都会从TCP/UDP入手，逐步深入到HTTP、网络安全等高级话题。 据2025年技术面试数据分析，计算机网络相关题目在Java后端面试中出现频率高达85%，其中TC。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- 计算机网络
+- TCP
+- UDP
+- 面试
+- 三次握手
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["计算机网络", "TCP", "UDP", "面试", "三次握手", "四次挥手"]
 ---
-
-# TCP与UDP深度解析
 
 ## 引言
 

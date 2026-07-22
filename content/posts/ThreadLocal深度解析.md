@@ -1,13 +1,21 @@
 ---
-title: "ThreadLocal 深度解析"
-date: 2026-05-12T09:30:00+08:00
+title: ThreadLocal 深度解析
+date: 2026-05-12 09:30:00+08:00
+updated: '2026-05-12T09:30:00+08:00'
+description: 面试高频问题：ThreadLocal 的原理？为什么会内存泄漏？如何避免？ ThreadLocal 是 Java 并发编程中实现线程隔离的重要工具。每个线程拥有变量的独立副本，互不干扰。理解 ThreadLocal 的原理和潜在问题，是编写高并发程序的关键。
+  ThreadLocal：线程本地变量，为。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Java
+- threadlocal
+- memory-leak
+- concurrency
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["java", "threadlocal", "memory-leak", "concurrency"]
 ---
-
-
-# ThreadLocal 深度解析
 
 > 面试高频问题：ThreadLocal 的原理？为什么会内存泄漏？如何避免？
 

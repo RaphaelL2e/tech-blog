@@ -1,0 +1,11 @@
+{{- $current := . -}}
+{{- $related := where (where .Site.RegularPages "Section" "posts") ".Params.topic" .Params.topic -}}
+{{- $related = where $related "RelPermalink" "ne" .RelPermalink -}}
+{{ if $related }}
+<section class="related-posts">
+  <div class="section-heading"><div><p class="eyebrow">KEEP READING</p><h2>相关文章</h2></div></div>
+  <div class="related-grid">
+  {{ range first 3 $related.ByDate.Reverse }}<a href="{{ .RelPermalink }}"><span>{{ .Date.Format "2006-01-02" }}</span><strong>{{ .Title }}</strong><p>{{ .Params.description | truncate 90 }}</p></a>{{ end }}
+  </div>
+</section>
+{{ end }}

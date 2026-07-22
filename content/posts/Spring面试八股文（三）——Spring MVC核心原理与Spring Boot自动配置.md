@@ -1,12 +1,23 @@
 ---
-title: "Spring面试八股文（三）——Spring MVC核心原理与Spring Boot自动配置"
-date: 2026-07-05T10:00:00+08:00
+title: Spring面试八股文（三）——Spring MVC核心原理与Spring Boot自动配置
+date: 2026-07-05 10:00:00+08:00
+updated: '2026-07-05T10:00:00+08:00'
+description: 🎯 本文目标：承接前两篇的IoC容器与AOP基础，深入Spring MVC的核心执行链路——DispatcherServlet的九大组件与请求处理全流程、HandlerMapping与HandlerAdapter的适配器模式实现、拦截器(Interceptor)与过滤器(Filter)的七点本质区别。
+topic: java-spring
+series: spring-interview
+series_order: 3
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Spring
+- Spring MVC
+- DispatcherServlet
+categories:
+- Java 与 Spring
 draft: false
-categories: ["Spring"]
-tags: ["面试", "八股文", "Spring", "Spring MVC", "DispatcherServlet", "HandlerMapping", "HandlerAdapter", "拦截器", "Interceptor", "过滤器", "Filter", "Spring Boot", "自动配置", "@Conditional", "条件装配", "自定义Starter"]
 ---
-
-# Spring面试八股文（三）——Spring MVC核心原理与Spring Boot自动配置
 
 > 🎯 **本文目标**：承接前两篇的IoC容器与AOP基础，深入Spring MVC的核心执行链路——DispatcherServlet的九大组件与请求处理全流程、HandlerMapping与HandlerAdapter的适配器模式实现、拦截器(Interceptor)与过滤器(Filter)的七点本质区别、Spring Boot的@EnableAutoConfiguration自动配置原理与@Conditional条件装配机制、以及自定义Starter的完整开发流程，构建Spring Web层与自动化配置的完整知识体系。
 

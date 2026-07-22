@@ -1,12 +1,24 @@
 ---
-title: "计算机网络面试八股文（七）——HTTPS与TLS/SSL"
-date: 2026-05-22T09:00:00+08:00
+title: 计算机网络面试八股文（七）——HTTPS与TLS/SSL
+date: 2026-05-22 09:00:00+08:00
+updated: '2026-05-22T09:00:00+08:00'
+description: HTTP协议存在严重的安全隐患： 明文传输：数据在网络中明文传输，容易被窃听 不验证身份：通信双方身份无法确认，可能遭遇中间人攻击 无法验证完整性：数据可能被篡改，接收方无法发现 这些问题在实际生产环境中是致命的，尤其是涉及敏感信息（如密码、银行账户）时。
+  HTTPS（HyperText Trans。
+topic: computer-science
+series: computer-network
+series_order: 7
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- HTTPS
+- TLS
+- SSL
+categories:
+- 计算机基础
 draft: false
-categories: ["计算机网络"]
-tags: ["面试", "八股文", "HTTPS", "TLS", "SSL", "网络安全"]
 ---
-
-# 计算机网络面试八股文（七）——HTTPS与TLS/SSL
 
 ## [](#http存在的问题)HTTP存在的问题
 

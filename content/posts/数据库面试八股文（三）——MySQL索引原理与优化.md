@@ -1,12 +1,24 @@
 ---
-title: "数据库面试八股文（三）——MySQL索引原理与优化"
-date: 2026-05-25T09:00:00+08:00
+title: 数据库面试八股文（三）——MySQL索引原理与优化
+date: 2026-05-25 09:00:00+08:00
+updated: '2026-05-25T09:00:00+08:00'
+description: 索引是MySQL面试中最高频的考点。本文深入讲解B+树原理、聚簇索引vs非聚簇索引、覆盖索引、最左前缀原则、索引优化实战等核心内容。 索引（Index） 是帮助MySQL高效获取数据的排好序的数据结构。 类比：书籍目录
+  —— 通过目录快速找到章节，而不是逐页翻阅。 大幅提高查询速度（从O(N)到O(。
+topic: database-middleware
+series: database-interview
+series_order: 3
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- MySQL
+- 索引
+- B+树
+categories:
+- 数据库与中间件
 draft: false
-categories: ["数据库"]
-tags: ["面试", "八股文", "MySQL", "索引", "B+树", "覆盖索引", "最左前缀"]
 ---
-
-# 数据库面试八股文（三）——MySQL索引原理与优化
 
 ## [](#概述)概述
 
@@ -302,4 +314,3 @@ WHERE name IS NOT NULL   -- ⚠️ 取决于NULL值比例
 下期预告：
 - 数据库面试八股文（四）——MySQL事务与ACID特性
 - 数据库面试八股文（五）——MySQL锁机制（行锁、表锁、间隙锁、MVCC）
-

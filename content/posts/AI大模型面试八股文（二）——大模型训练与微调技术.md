@@ -1,12 +1,23 @@
 ---
-title: "AI大模型面试八股文（二）——大模型训练与微调技术"
-date: 2026-06-09T10:00:00+08:00
+title: AI大模型面试八股文（二）——大模型训练与微调技术
+date: 2026-06-09 10:00:00+08:00
+updated: '2026-06-09T10:00:00+08:00'
+description: 面试高频问题：大模型预训练怎么做？SFT和RLHF有什么区别？LoRA为什么能高效微调？PPO和DPO怎么选？本文带你深入理解大模型从预训练到对齐的完整流程。 上一篇我们理解了Transformer架构——大模型的"骨架"。但一个强大的大模型，光有架构远远不够。从预训练的海量数据喂养，到指令微调的"。
+topic: ai-engineering
+series: ai-llm-interview
+series_order: 2
+level: intermediate
+status: maintained
+tags:
+- AI
+- 大模型
+- 预训练
+- 微调
+- SFT
+categories:
+- AI 工程化
 draft: false
-categories: ["AI"]
-tags: ["AI", "大模型", "预训练", "微调", "SFT", "RLHF", "LoRA", "面试"]
 ---
-
-# AI大模型面试八股文（二）——大模型训练与微调技术
 
 > 面试高频问题：大模型预训练怎么做？SFT和RLHF有什么区别？LoRA为什么能高效微调？PPO和DPO怎么选？本文带你深入理解大模型从预训练到对齐的完整流程。
 
@@ -733,4 +744,4 @@ LLaMA 2-Chat的训练路径：
 
 ---
 
-*作者：飞哥的 AI 折腾日记*
+*作者：李亚飞 · Raphael Lab*

@@ -1,12 +1,18 @@
 ---
-title: "算法小练——实现 strStr()"
-date: 2019-11-07T19:39:48+08:00
+title: 算法小练——实现 strStr()
+date: 2019-11-07 19:39:48+08:00
+updated: '2019-11-07T19:39:48+08:00'
+description: '给定一个 haystack 字符串和一个 needle 字符串，在 haystack 字符串中找出 needle 字符串出现的第一个位置 (从0开始)。如果不存在，则返回 -1。 输入: haystack = “hello”,
+  needle = “ll” 输入: haystack = “aaaaa”。'
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- easy
+categories:
+- 计算机基础
 draft: false
-categories: ['Algorithms']
-tags: ['easy']
 ---
-
-# [](#实现-strStr)[实现 strStr()](https://leetcode-cn.com/problems/implement-strstr/)
 
 ### [](#描述)描述
 

@@ -1,17 +1,66 @@
 {{ define "main" }}
-<h1 class="page-title">最新文章</h1>
-{{ range .Site.RegularPages }}
-<article>
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    <div class="meta">{{ .Date.Format "2006-01-02" }} {{ if .Params.categories }}<span>/</span> {{ range .Params.categories }}{{ . }} {{ end }}{{ end }}</div>
-    <div class="summary">
-        {{ if .Params.description }}
-            {{ .Params.description }}
-        {{ else }}
-            {{ .Summary | truncate 120 }}
-        {{ end }}
-        <a href="{{ .RelPermalink }}">阅读更多 →</a>
-    </div>
-</article>
-{{ end }}
+{{ $posts := where .Site.RegularPages "Section" "posts" }}
+{{ $series := where .Site.RegularPages "Section" "series" }}
+<section class="home-hero shell">
+  <div class="hero-status"><span></span>持续更新中 <b>·</b> {{ now.Format "2006" }}</div>
+  <p class="eyebrow">{{ .Site.Params.chineseBrand }}</p>
+  <h1>把复杂系统，<br><span>讲到能真正落地。</span></h1>
+  <p class="hero-copy">记录后端工程、分布式系统与 AI 工程化的真实实践。不只解释“是什么”，更关注真实系统里“为什么这样做”。</p>
+  <form class="hero-search" action="{{ "/search/" | relURL }}" role="search">
+    <label class="sr-only" for="home-search">搜索文章</label>
+    <span aria-hidden="true">⌕</span>
+    <input id="home-search" type="search" name="q" placeholder="搜索 {{ len $posts }} 篇文章…" autocomplete="off">
+    <button type="submit">搜索</button>
+  </form>
+  <div class="hero-actions">
+    <a class="button primary" href="{{ "/series/" | relURL }}">浏览专题</a>
+    <a class="button secondary" href="{{ "/about/" | relURL }}">了解作者</a>
+    <p>{{ len $posts }} 篇文章 <span>·</span> 7 个主题 <span>·</span> {{ len $series }} 条学习路径</p>
+  </div>
+</section>
+
+<section class="section-block shell">
+  <div class="section-heading">
+    <div><p class="eyebrow">LEARNING PATHS</p><h2>推荐学习路径</h2></div>
+    <a href="{{ "/series/" | relURL }}">查看全部 <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="series-grid compact-grid">
+    {{ range first 4 (sort $series "Weight") }}
+      {{ partial "series-card.html" . }}
+    {{ end }}
+  </div>
+</section>
+
+<section class="section-block shell">
+  <div class="section-heading">
+    <div><p class="eyebrow">EDITOR'S PICKS</p><h2>精选文章</h2></div>
+  </div>
+  <div class="post-grid">
+    {{ $featured := where $posts ".Params.featured" true }}
+    {{ if lt (len $featured) 3 }}{{ $featured = first 3 $posts }}{{ end }}
+    {{ range first 3 $featured }}{{ partial "post-card.html" . }}{{ end }}
+  </div>
+</section>
+
+<section class="section-block shell">
+  <div class="section-heading">
+    <div><p class="eyebrow">RECENTLY PUBLISHED</p><h2>最近更新</h2></div>
+    <a href="{{ "/posts/" | relURL }}">进入文章库 <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="post-grid">
+    {{ range first 6 $posts.ByDate.Reverse }}{{ partial "post-card.html" . }}{{ end }}
+  </div>
+</section>
+
+<section class="section-block shell project-preview">
+  <div class="section-heading">
+    <div><p class="eyebrow">ENGINEERING WORK</p><h2>工程项目</h2></div>
+    <a href="{{ "/projects/" | relURL }}">查看项目 <span aria-hidden="true">→</span></a>
+  </div>
+  <div class="project-strip">
+    {{ range first 3 (where .Site.RegularPages "Section" "projects") }}
+    <a href="{{ .RelPermalink }}"><span>{{ .Params.stack | default "Engineering" }}</span><strong>{{ .Title }}</strong><p>{{ .Params.description }}</p></a>
+    {{ end }}
+  </div>
+</section>
 {{ end }}

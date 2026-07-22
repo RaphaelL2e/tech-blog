@@ -1,9 +1,21 @@
 ---
-title: "Java设计模式（十一）：命令模式完全解析"
-date: 2026-04-20T13:15:00+08:00
+title: Java设计模式（十一）：命令模式完全解析
+date: 2026-04-20 13:15:00+08:00
+updated: '2026-04-20T13:15:00+08:00'
+description: 前九篇文章覆盖了多种创建型、结构型和行为型模式。今天继续 Java 设计模式系列，命令模式（Command Pattern） 是行为型模式中的经典，用于将请求封装为对象，实现请求的参数化、队列化、撤销/重做等功能。 核心思想：将请求封装为对象，从而可用不同的请求参数化客户；将请求排队或记录日志；支持。
+topic: java-spring
+series: java-design-patterns
+series_order: 11
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 命令模式
+- command
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "命令模式", "command"]
 ---
 
 ## 前言

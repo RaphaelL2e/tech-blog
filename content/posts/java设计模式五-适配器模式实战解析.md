@@ -1,9 +1,22 @@
 ---
-title: "Java设计模式（五）：适配器模式实战解析"
-date: 2026-04-13T16:40:00+08:00
+title: Java设计模式（五）：适配器模式实战解析
+date: 2026-04-13 16:40:00+08:00
+updated: '2026-04-13T16:40:00+08:00'
+description: 前四篇文章我们介绍了单例模式、工厂模式、建造者模式和原型模式，今天继续 Java 设计模式系列。适配器模式（Adapter Pattern） 是结构型模式中的核心成员，用于解决接口不兼容的问题。 核心思想：将一个类的接口转换成客户期望的另一个接口，使原本接口不兼容的类可以一起工作。
+  当接口方法太多。
+topic: java-spring
+series: java-design-patterns
+series_order: 5
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 适配器模式
+- adapter
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "适配器模式", "adapter"]
 ---
 
 ## 前言

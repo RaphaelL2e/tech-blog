@@ -1,12 +1,18 @@
 ---
-title: "算法小练——Excel表列名称"
-date: 2019-11-27T20:54:27+08:00
+title: 算法小练——Excel表列名称
+date: 2019-11-27 20:54:27+08:00
+updated: '2019-11-27T20:54:27+08:00'
+description: 给定一个正整数，返回它在 Excel 表中相对应的列名称。 class Solution { public String convertToTitle(int n) { StringBuilder ans =new StringBuilder();
+  ans.append((char)('A'+n%2。
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- easy
+categories:
+- 计算机基础
 draft: false
-categories: ['Algorithms']
-tags: ['easy']
 ---
-
-# [](#Excel表列名称)[Excel表列名称](https://leetcode-cn.com/problems/excel-sheet-column-title/)
 
 ### [](#描述)描述
 

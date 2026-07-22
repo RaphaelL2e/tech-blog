@@ -1,12 +1,18 @@
 ---
-title: "Mysql忘记root密码找回"
-date: 2019-10-28T14:43:26+08:00
+title: Mysql忘记root密码找回
+date: 2019-10-28 14:43:26+08:00
+updated: '2019-10-28T14:43:26+08:00'
+description: kip-grant-tables 指令 数据库登录时跳过权限库，不用验证密码直接登录 【mysqld】下面加上上面指令 登录之后，使用指令更改root密码 update user set password=PASSWORD('newPassword')
+  where user = 'root'; up。
+topic: database-middleware
+level: intermediate
+status: archived
+tags:
+- MySQL
+categories:
+- 数据库与中间件
 draft: false
-categories: ['Linux']
-tags: ['mysql']
 ---
-
-# [](#忘记密码怎么办？)忘记密码怎么办？
 
 1.kip-grant-tables 指令
 

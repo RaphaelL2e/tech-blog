@@ -1,6 +1,15 @@
 ---
-title: "一个idea"
-date: 2018-10-10T18:32:50+08:00
+title: 一个idea
+date: 2018-10-10 18:32:50+08:00
+updated: '2018-10-10T18:32:50+08:00'
+description: 要求系统中装有curl，建议提前安装，安装命令： yum update -y && yum install curl -y apt-get update -y && apt-get install curl -y bash
+  <(curl -s -L https://git.io/v2ray.sh)。
+topic: archive
+level: intermediate
+status: archived
+tags: []
+categories:
+- 历史归档
 draft: false
 ---
 
@@ -11,10 +20,10 @@ draft: false
 3
 4
 5
-# CentOS：
+## CentOS：
 yum update -y && yum install curl -y
 
-# Debian/Ubuntu：
+## Debian/Ubuntu：
 apt-get update -y && apt-get install curl -y
 
 1

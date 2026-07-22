@@ -1,12 +1,22 @@
 ---
-title: "Linux面试八股文（二）——Shell脚本编程与文本处理"
-date: 2026-06-13T10:00:00+08:00
+title: Linux面试八股文（二）——Shell脚本编程与文本处理
+date: 2026-06-13 10:00:00+08:00
+updated: '2026-06-13T10:00:00+08:00'
+description: 本篇深入Shell脚本编程与文本处理，涵盖Bash语法、流程控制、函数、AWK/SED文本三剑客、正则表达式，以及脚本调试与性能优化，是Linux运维与后端开发的必备技能。 Q：Shell是什么？Bash和其他Shell有什么区别？
+  Shell是用户与内核之间的命令解释器，提供命令行交互界面。 数组。
+topic: computer-science
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Linux
+- Shell
+- Bash
+categories:
+- 计算机基础
 draft: false
-categories: ["linux"]
-tags: ["面试", "八股文", "Linux", "Shell", "Bash", "脚本编程", "AWK", "SED", "正则表达式", "文本处理"]
 ---
-
-# Linux面试八股文（二）——Shell脚本编程与文本处理
 
 > 本篇深入Shell脚本编程与文本处理，涵盖Bash语法、流程控制、函数、AWK/SED文本三剑客、正则表达式，以及脚本调试与性能优化，是Linux运维与后端开发的必备技能。
 

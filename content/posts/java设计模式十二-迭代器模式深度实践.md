@@ -1,9 +1,21 @@
 ---
-title: "Java设计模式（十二）：迭代器模式深度实践"
-date: 2026-04-21T23:10:00+08:00
+title: Java设计模式（十二）：迭代器模式深度实践
+date: 2026-04-21 23:10:00+08:00
+updated: '2026-04-21T23:10:00+08:00'
+description: 前面系列文章已经覆盖了 11 种设计模式。今天继续 Java 设计模式系列，迭代器模式（Iterator Pattern） 是行为型模式中的经典，用于提供一种顺序访问集合元素的方式，而不暴露集合的底层表示。 核心思想：将集合的遍历行为抽象为独立的迭代器对象，使得可以在不知道集合内部结构的情况下遍历元。
+topic: java-spring
+series: java-design-patterns
+series_order: 12
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 迭代器模式
+- iterator
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "迭代器模式", "iterator"]
 ---
 
 ## 前言

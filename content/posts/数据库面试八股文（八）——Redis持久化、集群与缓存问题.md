@@ -1,12 +1,23 @@
 ---
-title: "数据库面试八股文（八）——Redis持久化、集群与缓存问题"
-date: 2026-06-04T10:00:00+08:00
+title: 数据库面试八股文（八）——Redis持久化、集群与缓存问题
+date: 2026-06-04 10:00:00+08:00
+updated: '2026-06-04T10:00:00+08:00'
+description: 面试高频考点：RDB与AOF持久化原理与选择、主从复制与哨兵模式、Cluster集群方案、缓存穿透/击穿/雪崩的解决方案。本文从持久化机制到集群架构再到缓存实战问题，全面覆盖Redis高可用与缓存面试题。 Redis是内存数据库，一旦进程退出数据就会丢失。持久化机制将内存数据保存到磁盘，保证重启后数。
+topic: database-middleware
+series: database-interview
+series_order: 8
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Redis
+- RDB
+- AOF
+categories:
+- 数据库与中间件
 draft: false
-categories: ["数据库"]
-tags: ["面试", "八股文", "Redis", "RDB", "AOF", "主从复制", "哨兵", "Cluster", "缓存穿透", "缓存击穿", "缓存雪崩"]
 ---
-
-# 数据库面试八股文（八）——Redis持久化、集群与缓存问题
 
 > 面试高频考点：RDB与AOF持久化原理与选择、主从复制与哨兵模式、Cluster集群方案、缓存穿透/击穿/雪崩的解决方案。本文从持久化机制到集群架构再到缓存实战问题，全面覆盖Redis高可用与缓存面试题。
 

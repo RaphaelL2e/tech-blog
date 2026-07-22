@@ -1,12 +1,22 @@
 ---
-title: "Redis面试八股文（一）——Redis核心数据结构与底层原理"
-date: 2026-06-20T10:00:00+08:00
+title: Redis面试八股文（一）——Redis核心数据结构与底层原理
+date: 2026-06-20 10:00:00+08:00
+updated: '2026-06-20T10:00:00+08:00'
+description: '🎯 本文目标：从面试高频问题出发，深入剖析Redis五种核心数据结构的底层实现原理——SDS、链表、字典、跳表、压缩列表，理解Redis为什么快，以及如何选型。 注意：Redis 6.0引入了多线程IO（仅用于网络读写，命令执行仍是单线程）。Redis
+  7.0进一步优化了多线程IO。 Q: SDS相。'
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Redis
+- 数据结构
+- SDS
+categories:
+- 数据库与中间件
 draft: false
-categories: ["Redis"]
-tags: ["面试", "八股文", "Redis", "数据结构", "SDS", "跳表", "压缩列表", "底层原理"]
 ---
-
-# Redis面试八股文（一）——Redis核心数据结构与底层原理
 
 > 🎯 **本文目标**：从面试高频问题出发，深入剖析Redis五种核心数据结构的底层实现原理——SDS、链表、字典、跳表、压缩列表，理解Redis为什么快，以及如何选型。
 

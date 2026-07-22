@@ -1,9 +1,22 @@
 ---
-title: "Java设计模式（七）：观察者模式完全解析"
-date: 2026-04-17T18:00:00+08:00
+title: Java设计模式（七）：观察者模式完全解析
+date: 2026-04-17 18:00:00+08:00
+updated: '2026-04-17T18:00:00+08:00'
+description: 前六篇我们介绍了单例、工厂、建造者、原型、适配器和装饰器模式，今天继续 Java 设计模式系列。观察者模式（Observer Pattern） 是行为型模式中最常用的一种，用于建立对象之间的依赖关系——当一个对象状态改变时，所有依赖它的对象都会收到通知并自动更新。
+  核心思想：定义对象间一对多的依赖关。
+topic: java-spring
+series: java-design-patterns
+series_order: 7
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 观察者模式
+- observer
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "观察者模式", "observer"]
 ---
 
 ## 前言

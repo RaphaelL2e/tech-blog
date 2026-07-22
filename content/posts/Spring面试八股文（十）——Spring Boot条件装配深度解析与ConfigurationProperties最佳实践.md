@@ -1,14 +1,32 @@
 ---
-title: "Spring面试八股文（十）——Spring Boot条件装配深度解析与ConfigurationProperties最佳实践"
-date: 2026-07-11T11:00:00+08:00
+title: Spring面试八股文（十）——Spring Boot条件装配深度解析与ConfigurationProperties最佳实践
+date: 2026-07-11 11:00:00+08:00
+updated: '2026-07-11T11:00:00+08:00'
+description: 深入解析Spring Boot条件装配的12种注解及其应用场景，@Profile多环境隔离的底层实现，@ConfigurationProperties的松散绑定与元数据生成机制，以及企业级配置属性设计的最佳实践。
+topic: java-spring
+series: spring-interview
+series_order: 10
+level: intermediate
+status: maintained
+featured: true
+tags:
+- Java
+- Spring
+- Spring Boot
+- 面试八股文
+categories:
+- Java 与 Spring
 draft: false
-tags: ["Java", "Spring", "Spring Boot", "面试八股文"]
-categories: ["Java"]
-keywords: ["Spring Boot", "@Conditional", "@Profile", "@ConfigurationProperties", "条件装配", "松散绑定", "配置属性绑定", "多环境"]
-description: "深入解析Spring Boot条件装配的12种注解及其应用场景，@Profile多环境隔离的底层实现，@ConfigurationProperties的松散绑定与元数据生成机制，以及企业级配置属性设计的最佳实践。"
+keywords:
+- Spring Boot
+- '@Conditional'
+- '@Profile'
+- '@ConfigurationProperties'
+- 条件装配
+- 松散绑定
+- 配置属性绑定
+- 多环境
 ---
-
-# Spring面试八股文（十）——Spring Boot条件装配深度解析与ConfigurationProperties最佳实践
 
 ## 一、条件装配：Spring Boot智能化的基石
 

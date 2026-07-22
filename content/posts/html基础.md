@@ -1,14 +1,22 @@
 ---
-title: "html基础"
-date: 2020-01-12T21:37:35+08:00
+title: html基础
+date: 2020-01-12 21:37:35+08:00
+updated: '2020-01-12T21:37:35+08:00'
+description: alt 图片不能显示时的替代文本 target blank 新窗口打开 align 设置表格在网页中水平对齐方式 cellspacing 单元格与单元格之间距离 cellpadding 单元格内容与边框的距离 rowspan="合并单元格的个数
+  " colspan="合并单元格个数" 根据 先上 后。
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- html
+categories:
+- 计算机基础
 draft: false
-categories: ['前端']
-tags: ['html']
 ---
 
 ﻿## 基础标签
 
-<h1></h1>:标题
+`<h1></h1>`：标题
 <p></p> 段落
 <hr>水平线
 <br>换行
@@ -24,7 +32,7 @@ tags: ['html']
 
 ## [](#图像标签)图像标签
 
-<img src="图片url">
+`<img src="图片url">`
 <img/>属性 
 
 - alt 图片不能显示时的替代文本
@@ -270,7 +278,7 @@ type
 			<input type="submit"  value="提交按钮"/>
 			<input type="reset"  value="重置按钮"/>
 			<!--图片提交按钮-->
-			<input type="image" src="图片地址" /><br/>
+			&lt;input type="image" src="图片地址" /&gt;<br/>
 			<!--文件域-->
 		上传头像: <input type="file"/>		
 </body>
@@ -378,7 +386,7 @@ type
 			<input type="submit"  value="提交按钮"/>
 			<input type="reset"  value="重置按钮"/>
 			<!--图片提交按钮-->
-			<input type="image" src="图片地址" /><br/>
+			&lt;input type="image" src="图片地址" /&gt;<br/>
 			<!--文件域-->
 		上传头像: <input type="file"/>		
 	</form>

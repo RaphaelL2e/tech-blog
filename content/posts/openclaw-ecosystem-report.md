@@ -1,10 +1,18 @@
 ---
-title: "OpenClaw 生态科技分析报告"
-date: 2026-03-27T14:46:00+08:00
+title: OpenClaw 生态科技分析报告
+date: 2026-03-27 14:46:00+08:00
+updated: '2026-03-27T14:46:00+08:00'
+description: 深度分析 OpenClaw 个人 AI 助手平台的产品矩阵、技术架构和竞品对比，评分 4/5 星，值得关注的开源项目。
+topic: ai-engineering
+level: intermediate
+status: maintained
+tags:
+- OpenClaw
+- AI Agent
+- 技术报告
+categories:
+- AI 工程化
 draft: false
-description: "深度分析 OpenClaw 个人 AI 助手平台的产品矩阵、技术架构和竞品对比，评分 4/5 星，值得关注的开源项目。"
-categories: ["AI", "技术架构"]
-tags: ["OpenClaw", "AI Agent", "技术报告"]
 ---
 
 ## 执行摘要

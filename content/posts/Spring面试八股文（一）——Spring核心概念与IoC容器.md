@@ -1,12 +1,24 @@
 ---
-title: "Spring面试八股文（一）——Spring核心概念与IoC容器"
-date: 2026-06-23T09:00:00+08:00
+title: Spring面试八股文（一）——Spring核心概念与IoC容器
+date: 2026-06-23 09:00:00+08:00
+updated: '2026-06-23T09:00:00+08:00'
+description: 🎯 本文目标：从Spring框架的设计哲学出发，深入剖析IoC容器的工作机制——包括依赖注入的三种方式、Bean的完整生命周期、ApplicationContext与BeanFactory的本质区别、Spring如何通过三级缓存解决循环依赖等核心面试高频考点，构建Spring基础知识的完整框架。
+  Q。
+topic: java-spring
+series: spring-interview
+series_order: 1
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Spring
+- IoC
+- 依赖注入
+categories:
+- Java 与 Spring
 draft: false
-categories: ["Spring"]
-tags: ["面试", "八股文", "Spring", "IoC", "依赖注入", "DI", "Bean", "ApplicationContext", "BeanFactory", "循环依赖", "三级缓存"]
 ---
-
-# Spring面试八股文（一）——Spring核心概念与IoC容器
 
 > 🎯 **本文目标**：从Spring框架的设计哲学出发，深入剖析IoC容器的工作机制——包括依赖注入的三种方式、Bean的完整生命周期、ApplicationContext与BeanFactory的本质区别、Spring如何通过三级缓存解决循环依赖等核心面试高频考点，构建Spring基础知识的完整框架。
 

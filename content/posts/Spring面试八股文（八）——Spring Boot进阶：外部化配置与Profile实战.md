@@ -1,14 +1,29 @@
 ---
-title: "Spring面试八股文（八）——Spring Boot进阶：外部化配置与Profile实战"
-date: 2026-07-10T11:00:00+08:00
+title: Spring面试八股文（八）——Spring Boot进阶：外部化配置与Profile实战
+date: 2026-07-10 11:00:00+08:00
+updated: '2026-07-10T11:00:00+08:00'
+description: 深入解析Spring Boot外部化配置机制、Profile多环境管理、@ConfigurationProperties与@Value的对比与最佳实践，以及配置加密与敏感信息管理。结合面试高频考点和实战代码示例。
+topic: java-spring
+series: spring-interview
+series_order: 8
+level: intermediate
+status: maintained
+tags:
+- Java
+- Spring
+- Spring Boot
+- 面试八股文
+categories:
+- Java 与 Spring
 draft: false
-tags: ["Java", "Spring", "Spring Boot", "面试八股文"]
-categories: ["Java"]
-keywords: ["Spring Boot", "外部化配置", "Profile", "@ConfigurationProperties", "@Value", "多环境配置"]
-description: "深入解析Spring Boot外部化配置机制、Profile多环境管理、@ConfigurationProperties与@Value的对比与最佳实践，以及配置加密与敏感信息管理。结合面试高频考点和实战代码示例。"
+keywords:
+- Spring Boot
+- 外部化配置
+- Profile
+- '@ConfigurationProperties'
+- '@Value'
+- 多环境配置
 ---
-
-# Spring面试八股文（八）——Spring Boot进阶：外部化配置与Profile实战
 
 ## 一、外部化配置核心原理
 

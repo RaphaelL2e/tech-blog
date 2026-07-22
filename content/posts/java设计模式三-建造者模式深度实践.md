@@ -1,9 +1,22 @@
 ---
-title: "Java设计模式（三）：建造者模式深度实践"
-date: 2026-04-13T14:15:00+08:00
+title: Java设计模式（三）：建造者模式深度实践
+date: 2026-04-13 14:15:00+08:00
+updated: '2026-04-13T14:15:00+08:00'
+description: 前两篇文章我们介绍了单例模式和工厂模式，今天继续 Java 设计模式系列。建造者模式（Builder Pattern） 是创建型模式中的重要成员，特别适合处理复杂对象的创建过程。 核心思想：将一个复杂对象的构建与它的表示分离，使得同样的构建过程可以创建不同的表示。
+  问题三：不可变对象与灵活构造的矛盾。
+topic: java-spring
+series: java-design-patterns
+series_order: 3
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 建造者模式
+- builder
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "建造者模式", "builder"]
 ---
 
 ## 前言

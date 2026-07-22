@@ -1,12 +1,24 @@
 ---
-title: "计算机网络面试八股文（六）——HTTP协议"
-date: 2026-05-22T10:00:00+08:00
+title: 计算机网络面试八股文（六）——HTTP协议
+date: 2026-05-22 10:00:00+08:00
+updated: '2026-05-22T10:00:00+08:00'
+description: HTTP（HyperText Transfer Protocol，超文本传输协议）是Web的核心协议： 无状态协议：每个请求独立，不保存之前的请求信息 请求-响应模式：客户端发送请求，服务器返回响应 HTTP/0.9：1991年，仅支持GET方法
+  HTTP/1.0：1996年，新增POST、HEAD。
+topic: computer-science
+series: computer-network
+series_order: 6
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- 计算机网络
+- HTTP
+- HTTPS
+categories:
+- 计算机基础
 draft: false
-categories: ["计算机网络"]
-tags: ["面试", "八股文", "计算机网络", "HTTP", "HTTPS", "Web"]
 ---
-
-# 计算机网络面试八股文（六）——HTTP协议
 
 ## [](#http概述)HTTP概述
 

@@ -1,10 +1,17 @@
 ---
-title: "redis配置"
-date: 2020-01-11T20:03:57+08:00
+title: redis配置
+date: 2020-01-11 20:03:57+08:00
+updated: '2020-01-11T20:03:57+08:00'
+description: wget https://github.com/microsoftarchive/redis/archive/win-3.2.100.tar.gz tar -zxvf win-3.2.100.tar.gz cd Redis-x64-3.2.100/
+  /installserver.sh vi /etc。
+topic: database-middleware
+level: intermediate
+status: archived
+tags:
+- Redis
+categories:
+- 数据库与中间件
 draft: false
-description: "Redis 安装配置完整指南，包括下载、解压、编译安装和基础配置。"
-categories: ['linux']
-tags: ['redis']
 ---
 
 ## [](#下载)下载

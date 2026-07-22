@@ -1,12 +1,22 @@
 ---
-title: "Redis 缓存问题深度解析"
-date: 2026-05-13T18:45:00+08:00
+title: Redis 缓存问题深度解析
+date: 2026-05-13 18:45:00+08:00
+updated: '2026-05-13T18:45:00+08:00'
+description: 前面三篇我们分别探讨了 Redis 的数据结构、持久化内存管理、主从复制与高可用架构。在生产环境中使用 Redis 作为缓存时，还会遇到经典的缓存穿透、缓存击穿、缓存雪崩三大问题。这些问题是面试高频考点，也是实际工作中必须掌握的技术方案。
+  在讨论缓存问题之前，先明确缓存处理请求的标准流程。 Cach。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- Redis
+- 缓存穿透
+- 缓存击穿
+- 缓存雪崩
+- 布隆过滤器
+categories:
+- 数据库与中间件
 draft: false
-categories: ["Redis"]
-tags: ["Redis", "缓存穿透", "缓存击穿", "缓存雪崩", "布隆过滤器"]
 ---
-
-# Redis 缓存问题深度解析
 
 ## 一、引言
 
@@ -771,4 +781,4 @@ public void preloadHotData() {
 
 ---
 
-*作者：飞哥的 AI 折腾日记*
+*作者：李亚飞 · Raphael Lab*

@@ -1,9 +1,23 @@
 ---
-title: "Java设计模式（十九）：中介者模式深度实践"
-date: 2026-04-22T10:50:00+08:00
+title: Java设计模式（十九）：中介者模式深度实践
+date: 2026-04-22 10:50:00+08:00
+updated: '2026-04-22T10:50:00+08:00'
+description: 中介者模式（Mediator Pattern）是一种行为型设计模式，它的核心思想是：用一个中介对象来封装一系列的对象交互，使各对象不需要显式地相互引用，从而使其耦合松散。 核心思想：将多对多的交互转化为一对多，通过中介者集中协调。
+  假设我们有一个聊天室系统，用户之间直接通信： 每个用户需要知道其他所。
+topic: java-spring
+series: java-design-patterns
+series_order: 19
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 中介者模式
+- mediator
+- 同事间解耦
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "中介者模式", "mediator", "同事间解耦"]
 ---
 
 ## 前言

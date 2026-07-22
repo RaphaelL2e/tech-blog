@@ -1,12 +1,22 @@
 ---
-title: "107倍成本差距：你的AI Agent正在烧钱吗？"
-date: 2026-04-28T23:50:00+08:00
+title: 107倍成本差距：你的AI Agent正在烧钱吗？
+slug: 107x-cost-saving-deepseek-vs-gpt4o
+date: 2026-04-28 23:50:00+08:00
+updated: '2026-04-28T23:50:00+08:00'
+description: AgentWatch 发现：DeepSeek 成本仅为 GPT-4o 的 1/107。本文展示如何用 AgentWatch 监控 AI 成本，避免不必要的开销。
+topic: ai-engineering
+level: intermediate
+status: maintained
+tags:
+- AI
+- AgentWatch
+- 成本优化
+- DeepSeek
+- GPT-4o
+categories:
+- AI 工程化
 draft: false
-slug: "107x-cost-saving-deepseek-vs-gpt4o"
-description: "AgentWatch 发现：DeepSeek 成本仅为 GPT-4o 的 1/107。本文展示如何用 AgentWatch 监控 AI 成本，避免不必要的开销。"
-tags: ["AI", "AgentWatch", "成本优化", "DeepSeek", "GPT-4o"]
-categories: ["技术分析"]
-author: "飞哥"
+author: 飞哥
 ---
 
 ## 🔥 省钱发现：107倍差距
@@ -190,9 +200,7 @@ with aw.trace("cost_saver", model="deepseek-chat") as trace:
 
 ## 📈 AgentWatch Dashboard
 
-AgentWatch 提供 Web Dashboard：
-
-![AgentWatch Dashboard](/images/agentwatch-dashboard.png)
+AgentWatch 提供 Web Dashboard，用于集中查看模型调用与成本数据。
 
 **功能：**
 - 实时成本曲线

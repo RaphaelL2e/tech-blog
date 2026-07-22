@@ -1,9 +1,22 @@
 ---
-title: "Java设计模式（一）：单例模式完全指南"
-date: 2026-04-13T13:30:00+08:00
+title: Java设计模式（一）：单例模式完全指南
+date: 2026-04-13 13:30:00+08:00
+updated: '2026-04-13T13:30:00+08:00'
+description: 设计模式是软件开发中经过验证的解决方案模板，是前辈们智慧的结晶。从本期开始，我们将开启 Java 设计模式系列文章，系统讲解 23 种经典设计模式。 第一篇：单例模式（Singleton Pattern） 单例模式是最简单也是最常用的设计模式之一，确保一个类只有一个实例，并提供一个全局访问点。
+  确保。
+topic: java-spring
+series: java-design-patterns
+series_order: 1
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 单例模式
+- singleton
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "单例模式", "singleton"]
 ---
 
 ## 前言

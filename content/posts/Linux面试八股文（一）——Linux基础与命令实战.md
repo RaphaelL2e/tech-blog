@@ -1,12 +1,22 @@
 ---
-title: "Linux面试八股文（一）——Linux基础与命令实战"
-date: 2026-06-12T11:00:00+08:00
+title: Linux面试八股文（一）——Linux基础与命令实战
+date: 2026-06-12 11:00:00+08:00
+updated: '2026-06-12T11:00:00+08:00'
+description: 本篇开启Linux面试八股文新系列，从Linux基础概念、文件系统、常用命令到Shell编程，全面覆盖Linux面试核心知识点。 Q：Linux操作系统的整体架构是怎样的？ 用户态→内核态：系统调用、中断、异常 切换开销：保存/恢复寄存器、切换地址空间、TLB刷新
+  优化原则：减少不必要的系统调用（如。
+topic: computer-science
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Linux
+- 命令
+- 文件系统
+categories:
+- 计算机基础
 draft: false
-categories: ["linux"]
-tags: ["面试", "八股文", "Linux", "命令", "文件系统", "权限", "Shell", "管道", "文本处理"]
 ---
-
-# Linux面试八股文（一）——Linux基础与命令实战
 
 > 本篇开启Linux面试八股文新系列，从Linux基础概念、文件系统、常用命令到Shell编程，全面覆盖Linux面试核心知识点。
 

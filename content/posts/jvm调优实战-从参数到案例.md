@@ -1,9 +1,20 @@
 ---
-title: "JVM调优实战：从参数到案例"
-date: 2026-04-10T21:30:00+08:00
+title: JVM调优实战：从参数到案例
+date: 2026-04-10 21:30:00+08:00
+updated: '2026-04-10T21:30:00+08:00'
+description: JVM（Java Virtual Machine）是 Java 程序运行的基础，了解并掌握 JVM 调优是每个 Java 开发者必备的技能。本文将从 JVM 内存模型、常见调优参数、工具使用以及实际案例四个方面，系统讲解
+  JVM 调优的实践方法。 JVM 在运行时将内存划分为以下几个区域： 问题现象。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Java
+- JVM
+- 调优
+- 性能优化
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "jvm", "调优", "性能优化"]
 ---
 
 ## 前言

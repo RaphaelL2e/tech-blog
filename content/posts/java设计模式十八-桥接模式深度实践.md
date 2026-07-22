@@ -1,9 +1,23 @@
 ---
-title: "Java设计模式（十八）：桥接模式深度实践"
-date: 2026-04-22T10:40:00+08:00
+title: Java设计模式（十八）：桥接模式深度实践
+date: 2026-04-22 10:40:00+08:00
+updated: '2026-04-22T10:40:00+08:00'
+description: 桥接模式（Bridge Pattern）是一种结构型设计模式，它的核心思想是：将抽象部分与实现部分分离，使它们都可以独立地变化。 核心思想：用组合替代继承，将两个独立变化的维度解耦。 假设我们要开发一个图形绘制系统，支持多种形状（圆形、矩形、三角形）和多种颜色（红色、蓝色、绿色）。用继承实现：
+  新增。
+topic: java-spring
+series: java-design-patterns
+series_order: 18
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 桥接模式
+- bridge
+- 抽象与实现分离
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "桥接模式", "bridge", "抽象与实现分离"]
 ---
 
 ## 前言

@@ -1,9 +1,17 @@
 ---
-title: "Mysqldump的使用——备份与恢复"
-date: 2019-10-28T15:15:38+08:00
+title: Mysqldump的使用——备份与恢复
+date: 2019-10-28 15:15:38+08:00
+updated: '2019-10-28T15:15:38+08:00'
+description: 导出整个数据库(包括整个数据库中的数据) mysqldump -u username -p dbname dbname.sql mysqldump -u username -p -d dbname dbname.sql
+  mysqldump -u username -p dbname tablenam。
+topic: database-middleware
+level: intermediate
+status: archived
+tags:
+- MySQL
+categories:
+- 数据库与中间件
 draft: false
-categories: ['Linux']
-tags: ['Mysql']
 ---
 
 ## [](#常用的使用指令)常用的使用指令

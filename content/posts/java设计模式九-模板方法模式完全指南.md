@@ -1,9 +1,21 @@
 ---
-title: "Java设计模式（九）：模板方法模式完全指南"
-date: 2026-04-20T11:10:00+08:00
+title: Java设计模式（九）：模板方法模式完全指南
+date: 2026-04-20 11:10:00+08:00
+updated: '2026-04-20T11:10:00+08:00'
+description: 前八篇文章我们介绍了创建型模式和多种行为型模式。今天继续 Java 设计模式系列，模板方法模式（Template Method Pattern） 是结构化流程的利器，完美体现了"复用"和"扩展"的平衡。 核心思想：定义一个算法的骨架，将某些步骤延迟到子类中实现。模板方法使得子类可以在不改变算法结构的。
+topic: java-spring
+series: java-design-patterns
+series_order: 9
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 模板方法
+- template method
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "模板方法", "template method"]
 ---
 
 ## 前言

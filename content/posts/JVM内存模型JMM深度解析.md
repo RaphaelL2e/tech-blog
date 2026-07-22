@@ -1,13 +1,22 @@
 ---
-title: "JVM 内存模型（JMM）深度解析"
-date: 2026-05-12T10:00:00+08:00
+title: JVM 内存模型（JMM）深度解析
+date: 2026-05-12 10:00:00+08:00
+updated: '2026-05-12T10:00:00+08:00'
+description: 面试高频问题：什么是 JMM？可见性、原子性、有序性？happens-before 规则？ Java 内存模型（Java Memory Model，JMM）是 Java 虚拟机规范中定义的一种抽象模型，用于屏蔽各种硬件和操作系统的内存访问差异，实现跨平台的一致性内存访问。理解
+  JMM 是编写正确并发。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- JVM
+- jmm
+- volatile
+- happens-before
+- memory-model
+categories:
+- Java 与 Spring
 draft: false
-categories: ["jvm"]
-tags: ["jvm", "jmm", "volatile", "happens-before", "memory-model"]
 ---
-
-
-# JVM 内存模型（JMM）深度解析
 
 > 面试高频问题：什么是 JMM？可见性、原子性、有序性？happens-before 规则？
 

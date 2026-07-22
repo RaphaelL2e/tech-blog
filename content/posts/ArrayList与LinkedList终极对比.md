@@ -1,12 +1,22 @@
 ---
-title: "ArrayList vs LinkedList：从源码到实战的终极对比"
-date: 2026-04-27T23:50:00+08:00
+title: ArrayList vs LinkedList：从源码到实战的终极对比
+date: 2026-04-27 23:50:00+08:00
+updated: '2026-04-27T23:50:00+08:00'
+description: LinkedList 中间插入虽然定位是 O(n)，但插入本身只需修改指针，而 ArrayList 需要移动后续所有元素。 EMPTYELEMENTDATA：用户指定容量为0时使用 DEFAULTCAPACITYEMPTYELEMENTDATA：无参构造使用
+  区分目的：首次 add 时，前者扩到 1。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Java
+- 面试
+- ArrayList
+- LinkedList
+- 集合框架
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["Java", "面试", "ArrayList", "LinkedList", "集合框架", "源码解析"]
 ---
-
-# ArrayList vs LinkedList：从源码到实战的终极对比
 
 ## 一、基础对比速查
 

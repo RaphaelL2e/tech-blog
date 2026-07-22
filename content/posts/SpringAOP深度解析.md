@@ -1,13 +1,20 @@
 ---
-title: "Spring AOP 深度解析"
-date: 2026-05-11T16:30:00+08:00
+title: Spring AOP 深度解析
+date: 2026-05-11 16:30:00+08:00
+updated: '2026-05-11T16:30:00+08:00'
+description: 面试高频问题：什么是 AOP？JDK 动态代理和 CGLIB 的区别？@Transactional 原理？ AOP（Aspect-Oriented Programming，面向切面编程）是 Spring 框架的另一大核心。它通过将横切关注点（如日志、事务、安全）与业务逻辑分离，提高了代码的模块化。本。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Spring
+- aop
+- proxy
+- transaction
+categories:
+- Java 与 Spring
 draft: false
-categories: ["spring"]
-tags: ["spring", "aop", "proxy", "transaction"]
 ---
-
-
-# Spring AOP 深度解析
 
 > 面试高频问题：什么是 AOP？JDK 动态代理和 CGLIB 的区别？@Transactional 原理？
 

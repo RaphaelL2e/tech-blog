@@ -1,12 +1,18 @@
 ---
-title: "算法小练——买卖股票的最佳时机II"
-date: 2019-11-16T21:56:13+08:00
+title: 算法小练——买卖股票的最佳时机II
+date: 2019-11-16 21:56:13+08:00
+updated: '2019-11-16T21:56:13+08:00'
+description: '给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。 设计一个算法来计算你所能获取的最大利润。你可以尽可能地完成更多的交易（多次买卖一支股票）。 输入: [7,1,5,3,6,4] 解释: 在第 2 天（股票价格
+  = 1）的时候买入，在第 3 天（股票价格 = 5）的时候卖出, 这笔交易。'
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- easy
+categories:
+- 计算机基础
 draft: false
-categories: ['Algorithms']
-tags: ['easy']
 ---
-
-# [](#买卖股票的最佳时机-II)[ 买卖股票的最佳时机 II](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/)
 
 ### [](#描述)描述
 

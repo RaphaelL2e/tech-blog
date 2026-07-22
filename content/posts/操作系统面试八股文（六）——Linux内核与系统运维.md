@@ -1,12 +1,23 @@
 ---
-title: "操作系统面试八股文（六）——Linux内核与系统运维"
-date: 2026-06-11T10:00:00+08:00
+title: 操作系统面试八股文（六）——Linux内核与系统运维
+date: 2026-06-11 10:00:00+08:00
+updated: '2026-06-11T10:00:00+08:00'
+description: 面试高频问题：Linux内核架构是怎样的？系统调用怎么从用户态到内核态？epoll为什么比select高效？怎么用perf分析性能问题？容器和虚拟机有什么区别？本文带你掌握Linux内核原理与系统运维实战。 前五篇我们讨论了操作系统的进程管理、线程同步、死锁、内存管理、文件系统与I/O。但面试中操作。
+topic: computer-science
+series: operating-system
+series_order: 6
+level: intermediate
+status: maintained
+tags:
+- 操作系统
+- Linux
+- 内核
+- 系统调用
+- 性能分析
+categories:
+- 计算机基础
 draft: false
-categories: ["操作系统"]
-tags: ["操作系统", "Linux", "内核", "系统调用", "性能分析", "容器", "面试"]
 ---
-
-# 操作系统面试八股文（六）——Linux内核与系统运维
 
 > 面试高频问题：Linux内核架构是怎样的？系统调用怎么从用户态到内核态？epoll为什么比select高效？怎么用perf分析性能问题？容器和虚拟机有什么区别？本文带你掌握Linux内核原理与系统运维实战。
 

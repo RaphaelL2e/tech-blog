@@ -1,12 +1,22 @@
 ---
-title: "JVM 垃圾回收算法与收集器深度解析"
-date: 2026-05-09T10:20:00+08:00
+title: JVM 垃圾回收算法与收集器深度解析
+date: 2026-05-09 10:20:00+08:00
+updated: '2026-05-09T10:20:00+08:00'
+description: 面试高频问题：GC 有哪些算法？CMS 和 G1 有什么区别？ZGC 为什么能做到几乎不停顿？ Java 与 C++ 的核心区别之一是内存管理。在 C++ 中，程序员需要手动分配和释放内存；而在 Java 中，垃圾回收器（Garbage
+  Collector）自动完成这项工作。理解 GC 算法和收集器。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- JVM
+- 垃圾回收
+- GC
+- G1
+- CMS
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["jvm", "垃圾回收", "GC", "G1", "CMS", "ZGC"]
 ---
-
-# JVM 垃圾回收算法与收集器深度解析
 
 > 面试高频问题：GC 有哪些算法？CMS 和 G1 有什么区别？ZGC 为什么能做到几乎不停顿？
 

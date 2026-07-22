@@ -1,12 +1,22 @@
 ---
-title: "Java并发编程面试八股文（五）——JVM层面并发机制与高并发实战"
-date: 2026-06-17T09:00:00+08:00
+title: Java并发编程面试八股文（五）——JVM层面并发机制与高并发实战
+date: 2026-06-17 09:00:00+08:00
+updated: '2026-06-17T09:00:00+08:00'
+description: '面试高频问题：synchronized锁升级全过程是怎样的？偏向锁什么时候失效？什么是内存屏障？JIT编译器如何影响并发？高并发场景下如何做架构设计？本文带你从JVM层面深入理解并发机制，并掌握高并发系统的实战设计方法。
+  Q: synchronized锁升级的全过程是怎样的？ JDK6之后，sync。'
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Java
+- 并发
+- JVM
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["面试", "八股文", "Java", "并发", "JVM", "synchronized锁升级", "内存屏障", "JIT", "高并发", "性能调优"]
 ---
-
-# Java并发编程面试八股文（五）——JVM层面并发机制与高并发实战
 
 > 面试高频问题：synchronized锁升级全过程是怎样的？偏向锁什么时候失效？什么是内存屏障？JIT编译器如何影响并发？高并发场景下如何做架构设计？本文带你从JVM层面深入理解并发机制，并掌握高并发系统的实战设计方法。
 

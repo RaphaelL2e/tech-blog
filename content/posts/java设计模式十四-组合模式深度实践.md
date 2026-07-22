@@ -1,9 +1,23 @@
 ---
-title: "Java设计模式（十四）：组合模式深度实践"
-date: 2026-04-22T10:00:00+08:00
+title: Java设计模式（十四）：组合模式深度实践
+date: 2026-04-22 10:00:00+08:00
+updated: '2026-04-22T10:00:00+08:00'
+description: 组合模式（Composite Pattern）是一种结构型设计模式，它的核心思想是：将对象组合成树形结构以表示"部分-整体"的层次关系，使得客户端对单个对象和组合对象的使用具有一致性。 核心思想：统一叶子节点和容器节点的接口，让客户端无需区分它们。
+  假设我们正在开发一个图形编辑器，有基本图形（圆形、。
+topic: java-spring
+series: java-design-patterns
+series_order: 14
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 组合模式
+- composite
+- 树形结构
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "组合模式", "composite", "树形结构"]
 ---
 
 ## 前言

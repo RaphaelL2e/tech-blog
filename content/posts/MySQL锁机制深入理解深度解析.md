@@ -1,13 +1,22 @@
 ---
-title: "MySQL 锁机制深入理解"
-date: 2026-05-12T17:30:00+08:00
+title: MySQL 锁机制深入理解
+date: 2026-05-12 17:30:00+08:00
+updated: '2026-05-12T17:30:00+08:00'
+description: 面试高频问题：MySQL 有哪些锁？ InnoDB 和 MyISAM 的锁有什么区别？什么是死锁？如何避免？ 锁是数据库并发控制的核心机制，用于保证事务的隔离性和数据一致性。MySQL 中，不同存储引擎的锁机制差异很大，InnoDB
+  采用了细粒度的行锁和 MVCC，相比 MyISAM 的表锁更适合高。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- MySQL
+- lock
+- innodb
+- myisam
+- deadlock
+categories:
+- 数据库与中间件
 draft: false
-categories: ["mysql"]
-tags: ["mysql", "lock", "innodb", "myisam", "deadlock"]
 ---
-
-
-# MySQL 锁机制深入理解
 
 > 面试高频问题：MySQL 有哪些锁？ InnoDB 和 MyISAM 的锁有什么区别？什么是死锁？如何避免？
 

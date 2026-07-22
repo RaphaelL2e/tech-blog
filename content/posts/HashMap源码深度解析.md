@@ -1,12 +1,21 @@
 ---
-title: "HashMap 源码全解析：从扰动函数到红黑树"
-date: 2026-04-27T22:15:00+08:00
+title: HashMap 源码全解析：从扰动函数到红黑树
+date: 2026-04-27 22:15:00+08:00
+updated: '2026-04-27T22:15:00+08:00'
+description: HashMap 是 Java 面试中出现频率最高的集合类，没有之一。无论是校招还是社招，几乎所有 Java 面试都会问到 HashMap 的原理。很多候选人能说出「数组 + 链表 + 红黑树」「扰动函数」「扩容机制」等关键词，但真正能讲清楚源码细节和设计思想的却寥寥无几。
+  本文将从 JDK 8 源码。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Java
+- 面试
+- HashMap
+- 源码解析
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["Java", "面试", "HashMap", "源码解析"]
 ---
-
-# HashMap 源码全解析：从扰动函数到红黑树
 
 HashMap 是 Java 面试中出现频率最高的集合类，没有之一。无论是校招还是社招，几乎所有 Java 面试都会问到 HashMap 的原理。很多候选人能说出「数组 + 链表 + 红黑树」「扰动函数」「扩容机制」等关键词，但真正能讲清楚源码细节和设计思想的却寥寥无几。
 
@@ -489,6 +498,6 @@ HashMap 是 Java 集合框架中最复杂的类之一，它的设计体现了众
 ---
 
 **推荐阅读**：
-- [Java 面试二 ConcurrentHashMap 实现原理](/categories/java/)
-- [Java 设计模式系列](/categories/java/)
-- [JVM 调优实战](/tags/jvm/)
+- [Java 与 Spring 主题](/posts/?topic=java-spring)
+- [Java 设计模式系列](/series/java-design-patterns/)
+- [JVM 相关文章](/search/?q=JVM)

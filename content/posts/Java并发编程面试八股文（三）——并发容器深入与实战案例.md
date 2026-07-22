@@ -1,12 +1,22 @@
 ---
-title: "Java并发编程面试八股文（三）——并发容器深入与实战案例"
-date: 2026-06-16T09:00:00+08:00
+title: Java并发编程面试八股文（三）——并发容器深入与实战案例
+date: 2026-06-16 09:00:00+08:00
+updated: '2026-06-16T09:00:00+08:00'
+description: '面试高频问题：ConcurrentHashMap在JDK7和JDK8中实现有什么不同？为什么ConcurrentHashMap不允许null键值？BlockingQueue有哪些实现？如何在生产环境选择合适的并发容器？本文带你深入并发容器源码与实战。
+  Q: ConcurrentHashMap在JDK。'
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Java
+- 并发
+- ConcurrentHashMap
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["面试", "八股文", "Java", "并发", "ConcurrentHashMap", "BlockingQueue", "CopyOnWriteArrayList", "并发容器"]
 ---
-
-# Java并发编程面试八股文（三）——并发容器深入与实战案例
 
 > 面试高频问题：ConcurrentHashMap在JDK7和JDK8中实现有什么不同？为什么ConcurrentHashMap不允许null键值？BlockingQueue有哪些实现？如何在生产环境选择合适的并发容器？本文带你深入并发容器源码与实战。
 

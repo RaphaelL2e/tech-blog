@@ -1,0 +1,18 @@
+{{ define "main" }}
+{{ $pages := sort (where (where .Site.RegularPages "Section" "posts") ".Params.series" .Params.series_key) ".Params.series_order" }}
+<section class="series-hero shell">
+  <nav class="breadcrumbs"><a href="{{ "/series/" | relURL }}">专题</a><span>/</span><span>{{ .Params.topic_name }}</span></nav>
+  <div class="series-hero-grid">
+    <div><p class="eyebrow">LEARNING PATH</p><h1>{{ .Title }}</h1><p class="lead">{{ .Params.description }}</p></div>
+    <dl><div><dt>文章</dt><dd>{{ len $pages }} 篇</dd></div><div><dt>难度</dt><dd>{{ .Params.level_name }}</dd></div><div><dt>预计</dt><dd>{{ .Params.estimated }}</dd></div><div><dt>状态</dt><dd>{{ .Params.state }}</dd></div></dl>
+  </div>
+</section>
+<section class="series-body shell">
+  <aside><h2>适合谁</h2><p>{{ .Params.audience }}</p><h2>学习前置</h2><p>{{ .Params.prerequisites }}</p>{{ with index $pages 0 }}<a class="button primary" href="{{ .RelPermalink }}">从第一篇开始</a>{{ end }}</aside>
+  <div class="series-chapters"><div class="section-heading"><div><p class="eyebrow">CHAPTERS</p><h2>系列目录</h2></div></div>
+    {{ if $pages }}
+    <ol>{{ range $pages }}<li><a href="{{ .RelPermalink }}"><span>{{ printf "%02d" (.Params.series_order | default 0) }}</span><div><strong>{{ .Title }}</strong><p>{{ .Params.description | truncate 110 }}</p><small>{{ .ReadingTime }} 分钟 · {{ .Date.Format "2006-01-02" }}</small></div><b aria-hidden="true">→</b></a></li>{{ end }}</ol>
+    {{ else }}<div class="empty-state"><strong>系列正在整理</strong><p>内容将在完成复核后加入这条学习路径。</p></div>{{ end }}
+  </div>
+</section>
+{{ end }}

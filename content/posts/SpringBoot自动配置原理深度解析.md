@@ -1,13 +1,21 @@
 ---
-title: "Spring Boot 自动配置原理深度解析"
-date: 2026-05-12T10:30:00+08:00
+title: Spring Boot 自动配置原理深度解析
+date: 2026-05-12 10:30:00+08:00
+updated: '2026-05-12T10:30:00+08:00'
+description: 面试高频问题：Spring Boot 自动配置的原理？@Conditional 注解如何工作？如何自定义 Starter？ Spring Boot 的核心特性就是"约定优于配置"，通过自动配置大幅减少了样板代码和配置。理解自动配置的原理，是掌握
+  Spring Boot 的关键。 Spring Boo。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Spring
+- springboot
+- autoconfiguration
+- starter
+categories:
+- Java 与 Spring
 draft: false
-categories: ["spring"]
-tags: ["spring", "springboot", "autoconfiguration", "starter"]
 ---
-
-
-# Spring Boot 自动配置原理深度解析
 
 > 面试高频问题：Spring Boot 自动配置的原理？@Conditional 注解如何工作？如何自定义 Starter？
 

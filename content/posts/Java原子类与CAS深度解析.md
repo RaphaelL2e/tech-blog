@@ -1,12 +1,22 @@
 ---
-title: "Java 原子类与 CAS 深度解析：从 AtomicInteger 到 LongAdder"
-date: 2026-06-07T10:00:00+08:00
+title: Java 原子类与 CAS 深度解析：从 AtomicInteger 到 LongAdder
+date: 2026-06-07 10:00:00+08:00
+updated: '2026-06-07T10:00:00+08:00'
+description: 面试高频问题：CAS 的原理是什么？ABA 问题怎么解决？AtomicInteger 怎么保证原子性？LongAdder 为什么比 AtomicLong 快？ 在多线程编程中，保证共享变量的原子性操作是核心挑战。Java
+  从 JDK 1.5 开始提供了一系列原子类（java.util.concurr。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Java
+- CAS
+- 原子类
+- AtomicInteger
+- LongAdder
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["java", "CAS", "原子类", "AtomicInteger", "LongAdder", "并发", "ABA问题"]
 ---
-
-# Java 原子类与 CAS 深度解析：从 AtomicInteger 到 LongAdder
 
 > 面试高频问题：CAS 的原理是什么？ABA 问题怎么解决？AtomicInteger 怎么保证原子性？LongAdder 为什么比 AtomicLong 快？
 

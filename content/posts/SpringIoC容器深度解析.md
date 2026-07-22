@@ -1,12 +1,22 @@
 ---
-title: "Spring IoC 容器深度解析"
-date: 2026-05-11T16:00:00+08:00
+title: Spring IoC 容器深度解析
+date: 2026-05-11 16:00:00+08:00
+updated: '2026-05-11T16:00:00+08:00'
+description: 面试高频问题：什么是 IoC？Bean 的生命周期？@Autowired 如何工作？ Spring 框架的核心是 IoC（Inversion of Control，控制反转） 容器。理解 IoC 容器的工作原理，是掌握
+  Spring 框架的关键。本文将从 IoC 概念到源码实现，全面解析 Sprin。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Spring
+- ioc
+- di
+- bean
+- autowired
+categories:
+- Java 与 Spring
 draft: false
-categories: ["spring"]
-tags: ["spring", "ioc", "di", "bean", "autowired"]
 ---
-
-# Spring IoC 容器深度解析
 
 > 面试高频问题：什么是 IoC？Bean 的生命周期？@Autowired 如何工作？
 

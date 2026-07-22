@@ -1,12 +1,22 @@
 ---
-title: "Linux面试八股文（三）——Linux网络配置与服务管理"
-date: 2026-06-13T11:00:00+08:00
+title: Linux面试八股文（三）——Linux网络配置与服务管理
+date: 2026-06-13 11:00:00+08:00
+updated: '2026-06-13T11:00:00+08:00'
+description: 本篇聚焦Linux网络配置与服务管理，涵盖网络配置命令、防火墙规则（iptables/firewalld）、systemd服务管理、系统服务监控与故障排查，是运维工程师和后端开发者的必备技能。 Q：Linux网络配置文件在哪里？常用配置项有哪些？
+  Q：ip命令和ifconfig命令有什么区别？ Q：。
+topic: computer-science
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Linux
+- 网络配置
+- 防火墙
+categories:
+- 计算机基础
 draft: false
-categories: ["linux"]
-tags: ["面试", "八股文", "Linux", "网络配置", "防火墙", "systemd", "服务管理", "iptables", "firewalld", "性能监控"]
 ---
-
-# Linux面试八股文（三）——Linux网络配置与服务管理
 
 > 本篇聚焦Linux网络配置与服务管理，涵盖网络配置命令、防火墙规则（iptables/firewalld）、systemd服务管理、系统服务监控与故障排查，是运维工程师和后端开发者的必备技能。
 

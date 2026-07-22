@@ -1,9 +1,17 @@
 ---
-title: "算法小练——A + B 问题"
-date: 2019-11-02T12:47:29+08:00
+title: 算法小练——A + B 问题
+date: 2019-11-02 12:47:29+08:00
+updated: '2019-11-02T12:47:29+08:00'
+description: '给出两个整数 aa 和 bb , 求他们的和。 你不需要从输入流读入数据，只需要根据aplusb的两个参数a和b，计算他们的和并返回就行。 您在真实的面试中是否遇到过这个题？ 是 输入: a = 1, b = 2 输入:
+  a = -1, b = 1 显然你可以直接 return a + b，但是你是。'
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- easy
+categories:
+- 计算机基础
 draft: false
-categories: ['Algorithms']
-tags: ['easy']
 ---
 
 ### [](#描述)**描述**

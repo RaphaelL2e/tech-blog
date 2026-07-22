@@ -1,12 +1,20 @@
 ---
-title: "Java 对象内存布局深度解析"
-date: 2026-05-07T23:08:00+08:00
+title: Java 对象内存布局深度解析
+date: 2026-05-07 23:08:00+08:00
+updated: '2026-05-07T23:08:00+08:00'
+description: 面试高频问题：Java 对象在内存中长什么样？如何计算对象大小？什么是指针压缩？ 在 Java 面试中，JVM 相关的题目往往是拉开差距的关键。而「Java 对象内存布局」作为一个经典考点，不仅涉及 JVM 底层原理，还能考察候选人对性能优化的理解深度。本文将从对象头、实例数据、对齐填充三个维度，全。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- JVM
+- 面试
+- 内存布局
+- 指针压缩
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["jvm", "面试", "内存布局", "指针压缩"]
 ---
-
-# Java 面试六：Java 对象内存布局深度解析
 
 > 面试高频问题：Java 对象在内存中长什么样？如何计算对象大小？什么是指针压缩？
 

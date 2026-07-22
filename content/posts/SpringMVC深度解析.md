@@ -1,13 +1,21 @@
 ---
-title: "Spring MVC 深度解析"
-date: 2026-05-11T17:00:00+08:00
+title: Spring MVC 深度解析
+date: 2026-05-11 17:00:00+08:00
+updated: '2026-05-11T17:00:00+08:00'
+description: 面试高频问题：Spring MVC 的请求流程？@RequestParam 和 @RequestBody 的区别？拦截器和过滤器的区别？ Spring MVC 是 Spring 框架的 Web 模块，用于构建 Web
+  应用。理解 Spring MVC 的请求流程，是掌握 Spring Web 开发的。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Spring
+- mvc
+- controller
+- interceptor
+categories:
+- Java 与 Spring
 draft: false
-categories: ["spring"]
-tags: ["spring", "mvc", "controller", "interceptor"]
 ---
-
-
-# Spring MVC 深度解析
 
 > 面试高频问题：Spring MVC 的请求流程？@RequestParam 和 @RequestBody 的区别？拦截器和过滤器的区别？
 

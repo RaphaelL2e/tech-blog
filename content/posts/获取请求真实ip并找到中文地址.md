@@ -1,9 +1,17 @@
 ---
-title: "获取请求真实ip并找到中文地址"
-date: 2019-10-26T10:17:34+08:00
+title: 获取请求真实ip并找到中文地址
+date: 2019-10-26 10:17:34+08:00
+updated: '2019-10-26T10:17:34+08:00'
+description: static String getClientIpAddr(HttpServletRequest request) { String ip = request.getHeader("X-Forwarded-For");
+  if (ip == null || ip.length() == 0 || "u。
+topic: java-spring
+level: intermediate
+status: archived
+tags:
+- Java
+categories:
+- Java 与 Spring
 draft: false
-categories: ['JAVA']
-tags: ['java']
 ---
 
 ## [](#JAVA获取HttpServletRequest的真实ip)JAVA获取HttpServletRequest的真实ip

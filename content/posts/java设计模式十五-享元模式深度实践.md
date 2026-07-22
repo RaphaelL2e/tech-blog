@@ -1,9 +1,23 @@
 ---
-title: "Java设计模式（十五）：享元模式深度实践"
-date: 2026-04-22T10:10:00+08:00
+title: Java设计模式（十五）：享元模式深度实践
+date: 2026-04-22 10:10:00+08:00
+updated: '2026-04-22T10:10:00+08:00'
+description: 享元模式（Flyweight Pattern）是一种结构型设计模式，它的核心思想是：通过共享技术有效地支持大量细粒度对象的复用，以减少内存占用和提高性能。 核心思想：将对象的状态分为内部状态（可共享）和外部状态（不可共享），通过共享内部状态来减少对象数量。
+  假设我们正在开发一个文本编辑器，每个字符都。
+topic: java-spring
+series: java-design-patterns
+series_order: 15
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 享元模式
+- flyweight
+- 对象池
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "享元模式", "flyweight", "对象池", "缓存"]
 ---
 
 ## 前言

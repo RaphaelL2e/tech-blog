@@ -1,0 +1,9 @@
+{{- $description := .Params.description | default .Summary | default .Site.Params.description | plainify | htmlUnescape | truncate 180 -}}
+{{- $person := dict "@type" "Person" "name" .Site.Params.author "url" (.Site.BaseURL | absURL) "sameAs" (slice .Site.Params.github) -}}
+{{- $website := dict "@type" "WebSite" "name" .Site.Title "alternateName" .Site.Params.chineseBrand "url" .Site.BaseURL "description" .Site.Params.description "inLanguage" "zh-CN" "publisher" $person -}}
+{{- if and .IsPage (eq .Section "posts") -}}
+  {{- $article := dict "@type" "TechArticle" "headline" .Title "description" $description "url" .Permalink "mainEntityOfPage" .Permalink "datePublished" (.Date.Format "2006-01-02T15:04:05Z07:00") "dateModified" ((.Lastmod | default .Date).Format "2006-01-02T15:04:05Z07:00") "inLanguage" "zh-CN" "author" $person "publisher" $person -}}
+  <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $website $article) | jsonify | safeJS }}</script>
+{{- else -}}
+  <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@graph" (slice $website $person) | jsonify | safeJS }}</script>
+{{- end -}}

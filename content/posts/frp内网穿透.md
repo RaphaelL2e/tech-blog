@@ -1,9 +1,17 @@
 ---
-title: "frp内网穿透"
-date: 2019-10-24T21:45:39+08:00
+title: frp内网穿透
+date: 2019-10-24 21:45:39+08:00
+updated: '2019-10-24T21:45:39+08:00'
+description: serveraddr = 127.0.0.1 //服务器地址 serverport = 7000 //服务器端监听frps端口 localip = 127.0.0.1 //本地ip localport = 22 //本地端口
+  remoteport = 6000 // 转发端口 customdomai。
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- Linux
+categories:
+- 计算机基础
 draft: false
-categories: ['linux']
-tags: ['linux']
 ---
 
 ## [](#安装)安装
@@ -64,7 +72,7 @@ custom_domains = www.yundingshuyuan.com
 2
 3
 4
-# frps.ini
+## frps.ini
 [common]
 bind_port = 7000  //内网frp监听地址
 vhost_http_port = 8080  // 服务端访问地址

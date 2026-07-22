@@ -1,12 +1,18 @@
 ---
-title: "第二章 Linux基础篇 linux入门"
-date: 2019-08-05T15:16:47+08:00
+title: 第二章 Linux基础篇 linux入门
+date: 2019-08-05 15:16:47+08:00
+updated: '2019-08-05T15:16:47+08:00'
+description: 一款操作系统，免费、开源、安全、高效、稳定、处理高并发强悍。 主要发行版本： Ubuntu、centOS、Redhat、Suse、红旗Linux 主要操作系统：windows、linux、Ios等 sudo x8664-softmmu/qemu-system-x8664
+  -m 2048 -enabl。
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- Linux
+categories:
+- 计算机基础
 draft: false
-categories: ['Linux']
-tags: ['linux']
 ---
-
-# [](#第二章-Linux基础篇-linux入门)第二章 Linux基础篇 linux入门
 
 ## [](#2-1-Linux介绍)2.1 Linux介绍
 
@@ -22,7 +28,7 @@ tags: ['linux']
 
 ## [](#2-2-Linux与Unix的关系)2.2 Linux与Unix的关系
 
-# [](#第三章-Linux基础篇-VM和Linux系统安装)第三章 Linux基础篇 VM和Linux系统安装
+## [](#第三章-Linux基础篇-VM和Linux系统安装)第三章 Linux基础篇 VM和Linux系统安装
 
 qemu的安装和使用
 
@@ -32,7 +38,7 @@ qemu的安装和使用
 
 sudo x86_64-softmmu/qemu-system-x86_64 -m 2048 -enable-kvm centos.img -cdrom ./linux-iso/CentOS-7-x86_64-Minimal-1810.iso
 
-# [](#第四章-Linux基础篇-Linux目录结构)第四章 Linux基础篇 Linux目录结构
+## [](#第四章-Linux基础篇-Linux目录结构)第四章 Linux基础篇 Linux目录结构
 
 ## [](#4-１树状目录结构，在结构的最上层是根目录-，在次目录下创建其他目录)4.１树状目录结构，在结构的最上层是根目录　/，在次目录下创建其他目录
 

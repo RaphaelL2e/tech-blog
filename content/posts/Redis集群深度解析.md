@@ -1,12 +1,22 @@
 ---
-title: "Redis 集群深度解析"
-date: 2026-05-14T19:30:00+08:00
+title: Redis 集群深度解析
+date: 2026-05-14 19:30:00+08:00
+updated: '2026-05-14T19:30:00+08:00'
+description: 当单节点 Redis 无法满足业务需求时，需要构建 Redis 集群来实现数据分片和高可用。Redis 集群主流方案有 Redis Cluster 和 Codis 两种，本文将深入解析两种方案的原理、架构与实战。 Redis
+  Cluster 架构与实战 服务端分片（Redis Cluster）： R。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- Redis
+- 集群
+- Redis Cluster
+- Codis
+- 数据分片
+categories:
+- 数据库与中间件
 draft: false
-categories: ["Redis"]
-tags: ["Redis", "集群", "Redis Cluster", "Codis", "数据分片", "高可用"]
 ---
-
-# Redis 集群深度解析
 
 ## 一、引言
 

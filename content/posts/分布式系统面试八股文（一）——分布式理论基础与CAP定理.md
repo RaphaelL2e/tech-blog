@@ -1,12 +1,24 @@
 ---
-title: "分布式系统面试八股文（一）——分布式理论基础与CAP定理"
-date: 2026-06-27T09:00:00+08:00
+title: 分布式系统面试八股文（一）——分布式理论基础与CAP定理
+date: 2026-06-27 09:00:00+08:00
+updated: '2026-06-27T09:00:00+08:00'
+description: 🎯 本文目标：从面试高频问题出发，深入剖析分布式系统的核心理论基础——CAP定理、BASE理论、一致性模型、时钟与网络问题，构建分布式系统面试的知识框架。 分布式系统是若干独立计算机的集合，这些计算机对于用户来说就像是单个相关系统。
+  CAP定理：一个分布式系统最多只能同时满足一致性（Consiste。
+topic: distributed-systems
+series: distributed-systems-interview
+series_order: 1
+level: intermediate
+status: maintained
+tags:
+- 分布式系统
+- CAP
+- BASE
+- 一致性
+- 可用性
+categories:
+- 分布式与微服务
 draft: false
-categories: ["分布式系统"]
-tags: ["分布式系统", "CAP", "BASE", "一致性", "可用性", "分区容错", "面试", "八股文"]
 ---
-
-# 分布式系统面试八股文（一）——分布式理论基础与CAP定理
 
 > 🎯 **本文目标**：从面试高频问题出发，深入剖析分布式系统的核心理论基础——CAP定理、BASE理论、一致性模型、时钟与网络问题，构建分布式系统面试的知识框架。
 
@@ -494,4 +506,4 @@ public class Snowflake {
 
 ---
 
-*作者：飞哥的 AI 折腾日记*
+*作者：李亚飞 · Raphael Lab*

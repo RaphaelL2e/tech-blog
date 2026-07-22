@@ -1,0 +1,13 @@
+{{ define "main" }}
+<section class="library-hero shell">
+  <p class="eyebrow">FULL-TEXT SEARCH</p>
+  <h1>搜索</h1>
+  <p class="lead">搜索标题、摘要、正文小标题与全文内容。</p>
+  {{ partial "search-controls.html" . }}
+</section>
+<section class="shell library-results" data-search-page>
+  <div class="result-summary" id="search-summary">输入关键词开始搜索</div>
+  <div class="post-grid search-results" id="search-results"></div>
+  <div class="empty-state" id="search-empty" hidden><strong>没有找到匹配文章</strong><p>试试更短的关键词，或清除筛选条件。</p></div>
+</section>
+{{ end }}

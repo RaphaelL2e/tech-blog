@@ -1,12 +1,21 @@
 ---
-title: "Java并发编程终极指南：从理论到实战的全景总结"
-date: 2026-06-08T09:00:00+08:00
+title: Java并发编程终极指南：从理论到实战的全景总结
+date: 2026-06-08 09:00:00+08:00
+updated: '2026-06-08T09:00:00+08:00'
+description: 面试终极问题：Java并发编程的核心原则是什么？如何选择合适的并发工具？JUC框架的最佳实践有哪些？本文作为Java并发系列的收官之作，将9篇精华融会贯通，构建完整的并发知识体系。 经过9篇深度解析，我们走遍了Java并发编程的每个角落——从对象内存布局到锁机制，从volatile到AQS，从线程池。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Java
+- 并发
+- JUC
+- 线程安全
+- 最佳实践
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["java", "并发", "JUC", "线程安全", "最佳实践", "面试"]
 ---
-
-# Java并发编程终极指南：从理论到实战的全景总结
 
 > 面试终极问题：Java并发编程的核心原则是什么？如何选择合适的并发工具？JUC框架的最佳实践有哪些？本文作为Java并发系列的收官之作，将9篇精华融会贯通，构建完整的并发知识体系。
 
@@ -514,4 +523,4 @@ key被GC回收后，value仍然被Entry强引用
 
 ---
 
-*作者：飞哥的 AI 折腾日记*
+*作者：李亚飞 · Raphael Lab*

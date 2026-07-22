@@ -1,12 +1,24 @@
 ---
-title: "Spring面试八股文（五）——Spring Cloud微服务架构实战"
-date: 2026-07-08T10:00:00+08:00
+title: Spring面试八股文（五）——Spring Cloud微服务架构实战
+date: 2026-07-08 10:00:00+08:00
+updated: '2026-07-08T10:00:00+08:00'
+description: 🎯 本文目标：在Spring Boot的基础上，深入解析Spring Cloud Alibaba生态的核心组件——服务注册发现Nacos、服务调用OpenFeign、负载均衡LoadBalancer、服务容错Sentinel、API网关Gateway，并结合实战经验构建微服务架构能力体系。
+  最佳实践。
+topic: distributed-systems
+series: spring-interview
+series_order: 5
+level: intermediate
+status: maintained
+tags:
+- Spring Cloud
+- 微服务
+- Nacos
+- Sentinel
+- Gateway
+categories:
+- 分布式与微服务
 draft: false
-categories: ["Spring Cloud"]
-tags: ["Spring Cloud", "微服务", "Nacos", "Sentinel", "Gateway", "OpenFeign", "LoadBalancer", "面试", "八股文"]
 ---
-
-# Spring面试八股文（五）——Spring Cloud微服务架构实战
 
 > 🎯 **本文目标**：在Spring Boot的基础上，深入解析Spring Cloud Alibaba生态的核心组件——服务注册发现Nacos、服务调用OpenFeign、负载均衡LoadBalancer、服务容错Sentinel、API网关Gateway，并结合实战经验构建微服务架构能力体系。
 
@@ -699,4 +711,3 @@ spring:
 ---
 
 > 🎯 **下期预告**：Spring面试八股文（六）——Spring Security安全框架与OAuth2认证授权，将深入解析认证授权流程、JWT实现、OAuth2四种授权模式、单点登录SSO、权限注解等核心知识。
-

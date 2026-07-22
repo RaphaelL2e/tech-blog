@@ -1,12 +1,25 @@
 ---
-title: "AI大模型面试八股文（六）——大模型系统设计与工程实践"
-date: 2026-06-14T10:00:00+08:00
+title: AI大模型面试八股文（六）——大模型系统设计与工程实践
+date: 2026-06-14 10:00:00+08:00
+updated: '2026-06-14T10:00:00+08:00'
+description: '面试高频问题：如何设计一个RAG系统？在线推理和离线推理有什么区别？大模型如何评测？如何设计一个多轮对话系统？本文带你掌握大模型系统设计与工程实践的核心知识。 Q: 什么是RAG？为什么要用RAG？ A: RAG(Retrieval-Augmented
+  Generation)是将检索与生成结合的架构。'
+topic: ai-engineering
+series: ai-llm-interview
+series_order: 6
+level: intermediate
+status: maintained
+featured: true
+tags:
+- AI
+- 大模型
+- 系统设计
+- RAG
+- 推理系统
+categories:
+- AI 工程化
 draft: false
-categories: ["AI"]
-tags: ["AI", "大模型", "系统设计", "RAG", "推理系统", "评测", "工程实践", "面试"]
 ---
-
-# AI大模型面试八股文（六）——大模型系统设计与工程实践
 
 > 面试高频问题：如何设计一个RAG系统？在线推理和离线推理有什么区别？大模型如何评测？如何设计一个多轮对话系统？本文带你掌握大模型系统设计与工程实践的核心知识。
 

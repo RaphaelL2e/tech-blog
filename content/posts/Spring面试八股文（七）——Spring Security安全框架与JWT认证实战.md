@@ -1,14 +1,29 @@
 ---
-title: "Spring面试八股文（七）——Spring Security安全框架与JWT认证实战"
-date: 2026-07-10T10:00:00+08:00
+title: Spring面试八股文（七）——Spring Security安全框架与JWT认证实战
+date: 2026-07-10 10:00:00+08:00
+updated: '2026-07-10T10:00:00+08:00'
+description: 深入解析Spring Security安全框架的核心架构、认证授权机制、JWT令牌实现，以及微服务环境下的安全实践。结合面试高频考点，提供完整的实战代码示例。
+topic: java-spring
+series: spring-interview
+series_order: 7
+level: intermediate
+status: maintained
+tags:
+- Java
+- Spring
+- Spring Security
+- 面试八股文
+categories:
+- Java 与 Spring
 draft: false
-tags: ["Java", "Spring", "Spring Security", "面试八股文"]
-categories: ["Java"]
-keywords: ["Spring Security", "JWT", "OAuth2", "认证授权", "RBAC", "Spring Boot"]
-description: "深入解析Spring Security安全框架的核心架构、认证授权机制、JWT令牌实现，以及微服务环境下的安全实践。结合面试高频考点，提供完整的实战代码示例。"
+keywords:
+- Spring Security
+- JWT
+- OAuth2
+- 认证授权
+- RBAC
+- Spring Boot
 ---
-
-# Spring面试八股文（七）——Spring Security安全框架与JWT认证实战
 
 ## 一、核心架构概述
 

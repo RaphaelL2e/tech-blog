@@ -1,12 +1,21 @@
 ---
-title: "volatile 与 Happens-Before 规则深度解析"
-date: 2026-05-09T15:50:00+08:00
+title: volatile 与 Happens-Before 规则深度解析
+date: 2026-05-09 15:50:00+08:00
+updated: '2026-05-09T15:50:00+08:00'
+description: 面试高频问题：volatile 如何保证可见性？synchronized 和 volatile 的区别？happens-before 是什么？ 在 Java 并发编程中，volatile 是一个常被提及却又容易被误解的关键字。很多面试者知道它能"保证可见性"，但追问其底层原理时就答不上来了。本文将从。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- volatile
+- happens-before
+- 并发
+- JMM
+- CAS
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["volatile", "happens-before", "并发", "JMM", "CAS"]
 ---
-
-# volatile 与 Happens-Before 规则深度解析
 
 > 面试高频问题：volatile 如何保证可见性？synchronized 和 volatile 的区别？happens-before 是什么？
 

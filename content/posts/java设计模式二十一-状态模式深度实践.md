@@ -1,9 +1,23 @@
 ---
-title: "Java设计模式（二十一）：状态模式深度实践"
-date: 2026-04-22T11:10:00+08:00
+title: Java设计模式（二十一）：状态模式深度实践
+date: 2026-04-22 11:10:00+08:00
+updated: '2026-04-22T11:10:00+08:00'
+description: 状态模式（State Pattern）是一种行为型设计模式，它的核心思想是：允许对象在其内部状态改变时改变它的行为，对象看起来似乎修改了它的类。 核心思想：用类表示状态，将状态转换逻辑封装在状态类中。 假设我们开发一个自动售货机，有投币、选择商品、出货等操作：
+  每新增一个状态或操作，所有方法都要修改。
+topic: java-spring
+series: java-design-patterns
+series_order: 21
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 状态模式
+- state
+- 状态机
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "状态模式", "state", "状态机", "有限状态机"]
 ---
 
 ## 前言

@@ -1,12 +1,22 @@
 ---
-title: "Kafka 深度解析"
-date: 2026-05-14T12:10:00+08:00
+title: Kafka 深度解析
+date: 2026-05-14 12:10:00+08:00
+updated: '2026-05-14T12:10:00+08:00'
+description: Kafka 是 LinkedIn 开源的分布式流处理平台，已成为大数据和实时计算领域的事实标准。无论是日志采集、实时计算还是事件驱动架构，Kafka 都是核心基础设施。理解 Kafka 的内部原理，对架构设计和面试都至关重要。
+  Topic 与 Partition ISR 机制与 High Water。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- Kafka
+- ISR
+- Rebalance
+- 零拷贝
+- 消息队列
+categories:
+- 数据库与中间件
 draft: false
-categories: ["分布式系统"]
-tags: ["Kafka", "ISR", "Rebalance", "零拷贝", "消息队列"]
 ---
-
-# Kafka 深度解析
 
 ## 一、引言
 
@@ -535,4 +545,4 @@ Kafka 的事务保证：
 
 ---
 
-*作者：飞哥的 AI 折腾日记*
+*作者：李亚飞 · Raphael Lab*

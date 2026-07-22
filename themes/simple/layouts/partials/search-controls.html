@@ -1,0 +1,25 @@
+<div class="library-controls" data-search-root data-index-url="{{ "search-index.json" | relURL }}">
+  <div class="search-field">
+    <label class="sr-only" for="library-search">搜索文章</label>
+    <span aria-hidden="true">⌕</span>
+    <input id="library-search" type="search" name="q" placeholder="搜索标题、摘要或正文…" autocomplete="off">
+    <kbd>⌘ K</kbd>
+  </div>
+  <div class="filter-row" aria-label="按主题筛选">
+    <button class="filter-chip active" type="button" data-topic="">全部主题</button>
+    <button class="filter-chip" type="button" data-topic="java-spring">Java / Spring</button>
+    <button class="filter-chip" type="button" data-topic="distributed-systems">分布式</button>
+    <button class="filter-chip" type="button" data-topic="database-middleware">数据库</button>
+    <button class="filter-chip" type="button" data-topic="system-engineering">系统设计</button>
+    <button class="filter-chip" type="button" data-topic="ai-engineering">AI 工程</button>
+    <button class="filter-chip" type="button" data-topic="computer-science">计算机基础</button>
+    <button class="filter-chip" type="button" data-topic="archive">历史归档</button>
+  </div>
+  <label class="series-filter">
+    <span>系列</span>
+    <select name="series" id="series-filter">
+      <option value="">全部系列</option>
+      {{ range sort (where .Site.RegularPages "Section" "series") "Weight" }}<option value="{{ .Params.series_key }}">{{ .Title }}</option>{{ end }}
+    </select>
+  </label>
+</div>

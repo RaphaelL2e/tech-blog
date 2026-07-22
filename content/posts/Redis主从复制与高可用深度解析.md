@@ -1,12 +1,22 @@
 ---
-title: "Redis 主从复制与高可用深度解析"
-date: 2026-05-13T18:35:00+08:00
+title: Redis 主从复制与高可用深度解析
+date: 2026-05-13 18:35:00+08:00
+updated: '2026-05-13T18:35:00+08:00'
+description: 前面两篇我们分别深入探讨了 Redis 的数据结构、持久化机制和内存管理策略。在生产环境中，单节点 Redis 往往面临单点故障风险，无法满足高可用需求。本文将深入解析 Redis 的主从复制机制、哨兵高可用方案以及
+  Redis Cluster 分布式集群，帮助你在面试中系统回答 Redis 高可用。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- Redis
+- 主从复制
+- 哨兵
+- Redis Cluster
+- 高可用
+categories:
+- 数据库与中间件
 draft: false
-categories: ["Redis"]
-tags: ["Redis", "主从复制", "哨兵", "Redis Cluster", "高可用"]
 ---
-
-# Redis 主从复制与高可用深度解析
 
 ## 一、引言
 
@@ -771,4 +781,4 @@ SELECT 1   # 报错
 
 ---
 
-*作者：飞哥的 AI 折腾日记*
+*作者：李亚飞 · Raphael Lab*

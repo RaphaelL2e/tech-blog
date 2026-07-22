@@ -1,9 +1,17 @@
 ---
-title: "一个美观好用的zsh"
-date: 2020-01-11T17:10:50+08:00
+title: 一个美观好用的zsh
+date: 2020-01-11 17:10:50+08:00
+updated: '2020-01-11T17:10:50+08:00'
+description: 今天介绍一款linux必备的shell 功能强大，可以添加各类插件（一键解压、压缩、历史命令等） centos系统：yum install zsh ubuntu系统：apt-get install ubuntu 注：如果是要全系统使用，则使用root帐号执行该指令
+  启用zsh chsh -s /bi。
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- Linux
+categories:
+- 计算机基础
 draft: false
-categories: ['linux']
-tags: ['linux']
 ---
 
 终于有时间来写文章了～

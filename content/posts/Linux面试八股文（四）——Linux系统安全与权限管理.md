@@ -1,12 +1,22 @@
 ---
-title: "Linux面试八股文（四）——Linux系统安全与权限管理"
-date: 2026-06-14T09:00:00+08:00
+title: Linux面试八股文（四）——Linux系统安全与权限管理
+date: 2026-06-14 09:00:00+08:00
+updated: '2026-06-14T09:00:00+08:00'
+description: '面试高频问题：Linux文件权限怎么管理？SELinux和AppArmor有什么区别？如何检测系统是否被入侵？sudo和su的区别是什么？本文带你系统掌握Linux安全与权限管理的核心知识。 Q: Linux中用户和组的分类？
+  主组(Primary Group)：用户创建时自动分配，一个用户只能有一。'
+topic: computer-science
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Linux
+- 安全
+- 权限管理
+categories:
+- 计算机基础
 draft: false
-categories: ["linux"]
-tags: ["面试", "八股文", "Linux", "安全", "权限管理", "SELinux", "AppArmor", "入侵检测", "审计"]
 ---
-
-# Linux面试八股文（四）——Linux系统安全与权限管理
 
 > 面试高频问题：Linux文件权限怎么管理？SELinux和AppArmor有什么区别？如何检测系统是否被入侵？sudo和su的区别是什么？本文带你系统掌握Linux安全与权限管理的核心知识。
 

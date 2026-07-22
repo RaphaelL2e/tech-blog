@@ -1,12 +1,22 @@
 ---
-title: "ConcurrentHashMap 实现全解析：从分段锁到 CAS"
-date: 2026-04-27T23:45:00+08:00
+title: ConcurrentHashMap 实现全解析：从分段锁到 CAS
+date: 2026-04-27 23:45:00+08:00
+updated: '2026-04-27T23:45:00+08:00'
+description: 第一次定位 Segment，确定哪个分段锁 第二次定位桶，在 Segment 内部寻址 分散 Hash 冲突，避免热点 Segment value 是 volatile 的，保证可见性 HashEntry.next 也是
+  volatile 的 volatile 读的语义：总是读到最新写入的值 代价：。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Java
+- 面试
+- ConcurrentHashMap
+- 并发
+- 源码解析
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["Java", "面试", "ConcurrentHashMap", "并发", "源码解析"]
 ---
-
-# ConcurrentHashMap 实现全解析：从分段锁到 CAS
 
 ## 一、为什么需要 ConcurrentHashMap
 

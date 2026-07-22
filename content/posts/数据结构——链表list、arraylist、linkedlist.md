@@ -1,12 +1,19 @@
 ---
-title: "数据结构——链表List、ArrayList、LinkedList"
-date: 2019-11-16T10:42:41+08:00
+title: 数据结构——链表List、ArrayList、LinkedList
+date: 2019-11-16 10:42:41+08:00
+updated: '2019-11-16T10:42:41+08:00'
+description: 最简单的一个整数表 - 由一群整数构成的一个数组，可以看做是一张表 int[] arr = new int[10]; int[] newArr = new int[arr.length2]; for(int i=0;i<arr.length;i++){
+  newArr[i] = arr[i]; 数组的。
+topic: java-spring
+level: intermediate
+status: archived
+tags:
+- 数据结构
+- 链表
+categories:
+- Java 与 Spring
 draft: false
-categories: ['数据结构']
-tags: ['数据结构', '链表']
 ---
-
-# [](#抽象数据类型ADT)抽象数据类型ADT
 
 - 是带有一组操作的一些对象的集合
 

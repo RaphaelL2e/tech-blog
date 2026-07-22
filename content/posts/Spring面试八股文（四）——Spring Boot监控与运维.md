@@ -1,13 +1,24 @@
 ---
-title: "Spring面试八股文（四）——Spring Boot监控与运维"
-date: 2026-07-06T10:00:00+08:00
+title: Spring面试八股文（四）——Spring Boot监控与运维
+date: 2026-07-06 10:00:00+08:00
+updated: '2026-07-06T10:00:00+08:00'
+description: 🎯 本文目标：承接前三篇的IoC容器、AOP、Spring MVC与自动配置基础，深入Spring Boot的监控运维体系——Actuator四大端点类型（Health/Info/Metrics/Env）的底层实现与安全配置、Micrometer指标采集体系与Prometheus+Grafana监控。
+topic: java-spring
+series: spring-interview
+series_order: 4
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Spring
+- Spring Boot
+- Actuator
+categories:
+- Java 与 Spring
 draft: false
-categories: ["Spring"]
-tags: ["面试", "八股文", "Spring", "Spring Boot", "Actuator", "Health", "Metrics", "Micrometer", "Prometheus", "Grafana", "Spring Boot Admin", "优雅停机", "Graceful Shutdown", "应用调优"]
-author: "飞哥"
+author: 飞哥
 ---
-
-# Spring面试八股文（四）——Spring Boot监控与运维
 
 > 🎯 **本文目标**：承接前三篇的IoC容器、AOP、Spring MVC与自动配置基础，深入Spring Boot的监控运维体系——Actuator四大端点类型（Health/Info/Metrics/Env）的底层实现与安全配置、Micrometer指标采集体系与Prometheus+Grafana监控大盘搭建、Spring Boot Admin可视化运维平台、优雅停机的Shutdown机制与Graceful Shutdown原理、以及Spring Boot应用调优十大实践，构建Spring Boot运维监控的完整能力体系。
 

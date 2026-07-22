@@ -1,12 +1,24 @@
 ---
-title: "数据库面试八股文（四）——MySQL事务与ACID特性"
-date: 2026-06-02T22:00:00+08:00
+title: 数据库面试八股文（四）——MySQL事务与ACID特性
+date: 2026-06-02 22:00:00+08:00
+updated: '2026-06-02T22:00:00+08:00'
+description: 事务（Transaction）是数据库最核心的概念之一，也是面试中出现频率最高的考点。上一篇文章我们了解了MySQL的架构和存储引擎，本文将深入讲解事务的ACID特性、隔离级别、实现原理，以及InnoDB如何通过MVCC实现高并发下的读写不阻塞。
+  事务（Transaction） 是一组数据库操作的逻。
+topic: database-middleware
+series: database-interview
+series_order: 4
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- MySQL
+- 事务
+- ACID
+categories:
+- 数据库与中间件
 draft: false
-categories: ["数据库"]
-tags: ["面试", "八股文", "MySQL", "事务", "ACID", "隔离级别", "MVCC"]
 ---
-
-# 数据库面试八股文（四）——MySQL事务与ACID特性
 
 ## 概述
 

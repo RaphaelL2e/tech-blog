@@ -1,13 +1,21 @@
 ---
-title: "Java 并发工具类深度解析"
-date: 2026-05-12T09:45:00+08:00
+title: Java 并发工具类深度解析
+date: 2026-05-12 09:45:00+08:00
+updated: '2026-05-12T09:45:00+08:00'
+description: 面试高频问题：CountDownLatch 和 CyclicBarrier 的区别？Semaphore 的原理？Future 和 CompletableFuture？ Java 并发包（java.util.concurrent）提供了丰富的并发工具类，帮助开发者高效地处理多线程协作。本文将深度解析。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Java
+- concurrency
+- countdownlatch
+- cyclicbarrier
+- semaphore
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["java", "concurrency", "countdownlatch", "cyclicbarrier", "semaphore", "completablefuture"]
 ---
-
-
-# Java 并发工具类深度解析
 
 > 面试高频问题：CountDownLatch 和 CyclicBarrier 的区别？Semaphore 的原理？Future 和 CompletableFuture？
 

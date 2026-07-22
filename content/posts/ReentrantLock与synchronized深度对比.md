@@ -1,13 +1,21 @@
 ---
-title: "ReentrantLock vs synchronized 深度对比"
-date: 2026-05-12T09:15:00+08:00
+title: ReentrantLock vs synchronized 深度对比
+date: 2026-05-12 09:15:00+08:00
+updated: '2026-05-12T09:15:00+08:00'
+description: 面试高频问题：ReentrantLock 和 synchronized 的区别？公平锁和非公平锁？Condition 是什么？ ReentrantLock 和 synchronized 是 Java 中两种最常用的锁机制。虽然都能实现互斥访问，但它们的实现原理、功能特性和适用场景差异很大。本文将从源。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- Java
+- lock
+- reentrantlock
+- synchronized
+- aqs
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["java", "lock", "reentrantlock", "synchronized", "aqs"]
 ---
-
-
-# ReentrantLock vs synchronized 深度对比
 
 > 面试高频问题：ReentrantLock 和 synchronized 的区别？公平锁和非公平锁？Condition 是什么？
 

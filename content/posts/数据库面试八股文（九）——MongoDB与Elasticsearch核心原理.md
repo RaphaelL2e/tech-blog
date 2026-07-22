@@ -1,12 +1,24 @@
 ---
-title: "数据库面试八股文（九）——MongoDB与Elasticsearch核心原理"
-date: 2026-06-04T11:00:00+08:00
+title: 数据库面试八股文（九）——MongoDB与Elasticsearch核心原理
+date: 2026-06-04 11:00:00+08:00
+updated: '2026-06-04T11:00:00+08:00'
+description: 面试高频考点：MongoDB文档模型与存储引擎、副本集与分片集群、聚合管道；Elasticsearch倒排索引原理、分片与路由、搜索与聚合DSL。本文从NoSQL文档数据库到搜索引擎，全面覆盖MongoDB与ES面试题。
+  MongoDB是面向文档的NoSQL数据库，核心特点： MongoDB 3.2。
+topic: database-middleware
+series: database-interview
+series_order: 9
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- MongoDB
+- Elasticsearch
+- NoSQL
+categories:
+- 数据库与中间件
 draft: false
-categories: ["数据库"]
-tags: ["面试", "八股文", "MongoDB", "Elasticsearch", "NoSQL", "倒排索引", "分片", "副本集", "搜索"]
 ---
-
-# 数据库面试八股文（九）——MongoDB与Elasticsearch核心原理
 
 > 面试高频考点：MongoDB文档模型与存储引擎、副本集与分片集群、聚合管道；Elasticsearch倒排索引原理、分片与路由、搜索与聚合DSL。本文从NoSQL文档数据库到搜索引擎，全面覆盖MongoDB与ES面试题。
 

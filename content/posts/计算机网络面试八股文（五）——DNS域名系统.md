@@ -1,12 +1,24 @@
 ---
-title: "计算机网络面试八股文（五）——DNS域名系统"
-date: 2026-05-22T09:00:00+08:00
+title: 计算机网络面试八股文（五）——DNS域名系统
+date: 2026-05-22 09:00:00+08:00
+updated: '2026-05-22T09:00:00+08:00'
+description: DNS（Domain Name System，域名系统）是一个将域名映射到IP地址的分布式数据库系统： 核心功能：实现域名到IP地址的映射转换 分布式架构：避免单点故障，负载分散 层次化命名：使用层级结构的域名空间 域名的层级结构从右到左依次降低：
+  根域名：. - 全球13个根服务器 顶级域名（TL。
+topic: computer-science
+series: computer-network
+series_order: 5
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- 计算机网络
+- DNS
+- 域名系统
+categories:
+- 计算机基础
 draft: false
-categories: ["计算机网络"]
-tags: ["面试", "八股文", "计算机网络", "DNS", "域名系统", "解析"]
 ---
-
-# 计算机网络面试八股文（五）——DNS域名系统
 
 ## [](#dns概述)DNS概述
 

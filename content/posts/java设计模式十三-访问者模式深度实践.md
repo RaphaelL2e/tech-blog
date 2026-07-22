@@ -1,9 +1,23 @@
 ---
-title: "Java设计模式（十三）：访问者模式深度实践"
-date: 2026-04-21T23:20:00+08:00
+title: Java设计模式（十三）：访问者模式深度实践
+date: 2026-04-21 23:20:00+08:00
+updated: '2026-04-21T23:20:00+08:00'
+description: 访问者模式（Visitor Pattern）是 GoF 23 种设计模式中最复杂、最难理解的一个。它的核心思想是：把对数据结构中每个元素的操作（Visitor）分离出来，允许在不改变元素类的前提下定义新的操作。 核心思想：将数据结构与作用于结构上的操作解耦，新增操作时无需修改数据结构本身。
+  假设我们。
+topic: java-spring
+series: java-design-patterns
+series_order: 13
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 访问者模式
+- visitor
+- double-dispatch
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "访问者模式", "visitor", "double-dispatch"]
 ---
 
 ## 前言

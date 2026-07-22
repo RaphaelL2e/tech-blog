@@ -1,12 +1,23 @@
 ---
-title: "AI大模型面试八股文（三）——大模型推理与部署优化"
-date: 2026-06-09T11:00:00+08:00
+title: AI大模型面试八股文（三）——大模型推理与部署优化
+date: 2026-06-09 11:00:00+08:00
+updated: '2026-06-09T11:00:00+08:00'
+description: 面试高频问题：KV Cache的原理是什么？Flash Attention怎么加速？INT8/INT4量化有什么区别？vLLM和TensorRT-LLM怎么选？本文带你掌握大模型从训练到生产的最后一公里。 前两篇我们聊了大模型的架构和训练。但训练出来的模型要真正服务用户，还需要经过推理优化和部署——。
+topic: ai-engineering
+series: ai-llm-interview
+series_order: 3
+level: intermediate
+status: maintained
+tags:
+- AI
+- 大模型
+- 推理优化
+- KV Cache
+- 量化
+categories:
+- AI 工程化
 draft: false
-categories: ["AI"]
-tags: ["AI", "大模型", "推理优化", "KV Cache", "量化", "部署", "vLLM", "面试"]
 ---
-
-# AI大模型面试八股文（三）——大模型推理与部署优化
 
 > 面试高频问题：KV Cache的原理是什么？Flash Attention怎么加速？INT8/INT4量化有什么区别？vLLM和TensorRT-LLM怎么选？本文带你掌握大模型从训练到生产的最后一公里。
 
@@ -678,4 +689,4 @@ CPU推理？
 
 ---
 
-*作者：飞哥的 AI 折腾日记*
+*作者：李亚飞 · Raphael Lab*

@@ -1,0 +1,9 @@
+{{- $count := len (where (where .Site.RegularPages "Section" "posts") ".Params.series" .Params.series_key) -}}
+<article class="series-card">
+  <a class="card-link" href="{{ .RelPermalink }}" aria-label="查看专题：{{ .Title }}"></a>
+  <div class="series-icon" aria-hidden="true">{{ .Params.icon | default "//" }}</div>
+  <p class="series-topic">{{ .Params.topic_name }}</p>
+  <h3>{{ .Title }}</h3>
+  <p>{{ .Params.description }}</p>
+  <div class="series-meta"><span>{{ $count }} 篇</span><span>{{ .Params.level_name }}</span><span>{{ .Params.state | default "持续更新" }}</span></div>
+</article>

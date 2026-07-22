@@ -1,13 +1,22 @@
 ---
-title: "MySQL 日志系统深度解析"
-date: 2026-05-12T17:35:00+08:00
+title: MySQL 日志系统深度解析
+date: 2026-05-12 17:35:00+08:00
+updated: '2026-05-12T17:35:00+08:00'
+description: 面试高频问题：binlog、redo log、undo log 有什么区别？ MySQL 崩溃恢复流程？什么是两阶段提交？ MySQL 的日志系统是数据库实现事务、崩溃恢复、数据复制的基础。主要包括 binlog（二进制日志）、redo
+  log（重做日志）和 undo log（回滚日志）。理解这三种。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- MySQL
+- binlog
+- redo-log
+- undo-log
+- two-phase-commit
+categories:
+- 数据库与中间件
 draft: false
-categories: ["mysql"]
-tags: ["mysql", "binlog", "redo-log", "undo-log", "two-phase-commit"]
 ---
-
-
-# MySQL 日志系统深度解析
 
 > 面试高频问题：binlog、redo log、undo log 有什么区别？ MySQL 崩溃恢复流程？什么是两阶段提交？
 

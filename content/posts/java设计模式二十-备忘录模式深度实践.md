@@ -1,9 +1,23 @@
 ---
-title: "Java设计模式（二十）：备忘录模式深度实践"
-date: 2026-04-22T11:00:00+08:00
+title: Java设计模式（二十）：备忘录模式深度实践
+date: 2026-04-22 11:00:00+08:00
+updated: '2026-04-22T11:00:00+08:00'
+description: 备忘录模式（Memento Pattern）是一种行为型设计模式，它的核心思想是：在不破坏封装性的前提下，捕获一个对象的内部状态，并在该对象之外保存这个状态，以便以后恢复。 核心思想：保存对象快照，支持撤销/恢复。 假设我们在开发一个文本编辑器，需要支持撤销操作：
+  直接暴露内部状态破坏了封装性。备忘。
+topic: java-spring
+series: java-design-patterns
+series_order: 20
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 备忘录模式
+- memento
+- 撤销
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "备忘录模式", "memento", "撤销", "快照"]
 ---
 
 ## 前言

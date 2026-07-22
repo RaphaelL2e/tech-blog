@@ -1,12 +1,23 @@
 ---
-title: "系统分析与设计（九）——持续交付与DevOps实践"
-date: 2026-06-26T12:00:00+08:00
+title: 系统分析与设计（九）——持续交付与DevOps实践
+date: 2026-06-26 12:00:00+08:00
+updated: '2026-06-26T12:00:00+08:00'
+description: 🎯 本文目标：作为系统分析与设计系列的收官之作，系统讲解从代码提交到生产上线的全自动化流水线设计，涵盖CI/CD核心实践、容器化与Kubernetes编排、GitOps声明式部署、蓝绿/金丝雀/滚动发布策略、可观测性驱动的运维体系，以及DevOps文化转型的核心要点——完成从"能做出来"到"能稳定跑。
+topic: system-engineering
+series: system-design
+series_order: 9
+level: intermediate
+status: maintained
+tags:
+- CI/CD
+- DevOps
+- 持续交付
+- Docker
+- Kubernetes
+categories:
+- 系统设计与工程效能
 draft: false
-categories: ["系统分析与设计"]
-tags: ["CI/CD", "DevOps", "持续交付", "Docker", "Kubernetes", "GitOps", "蓝绿部署", "灰度发布", "GitLab CI", "GitHub Actions", "面试"]
 ---
-
-# 系统分析与设计（九）——持续交付与DevOps实践
 
 > 🎯 **本文目标**：作为系统分析与设计系列的收官之作，系统讲解从代码提交到生产上线的全自动化流水线设计，涵盖CI/CD核心实践、容器化与Kubernetes编排、GitOps声明式部署、蓝绿/金丝雀/滚动发布策略、可观测性驱动的运维体系，以及DevOps文化转型的核心要点——完成从"能做出来"到"能稳定跑起来"的最后一公里。
 

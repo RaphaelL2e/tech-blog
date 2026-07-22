@@ -1,12 +1,18 @@
 ---
-title: "GitHub快速学习(三)"
-date: 2019-06-27T14:34:28+08:00
+title: GitHub快速学习(三)
+date: 2019-06-27 14:34:28+08:00
+updated: '2019-06-27T14:34:28+08:00'
+description: mkdir git-tutorial 创建git文件夹 git init 执行成功在该目录下生成 .git目录 git status 查看仓库状态 您的分支与上游分支 'origin/master' 一致。 git add
+  向暂存区添加文件 $ git add a.class 您的分支与上游分支 '。
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- github
+categories:
+- 计算机基础
 draft: false
-categories: ['GitHub']
-tags: ['github']
 ---
-
-# [](#常用指令学习)常用指令学习
 
 - **git init** 初始化仓库
 

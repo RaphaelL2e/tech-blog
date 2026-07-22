@@ -1,12 +1,22 @@
 ---
-title: "Spring Cloud 全家桶深度解析"
-date: 2026-05-14T22:50:00+08:00
+title: Spring Cloud 全家桶深度解析
+date: 2026-05-14 22:50:00+08:00
+updated: '2026-05-14T22:50:00+08:00'
+description: Spring Cloud 是目前最主流的微服务框架，提供了一站式微服务解决方案。理解 Spring Cloud 的各个组件及其作用，是微服务开发和面试的必备技能。 Spring Cloud 生态全景 Spring Cloud
+  Alibaba 组件 版本选择（Hoxton、2020.0.x、2022.
+topic: distributed-systems
+level: intermediate
+status: maintained
+tags:
+- Spring Cloud
+- Nacos
+- Sentinel
+- Gateway
+- OpenFeign
+categories:
+- 分布式与微服务
 draft: false
-categories: ["微服务", "Spring Cloud"]
-tags: ["Spring Cloud", "Nacos", "Sentinel", "Gateway", "OpenFeign"]
 ---
-
-# Spring Cloud 全家桶深度解析
 
 ## 一、引言
 
@@ -592,4 +602,4 @@ e-commerce-platform/
 
 ---
 
-*作者：飞哥的 AI 折腾日记*
+*作者：李亚飞 · Raphael Lab*

@@ -1,12 +1,22 @@
 ---
-title: "Elasticsearch 深度解析"
-date: 2026-05-14T12:20:00+08:00
+title: Elasticsearch 深度解析
+date: 2026-05-14 12:20:00+08:00
+updated: '2026-05-14T12:20:00+08:00'
+description: Elasticsearch 是目前最流行的分布式搜索和分析引擎，广泛应用于日志分析、全文搜索、监控报警等场景。理解 Elasticsearch 的内部原理，对面试和架构设计都极为重要。 Elasticsearch 核心概念
+  写入流程（Primary → Replica） 搜索流程（Query → F。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- Elasticsearch
+- 倒排索引
+- 分片
+- 深度分页
+- BM25
+categories:
+- 数据库与中间件
 draft: false
-categories: ["分布式系统"]
-tags: ["Elasticsearch", "倒排索引", "分片", "深度分页", "BM25"]
 ---
-
-# Elasticsearch 深度解析
 
 ## 一、引言
 
@@ -541,4 +551,4 @@ ES 默认限制：from + size ≤ 10000（index.max_result_window）
 
 ---
 
-*作者：飞哥的 AI 折腾日记*
+*作者：李亚飞 · Raphael Lab*

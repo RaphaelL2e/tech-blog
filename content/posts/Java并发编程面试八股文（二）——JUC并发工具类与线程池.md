@@ -1,12 +1,22 @@
 ---
-title: "Java并发编程面试八股文（二）——JUC并发工具类与线程池"
-date: 2026-06-15T10:00:00+08:00
+title: Java并发编程面试八股文（二）——JUC并发工具类与线程池
+date: 2026-06-15 10:00:00+08:00
+updated: '2026-06-15T10:00:00+08:00'
+description: '面试高频问题：CountDownLatch和CyclicBarrier有什么区别？线程池的核心参数有哪些？如何设置线程池大小？线程池的拒绝策略有哪些？本文带你系统掌握JUC并发工具类与线程池的核心知识。 Q: 什么是CAS？Java中有哪些原子类？
+  A: CAS(Compare-And-Swap)是。'
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Java
+- 并发
+- 线程池
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["面试", "八股文", "Java", "并发", "线程池", "JUC", "CountDownLatch", "Semaphore", "ThreadPoolExecutor"]
 ---
-
-# Java并发编程面试八股文（二）——JUC并发工具类与线程池
 
 > 面试高频问题：CountDownLatch和CyclicBarrier有什么区别？线程池的核心参数有哪些？如何设置线程池大小？线程池的拒绝策略有哪些？本文带你系统掌握JUC并发工具类与线程池的核心知识。
 

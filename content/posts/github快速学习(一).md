@@ -1,13 +1,17 @@
 ---
-title: "GitHub快速学习(一)"
-date: 2019-06-26T19:06:32+08:00
+title: GitHub快速学习(一)
+date: 2019-06-26 19:06:32+08:00
+updated: '2019-06-26T19:06:32+08:00'
+description: GitHub 入门教程第一篇，讲解 Git 与 GitHub 的区别，以及社会化编程的概念。
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- github
+categories:
+- 计算机基础
 draft: false
-description: "GitHub 入门教程第一篇，讲解 Git 与 GitHub 的区别，以及社会化编程的概念。"
-categories: ['GitHub']
-tags: ['github']
 ---
-
-# [](#First-git-amp-amp-github-区别)First git && github 区别
 
 Git 是代码仓库，存储在本地的。
 GitHub 是**网络**上提供的一个Git仓库服务
@@ -30,12 +34,12 @@ GitHub 是**网络**上提供的一个Git仓库服务
 - github提供了pull request 和源代码前后差别的讨论功能
 ```
 
-# [](#Git-初始化设置)Git 初始化设置
+## [](#Git-初始化设置)Git 初始化设置
 
 1
 2
 3
-# 首先，设置姓名跟邮箱
+## 首先，设置姓名跟邮箱
 git config --global user.name "Your Name" 
 git config --global user.email "Your_email@example.com"
 

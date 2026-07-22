@@ -1,13 +1,17 @@
 ---
-title: "第一章 Linux开山篇"
-date: 2019-08-01T04:50:37+08:00
+title: 第一章 Linux开山篇
+date: 2019-08-01 04:50:37+08:00
+updated: '2019-08-01T04:50:37+08:00'
+description: Linux 入门教程第一章，介绍本套课程的内容安排和学习路线，适合零基础初学者。
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- Linux
+categories:
+- 计算机基础
 draft: false
-description: "Linux 入门教程第一章，介绍本套课程的内容安排和学习路线，适合零基础初学者。"
-categories: ['Linux']
-tags: ['linux']
 ---
-
-# [](#第一章-Linux开山篇)第一章 Linux开山篇
 
 ## [](#1-1-本套Linux课程内容介绍)1.1 本套Linux课程内容介绍
 

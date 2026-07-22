@@ -1,12 +1,23 @@
 ---
-title: "AI大模型面试八股文（四）——大模型应用开发与Agent框架"
-date: 2026-06-10T09:00:00+08:00
+title: AI大模型面试八股文（四）——大模型应用开发与Agent框架
+date: 2026-06-10 09:00:00+08:00
+updated: '2026-06-10T09:00:00+08:00'
+description: 面试高频问题：RAG的原理是什么？LangChain的核心组件有哪些？Function Calling怎么实现？Agent和普通大模型调用有什么区别？本文带你掌握大模型应用开发的核心技术栈。 前三篇我们分别聊了大模型架构、训练微调、推理部署。但模型部署上线只是起点，如何让大模型真正解决业务问题？这就。
+topic: ai-engineering
+series: ai-llm-interview
+series_order: 4
+level: intermediate
+status: maintained
+tags:
+- AI
+- 大模型
+- 应用开发
+- Agent
+- RAG
+categories:
+- AI 工程化
 draft: false
-categories: ["AI"]
-tags: ["AI", "大模型", "应用开发", "Agent", "RAG", "LangChain", "Function Calling", "面试"]
 ---
-
-# AI大模型面试八股文（四）——大模型应用开发与Agent框架
 
 > 面试高频问题：RAG的原理是什么？LangChain的核心组件有哪些？Function Calling怎么实现？Agent和普通大模型调用有什么区别？本文带你掌握大模型应用开发的核心技术栈。
 

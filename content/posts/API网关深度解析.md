@@ -1,12 +1,22 @@
 ---
-title: "API网关深度解析"
-date: 2026-05-15T21:36:00+08:00
+title: API网关深度解析
+date: 2026-05-15 21:36:00+08:00
+updated: '2026-05-15T21:36:00+08:00'
+description: 在微服务架构中，客户端需要调用多个微服务才能完成一个业务功能。如果每个微服务都暴露独立的网络地址，客户端需要了解每个服务的地址、处理不同的协议、实现负载均衡、处理认证授权等横切关注点。API网关正是为了解决这些问题而诞生的，它是微服务架构的"看门人"，统一了所有外部请求的入口。
+  本文将从API网关的。
+topic: distributed-systems
+level: intermediate
+status: maintained
+tags:
+- 微服务
+- API网关
+- Zuul
+- Gateway
+- Kong
+categories:
+- 分布式与微服务
 draft: false
-categories: ["java"]
-tags: ["微服务", "API网关", "Zuul", "Gateway", "Kong", "APISIX", "边缘服务"]
 ---
-
-# API网关深度解析
 
 ## 一、引言
 

@@ -1,11 +1,47 @@
 {{ define "main" }}
-<article class="post">
-    <div class="post-header">
-        <div class="meta">{{ .Date.Format "2006-01-02" }} {{ if .Params.categories }}<span>/</span> {{ range .Params.categories }}{{ . }} {{ end }}{{ end }}</div>
-        <h1>{{ .Title }}</h1>
+<article class="article-shell shell">
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+  <div class="article-main">
+    <nav class="breadcrumbs" aria-label="面包屑">
+      <a href="{{ "/" | relURL }}">首页</a><span>/</span>
+      <a href="{{ "/posts/" | relURL }}">文章库</a>
+      {{ with .Params.series }}{{ $seriesKey := . }}{{ with index (where $.Site.RegularPages ".Params.series_key" $seriesKey) 0 }}<span>/</span><a href="{{ .RelPermalink }}">{{ .Title }}</a>{{ end }}{{ end }}
+    </nav>
+    <header class="article-header">
+      <div class="article-status">
+        {{ if eq .Params.status "maintained" }}<span class="status maintained">持续维护</span>{{ else }}<span class="status archived">历史归档，部分内容可能过时</span>{{ end }}
+      </div>
+      <h1>{{ .Title }}</h1>
+      <p class="article-description">{{ .Params.description }}</p>
+      <div class="article-meta">
+        <span>发布于 <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time></span>
+        <span>最后验证 {{ (time.AsTime (.Params.updated | default .Date)).Format "2006-01" }}</span>
+        <span>{{ .ReadingTime }} 分钟阅读</span>
+        <span>{{ .WordCount }} 字</span>
+      </div>
+    </header>
+    {{ if .TableOfContents }}
+    <details class="toc-mobile">
+      <summary>本文目录</summary>
+      {{ .TableOfContents }}
+    </details>
+    {{ end }}
+    <div class="post-content" data-article-content>
+      {{ .Content }}
     </div>
-    <div class="post-content">
-        {{ .Content }}
-    </div>
+    {{ partial "article-nav.html" . }}
+    {{ partial "related.html" . }}
+    <footer class="article-feedback">
+      <div><strong>这篇内容对你有帮助吗？</strong><p>如果发现错误或有更好的工程实践，欢迎一起完善。</p></div>
+      <a class="button secondary" href="{{ .Site.Params.github }}/issues/new?title={{ printf "文章反馈：%s" .Title | urlquery }}" target="_blank" rel="noopener noreferrer">提交反馈</a>
+    </footer>
+  </div>
+  {{ if .TableOfContents }}
+  <aside class="article-toc" aria-label="本文目录">
+    <p>本文目录</p>
+    {{ .TableOfContents }}
+    <div class="toc-progress"><span></span><small>阅读进度 <b>0%</b></small></div>
+  </aside>
+  {{ end }}
 </article>
 {{ end }}

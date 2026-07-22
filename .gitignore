@@ -13,3 +13,8 @@ Thumbs.db
 # Local secrets
 .env
 .env.*
+.private/
+
+# Local QA artifacts
+.playwright-cli/
+output/

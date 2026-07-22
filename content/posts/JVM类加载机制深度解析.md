@@ -1,12 +1,21 @@
 ---
-title: "JVM 类加载机制深度解析"
-date: 2026-05-08T15:08:00+08:00
+title: JVM 类加载机制深度解析
+date: 2026-05-08 15:08:00+08:00
+updated: '2026-05-08T15:08:00+08:00'
+description: 面试高频问题：类加载过程是什么？什么是双亲委派模型？为什么要打破双亲委派？ 在 Java 面试中，JVM 类加载机制是考察候选人底层理解能力的经典题目。从「类加载过程」到「双亲委派模型」，再到「如何打破双亲委派」，这些问题不仅考察理论知识，还涉及实际应用场景如
+  Tomcat 类加载、OSGi 模块化。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- JVM
+- 面试
+- 类加载
+- 双亲委派
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["jvm", "面试", "类加载", "双亲委派"]
 ---
-
-# Java 面试七：JVM 类加载机制深度解析
 
 > 面试高频问题：类加载过程是什么？什么是双亲委派模型？为什么要打破双亲委派？
 

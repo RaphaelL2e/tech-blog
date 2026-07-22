@@ -1,14 +1,20 @@
 ---
-title: "GitHub快速学习(二)"
-date: 2019-06-26T19:23:49+08:00
+title: GitHub快速学习(二)
+date: 2019-06-26 19:23:49+08:00
+updated: '2019-06-26T19:23:49+08:00'
+description: repository name 仓库名 description 仓库说明 Public Or Private 仓库是否公开 Initialize this repository with a README 自动初始化仓库并且设置README文件
+  Add .gitignore 这个设定帮助我们把不需要。
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- github
+categories:
+- 计算机基础
 draft: false
-categories: ['GitHub']
-tags: ['github']
 ---
 
-# [](#设置SSH-Key)设置SSH Key
-
-### [](#一、创建秘钥)一、[创建秘钥](/秘钥链接.md)
+### [](#一、创建秘钥)一、[创建秘钥](/posts/秘钥连接/)
 
 ### [](#二、在github中添加公开秘钥)二、在github中添加公开秘钥
 
@@ -17,7 +23,7 @@ tags: ['github']
 ```
 ### [](#三、社区功能-Follow-关注其他用户)三、社区功能　Follow 关注其他用户
 
-# [](#创建仓库)创建仓库
+## [](#创建仓库)创建仓库
 
 - **New repository**
 repository name 仓库名
@@ -44,7 +50,7 @@ repository name 仓库名
 
 - 许可协议等
 
-# [](#公开代码)公开代码
+## [](#公开代码)公开代码
 
 ### [](#clone已有仓库)clone已有仓库
 
@@ -90,9 +96,9 @@ git status
 5
 git add a.class #将文件加入到暂存区
 git commit -m "提交说明"
-# 提交成功后可以
+## 提交成功后可以
 git log 
-# 查看提交日志
+## 查看提交日志
 
 ### [](#Push)Push
 

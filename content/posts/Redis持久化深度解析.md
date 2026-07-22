@@ -1,12 +1,22 @@
 ---
-title: "Redis 持久化深度解析"
-date: 2026-05-14T19:00:00+08:00
+title: Redis 持久化深度解析
+date: 2026-05-14 19:00:00+08:00
+updated: '2026-05-14T19:00:00+08:00'
+description: Redis 作为内存数据库，数据存储在内存中。为了在服务器重启后能够恢复数据，Redis 提供了两种持久化机制：RDB（Redis DataBase） 和 AOF（Append Only File）。理解持久化原理对于生产环境数据安全至关重要，也是面试高频考点。
+  RDB 持久化会定时将内存中的数据快。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- Redis
+- 持久化
+- RDB
+- AOF
+- 混合持久化
+categories:
+- 数据库与中间件
 draft: false
-categories: ["Redis"]
-tags: ["Redis", "持久化", "RDB", "AOF", "混合持久化", "数据恢复"]
 ---
-
-# Redis 持久化深度解析
 
 ## 一、引言
 

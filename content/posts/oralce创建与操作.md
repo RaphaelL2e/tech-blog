@@ -1,11 +1,17 @@
 ---
-title: "Oralce创建与操作"
-date: 2020-01-01T15:54:18+08:00
+title: Oralce创建与操作
+date: 2020-01-01 15:54:18+08:00
+updated: '2020-01-01T15:54:18+08:00'
+description: CREATE USER username IDENTIFIED BY password [DEFAULT TABLESPACE tablespace] [TEMPORARY TABLESPACE tablespace];
+  CREATE USER MARTIN IDENTIFIED BY martin。
+topic: database-middleware
+level: intermediate
+status: archived
+tags: []
+categories:
+- 数据库与中间件
 draft: false
-categories: ['Oracle']
 ---
-
-# [](#创建新用户)创建新用户
 
 1
 2
@@ -55,7 +61,7 @@ ALTER USER MARTIN IDENTIFIED BY martinpass;
 DROP USER MARTIN CASCADE; 
 CASCADE 级联删除
 
-# [](#SQL-Plus的连接命令)SQL*Plus的连接命令
+## [](#SQL-Plus的连接命令)SQL*Plus的连接命令
 
 ## [](#conn-ect)conn[ect]
 
@@ -89,7 +95,7 @@ CASCADE 级联删除
 （6）设置一页可以容纳的行数
       SQL> SET PAGESIZE 40;
 
-# [](#创建表)创建表
+## [](#创建表)创建表
 
 1
 2

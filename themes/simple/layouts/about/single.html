@@ -1,0 +1,4 @@
+{{ define "main" }}
+<section class="about-hero shell"><div class="avatar" aria-hidden="true">LYF</div><div><p class="eyebrow">ABOUT THE AUTHOR</p><h1>李亚飞</h1><p>后端工程师，长期从事平台型系统、数据闭环平台与 AI 工程化建设。主语言是 Java，同时用 Go 构建 Agent 与工程工具。</p><div class="about-links"><a href="{{ .Site.Params.github }}" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="mailto:{{ .Site.Params.email }}">邮件联系</a><a href="{{ "/index.xml" | relURL }}">RSS</a></div></div></section>
+<section class="about-body shell"><aside><h2>当前关注</h2><ul><li>Agent 企业落地与私有化</li><li>分布式系统可靠性</li><li>Go / Java 工程效能</li><li>AI 辅助研发工作流</li></ul></aside><div class="post-content">{{ .Content }}</div></section>
+{{ end }}

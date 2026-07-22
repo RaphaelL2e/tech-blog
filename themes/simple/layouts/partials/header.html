@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="{{ "/" | relURL }}">
+      <span class="brand-mark" aria-hidden="true">R</span>
+      <span>{{ .Site.Params.brand }}</span>
+    </a>
+    <nav class="desktop-nav" aria-label="主导航">
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "main" . }} aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    <div class="header-actions">
+      <a class="search-trigger" href="{{ "/search/" | relURL }}" aria-label="搜索文章"><span aria-hidden="true">⌕</span><span class="search-label">搜索</span><kbd>/</kbd></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="打开导航"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="移动端导航" hidden>
+    {{ range .Site.Menus.main }}<a href="{{ .URL | relURL }}">{{ .Name }}</a>{{ end }}
+    <a href="{{ "/search/" | relURL }}">搜索</a>
+  </nav>
+</header>

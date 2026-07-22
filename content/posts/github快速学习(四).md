@@ -1,12 +1,18 @@
 ---
-title: "GitHub快速学习(四)"
-date: 2019-06-27T14:37:47+08:00
+title: GitHub快速学习(四)
+date: 2019-06-27 14:37:47+08:00
+updated: '2019-06-27T14:37:47+08:00'
+description: 一个仓库有一条主支master，还可以创建多条分支。各个分支互不干扰，独立开发。 将分支名列出，同时可以确定当前分支（分支 表示当前分支） git checkout -b 创建、切换分支 git ckeckout -b
+  feature-A 创建分支 feature-A 并切换到 feature-A。
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- github
+categories:
+- 计算机基础
 draft: false
-categories: ['GitHub']
-tags: ['github']
 ---
-
-# [](#分支操作)分支操作
 
 ## [](#一、分支)一、分支
 

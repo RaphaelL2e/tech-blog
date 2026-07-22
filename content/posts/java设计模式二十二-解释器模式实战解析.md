@@ -1,9 +1,23 @@
 ---
-title: "Java设计模式（二十二）：解释器模式实战解析"
-date: 2026-04-22T11:20:00+08:00
+title: Java设计模式（二十二）：解释器模式实战解析
+date: 2026-04-22 11:20:00+08:00
+updated: '2026-04-22T11:20:00+08:00'
+description: 解释器模式（Interpreter Pattern）是一种行为型设计模式，它的核心思想是：给定一个语言，定义它的文法的一种表示，并定义一个解释器，这个解释器使用该表示来解释语言中的句子。 核心思想：用类来表示文法规则，通过组合这些类来解释表达式。
+  在许多应用中，我们需要解析特定领域的表达式： SQL。
+topic: java-spring
+series: java-design-patterns
+series_order: 22
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 解释器模式
+- interpreter
+- DSL
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "解释器模式", "interpreter", "DSL", "语法树"]
 ---
 
 ## 前言

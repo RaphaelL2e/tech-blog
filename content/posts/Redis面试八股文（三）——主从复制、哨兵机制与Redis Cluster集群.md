@@ -1,12 +1,21 @@
 ---
-title: "Redis面试八股文（三）——主从复制、哨兵机制与Redis Cluster集群"
-date: 2026-06-22T09:00:00+08:00
+title: Redis面试八股文（三）——主从复制、哨兵机制与Redis Cluster集群
+date: 2026-06-22 09:00:00+08:00
+updated: '2026-06-22T09:00:00+08:00'
+description: 🎯 本文目标：承接上一篇持久化与内存管理的单机视角，本文将上升到分布式架构层面，深入Redis主从复制的全量/部分同步机制、Sentinel哨兵的主观下线与客观下线判定、Redis Cluster的16384槽位分配与MOVED/ASK重定向、Gossip协议节点通信等核心高可用与集群技术，构建完整。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Redis
+- 主从复制
+- 哨兵
+categories:
+- 数据库与中间件
 draft: false
-categories: ["Redis"]
-tags: ["面试", "八股文", "Redis", "主从复制", "哨兵", "Sentinel", "Cluster", "集群", "Gossip", "槽位", "分片", "高可用"]
 ---
-
-# Redis面试八股文（三）——主从复制、哨兵机制与Redis Cluster集群
 
 > 🎯 **本文目标**：承接上一篇持久化与内存管理的单机视角，本文将上升到分布式架构层面，深入Redis主从复制的全量/部分同步机制、Sentinel哨兵的主观下线与客观下线判定、Redis Cluster的16384槽位分配与MOVED/ASK重定向、Gossip协议节点通信等核心高可用与集群技术，构建完整的分布式Redis知识体系。
 

@@ -1,12 +1,19 @@
 ---
-title: "maven学习"
-date: 2019-06-27T14:45:38+08:00
+title: maven学习
+date: 2019-06-27 14:45:38+08:00
+updated: '2019-06-27T14:45:38+08:00'
+description: 当一个项目非常庞大，可以借助maven拆分成一个个工程。 借助maven可以将jar保存在仓库，直接引用就行。不用累赘的一个个导包。 借助maven可以更加便捷快捷，规范化的使用jar包 借助maven所有jar存放在仓库，所有项目使用仓库中的一份jar包
+  借助maven会自动的导入相关依赖包 Ap。
+topic: java-spring
+level: intermediate
+status: archived
+tags:
+- Java
+- maven
+categories:
+- Java 与 Spring
 draft: false
-categories: ['JAVA']
-tags: ['java', 'maven']
 ---
-
-# [](#一、为什么使用maven)一、为什么使用maven?
 
 ### [](#1-一般的一个项目就是一个工程)1.一般的一个项目就是一个工程
 
@@ -28,7 +35,7 @@ tags: ['java', 'maven']
 
 借助maven会自动的导入相关依赖包
 
-# [](#二、什么是maven)二、什么是maven?
+## [](#二、什么是maven)二、什么是maven?
 
 [Apache Maven is a software project management and comprehension tool. Based on the concept of a project object model (POM), Maven can manage a project’s build, reporting and documentation from a central piece of information.](https://maven.apache.org/)
 **是一个软件项目管理和理解工具。基于项目对象模型（POM）的概念，Maven可以从一个中心信息管理项目的构建，报告和文档**。
@@ -103,7 +110,7 @@ clean [清理] ：将之前编译的文件删除
 42
 43
 
-# 四、构建一个maven项目从0到1
+## 四、构建一个maven项目从0到1
 ### 约定目录结构
 根目录:工程名
 |——src： 源码
@@ -240,7 +247,7 @@ classes  generated-sources  Hello-0.0.1-SNAPSHOT.jar  maven-archiver  maven-stat
 10
 11
 
-# 五、仓库&&坐标
+## 五、仓库&&坐标
 - **pom.xml**: **Project Object Model 项目对象模型**。它是maven的核心配置文件，所有的构建的配置都在这里设置。
 - **坐标**： 使用三个向量确定仓库内唯一一个maven工程
 ```xml

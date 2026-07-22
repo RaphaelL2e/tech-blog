@@ -1,12 +1,24 @@
 ---
-title: "数据库面试八股文（七）——Redis核心数据结构与应用场景"
-date: 2026-06-03T11:00:00+08:00
+title: 数据库面试八股文（七）——Redis核心数据结构与应用场景
+date: 2026-06-03 11:00:00+08:00
+updated: '2026-06-03T11:00:00+08:00'
+description: 面试高频考点：Redis五种基本数据结构的底层实现、三种特殊数据结构的应用场景、跳表原理、对象系统。本文从SDS到跳表，从原理到实战，全面覆盖Redis数据结构面试题。 Redis每个键值对都是一个对象： type：对外暴露的类型（STRING,
+  LIST, HASH, SET, ZSET） enc。
+topic: database-middleware
+series: database-interview
+series_order: 7
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- Redis
+- 数据结构
+- String
+categories:
+- 数据库与中间件
 draft: false
-categories: ["数据库"]
-tags: ["面试", "八股文", "Redis", "数据结构", "String", "Hash", "ZSet", "跳表", "应用场景"]
 ---
-
-# 数据库面试八股文（七）——Redis核心数据结构与应用场景
 
 > 面试高频考点：Redis五种基本数据结构的底层实现、三种特殊数据结构的应用场景、跳表原理、对象系统。本文从SDS到跳表，从原理到实战，全面覆盖Redis数据结构面试题。
 

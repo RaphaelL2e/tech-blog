@@ -1,12 +1,22 @@
 ---
-title: "Redis 性能优化与实战"
-date: 2026-05-13T19:00:00+08:00
+title: Redis 性能优化与实战
+date: 2026-05-13 19:00:00+08:00
+updated: '2026-05-13T19:00:00+08:00'
+description: 本系列前面四篇分别探讨了 Redis 的数据结构、持久化与内存管理、主从复制与高可用、缓存问题（穿透/击穿/雪崩）。作为系列最后一篇，本文将聚焦 Redis 的性能优化技巧、Pipeline 与 Lua 脚本、分布式锁实战、慢查询分析等实战内容，帮助你系统掌握
+  Redis 在生产环境中的最佳实践。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- Redis
+- 性能优化
+- Pipeline
+- Lua 脚本
+- 分布式锁
+categories:
+- 数据库与中间件
 draft: false
-categories: ["Redis"]
-tags: ["Redis", "性能优化", "Pipeline", "Lua 脚本", "分布式锁"]
 ---
-
-# Redis 性能优化与实战
 
 ## 一、引言
 
@@ -746,4 +756,4 @@ public class RedisDistributedLock {
 
 ---
 
-*作者：飞哥的 AI 折腾日记*
+*作者：李亚飞 · Raphael Lab*

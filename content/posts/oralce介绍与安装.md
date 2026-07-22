@@ -1,11 +1,17 @@
 ---
-title: "Oralce介绍与安装"
-date: 2020-01-01T15:01:56+08:00
+title: Oralce介绍与安装
+date: 2020-01-01 15:01:56+08:00
+updated: '2020-01-01T15:01:56+08:00'
+description: 按一定的数据模型组织数据形成数据库，并对数据库进行管理 数据、数据库、数据库管理系统的应用加上支撑他们的硬件、软件平台与人员构成的完整的数据库系统 DENY 收回权限，并禁止从其他角色继承许可权限 概念数据模型（Conceptual
+  Data Model），简称概念模型，是面向数据库用户的现实世界的。
+topic: database-middleware
+level: intermediate
+status: archived
+tags: []
+categories:
+- 数据库与中间件
 draft: false
-categories: ['Oracle']
 ---
-
-# [](#基础概念)基础概念
 
 ## [](#数据库系统)数据库系统
 
@@ -57,7 +63,7 @@ categories: ['Oracle']
 
 - DENY 收回权限，并禁止从其他角色继承许可权限
 
-# [](#数据库设计)数据库设计
+## [](#数据库设计)数据库设计
 
 ## [](#概念数据模型)概念数据模型
 
@@ -71,11 +77,11 @@ categories: ['Oracle']
 
 物理数据模型（Physical Data Model，PDM），提供了系统初始设计所需要的基础元素，以及相关元素之间的关系。即用于存储结构和访问机制的更高层描述，描述数据是如何在计算机中存储的，如何表达记录结构、记录顺序和访问路径等信息。
 
-# [](#ORACLE安装)ORACLE安装
+## [](#ORACLE安装)ORACLE安装
 
 待补充～～～
 
-# [](#Oralce数据库基础结构)Oralce数据库基础结构
+## [](#Oralce数据库基础结构)Oralce数据库基础结构
 
 ## [](#内部结构)内部结构
 

@@ -1,9 +1,18 @@
 ---
-title: "Elasticsearch回顾"
-date: 2019-10-17T21:19:34+08:00
+title: Elasticsearch回顾
+date: 2019-10-17 21:19:34+08:00
+updated: '2019-10-17T21:19:34+08:00'
+description: 之前做一个社区得时候，使用过的技术——elasticsearch，最近因为需要做一个全站文章搜索，再次使用到它。由于之前使用，并没有留存笔记，这次使用过程中需要反复查一些资料，所以做一些必要的保留，方便下次使用回顾。
+  elasticsearch官网有详细的安装部署文档，不再赘述。 Cluster 集。
+topic: database-middleware
+level: intermediate
+status: archived
+tags:
+- Java
+- Elasticsearch
+categories:
+- 数据库与中间件
 draft: false
-categories: ['JAVA']
-tags: ['java', 'elasticsearch']
 ---
 
 之前做一个社区得时候，使用过的技术——elasticsearch，最近因为需要做一个全站文章搜索，再次使用到它。由于之前使用，并没有留存笔记，这次使用过程中需要反复查一些资料，所以做一些必要的保留，方便下次使用回顾。

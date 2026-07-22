@@ -1,12 +1,22 @@
 ---
-title: "ZooKeeper 深度解析"
-date: 2026-05-14T11:10:00+08:00
+title: ZooKeeper 深度解析
+date: 2026-05-14 11:10:00+08:00
+updated: '2026-05-14T11:10:00+08:00'
+description: ZooKeeper 是 Apache 基金会下的开源分布式协调服务，是分布式系统的"管家"。无论是 Hadoop、Kafka、Dubbo 还是 HBase，都依赖 ZooKeeper 做服务发现、配置管理、Leader
+  选举等工作。理解 ZooKeeper 是掌握分布式系统的关键一步。 ZooKee。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- ZooKeeper
+- ZAB
+- 分布式协调
+- Watch
+- 分布式锁
+categories:
+- 数据库与中间件
 draft: false
-categories: ["分布式系统"]
-tags: ["ZooKeeper", "ZAB", "分布式协调", "Watch", "分布式锁"]
 ---
-
-# ZooKeeper 深度解析
 
 ## 一、引言
 
@@ -725,4 +735,4 @@ echo envi | nc localhost 2181
 
 ---
 
-*作者：飞哥的 AI 折腾日记*
+*作者：李亚飞 · Raphael Lab*

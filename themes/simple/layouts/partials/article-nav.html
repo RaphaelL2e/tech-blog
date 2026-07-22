@@ -1,0 +1,20 @@
+{{- $current := . -}}
+{{- $prev := false -}}{{- $next := false -}}
+{{- with .Params.series -}}
+  {{- $seriesKey := . -}}
+  {{- $pages := sort (where (where $.Site.RegularPages "Section" "posts") ".Params.series" $seriesKey) ".Params.series_order" -}}
+  {{- range $index, $page := $pages -}}
+    {{- if eq $page.RelPermalink $current.RelPermalink -}}
+      {{- if gt $index 0 }}{{ $prev = index $pages (sub $index 1) }}{{ end -}}
+      {{- if lt (add $index 1) (len $pages) }}{{ $next = index $pages (add $index 1) }}{{ end -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- $prev = .PrevInSection -}}{{- $next = .NextInSection -}}
+{{- end -}}
+{{ if or $prev $next }}
+<nav class="article-nav" aria-label="文章前后导航">
+  {{ with $prev }}<a class="prev" href="{{ .RelPermalink }}"><span>← 上一篇</span><strong>{{ .Title }}</strong></a>{{ else }}<span></span>{{ end }}
+  {{ with $next }}<a class="next" href="{{ .RelPermalink }}"><span>下一篇 →</span><strong>{{ .Title }}</strong></a>{{ end }}
+</nav>
+{{ end }}

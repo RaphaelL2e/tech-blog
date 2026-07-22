@@ -1,16 +1,13 @@
 {{ define "main" }}
-<h1 class="page-title">{{ .Title }}</h1>
-<div class="post-content">
-    {{ .Content }}
-</div>
-{{ range .Pages }}
-<article>
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    <div class="meta">{{ .Date.Format "2006-01-02" }}</div>
-    <div class="summary">
-        {{ if .Params.description }}{{ .Params.description }}{{ else }}{{ .Summary | truncate 120 }}{{ end }}
-        <a href="{{ .RelPermalink }}">阅读更多 →</a>
-    </div>
-</article>
-{{ end }}
+<section class="library-hero shell narrow-hero">
+  <p class="eyebrow">KNOWLEDGE BASE</p>
+  <h1>{{ .Title }}</h1>
+  {{ with .Content }}<div class="lead">{{ . }}</div>{{ end }}
+</section>
+<section class="shell section-block">
+  <div class="post-grid">
+    {{ range .Paginator.Pages }}{{ partial "post-card.html" . }}{{ end }}
+  </div>
+  {{ partial "pagination.html" . }}
+</section>
 {{ end }}

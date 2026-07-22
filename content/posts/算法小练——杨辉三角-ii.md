@@ -1,12 +1,18 @@
 ---
-title: "算法小练——杨辉三角 II"
-date: 2019-11-14T18:39:08+08:00
+title: 算法小练——杨辉三角 II
+date: 2019-11-14 18:39:08+08:00
+updated: '2019-11-14T18:39:08+08:00'
+description: 给定一个非负索引 k，其中 k ≤ 33，返回杨辉三角的第 k 行。 在杨辉三角中，每个数是它左上方和右上方的数的和。 你可以优化你的算法到 O(k) 空间复杂度吗？ class Solution { public List<Integer
+  getRow(int rowIndex) { List<I。
+topic: computer-science
+level: intermediate
+status: archived
+tags:
+- easy
+categories:
+- 计算机基础
 draft: false
-categories: ['Algorithms']
-tags: ['easy']
 ---
-
-# [](#杨辉三角-II)[杨辉三角 II](https://leetcode-cn.com/problems/pascals-triangle-ii/)
 
 ### [](#描述)描述
 

@@ -1,12 +1,24 @@
 ---
-title: "数据库面试八股文（二）——MySQL架构与存储引擎"
-date: 2026-05-24T10:00:00+08:00
+title: 数据库面试八股文（二）——MySQL架构与存储引擎
+date: 2026-05-24 10:00:00+08:00
+updated: '2026-05-24T10:00:00+08:00'
+description: 上一篇文章讲解了数据库的基础概念和范式理论，本文深入MySQL的整体架构和存储引擎，这是理解MySQL一切高级特性的基础。面试中，架构图和InnoDB vs MyISAM的对比是高频考点。 MySQL采用分层架构，从上到下分为四层：
+  连接管理：每个客户端连接在服务器进程中有一个线程 连接池：应用端通。
+topic: database-middleware
+series: database-interview
+series_order: 2
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- MySQL
+- InnoDB
+- MyISAM
+categories:
+- 数据库与中间件
 draft: false
-categories: ["数据库"]
-tags: ["面试", "八股文", "MySQL", "InnoDB", "MyISAM", "存储引擎"]
 ---
-
-# 数据库面试八股文（二）——MySQL架构与存储引擎
 
 ## [](#概述)概述
 
@@ -335,4 +347,3 @@ mysql -u root -p -e "SHOW VARIABLES LIKE 'datadir';"
 下期预告：
 - 数据库面试八股文（三）——MySQL索引原理与优化
 - 数据库面试八股文（四）——MySQL事务与ACID特性
-

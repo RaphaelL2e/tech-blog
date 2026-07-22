@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /wealth/
+Disallow: /search/
+
+Sitemap: {{ "sitemap.xml" | absURL }}

@@ -1,9 +1,22 @@
 ---
-title: "Java设计模式（二）：工厂模式深入详解"
-date: 2026-04-13T14:00:00+08:00
+title: Java设计模式（二）：工厂模式深入详解
+date: 2026-04-13 14:00:00+08:00
+updated: '2026-04-13T14:00:00+08:00'
+description: 上一篇文章我们介绍了单例模式，本期继续 Java 设计模式系列。工厂模式是创建型模式中应用最广泛的模式之一，用于封装对象的创建过程，实现解耦。 核心思想：定义一个创建对象的接口，让子类决定实例化哪一个类。 违反开闭原则（对扩展开放，对修改关闭）
+  优点：封装了对象创建逻辑，客户端与具体产品解耦 缺点：。
+topic: java-spring
+series: java-design-patterns
+series_order: 2
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 工厂模式
+- factory
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "工厂模式", "factory"]
 ---
 
 ## 前言

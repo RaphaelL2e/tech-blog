@@ -1,12 +1,24 @@
 ---
-title: "Spring面试八股文（六）——Spring Event事件驱动与异步任务处理实战"
-date: 2026-07-08T11:00:00+08:00
+title: Spring面试八股文（六）——Spring Event事件驱动与异步任务处理实战
+date: 2026-07-08 11:00:00+08:00
+updated: '2026-07-08T11:00:00+08:00'
+description: 🎯 本文目标：在前五篇的基础上，深入解析Spring框架中的事件驱动编程模型——ApplicationEvent机制、@EventListener注解、事务事件监听、@Async异步执行原理、TaskExecutor线程池体系、@Scheduled定时任务、Spring
+  Retry重试机制，构建完整。
+topic: java-spring
+series: spring-interview
+series_order: 6
+level: intermediate
+status: maintained
+tags:
+- Spring
+- Spring Event
+- ApplicationEvent
+- EventListener
+- Async
+categories:
+- Java 与 Spring
 draft: false
-categories: ["spring"]
-tags: ["Spring", "Spring Event", "ApplicationEvent", "EventListener", "Async", "CompletableFuture", "Scheduled", "TaskExecutor", "Spring Retry", "面试", "八股文"]
 ---
-
-# Spring面试八股文（六）——Spring Event事件驱动与异步任务处理实战
 
 > 🎯 **本文目标**：在前五篇的基础上，深入解析Spring框架中的事件驱动编程模型——ApplicationEvent机制、@EventListener注解、事务事件监听、@Async异步执行原理、TaskExecutor线程池体系、@Scheduled定时任务、Spring Retry重试机制，构建完整的Spring异步与事件处理知识体系。
 

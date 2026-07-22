@@ -1,12 +1,22 @@
 ---
-title: "JVM 调优实战：从 OOM 到 GC 优化"
-date: 2026-05-11T14:20:00+08:00
+title: JVM 调优实战：从 OOM 到 GC 优化
+date: 2026-05-11 14:20:00+08:00
+updated: '2026-05-11T14:20:00+08:00'
+description: 面试高频问题：如何排查 OOM？常用 JVM 参数有哪些？G1 和 ZGC 怎么选型？ JVM 调优是 Java 高级工程师的必备技能。一个未经调优的 JVM 应用，在生产环境中可能面临 OOM、频繁 GC、停顿过长等问题。本文将从问题排查到参数调优，全面解析
+  JVM 调优实战。 原因：GC 时间超。
+topic: java-spring
+level: intermediate
+status: maintained
+tags:
+- JVM
+- 调优
+- OOM
+- GC
+- G1
+categories:
+- Java 与 Spring
 draft: false
-categories: ["java"]
-tags: ["jvm", "调优", "OOM", "GC", "G1", "ZGC"]
 ---
-
-# JVM 调优实战：从 OOM 到 GC 优化
 
 > 面试高频问题：如何排查 OOM？常用 JVM 参数有哪些？G1 和 ZGC 怎么选型？
 

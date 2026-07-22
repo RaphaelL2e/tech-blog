@@ -1,9 +1,23 @@
 ---
-title: "Java设计模式（四）：原型模式与对象克隆"
-date: 2026-04-13T14:30:00+08:00
+title: Java设计模式（四）：原型模式与对象克隆
+date: 2026-04-13 14:30:00+08:00
+updated: '2026-04-13T14:30:00+08:00'
+description: 前三篇文章我们介绍了单例模式、工厂模式和建造者模式，今天继续 Java 设计模式系列。原型模式（Prototype Pattern） 是创建型模式中最直接的一种，通过复制已有对象来创建新对象。 核心思想：通过复制现有对象来创建新对象，而无需了解其具体类型。
+  如果对象创建复杂（如数据库查询、文件读取）。
+topic: java-spring
+series: java-design-patterns
+series_order: 4
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 原型模式
+- prototype
+- clone
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "原型模式", "prototype", "clone"]
 ---
 
 ## 前言

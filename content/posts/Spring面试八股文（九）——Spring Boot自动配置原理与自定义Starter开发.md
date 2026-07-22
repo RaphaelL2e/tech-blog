@@ -1,14 +1,30 @@
 ---
-title: "Spring面试八股文（九）——Spring Boot自动配置原理与自定义Starter开发"
-date: 2026-07-11T10:00:00+08:00
+title: Spring面试八股文（九）——Spring Boot自动配置原理与自定义Starter开发
+date: 2026-07-11 10:00:00+08:00
+updated: '2026-07-11T10:00:00+08:00'
+description: 深入解析Spring Boot自动配置的核心原理：从@EnableAutoConfiguration到底层SpringFactoriesLoader、AutoConfigurationImportSelector的完整链路，以及如何开发企业级自定义Starter。结合高频面试题和源码剖析。
+topic: java-spring
+series: spring-interview
+series_order: 9
+level: intermediate
+status: maintained
+tags:
+- Java
+- Spring
+- Spring Boot
+- 面试八股文
+categories:
+- Java 与 Spring
 draft: false
-tags: ["Java", "Spring", "Spring Boot", "面试八股文"]
-categories: ["Java"]
-keywords: ["Spring Boot", "自动配置", "@EnableAutoConfiguration", "SpringFactoriesLoader", "AutoConfigurationImportSelector", "自定义Starter", "条件装配"]
-description: "深入解析Spring Boot自动配置的核心原理：从@EnableAutoConfiguration到底层SpringFactoriesLoader、AutoConfigurationImportSelector的完整链路，以及如何开发企业级自定义Starter。结合高频面试题和源码剖析。"
+keywords:
+- Spring Boot
+- 自动配置
+- '@EnableAutoConfiguration'
+- SpringFactoriesLoader
+- AutoConfigurationImportSelector
+- 自定义Starter
+- 条件装配
 ---
-
-# Spring面试八股文（九）——Spring Boot自动配置原理与自定义Starter开发
 
 ## 一、自动配置的核心意义
 

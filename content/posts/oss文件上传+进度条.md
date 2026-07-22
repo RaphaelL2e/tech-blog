@@ -1,12 +1,19 @@
 ---
-title: "OSS文件上传+进度条"
-date: 2019-10-23T20:13:09+08:00
+title: OSS文件上传+进度条
+date: 2019-10-23 20:13:09+08:00
+updated: '2019-10-23T20:13:09+08:00'
+description: package com..website.util; import com.aliyun.oss.ClientException; import com.aliyun.oss.OSSClient; import com.aliyun.oss.OSSException;
+  import com.aliy。
+topic: java-spring
+level: intermediate
+status: archived
+tags:
+- Java
+- oss
+categories:
+- Java 与 Spring
 draft: false
-categories: ['JAVA']
-tags: ['java', 'oss']
 ---
-
-# [](#文件上传——ossutil-putObject)文件上传——ossutil.putObject
 
 ## [](#工具类)工具类
 

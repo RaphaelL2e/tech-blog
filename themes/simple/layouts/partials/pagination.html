@@ -1,0 +1,7 @@
+{{ if gt .Paginator.TotalPages 1 }}
+<nav class="pagination" aria-label="分页">
+  {{ with .Paginator.Prev }}<a href="{{ .URL }}" rel="prev">← 上一页</a>{{ else }}<span aria-disabled="true">← 上一页</span>{{ end }}
+  <span>第 {{ .Paginator.PageNumber }} / {{ .Paginator.TotalPages }} 页</span>
+  {{ with .Paginator.Next }}<a href="{{ .URL }}" rel="next">下一页 →</a>{{ else }}<span aria-disabled="true">下一页 →</span>{{ end }}
+</nav>
+{{ end }}

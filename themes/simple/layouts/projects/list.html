@@ -1,0 +1,4 @@
+{{ define "main" }}
+<section class="library-hero shell"><p class="eyebrow">PROJECTS & CASE STUDIES</p><h1>工程项目</h1><p class="lead">不只列举技术栈，而是记录问题、约束、关键决策与交付结果。</p></section>
+<section class="shell section-block"><div class="project-grid">{{ range .Pages.ByWeight }}<article><p class="eyebrow">{{ .Params.stack }}</p><h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2><p>{{ .Params.description }}</p><div>{{ range .Params.tags }}<span>{{ . }}</span>{{ end }}</div><a href="{{ .RelPermalink }}">阅读案例 →</a></article>{{ end }}</div></section>
+{{ end }}

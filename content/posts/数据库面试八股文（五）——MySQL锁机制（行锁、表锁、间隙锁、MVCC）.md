@@ -1,12 +1,24 @@
 ---
-title: "数据库面试八股文（五）——MySQL锁机制（行锁、表锁、间隙锁、MVCC）"
-date: 2026-06-02T23:00:00+08:00
+title: 数据库面试八股文（五）——MySQL锁机制（行锁、表锁、间隙锁、MVCC）
+date: 2026-06-02 23:00:00+08:00
+updated: '2026-06-02T23:00:00+08:00'
+description: 锁是数据库实现隔离性和一致性的核心机制。上一篇文章我们学习了事务的ACID特性和隔离级别，本文将深入讲解MySQL/InnoDB的各种锁类型、加锁规则、死锁处理，以及锁与MVCC的协作关系。锁机制是面试中区分度高、考察深入的重点。
+  全局锁对整个数据库实例加锁，让数据库处于只读状态。 使用场景：全库逻。
+topic: database-middleware
+series: database-interview
+series_order: 5
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- MySQL
+- 锁
+- 行锁
+categories:
+- 数据库与中间件
 draft: false
-categories: ["数据库"]
-tags: ["面试", "八股文", "MySQL", "锁", "行锁", "表锁", "间隙锁", "死锁", "MVCC"]
 ---
-
-# 数据库面试八股文（五）——MySQL锁机制（行锁、表锁、间隙锁、MVCC）
 
 ## 概述
 

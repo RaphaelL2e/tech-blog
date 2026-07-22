@@ -1,9 +1,22 @@
 ---
-title: "Java设计模式（八）：策略模式深度实践"
-date: 2026-04-20T11:00:00+08:00
+title: Java设计模式（八）：策略模式深度实践
+date: 2026-04-20 11:00:00+08:00
+updated: '2026-04-20T11:00:00+08:00'
+description: 前七篇文章我们介绍了创建型模式和部分结构型/行为型模式。今天继续 Java 设计模式系列，策略模式（Strategy Pattern） 是行为型模式中的核心成员，完美诠释了"面向接口编程"和"开闭原则"。 核心思想：定义一系列算法，把它们一个个封装起来，并且使它们可以相互替换。
+  代码膨胀：每增加一种。
+topic: java-spring
+series: java-design-patterns
+series_order: 8
+level: intermediate
+status: maintained
+tags:
+- Java
+- 设计模式
+- 策略模式
+- strategy
+categories:
+- Java 与 Spring
 draft: false
-categories: ["JAVA"]
-tags: ["java", "设计模式", "策略模式", "strategy"]
 ---
 
 ## 前言

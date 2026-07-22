@@ -1,9 +1,20 @@
 ---
-title: "AgentWatch：开源 AI Agent 监控平台"
-date: 2026-04-26T15:00:00+08:00
+title: AgentWatch：开源 AI Agent 监控平台
+date: 2026-04-26 15:00:00+08:00
+updated: '2026-04-26T15:00:00+08:00'
+description: 想象一下：你开发了一个 AI Agent，让它帮你处理客户咨询、分析数据、甚至写代码。但运行一段时间后，你发现： 成本失控：不知道 Agent 每次调用消耗了多少 Token，月底收到一张巨额 API 费单 质量参差不齐：有时
+  Agent 输出很棒，有时却敷衍了事，但你不知道怎么检测 安全隐患：Ag。
+topic: ai-engineering
+level: intermediate
+status: maintained
+tags:
+- AgentWatch
+- AI Agent
+- 监控
+- 开源
+categories:
+- AI 工程化
 draft: false
-categories: ["创业", "AI"]
-tags: ["AgentWatch", "AI Agent", "监控", "开源"]
 ---
 
 ## 为什么需要 Agent 监控？

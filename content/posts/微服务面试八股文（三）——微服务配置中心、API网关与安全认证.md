@@ -1,12 +1,24 @@
 ---
-title: "微服务面试八股文（三）——微服务配置中心、API网关与安全认证"
-date: 2026-07-05T11:00:00+08:00
+title: 微服务面试八股文（三）——微服务配置中心、API网关与安全认证
+date: 2026-07-05 11:00:00+08:00
+updated: '2026-07-05T11:00:00+08:00'
+description: 🎯 本文目标：承接前两篇的微服务架构基础与服务治理，深入微服务的配置与安全两大基础设施——Nacos配置中心的灰度发布与配置回滚机制、Spring Cloud Gateway的Predicate断言工厂与Filter过滤器链的实战开发、JWT
+  vs OAuth2 vs SSO三种认证方案的对比与选型。
+topic: distributed-systems
+series: microservices-interview
+series_order: 3
+level: intermediate
+status: maintained
+tags:
+- 面试
+- 八股文
+- 微服务
+- Nacos
+- 配置中心
+categories:
+- 分布式与微服务
 draft: false
-categories: ["微服务", "Spring Cloud"]
-tags: ["面试", "八股文", "微服务", "Nacos", "配置中心", "灰度发布", "配置回滚", "Spring Cloud Gateway", "Predicate", "Filter", "JWT", "OAuth2", "SSO", "分布式Session", "RBAC", "ABAC", "API鉴权"]
 ---
-
-# 微服务面试八股文（三）——微服务配置中心、API网关与安全认证
 
 > 🎯 **本文目标**：承接前两篇的微服务架构基础与服务治理，深入微服务的配置与安全两大基础设施——Nacos配置中心的灰度发布与配置回滚机制、Spring Cloud Gateway的Predicate断言工厂与Filter过滤器链的实战开发、JWT vs OAuth2 vs SSO三种认证方案的对比与选型、分布式Session的一致性解决方案（Redis集中存储 vs Token无状态 vs Sticky Session）、以及API鉴权的RBAC与ABAC模型对比与Spring Security落地实战，构建微服务配置与安全的完整能力体系。
 

@@ -1,13 +1,22 @@
 ---
-title: "MySQL 事务与隔离级别深度解析"
-date: 2026-05-12T17:25:00+08:00
+title: MySQL 事务与隔离级别深度解析
+date: 2026-05-12 17:25:00+08:00
+updated: '2026-05-12T17:25:00+08:00'
+description: 面试高频问题：MySQL 的事务隔离级别有哪些？脏读、不可重复读、幻读是什么？InnoDB 如何解决幻读？ 事务是数据库的核心特性之一，用于保证数据的一致性和完整性。MySQL 通过事务隔离级别来平衡并发性能和数据一致性，不同的隔离级别会出现不同的问题，需要根据业务场景选择。
+  事务（Transact。
+topic: database-middleware
+level: intermediate
+status: maintained
+tags:
+- MySQL
+- transaction
+- acid
+- mvcc
+- isolation-level
+categories:
+- 数据库与中间件
 draft: false
-categories: ["mysql"]
-tags: ["mysql", "transaction", "acid", "mvcc", "isolation-level"]
 ---
-
-
-# MySQL 事务与隔离级别深度解析
 
 > 面试高频问题：MySQL 的事务隔离级别有哪些？脏读、不可重复读、幻读是什么？InnoDB 如何解决幻读？
 
