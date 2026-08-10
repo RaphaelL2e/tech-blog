@@ -14,7 +14,6 @@ tags:
 - JVM
 - GC
 - 垃圾收集器
-- 性能调优
 categories:
 - Java 与 Spring
 draft: false
