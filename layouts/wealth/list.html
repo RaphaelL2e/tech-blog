@@ -28,9 +28,12 @@
         <div class="wealth-dashboard-header">
             <div>
                 <p class="wealth-kicker">统计时间</p>
-                <h2 id="wealth-snapshot-date">-</h2>
+                <h2 id="wealth-snapshot-date" class="wealth-sensitive">-</h2>
             </div>
-            <button class="wealth-secondary-button" id="wealth-lock-button" type="button">锁定</button>
+            <div class="wealth-dashboard-actions">
+                <button class="wealth-secondary-button" id="wealth-privacy-button" type="button" aria-pressed="false">隐藏数据</button>
+                <button class="wealth-secondary-button" id="wealth-lock-button" type="button">锁定</button>
+            </div>
         </div>
 
         <div class="wealth-metrics" id="wealth-metrics"></div>
@@ -43,7 +46,7 @@
             <section class="wealth-panel">
                 <h3>风险资产敞口</h3>
                 <div id="wealth-risk-exposure" class="wealth-bars"></div>
-                <p id="wealth-risk-conclusion" class="wealth-panel-note"></p>
+                <p id="wealth-risk-conclusion" class="wealth-panel-note wealth-sensitive"></p>
             </section>
         </div>
 

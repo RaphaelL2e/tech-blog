@@ -7,6 +7,7 @@
     const status = document.getElementById("wealth-status");
     const dashboard = document.getElementById("wealth-dashboard");
     const lockButton = document.getElementById("wealth-lock-button");
+    const privacyButton = document.getElementById("wealth-privacy-button");
     const lockedView = document.querySelector("[data-view='locked']");
     const payloadUrl = app.dataset.payloadUrl || "wealth-data.enc.json";
 
@@ -140,6 +141,7 @@
             viewBox: `0 0 ${width} ${height}`,
             role: "img",
             "aria-label": "每周财富变化",
+            class: "wealth-sensitive-visual",
         });
         const defs = svgNode("defs");
         const clip = svgNode("clipPath", { id: "wealth-trend-clip" });
@@ -187,7 +189,7 @@
         });
 
         const tooltip = document.createElement("div");
-        tooltip.className = "wealth-trend-tooltip";
+        tooltip.className = "wealth-trend-tooltip wealth-sensitive-visual";
         tooltip.hidden = true;
 
         const tooltipColor = (label, color) => {
@@ -440,7 +442,7 @@
             const item = document.createElement("div");
             item.className = "wealth-metric";
             item.append(text("span", label));
-            item.append(text("strong", formatMoney(value)));
+            item.append(text("strong", formatMoney(value), "wealth-sensitive"));
             metrics.append(item);
         });
     };
@@ -454,12 +456,12 @@
             const ratio = denominatorKey ? row[denominatorKey] : row.ratio;
             head.className = "wealth-bar-head";
             head.append(text("span", row.name));
-            head.append(text("strong", `${formatMoney(row.amount)} · ${formatPercent(ratio)}`));
+            head.append(text("strong", `${formatMoney(row.amount)} · ${formatPercent(ratio)}`, "wealth-sensitive"));
 
             const track = document.createElement("div");
             const fill = document.createElement("div");
             track.className = "wealth-bar-track";
-            fill.className = "wealth-bar-fill";
+            fill.className = "wealth-bar-fill wealth-sensitive-visual";
             fill.style.width = `${Math.min(Math.max((ratio || 0) * 100, 0), 100)}%`;
             track.append(fill);
 
@@ -488,7 +490,7 @@
         const tbody = document.createElement("tbody");
         rows.forEach((row) => {
             const tr = document.createElement("tr");
-            columns.forEach(([key]) => tr.append(text("td", row[key] || "-")));
+            columns.forEach(([key]) => tr.append(text("td", row[key] || "-", "wealth-sensitive")));
             tbody.append(tr);
         });
         table.append(thead, tbody);
@@ -518,21 +520,21 @@
         ].forEach(([label, value]) => {
             const row = document.createElement("div");
             row.className = "wealth-score-card";
-            row.append(text("strong", `${label}: ${value}`));
+            row.append(text("strong", `${label}: ${value}`, "wealth-sensitive"));
             cashContainer.append(row);
         });
-        if (cash.suggestion) cashContainer.append(text("p", cash.suggestion));
+        if (cash.suggestion) cashContainer.append(text("p", cash.suggestion, "wealth-sensitive"));
 
         (analysis.riskExposure?.rows || []).forEach((row) => {
             const item = document.createElement("div");
             const head = document.createElement("div");
             head.className = "wealth-bar-head";
             head.append(text("span", row.name));
-            head.append(text("strong", `${formatMoney2(row.amount)} · ${formatPercent(row.ratio)}`));
+            head.append(text("strong", `${formatMoney2(row.amount)} · ${formatPercent(row.ratio)}`, "wealth-sensitive"));
             const track = document.createElement("div");
             const fill = document.createElement("div");
             track.className = "wealth-bar-track";
-            fill.className = "wealth-bar-fill";
+            fill.className = "wealth-bar-fill wealth-sensitive-visual";
             fill.style.width = `${Math.min(Math.max((row.ratio || 0) * 100, 0), 100)}%`;
             track.append(fill);
             item.append(head, track, text("p", row.components || ""));
@@ -543,7 +545,7 @@
         (analysis.systemConclusions || []).slice(0, 3).forEach((item) => {
             const row = document.createElement("div");
             row.className = "wealth-advice-item";
-            row.append(text("p", item));
+            row.append(text("p", item, "wealth-sensitive"));
             systemConclusion.append(row);
         });
         renderTable(
@@ -565,8 +567,8 @@
         items.forEach((item) => {
             const row = document.createElement("div");
             row.className = "wealth-advice-item";
-            row.append(text("strong", `${item.priority} | ${item.action}: ${item.recommendation}`));
-            row.append(text("p", item.reason));
+            row.append(text("strong", `${item.priority} | ${item.action}: ${item.recommendation}`, "wealth-sensitive"));
+            row.append(text("p", item.reason, "wealth-sensitive"));
             container.append(row);
         });
     };
@@ -580,8 +582,8 @@
         ].forEach(([label, score, note]) => {
             const row = document.createElement("div");
             row.className = "wealth-score-card";
-            row.append(text("strong", `${label}: ${score}`));
-            row.append(text("p", note));
+            row.append(text("strong", `${label}: ${score}`, "wealth-sensitive"));
+            row.append(text("p", note, "wealth-sensitive"));
             container.append(row);
         });
     };
@@ -608,7 +610,7 @@
             const card = document.createElement("div");
             card.className = "wealth-dca-card";
             card.append(text("span", label));
-            card.append(text("strong", value));
+            card.append(text("strong", value, "wealth-sensitive"));
             summary.append(card);
         });
 
@@ -632,7 +634,7 @@
             const tr = document.createElement("tr");
             columns.forEach(([key]) => {
                 const value = key.endsWith("Amount") ? formatMoney(row[key]) : row[key];
-                tr.append(text("td", value || "-"));
+                tr.append(text("td", value || "-", "wealth-sensitive"));
             });
             tbody.append(tr);
         });
@@ -642,7 +644,13 @@
     const renderNextActions = (actions) => {
         const list = document.getElementById("wealth-next-actions");
         clearNode(list);
-        actions.forEach((item) => list.append(text("li", item)));
+        actions.forEach((item) => list.append(text("li", item, "wealth-sensitive")));
+    };
+
+    const setPrivacyMasked = (masked) => {
+        dashboard.classList.toggle("is-masked", masked);
+        privacyButton.setAttribute("aria-pressed", String(masked));
+        privacyButton.textContent = masked ? "显示数据" : "隐藏数据";
     };
 
     const renderDashboard = (data) => {
@@ -656,6 +664,7 @@
         renderScores(data.summary);
         renderDca(data.dca);
         renderNextActions(data.summary.nextActions || []);
+        setPrivacyMasked(false);
         lockedView.hidden = true;
         dashboard.hidden = false;
     };
@@ -686,7 +695,12 @@
         }
     });
 
+    privacyButton.addEventListener("click", () => {
+        setPrivacyMasked(!dashboard.classList.contains("is-masked"));
+    });
+
     lockButton.addEventListener("click", () => {
+        setPrivacyMasked(false);
         dashboard.hidden = true;
         lockedView.hidden = false;
         setStatus("已锁定。密码不会发送到服务器，也不会写入本地存储。");

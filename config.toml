@@ -56,6 +56,7 @@ summaryLength = 52
   [markup.highlight]
     noClasses = false
     lineNos = false
+    guessSyntax = true
   [markup.tableOfContents]
     startLevel = 2
     endLevel = 3
