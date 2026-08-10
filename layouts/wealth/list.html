@@ -1,5 +1,5 @@
 {{ define "main" }}
-<link rel="stylesheet" href="{{ "wealth/wealth.css" | relURL }}">
+<link rel="stylesheet" href="{{ "wealth/wealth.css" | relURL }}?v=20260810-privacy">
 
 <section class="wealth-shell" id="wealth-app" data-payload-url="{{ "wealth/wealth-data.enc.json" | relURL }}">
     <header class="wealth-hero">
@@ -103,5 +103,5 @@
     </section>
 </section>
 
-<script src="{{ "wealth/wealth.js" | relURL }}" defer></script>
+<script src="{{ "wealth/wealth.js" | relURL }}?v=20260810-privacy" defer></script>
 {{ end }}
