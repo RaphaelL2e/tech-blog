@@ -15,7 +15,6 @@ tags:
 - Agent
 - 多Agent协作
 - Agent工程化
-- 面试冲刺
 categories:
 - AI 工程化
 ---
@@ -612,7 +611,7 @@ class TenantCostManager:
 
 ## 下一期预告
 
-本系列到此完结。感谢一路陪伴！后续将开启新的技术系列，敬请关注「Raphael Tech Blog」的更新。
+本系列到此完结。感谢一路陪伴！后续将开启新的技术系列，敬请关注「Raphael Lab」的更新。
 
 > **系列导航**
 > - [（一）大模型基础与Transformer架构]({{< ref "posts/AI大模型面试八股文（一）——大模型基础与Transformer架构.md" >}})
@@ -628,4 +627,4 @@ class TenantCostManager:
 
 ---
 
-*如果本文对你有帮助，欢迎关注并收藏「Raphael Tech Blog」，我会持续输出高质量的技术博客。*
+*如果本文对你有帮助，欢迎关注并收藏「Raphael Lab」，我会持续输出高质量的技术博客。*

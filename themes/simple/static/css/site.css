@@ -259,6 +259,8 @@ kbd { border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; col
 .site-footer p { margin: .3rem 0 0; }
 .footer-links { display: flex; gap: 1.2rem; align-items: start; }
 .footer-links a { color: var(--muted); text-decoration: none; }
+.footer-links .private-tool-link { color: var(--text-soft); }
+.footer-links .private-tool-link:hover { color: var(--accent); }
 .copyright { grid-column: 1 / -1; }
 
 @media (max-width: 1023px) {

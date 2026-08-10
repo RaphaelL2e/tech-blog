@@ -11,14 +11,10 @@ level: intermediate
 status: maintained
 tags:
 - 面试
-- 八股文
 - Kubernetes
-- K8s
-- 云原生
 - 高可用
 - 灾备
 - etcd
-- 多集群
 categories:
 - 分布式与微服务
 draft: false

@@ -15,7 +15,6 @@ tags:
 - RAG
 - 知识工程
 - GraphRAG
-- Agentic RAG
 categories:
 - AI 工程化
 ---
@@ -976,4 +975,4 @@ AI大模型面试第十期将聚焦 **AI Agent工程化实战与面试冲刺**�
 
 ---
 
-*如果本文对你有帮助，欢迎关注并收藏「Raphael Tech Blog」，我会持续输出高质量的技术博客。*
+*如果本文对你有帮助，欢迎关注并收藏「Raphael Lab」，我会持续输出高质量的技术博客。*

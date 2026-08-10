@@ -4,8 +4,6 @@ date: 2026-07-25 10:00:00+08:00
 updated: '2026-07-25T10:00:00+08:00'
 description: 面试高频问题：如何设计一个高并发系统？线程池参数如何调优？synchronized 和 ReentrantLock 怎么选？本文整合 Java 并发编程前五篇的全部核心知识点，以场景化面试题的形式，系统梳理线程安全、并发工具、性能调优等高频考点，带你完成从"懂原理"到"能实战"的跨越。
 topic: java-spring
-series: system-design
-series_order: 6
 level: intermediate
 status: maintained
 tags:

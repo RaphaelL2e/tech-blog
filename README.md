@@ -20,7 +20,7 @@ hugo
 
 ## 财富系统加密导出
 
-`/wealth/` 页面只加载加密后的静态 JSON，解密在浏览器本地完成。密码不要提交到 Git，也不要写进 GitHub Actions。
+`/wealth/` 页面只加载加密后的静态 JSON，解密在浏览器本地完成。页面通过全站页脚的“财富系统”私有工具入口访问，不进入公开主导航，也不会被搜索引擎索引。密码不要提交到 Git，也不要写进 GitHub Actions。
 
 ```bash
 # 交互输入密码并生成 static/wealth/wealth-data.enc.json

@@ -14,7 +14,6 @@ tags:
 - JVM
 - 内存模型
 - GC算法
-- 垃圾回收
 categories:
 - Java 与 Spring
 draft: false
@@ -562,6 +561,6 @@ JVM内存模型与GC算法
 
 ---
 
-*本文是「JVM调优面试八股文」系列的第一篇。如果你觉得有帮助，欢迎关注「Raphael Tech Blog」获取后续更新。*
+*本文是「JVM调优面试八股文」系列的第一篇。如果你觉得有帮助，欢迎关注「Raphael Lab」获取后续更新。*
 
 *作者：李亚飞 · Raphael Lab*

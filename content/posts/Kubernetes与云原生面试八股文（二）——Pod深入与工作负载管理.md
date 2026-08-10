@@ -10,10 +10,8 @@ level: intermediate
 status: maintained
 tags:
 - 面试
-- 八股文
 - Kubernetes
 - K8s
-- 云原生
 - Pod
 - Workload
 categories:

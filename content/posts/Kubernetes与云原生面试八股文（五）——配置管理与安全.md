@@ -10,15 +10,10 @@ level: intermediate
 status: maintained
 tags:
 - 面试
-- 八股文
 - Kubernetes
-- K8s
-- 云原生
 - ConfigMap
 - Secret
 - RBAC
-- Security
-- NetworkPolicy
 categories:
 - 分布式与微服务
 draft: false

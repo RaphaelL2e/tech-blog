@@ -30,8 +30,8 @@ EXPECTED_SERIES_COUNTS = {
     "distributed-systems-interview": 10,
     "microservices-interview": 10,
     "database-interview": 12,
-    "system-design": 9,
-    "ai-llm-interview": 6,
+    "system-design": 10,
+    "ai-llm-interview": 10,
     "computer-network": 10,
     "operating-system": 7,
 }
@@ -275,6 +275,19 @@ def main() -> int:
     robots = (PUBLIC / "robots.txt").read_text(encoding="utf-8") if (PUBLIC / "robots.txt").exists() else ""
     if "Disallow: /wealth/" not in robots or "Sitemap:" not in robots:
         errors.append("robots.txt is missing private route exclusion or sitemap declaration")
+
+    wealth_page = PUBLIC / "wealth" / "index.html"
+    wealth_payload = PUBLIC / "wealth" / "wealth-data.enc.json"
+    if not wealth_page.exists():
+        errors.append("private wealth dashboard page is missing from the build")
+    else:
+        wealth_html = wealth_page.read_text(encoding="utf-8", errors="ignore")
+        if not re.search(r'id=(?:"wealth-app"|wealth-app)', wealth_html):
+            errors.append("private wealth dashboard shell is missing from the build")
+        if 'href="/wealth/"' not in wealth_html and "href=/wealth/" not in wealth_html:
+            errors.append("private wealth dashboard has no recoverable footer entry")
+    if not wealth_payload.exists():
+        errors.append("encrypted wealth payload is missing from the build")
 
     print("V2 build audit")
     for fact in facts:

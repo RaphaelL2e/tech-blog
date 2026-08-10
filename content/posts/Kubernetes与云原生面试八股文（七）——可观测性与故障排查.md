@@ -11,17 +11,10 @@ level: intermediate
 status: maintained
 tags:
 - 面试
-- 八股文
 - Kubernetes
-- K8s
-- 云原生
 - Prometheus
 - Grafana
-- Loki
-- Jaeger
 - 可观测性
-- 故障排查
-- OAM
 categories:
 - 分布式与微服务
 draft: false
