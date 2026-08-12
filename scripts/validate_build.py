@@ -117,7 +117,7 @@ def main() -> int:
     required = [
         "index.html", "posts/index.html", "series/index.html", "projects/index.html",
         "about/index.html", "search/index.html", "search-index.json", "404.html",
-        "robots.txt", "sitemap.xml", "index.xml", "css/site.css", "js/site.js",
+        "content-manifest.json", "robots.txt", "sitemap.xml", "index.xml", "css/site.css", "js/site.js",
     ]
     for relative in required:
         if not (PUBLIC / relative).is_file():
@@ -256,6 +256,26 @@ def main() -> int:
             facts.append(f"search index: {len(search_index)} articles")
         except Exception as exc:
             errors.append(f"search index is invalid JSON: {exc}")
+
+    manifest_path = PUBLIC / "content-manifest.json"
+    if manifest_path.exists():
+        try:
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            if len(manifest) != len(content_paths):
+                errors.append(f"content manifest has {len(manifest)} items; expected {len(content_paths)}")
+            keys = [item.get("contentKey") for item in manifest]
+            if any(not key for key in keys):
+                errors.append("content manifest contains an item without contentKey")
+            if len(keys) != len(set(keys)):
+                errors.append("content manifest contains duplicate contentKey values")
+            for item in manifest:
+                for field in ("contentKey", "title", "url", "description", "topic", "date", "visibility"):
+                    if not item.get(field):
+                        errors.append(f"content manifest item {item.get('title', '<unknown>')} missing {field}")
+                        break
+            facts.append(f"content manifest: {len(manifest)} articles")
+        except Exception as exc:
+            errors.append(f"content manifest is invalid JSON: {exc}")
 
     source_js = ROOT / "themes" / "simple" / "static" / "js" / "site.js"
     if source_js.exists() and "encodeURI(item.url)" in source_js.read_text(encoding="utf-8"):

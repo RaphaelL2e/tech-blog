@@ -1,0 +1,20 @@
+[
+{{- $pages := where .Site.RegularPages "Section" "posts" -}}
+{{- range $index, $page := $pages -}}
+{{- if $index }},{{ end -}}
+{{- $contentKey := $page.Params.content_key | default (printf "post:%s" $page.RelPermalink | md5) -}}
+{{- dict
+  "contentKey" $contentKey
+  "title" $page.Title
+  "url" $page.RelPermalink
+  "description" ($page.Params.description | default $page.Summary | plainify | htmlUnescape)
+  "topic" ($page.Params.topic | default "archive")
+  "series" ($page.Params.series | default "")
+  "seriesOrder" ($page.Params.series_order | default 0)
+  "date" ($page.Date.Format "2006-01-02")
+  "updatedAt" (($page.Lastmod | default $page.Date).Format "2006-01-02")
+  "readingTime" $page.ReadingTime
+  "visibility" ($page.Params.visibility | default "public")
+  | jsonify -}}
+{{- end -}}
+]

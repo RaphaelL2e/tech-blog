@@ -16,6 +16,7 @@ summaryLength = 52
   github = 'https://github.com/RaphaelL2e'
   email = 'liyafei.work@foxmail.com'
   defaultImage = '/images/og-default.png'
+  platformAPI = ''
 
 [menu]
   [[menu.main]]
@@ -40,12 +41,18 @@ summaryLength = 52
     weight = 50
 
 [outputs]
-  home = ['HTML', 'RSS', 'JSON']
+  home = ['HTML', 'RSS', 'JSON', 'MANIFEST']
   section = ['HTML', 'RSS']
 
 [outputFormats.JSON]
   mediaType = 'application/json'
   baseName = 'search-index'
+  isPlainText = true
+  notAlternative = true
+
+[outputFormats.MANIFEST]
+  mediaType = 'application/json'
+  baseName = 'content-manifest'
   isPlainText = true
   notAlternative = true
 

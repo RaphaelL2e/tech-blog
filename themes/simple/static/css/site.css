@@ -242,6 +242,17 @@ kbd { border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; col
 .related-grid span { color: var(--faint); font-size: .68rem; }
 .related-grid strong { display: block; margin: .5rem 0; font-size: .83rem; line-height: 1.45; }
 .related-grid p { margin: 0; color: var(--faint); font-size: .7rem; }
+.article-interaction { display: flex; justify-content: space-between; gap: 1rem; align-items: center; margin-top: 28px; padding: 18px 20px; border: 1px solid rgba(111,168,255,.24); border-radius: 10px; background: rgba(111,168,255,.045); }
+.article-interaction-copy strong { font-size: .9rem; }
+.article-interaction-copy p, .article-interaction-status { margin: .25rem 0 0; color: var(--muted); font-size: .76rem; }
+.article-interaction-actions { display: flex; flex-wrap: wrap; gap: .5rem; }
+.article-interaction-actions button { min-height: 34px; padding: .35rem .7rem; border: 1px solid var(--border); border-radius: 8px; color: var(--text-soft); background: rgba(255,255,255,.025); cursor: pointer; }
+.article-interaction-actions button:hover:not(:disabled) { border-color: var(--blue); color: var(--text); }
+.article-interaction-actions button:disabled { cursor: not-allowed; opacity: .5; }
+.article-interaction-status { grid-column: 1 / -1; }
+.article-interaction-comments { width: 100%; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+.article-interaction-comments strong { font-size: .78rem; }
+.article-interaction-comments p { margin: .45rem 0 0; color: var(--text-soft); font-size: .78rem; }
 .article-feedback { display: flex; justify-content: space-between; gap: 1rem; align-items: center; margin-top: 48px; padding: 22px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface-soft); }
 .article-feedback strong { font-size: .9rem; }
 .article-feedback p { margin: .25rem 0 0; color: var(--muted); font-size: .77rem; }
@@ -330,6 +341,7 @@ kbd { border: 1px solid var(--border); border-radius: 4px; padding: 1px 5px; col
   .article-nav { grid-template-columns: 1fr; }
   .article-nav a.next { text-align: left; }
   .related-grid { grid-template-columns: 1fr; }
+  .article-interaction { align-items: start; flex-direction: column; }
   .article-feedback { align-items: start; flex-direction: column; }
   .about-hero { grid-template-columns: 1fr; padding-top: 60px; }
   .avatar { width: 92px; height: 92px; border-radius: 18px; font-size: 1.2rem; }

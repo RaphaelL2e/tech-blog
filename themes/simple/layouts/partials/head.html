@@ -16,7 +16,7 @@
 <meta name="description" content="{{ $description }}">
 <meta name="author" content="{{ .Site.Params.author }}">
 <meta name="referrer" content="strict-origin-when-cross-origin">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src 'self'; font-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data: https:; connect-src 'self'{{ with .Site.Params.platformAPI }} {{ . }}{{ end }}; font-src 'self'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests">
 {{ if $noindex }}<meta name="robots" content="noindex,nofollow">{{ else }}<meta name="robots" content="index,follow,max-image-preview:large">{{ end }}
 <link rel="canonical" href="{{ $canonical }}">
 <link rel="alternate" type="application/rss+xml" title="{{ .Site.Params.brand }} RSS" href="{{ "index.xml" | absURL }}">

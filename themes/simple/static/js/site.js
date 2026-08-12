@@ -202,6 +202,96 @@
     search();
   }
 
+  const interaction = document.querySelector('[data-content-key]');
+  if (interaction) {
+    const apiBase = (interaction.dataset.platformApi || '').replace(/\/+$/, '');
+    const contentKey = interaction.dataset.contentKey;
+    const status = interaction.querySelector('[data-interaction-status]');
+    const favoriteButton = interaction.querySelector('[data-interaction-action="favorite"]');
+    const commentButton = interaction.querySelector('[data-interaction-action="comment"]');
+    const feedbackButton = interaction.querySelector('[data-interaction-action="feedback"]');
+    const commentsRoot = interaction.querySelector('[data-interaction-comments]');
+    const summaryURL = apiBase && contentKey
+      ? `${apiBase}/v1/content/${encodeURIComponent(contentKey)}/interaction-summary`
+      : '';
+    const request = async (url, options) => {
+      const response = await fetch(url, { credentials: 'include', ...options });
+      if (!response.ok) {
+        const payload = await response.json().catch(() => null);
+        throw new Error(payload?.error?.message || `互动请求失败（${response.status}）`);
+      }
+      return response.status === 204 ? null : response.json();
+    };
+    const loadSummary = async () => {
+      if (!summaryURL) {
+        if (status) status.textContent = '互动服务尚未配置，仍可通过 GitHub 提交反馈。';
+        return;
+      }
+      try {
+        const summary = await request(summaryURL);
+        if (favoriteButton) {
+          favoriteButton.disabled = false;
+          favoriteButton.textContent = summary.favoritedByViewer ? '取消收藏' : `收藏（${summary.favoriteCount}）`;
+        }
+        if (commentButton) commentButton.disabled = false;
+        if (feedbackButton) feedbackButton.disabled = false;
+        const comments = await request(`${apiBase}/v1/content/${encodeURIComponent(contentKey)}/comments?limit=10`);
+        if (commentsRoot) {
+          const escapeHTML = (value) => String(value || '').replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' })[char]);
+          commentsRoot.innerHTML = comments.length
+            ? `<strong>读者评论</strong>${comments.map((comment) => `<p>${escapeHTML(comment.body)}</p>`).join('')}`
+            : '';
+        }
+        if (status) status.textContent = `${summary.approvedCommentCount} 条公开评论`;
+      } catch (error) {
+        if (status) status.textContent = error.message || '互动服务暂不可用。';
+      }
+    };
+    favoriteButton?.addEventListener('click', async () => {
+      try {
+        const summary = await request(summaryURL);
+        await request(`${apiBase}/v1/content/${encodeURIComponent(contentKey)}/favorites`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ enabled: !summary.favoritedByViewer }),
+        });
+        await loadSummary();
+      } catch (error) {
+        if (status) status.textContent = error.message || '请先登录后再收藏。';
+      }
+    });
+    commentButton?.addEventListener('click', async () => {
+      const body = window.prompt('写下你的评论（提交后等待作者审核）：');
+      if (!body || !body.trim()) return;
+      try {
+        await request(`${apiBase}/v1/content/${encodeURIComponent(contentKey)}/comments`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ body: body.trim() }),
+        });
+        if (status) status.textContent = '评论已提交，等待审核。';
+        await loadSummary();
+      } catch (error) {
+        if (status) status.textContent = error.message || '请先登录后再评论。';
+      }
+    });
+    feedbackButton?.addEventListener('click', async () => {
+      const message = window.prompt('描述你发现的错误：');
+      if (!message || !message.trim()) return;
+      try {
+        await request(`${apiBase}/v1/content/${encodeURIComponent(contentKey)}/feedback`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ kind: 'error', message: message.trim() }),
+        });
+        if (status) status.textContent = '错误反馈已提交，感谢你帮助完善内容。';
+      } catch (error) {
+        if (status) status.textContent = error.message || '请先登录后再提交反馈。';
+      }
+    });
+    loadSummary();
+  }
+
   document.addEventListener('keydown', (event) => {
     const target = event.target;
     const typing = target && (/^(INPUT|TEXTAREA|SELECT)$/.test(target.tagName) || target.isContentEditable);

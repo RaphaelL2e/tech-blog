@@ -1,0 +1,13 @@
+<section class="article-interaction" data-content-key="{{ .Params.content_key | default (printf "post:%s" .RelPermalink | md5) }}"{{ with .Site.Params.platformAPI }} data-platform-api="{{ . }}"{{ end }} aria-label="文章互动">
+  <div class="article-interaction-copy">
+    <strong>参与完善这篇内容</strong>
+    <p>登录后可以收藏、评论，或反馈文章中的错误。</p>
+  </div>
+  <div class="article-interaction-actions">
+    <button type="button" data-interaction-action="favorite" disabled>收藏</button>
+    <button type="button" data-interaction-action="comment" disabled>评论</button>
+    <button type="button" data-interaction-action="feedback" disabled>反馈错误</button>
+  </div>
+  <p class="article-interaction-status" data-interaction-status>互动服务准备中。</p>
+  <div class="article-interaction-comments" data-interaction-comments aria-live="polite"></div>
+</section>

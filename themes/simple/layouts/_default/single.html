@@ -31,6 +31,7 @@
     </div>
     {{ partial "article-nav.html" . }}
     {{ partial "related.html" . }}
+    {{ partial "interaction.html" . }}
     <footer class="article-feedback">
       <div><strong>这篇内容对你有帮助吗？</strong><p>如果发现错误或有更好的工程实践，欢迎一起完善。</p></div>
       <a class="button secondary" href="{{ .Site.Params.github }}/issues/new?title={{ printf "文章反馈：%s" .Title | urlquery }}" target="_blank" rel="noopener noreferrer">提交反馈</a>
